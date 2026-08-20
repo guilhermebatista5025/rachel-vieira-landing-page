@@ -258,10 +258,6 @@ button {
   margin-bottom: 2.2rem;
   max-width: 540px;
   font-weight: 400;
-  color: var(--c-text-secondary);
-  margin-bottom: 2rem;
-  max-width: 540px;
-  font-weight: 400;
 }
 
 .hero-actions {
@@ -1211,3 +1207,146 @@ textarea.form-input {
     padding: 1.8rem 1.2rem;
   }
 }
+
+/* ==========================================================================
+   Formação & Specialization Enhancements
+   ========================================================================== */
+
+.Highlight-lead {
+  font-size: 1.08rem;
+  color: var(--c-text-primary);
+  line-height: 1.7;
+}
+
+.floating-badge {
+  position: absolute;
+  top: 20px;
+  left: -20px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 10px 30px rgba(93, 73, 50, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+  color: var(--c-dark);
+  border: 1px solid var(--c-border);
+  z-index: 10;
+  animation: floatAnim 4s ease-in-out infinite;
+}
+
+.floating-badge i {
+  color: var(--c-gold);
+  font-size: 1.1rem;
+}
+
+@keyframes floatAnim {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.about-experience-badge {
+  position: absolute;
+  bottom: -20px;
+  right: 15px;
+  background: var(--c-dark);
+  color: #ffffff;
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 12px 30px rgba(93, 73, 50, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 5;
+}
+
+.about-experience-badge .exp-number {
+  font-family: var(--ff-title);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--c-sand);
+}
+
+.about-experience-badge .exp-text {
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: 0.3rem;
+  opacity: 0.9;
+}
+
+.formacao-box {
+  background: var(--c-bg-alt);
+  border: 1px solid var(--c-border);
+  border-left: 4px solid var(--c-medium);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  margin-top: 1.8rem;
+  transition: var(--transition);
+}
+
+.formacao-box:hover {
+  box-shadow: 0 8px 25px rgba(93, 73, 50, 0.08);
+  border-left-color: var(--c-dark);
+}
+
+.formacao-title {
+  font-family: var(--ff-title);
+  font-size: 1.4rem;
+  color: var(--c-dark);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.formacao-title i {
+  color: var(--c-medium);
+}
+
+.formacao-desc {
+  font-size: 0.98rem;
+  color: var(--c-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.formacao-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #ffffff;
+  border: 1px solid var(--c-border);
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--c-dark);
+  transition: var(--transition);
+}
+
+.tag-pill i {
+  color: var(--c-medium);
+  font-size: 0.85rem;
+}
+
+.tag-pill:hover {
+  background: var(--c-dark);
+  color: #ffffff;
+  border-color: var(--c-dark);
+}
+
+.tag-pill:hover i {
+  color: var(--c-sand);
+}
+
