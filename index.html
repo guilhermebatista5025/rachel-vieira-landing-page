@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Raquel Vieira | Psicanálise & Acolhimento</title>
-  <meta name="description" content="Um espaço de acolhimento para você se escutar e se transformar. Psicanálise com sensibilidade, ética e presença com Raquel Vieira.">
-  
+  <meta name="description"
+    content="Um espaço de acolhimento para você se escutar e se transformar. Psicanálise com sensibilidade, ética e presença com Raquel Vieira.">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
 
   <!-- Header & Navigation -->
@@ -26,21 +31,24 @@
         <img src="imagens/logo.png" alt="Logo Raquel Vieira" class="logo-img">
       </a>
 
-      <nav>
+      <nav class="nav-center">
         <ul class="nav-menu" id="navMenu">
-          <li><a href="#sobre" class="nav-link">Sobre</a></li>
           <li><a href="#atendimentos" class="nav-link">Atendimentos</a></li>
-          <li><a href="#recursos" class="nav-link">Recursos</a></li>
+          <li><a href="#sobre" class="nav-link">Sobre</a></li>
+          <li><a href="#curso" class="nav-link">Curso</a></li>
           <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
           <li><a href="#perguntas" class="nav-link">Perguntas</a></li>
           <li><a href="#contato" class="nav-link">Contato</a></li>
-          <li><a href="#" class="btn btn-primary js-open-appointment">Agendar conversa</a></li>
+          <li class="mobile-cta-only"><a href="#" class="btn btn-primary js-open-appointment">Agendar conversa</a></li>
         </ul>
       </nav>
 
-      <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menu">
-        <i class="fas fa-bars"></i>
-      </button>
+      <div class="header-right">
+        <a href="#" class="btn btn-primary header-cta-btn js-open-appointment">Agendar conversa</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -51,7 +59,8 @@
         <span class="hero-tag">DEPENDÊNCIA EMOCIONAL • RELAÇÕES ABUSIVAS • PSICANÁLISE CLÍNICA</span>
         <h1 class="hero-title">Desenvolva sua autonomia emocional e ressignifique sua história.</h1>
         <p class="hero-subtitle">
-          Especialista no tratamento da dependência emocional e pesquisadora de relações abusivas. Mais de 5.000 atendimentos guiando pessoas na libertação de padrões dolorosos e na construção de relações saudáveis.
+          Especialista no tratamento da dependência emocional e pesquisadora de relações abusivas. Mais de 5.000
+          atendimentos guiando pessoas na libertação de padrões dolorosos e na construção de relações saudáveis.
         </p>
         <div class="hero-actions">
           <a href="#" class="btn btn-primary js-open-appointment">Agendar conversa <i class="fab fa-whatsapp"></i></a>
@@ -62,7 +71,8 @@
       <div class="hero-image-wrapper">
         <div class="hero-watermark">RV</div>
         <div class="hero-img-box">
-          <img src="imagens/raquel-hero.jpg" alt="Dra. Raquel Vieira - Psicanalista especialista em dependência emocional">
+          <img src="imagens/raquel-hero.jpg"
+            alt="Dra. Raquel Vieira - Psicanalista especialista em dependência emocional">
         </div>
         <div class="floating-badge">
           <i class="fas fa-user-check"></i>
@@ -76,34 +86,109 @@
     </div>
   </section>
 
-  <!-- Pillars Section -->
-  <section class="pillars">
+  <!-- Clinic Treatments Carousel Section -->
+  <section class="clinic-carousel-section" id="atendimentos">
     <div class="container">
-      <div class="pillars-grid">
-        <div class="pillar-card">
-          <div class="pillar-icon"><i class="fas fa-hands-holding-circle"></i></div>
-          <h3 class="pillar-title">Autonomia Emocional</h3>
-          <p class="pillar-desc">Desenvolvimento do fortalecimento interno para libertar-se de dependências dolorosas.</p>
-        </div>
-
-        <div class="pillar-card">
-          <div class="pillar-icon"><i class="fas fa-heart-circle-check"></i></div>
-          <h3 class="pillar-title">Escuta Acolhedora</h3>
-          <p class="pillar-desc">Espaço seguro e transformador para compreender suas dores sem julgamentos.</p>
-        </div>
-
-        <div class="pillar-card">
-          <div class="pillar-icon"><i class="fas fa-shield-halved"></i></div>
-          <h3 class="pillar-title">Relações Saudáveis</h3>
-          <p class="pillar-desc">Interrupção de padrões repetitivos para construir vínculos equilibrados e respeitosos.</p>
-        </div>
-
-        <div class="pillar-card">
-          <div class="pillar-icon"><i class="fas fa-seedling"></i></div>
-          <h3 class="pillar-title">Elaboração de Traumas</h3>
-          <p class="pillar-desc">Ressignificação da sua história com viés psicanalítico, constelação e renascimento.</p>
-        </div>
+      <div class="section-header-center">
+        <span class="section-tag"><i class="fas fa-stethoscope"></i> ATENDIMENTOS CLÍNICOS</span>
+        <h2 class="section-title">O que é tratado na clínica</h2>
+        <p class="section-subtitle-center">Deslize para conhecer as principais áreas de acompanhamento terapêutico.</p>
       </div>
+
+      <div class="carousel-wrapper">
+        <button class="carousel-control prev-btn" id="carouselPrev" aria-label="Anterior">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <div class="carousel-track-container" id="carouselTrackContainer">
+          <div class="carousel-track" id="carouselTrack">
+            <!-- Slide 1 -->
+            <div class="carousel-slide">
+              <div class="treatment-card js-open-detail-modal" data-detail-id="dependencia">
+                <div class="treatment-icon"><i class="fas fa-link-slash"></i></div>
+                <h3 class="treatment-title">Dependência Emocional</h3>
+                <p class="treatment-desc">Libertação de apegos dolorosos, resgate da autonomia e superação do medo de ficar sós.</p>
+                <div class="treatment-card-footer">
+                  <span>Ver detalhes</span>
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-slide">
+              <div class="treatment-card js-open-detail-modal" data-detail-id="abusivas">
+                <div class="treatment-icon"><i class="fas fa-shield-heart"></i></div>
+                <h3 class="treatment-title">Relações Abusivas</h3>
+                <p class="treatment-desc">Identificação de manipulações (gaslighting), quebra de ciclos nocivos e reconstrução da identidade.</p>
+                <div class="treatment-card-footer">
+                  <span>Ver detalhes</span>
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-slide">
+              <div class="treatment-card js-open-detail-modal" data-detail-id="psicanalise">
+                <div class="treatment-icon"><i class="fas fa-brain"></i></div>
+                <h3 class="treatment-title">Psicanálise & Ansiedade</h3>
+                <p class="treatment-desc">Investigação de causas inconscientes, angústias profundas e manejo do estado de alerta constante.</p>
+                <div class="treatment-card-footer">
+                  <span>Ver detalhes</span>
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="carousel-slide">
+              <div class="treatment-card js-open-detail-modal" data-detail-id="constelacao">
+                <div class="treatment-icon"><i class="fas fa-diagram-project"></i></div>
+                <h3 class="treatment-title">Constelação Familiar</h3>
+                <p class="treatment-desc">Cura de feridas sistêmicas, desconstrução de lealdades invisíveis e repetições transgeracionais.</p>
+                <div class="treatment-card-footer">
+                  <span>Ver detalhes</span>
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="carousel-slide">
+              <div class="treatment-card js-open-detail-modal" data-detail-id="traumas">
+                <div class="treatment-icon"><i class="fas fa-wind"></i></div>
+                <h3 class="treatment-title">Renascimento & Traumas</h3>
+                <p class="treatment-desc">Técnicas integrativas de respiração consciente para liberação de memórias e traumas no corpo.</p>
+                <div class="treatment-card-footer">
+                  <span>Ver detalhes</span>
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 6 -->
+            <div class="carousel-slide">
+              <div class="treatment-card js-open-detail-modal" data-detail-id="autonomia">
+                <div class="treatment-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                <h3 class="treatment-title">Autoestima & Limites</h3>
+                <p class="treatment-desc">Fortalecimento do valor próprio, comunicação assertiva e imposição de limites sem culpa.</p>
+                <div class="treatment-card-footer">
+                  <span>Ver detalhes</span>
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control next-btn" id="carouselNext" aria-label="Próximo">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <!-- Pagination Dots -->
+      <div class="carousel-dots" id="carouselDots"></div>
     </div>
   </section>
 
@@ -121,23 +206,30 @@
       <div class="about-content">
         <span class="section-tag">QUEM É RAQUEL VIEIRA</span>
         <h2 class="section-title">Especialista no tratamento da dependência emocional e relações abusivas</h2>
-        
+
         <p class="about-text Highlight-lead">
-          <strong>Raquel é muito mais que uma terapeuta:</strong> é uma das mais respeitadas especialistas no tratamento da dependência emocional e pesquisadoras de relações abusivas. Sua trajetória profissional é marcada pelo compromisso com a transformação emocional e pela facilidade de ajudar pessoas a se libertarem da dependência emocional, compreenderem suas histórias e pararem de repetir padrões que causam sofrimento.
-        </p>
-        
-        <p class="about-text">
-          Sua experiência clínica reúne <strong>mais de 5.000 atendimentos</strong>, acompanhando pessoas em processos de compreensão de suas dores, elaboração de traumas e construção de relações saudáveis consigo mesmas e com os outros.
+          <strong>Raquel é muito mais que uma terapeuta:</strong> é uma das mais respeitadas especialistas no tratamento
+          da dependência emocional e pesquisadoras de relações abusivas. Sua trajetória profissional é marcada pelo
+          compromisso com a transformação emocional e pela facilidade de ajudar pessoas a se libertarem da dependência
+          emocional, compreenderem suas histórias e pararem de repetir padrões que causam sofrimento.
         </p>
 
         <p class="about-text">
-          Seu propósito é oferecer uma <strong>escuta acolhedora e transformadora</strong>, ajudando seus pacientes no desenvolvimento de sua autonomia emocional.
+          Sua experiência clínica reúne <strong>mais de 5.000 atendimentos</strong>, acompanhando pessoas em processos
+          de compreensão de suas dores, elaboração de traumas e construção de relações saudáveis consigo mesmas e com os
+          outros.
+        </p>
+
+        <p class="about-text">
+          Seu propósito é oferecer uma <strong>escuta acolhedora e transformadora</strong>, ajudando seus pacientes no
+          desenvolvimento de sua autonomia emocional.
         </p>
 
         <div class="formacao-box">
           <h3 class="formacao-title"><i class="fas fa-graduation-cap"></i> Formação & Especializações</h3>
           <p class="formacao-desc">
-            Psicanalista clínica, especialista em saúde mental e dependência emocional. Constelação familiar e renascimento.
+            Psicanalista clínica, especialista em saúde mental e dependência emocional. Constelação familiar e
+            renascimento.
           </p>
           <div class="formacao-tags">
             <span class="tag-pill"><i class="fas fa-brain"></i> Psicanalista Clínica</span>
@@ -147,52 +239,216 @@
             <span class="tag-pill"><i class="fas fa-wind"></i> Renascimento</span>
           </div>
         </div>
-
-        <div style="margin-top: 1.5rem;">
-          <a href="#" class="btn btn-primary js-open-appointment">Agendar consulta com Raquel <i class="fab fa-whatsapp"></i></a>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- Services / Offerings Section -->
-  <section class="services" id="atendimentos">
+  <!-- Course / Therapeutic Program Section -->
+  <section class="course-section" id="curso">
     <div class="container">
+      <!-- Header -->
       <div class="section-header-center">
-        <span class="section-tag">ÁREAS DE ATUAÇÃO</span>
-        <h2 class="section-title">Como posso te ajudar no seu processo</h2>
+        <span class="section-tag"><i class="fas fa-heart-circle-check"></i> PROGRAMA TERAPÊUTICO</span>
+        <h2 class="section-title">Jornada de Libertação Emocional</h2>
+        <p class="section-subtitle">Rompa os padrões de dor e recupere o controle da sua história</p>
       </div>
 
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-symbol"><i class="fas fa-link-slash"></i></div>
-          <h3 class="service-title">Tratamento da Dependência Emocional</h3>
-          <p class="service-desc">Processo terapêutico focado no desapego saudável, resgate do valor próprio e autonomia interpessoal.</p>
+      <!-- Intro Reflection Card -->
+      <div class="course-intro-card">
+        <p class="course-lead-text">
+          Reconhecer a dependência emocional e a repetição de padrões dolorosos é o primeiro passo para transformar a
+          sua história.
+        </p>
+
+        <div class="course-paragraphs">
+          <p>
+            Você sabe que aceita menos do que merece e que tolera o intolerável. Você já aceitou — ou até ainda aceita
+            — abusos e desrespeitos nos relacionamentos. Sabe que já teve muitos prejuízos, que vive em estado de
+            alerta e ansiedade, mas não consegue se libertar.
+          </p>
+          <p>
+            Quantas vezes você já prometeu para você mesmo que nunca mais voltaria para pessoas e lugares que te
+            machucam, mas, quando se percebe, está lá novamente, repetindo esses padrões de dor e sofrimento?
+          </p>
+          <p>
+            Você já tentou várias fórmulas: fez cursos, leu livros e aprendeu técnicas. Por um momento até ajudou, mas
+            se viu novamente tolerando o intolerável. Isso não é fraqueza e também não é porque você "não tem vergonha
+            na cara": <strong>é dependência emocional.</strong>
+          </p>
+          <p>
+            Você sabe o que precisa fazer, mas o seu emocional não dá conta. As decisões ficam pesadas e você não
+            consegue sustentar o que quer e precisa fazer. É você repetindo padrões e fazendo o que está programado
+            para fazer: <em>sobreviver</em>. Mas o que você precisa entender é que, enquanto não romper com esses
+            padrões, seu emocional vai continuar decidindo por você. Dessa forma, você não consegue se posicionar nos
+            relacionamentos e continua tolerando o intolerável.
+          </p>
         </div>
 
-        <div class="service-card">
-          <div class="service-symbol"><i class="fas fa-shield-heart"></i></div>
-          <h3 class="service-title">Superação de Relações Abusivas</h3>
-          <p class="service-desc">Apoio especializado para identificar dinâmicas tóxicas, quebrar ciclos e reconstruir sua identidade.</p>
+        <div class="course-highlight-banner">
+          <i class="fas fa-heart-pulse"></i>
+          <span>Você não precisa mais continuar tolerando o que te machuca.</span>
         </div>
+      </div>
 
-        <div class="service-card">
-          <div class="service-symbol">Ψ</div>
-          <h3 class="service-title">Psicanálise Clínica & Saúde Mental</h3>
-          <p class="service-desc">Escuta analítica profunda para investigar causas inconscientes, angústias e elaborar traumas passados.</p>
+      <!-- What is the Program -->
+      <div class="course-about-box">
+        <div class="course-about-badge"><i class="fas fa-video"></i> 5 Vídeos Terapêuticos + Exercícios Práticos</div>
+        <h3 class="course-subheading">O que é o programa terapêutico?</h3>
+        <p class="course-about-desc">
+          O programa terapêutico que criei não é uma simples técnica ou mais um curso para você fazer. É um programa
+          desenvolvido para quem deseja compreender por que permanece em relações que causam sofrimento, fortalecer a
+          autoestima, reconhecer e tratar compulsões, aprender a se posicionar e romper padrões de dependência
+          emocional. São apenas <strong>cinco vídeos terapêuticos com exercícios práticos</strong> para ajudar você a
+          olhar para as suas emoções, reconhecer padrões e construir relações saudáveis.
+        </p>
+      </div>
+
+      <!-- Audience: Para quem é este programa? -->
+      <div class="course-block">
+        <h3 class="course-subheading center">Para quem é esse programa terapêutico?</h3>
+        <div class="course-audience-grid">
+          <div class="audience-card">
+            <div class="audience-icon"><i class="fas fa-dove"></i></div>
+            <h4>Libertação</h4>
+            <p>Para quem ainda sofre em relações abusivas e não consegue se libertar.</p>
+          </div>
+
+          <div class="audience-card">
+            <div class="audience-icon"><i class="fas fa-compass"></i></div>
+            <h4>Posicionamento</h4>
+            <p>Para quem já tentou várias fórmulas e ainda não consegue se posicionar nos relacionamentos.</p>
+          </div>
+
+          <div class="audience-card">
+            <div class="audience-icon"><i class="fas fa-feather"></i></div>
+            <h4>Paz Interior</h4>
+            <p>Para quem vive em ansiedade e estado de alerta constante, mesmo quando tudo parece estar bem.</p>
+          </div>
+
+          <div class="audience-card">
+            <div class="audience-icon"><i class="fas fa-house-user"></i></div>
+            <h4>Privacidade</h4>
+            <p>Para quem quer fazer terapia no conforto de casa, sem precisar se expor para outras pessoas.</p>
+          </div>
         </div>
+      </div>
 
-        <div class="service-card">
-          <div class="service-symbol"><i class="fas fa-diagram-project"></i></div>
-          <h3 class="service-title">Constelação Familiar & Renascimento</h3>
-          <p class="service-desc">Abordagens integrativas para curar feridas sistêmicas, padrões familiares e desbloquear a energia vital.</p>
+      <!-- Advantages: Vantagens de ter acesso ao programa -->
+      <div class="course-block">
+        <h3 class="course-subheading center">Por que é interessante e quais as vantagens de ter acesso?</h3>
+        <div class="course-advantages-grid">
+          <div class="advantage-card">
+            <div class="adv-check"><i class="fas fa-check-circle"></i></div>
+            <div>
+              <h4>Sem teoria exaustiva</h4>
+              <p>Sem técnicas cansativas e sem necessidade de estudos complexos.</p>
+            </div>
+          </div>
+
+          <div class="advantage-card">
+            <div class="adv-check"><i class="fas fa-check-circle"></i></div>
+            <div>
+              <h4>Sem cobranças</h4>
+              <p>Processo sem esforços excessivos, sem cobranças e no seu ritmo.</p>
+            </div>
+          </div>
+
+          <div class="advantage-card">
+            <div class="adv-check"><i class="fas fa-check-circle"></i></div>
+            <div>
+              <h4>Sem exposição</h4>
+              <p>Sem medo de expor seus sentimentos e livre de inseguranças.</p>
+            </div>
+          </div>
+
+          <div class="advantage-card">
+            <div class="adv-check"><i class="fas fa-check-circle"></i></div>
+            <div>
+              <h4>Acesso vitalício</h4>
+              <p>Você faz quando quiser, no seu próprio tempo e no seu ritmo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Compare: Imagine o Futuro vs Se Não Fizer Nada -->
+      <div class="course-comparison-wrapper">
+        <h3 class="course-subheading center">Compare os caminhos</h3>
+        <div class="comparison-grid">
+          <!-- Positive / Future -->
+          <div class="comparison-card positive">
+            <div class="comparison-header">
+              <i class="fas fa-sun"></i>
+              <div>
+                <span class="comparison-tag">A SUA NOVA REALIDADE</span>
+                <h4>Imagine como vai ser futuramente</h4>
+              </div>
+            </div>
+            <ul class="comparison-list">
+              <li>
+                <i class="fas fa-circle-check"></i>
+                <span>As decisões que antes te travavam ficam mais simples e você começa a se perceber se
+                  posicionando, impondo limites às situações e às pessoas que te machucam.</span>
+              </li>
+              <li>
+                <i class="fas fa-circle-check"></i>
+                <span>Você agindo no seu ritmo, respeitando seus sentimentos, sem cobranças e sem ansiedade.</span>
+              </li>
+              <li>
+                <i class="fas fa-circle-check"></i>
+                <span>Você agindo diferente não porque é uma pessoa diferente, mas porque agora aprendeu a se cuidar e
+                  se amar como realmente merece — simplesmente porque agora seu valor é reconhecido.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Negative / Passive -->
+          <div class="comparison-card negative">
+            <div class="comparison-header">
+              <i class="fas fa-triangle-exclamation"></i>
+              <div>
+                <span class="comparison-tag">O CUSTO DE NÃO FAZER NADA</span>
+                <h4>Como vai ser se você não fizer nada por você</h4>
+              </div>
+            </div>
+            <ul class="comparison-list">
+              <li>
+                <i class="fas fa-xmark"></i>
+                <span>Se você fechar essa página e não fizer nada, seu estado emocional continua o mesmo. O sistema
+                  nervoso continua em alerta e a ansiedade destruindo seu emocional.</span>
+              </li>
+              <li>
+                <i class="fas fa-xmark"></i>
+                <span>Você aceitando o inaceitável e tolerando o intolerável nos seus relacionamentos.</span>
+              </li>
+              <li>
+                <i class="fas fa-xmark"></i>
+                <span>Não porque você não se esforça ou não quer, mas porque o esforço sem mudança interna não vale de
+                  nada.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Final CTA Button Box -->
+      <div class="course-cta-box">
+        <div class="cta-inner">
+          <h3>Pronta para dar o primeiro passo na sua libertação?</h3>
+          <p>Garanta seu acesso ao programa terapêutico e comece hoje mesmo a transformar sua história.</p>
+          <a href="#" class="btn btn-primary btn-cta-course">
+            <span>Quero romper os padrões e reconquistar minha liberdade</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <span class="cta-micro-note"><i class="fas fa-shield-halved"></i> Acesso imediato e vitalício ao
+            programa</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Reflections / Content Section -->
-  <section class="reflections" id="recursos">
+  <section class="reflections">
     <div class="container">
       <div class="section-header-center">
         <span class="section-tag">CONTEÚDOS E REFLEXÕES</span>
@@ -208,7 +464,8 @@
           </div>
           <div class="video-content">
             <h3 class="video-title">Como libertar-se da dependência emocional</h3>
-            <p class="video-desc">Compreendendo as razões do apego excessivo e os passos práticos para a autonomia.</p>
+            <p class="video-desc">Compreendendo as razões do apego excessivo e os passos práticos para a autonomia.
+            </p>
           </div>
         </div>
 
@@ -232,7 +489,8 @@
           </div>
           <div class="video-content">
             <h3 class="video-title">Como parar de repetir velhos padrões</h3>
-            <p class="video-desc">O papel da psicanálise e da constelação para ressignificar traumas inconscientes.</p>
+            <p class="video-desc">O papel da psicanálise e da constelação para ressignificar traumas inconscientes.
+            </p>
           </div>
         </div>
       </div>
@@ -249,7 +507,8 @@
       <div class="stats-info">
         <span class="section-tag">EXPERIÊNCIA CLÍNICA</span>
         <h2 class="section-title">Resultados pautados na ética e na autonomia</h2>
-        <p>Acompanhando pessoas na compreensão de suas dores, elaboração de traumas e construção de relações verdadeiramente saudáveis.</p>
+        <p>Acompanhando pessoas na compreensão de suas dores, elaboração de traumas e construção de relações
+          verdadeiramente saudáveis.</p>
       </div>
 
       <div class="stat-item">
@@ -281,7 +540,8 @@
         <div class="testimonial-card">
           <div class="quote-mark">“</div>
           <p class="testimonial-text">
-            "Raquel me ajudou a sair de um ciclo de dependência emocional que parecia não ter fim. Sua escuta é única, acolhedora e me deu a autonomia necessária para reconstruir minha vida."
+            "Raquel me ajudou a sair de um ciclo de dependência emocional que parecia não ter fim. Sua escuta é única,
+            acolhedora e me deu a autonomia necessária para reconstruir minha vida."
           </p>
           <div class="testimonial-author">
             <div class="author-avatar">PS</div>
@@ -295,7 +555,8 @@
         <div class="testimonial-card">
           <div class="quote-mark">“</div>
           <p class="testimonial-text">
-            "Identificar os padrões da relação abusiva que eu vivia foi libertador. A condução da Raquel com a psicanálise e o renascimento transformaram a forma como me vejo e me me relaciono."
+            "Identificar os padrões da relação abusiva que eu vivia foi libertador. A condução da Raquel com a
+            psicanálise e o renascimento transformaram a forma como me vejo e me me relaciono."
           </p>
           <div class="testimonial-author">
             <div class="author-avatar">FL</div>
@@ -309,7 +570,8 @@
         <div class="testimonial-card">
           <div class="quote-mark">“</div>
           <p class="testimonial-text">
-            "Profissional extremamente ética, sensível e qualificada. Mais de 5.000 atendimentos refletem na sabedoria e clareza que ela transmite em cada sessão."
+            "Profissional extremamente ética, sensível e qualificada. Mais de 5.000 atendimentos refletem na sabedoria
+            e clareza que ela transmite em cada sessão."
           </p>
           <div class="testimonial-author">
             <div class="author-avatar">RM</div>
@@ -338,7 +600,9 @@
             <i class="fas fa-plus faq-icon"></i>
           </button>
           <div class="faq-answer">
-            <p>O tratamento foca em compreender as origens do apego doloroso, desconstruir crenças de desvalor e fortalecer sua autonomia emocional. Através de uma escuta acolhedora, você aprende a parar de repetir padrões de sofrimento e construir relações saudáveis consigo e com os outros.</p>
+            <p>O tratamento foca em compreender as origens do apego doloroso, desconstruir crenças de desvalor e
+              fortalecer sua autonomia emocional. Através de uma escuta acolhedora, você aprende a parar de repetir
+              padrões de sofrimento e construir relações saudáveis consigo e com os outros.</p>
           </div>
         </div>
 
@@ -348,7 +612,9 @@
             <i class="fas fa-plus faq-icon"></i>
           </button>
           <div class="faq-answer">
-            <p>Relações abusivas vão muito além da violência física — envolvem manipulação psicológica, invalidação de sentimentos e perda gradual de autonomia. No espaço terapêutico, analisamos com ética e sigilo a sua história para que você possa retomar o controle da sua vida.</p>
+            <p>Relações abusivas vão muito além da violência física — envolvem manipulação psicológica, invalidação de
+              sentimentos e perda gradual de autonomia. No espaço terapêutico, analisamos com ética e sigilo a sua
+              história para que você possa retomar o controle da sua vida.</p>
           </div>
         </div>
 
@@ -358,7 +624,9 @@
             <i class="fas fa-plus faq-icon"></i>
           </button>
           <div class="faq-answer">
-            <p>Raquel Vieira é psicanalista clínica, especialista em saúde mental e dependência emocional, com formação e atuação em Constelação Familiar e Renascimento (Rebirthing), integrando saberes para uma transformação profunda.</p>
+            <p>Raquel Vieira é psicanalista clínica, especialista em saúde mental e dependência emocional, com
+              formação e atuação em Constelação Familiar e Renascimento (Rebirthing), integrando saberes para uma
+              transformação profunda.</p>
           </div>
         </div>
 
@@ -368,7 +636,9 @@
             <i class="fas fa-plus faq-icon"></i>
           </button>
           <div class="faq-answer">
-            <p>Sim! Os atendimentos são oferecidos tanto na modalidade presencial quanto online (via videochamada segura e sigilosa), garantindo o mesmo nível de acolhimento e privacidade para pacientes no Brasil e no exterior.</p>
+            <p>Sim! Os atendimentos são oferecidos tanto na modalidade presencial quanto online (via videochamada
+              segura e sigilosa), garantindo o mesmo nível de acolhimento e privacidade para pacientes no Brasil e no
+              exterior.</p>
           </div>
         </div>
 
@@ -378,7 +648,8 @@
             <i class="fas fa-plus faq-icon"></i>
           </button>
           <div class="faq-answer">
-            <p>Basta clicar em qualquer botão "Agendar conversa" na página para entrar em contato diretamente via WhatsApp ou preencher o formulário rápido de agendamento.</p>
+            <p>Basta clicar em qualquer botão "Agendar conversa" na página para entrar em contato diretamente via
+              WhatsApp ou preencher o formulário rápido de agendamento.</p>
           </div>
         </div>
       </div>
@@ -391,7 +662,8 @@
       <div class="footer-top">
         <div class="footer-brand">
           <img src="imagens/logo.png" alt="Raquel Vieira" class="logo-img">
-          <p>Psicanálise clínica, tratamento da dependência emocional, relações abusivas, constelação familiar e renascimento. Mais de 5.000 atendimentos acompanhando caminhos de liberdade e autonomia.</p>
+          <p>Psicanálise clínica, tratamento da dependência emocional, relações abusivas, constelação familiar e
+            renascimento. Mais de 5.000 atendimentos acompanhando caminhos de liberdade e autonomia.</p>
         </div>
 
         <div>
@@ -399,6 +671,7 @@
           <ul class="footer-links">
             <li><a href="#sobre">Sobre Raquel</a></li>
             <li><a href="#atendimentos">Atendimentos</a></li>
+            <li><a href="#curso">Programa Terapêutico</a></li>
             <li><a href="#recursos">Recursos</a></li>
           </ul>
         </div>
@@ -437,8 +710,9 @@
     <div class="modal-card">
       <button class="modal-close js-close-modal" aria-label="Fechar"><i class="fas fa-times"></i></button>
       <h3 class="modal-title">Agendar conversa</h3>
-      <p class="modal-desc">Preencha seus dados para iniciar seu contato direto via WhatsApp com a Dra. Raquel Vieira.</p>
-      
+      <p class="modal-desc">Preencha seus dados para iniciar seu contato direto via WhatsApp com a Dra. Raquel Vieira.
+      </p>
+
       <form id="appointmentForm">
         <div class="form-group">
           <label for="fieldName" class="form-label">Nome Completo</label>
@@ -455,7 +729,8 @@
           <textarea id="fieldMessage" class="form-input" placeholder="Como posso te ajudar no momento?"></textarea>
         </div>
 
-        <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar mensagem no WhatsApp <i class="fab fa-whatsapp"></i></button>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar mensagem no WhatsApp <i
+            class="fab fa-whatsapp"></i></button>
       </form>
     </div>
   </div>
@@ -463,7 +738,8 @@
   <!-- Video Modal -->
   <div class="modal-backdrop" id="videoModal">
     <div class="modal-card video-modal-card">
-      <button class="modal-close js-close-modal" aria-label="Fechar" style="color: #fff;"><i class="fas fa-times"></i></button>
+      <button class="modal-close js-close-modal" aria-label="Fechar" style="color: #fff;"><i
+          class="fas fa-times"></i></button>
       <h3 class="modal-title" style="color: #fff; text-align: center;">Vídeo de Apresentação</h3>
       <div class="video-player-frame">
         <i class="fas fa-circle-notch fa-spin" style="font-size: 2.5rem; color: var(--c-sand);"></i>
@@ -472,7 +748,37 @@
     </div>
   </div>
 
+  <!-- Interactive Detail Modal -->
+  <div class="modal-backdrop" id="detailModal">
+    <div class="modal-card detail-modal-card">
+      <button class="modal-close js-close-modal" aria-label="Fechar"><i class="fas fa-times"></i></button>
+      <div class="detail-modal-header">
+        <div class="detail-modal-icon" id="detailModalIcon"><i class="fas fa-sparkles"></i></div>
+        <div>
+          <span class="detail-modal-category" id="detailModalCategory">ÁREA DE ATUAÇÃO</span>
+          <h3 class="detail-modal-title" id="detailModalTitle">Título</h3>
+        </div>
+      </div>
+      <div class="detail-modal-body">
+        <p id="detailModalDesc" class="detail-modal-desc">Descrição...</p>
+
+        <div class="detail-highlights-box">
+          <h4><i class="fas fa-check-circle"></i> O que é trabalhado neste acompanhamento:</h4>
+          <ul id="detailModalList" class="detail-modal-list">
+            <!-- Dynamic items populated via JS -->
+          </ul>
+        </div>
+      </div>
+      <div class="detail-modal-footer">
+        <button class="btn btn-primary js-open-appointment" style="width: 100%;">
+          Agendar conversa sobre este tema <i class="fab fa-whatsapp"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Main JavaScript File -->
   <script src="js/main.js"></script>
 </body>
+
 </html>
