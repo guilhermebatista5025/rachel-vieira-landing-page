@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
 
   <!-- FontAwesome Icons -->
@@ -52,46 +52,160 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero" id="hero">
-    <div class="container hero-grid">
-      <div class="hero-content">
-        <span class="hero-tag">DEPENDÊNCIA EMOCIONAL • RELAÇÕES ABUSIVAS • PSICANÁLISE CLÍNICA</span>
-        <h1 class="hero-title">Desenvolva sua autonomia emocional e ressignifique sua história.</h1>
-        <p class="hero-subtitle">
-          Especialista no tratamento da dependência emocional e pesquisadora de relações abusivas. Mais de 5.000
-          atendimentos guiando pessoas na libertação de padrões dolorosos e na construção de relações saudáveis.
-        </p>
-        <div class="hero-actions">
-          <a href="#" class="btn btn-primary js-open-appointment">Agendar conversa <i class="fab fa-whatsapp"></i></a>
-          <a href="#sobre" class="btn btn-outline">Conhecer Raquel Vieira</a>
+  <!-- Hero Section (Remodeled Full Width - Strict 100vh Viewport Fit) -->
+  <section class="hero-full" id="hero">
+    <!-- SVG ClipPath for Image S-Curve Contour -->
+    <svg width="0" height="0" style="position: absolute; pointer-events: none;">
+      <defs>
+        <clipPath id="sCurveClip" clipPathUnits="objectBoundingBox">
+          <path d="M 0.12,0 C 0.02,0.32 0.20,0.68 0.03,1 L 1,1 L 1,0 Z" />
+        </clipPath>
+      </defs>
+    </svg>
+
+    <!-- Botanical Leaf Background Watermarks -->
+    <div class="hero-leaf-bg leaf-bottom-left">
+      <svg width="180" height="180" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40 180C40 180 60 120 120 100C180 80 190 20 190 20C190 20 130 40 100 100C70 160 40 180 40 180Z"
+          stroke="#d5c4b1" stroke-width="2" stroke-linecap="round" opacity="0.45" />
+        <path d="M70 150C70 150 90 110 140 95C170 85 180 50 180 50" stroke="#d5c4b1" stroke-width="1.5"
+          stroke-linecap="round" opacity="0.35" />
+        <path d="M30 140C30 140 70 130 100 80" stroke="#d5c4b1" stroke-width="1.5" stroke-linecap="round"
+          opacity="0.35" />
+      </svg>
+    </div>
+    <div class="hero-leaf-bg leaf-bottom-right">
+      <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M160 180C160 180 140 120 80 100C20 80 10 20 10 20C10 20 70 40 100 100C130 160 160 180 160 180Z"
+          stroke="#d5c4b1" stroke-width="2" stroke-linecap="round" opacity="0.4" />
+        <path d="M130 150C130 150 110 110 60 95C30 85 20 50 20 50" stroke="#d5c4b1" stroke-width="1.5"
+          stroke-linecap="round" opacity="0.3" />
+      </svg>
+    </div>
+
+    <div class="hero-main-wrapper">
+      <!-- Left Content Column -->
+      <div class="hero-left-col">
+        <div class="hero-left-inner">
+          <div class="hero-tag-pill">
+            <i class="fas fa-leaf tag-icon"></i>
+            <span>DEPENDÊNCIA EMOCIONAL • RELAÇÕES ABUSIVAS • PSICANÁLISE CLÍNICA</span>
+          </div>
+
+          <h1 class="hero-title-main">
+            Desenvolva sua<br>
+            autonomia emocional e<br>
+            ressignifique <span class="highlight-gold">sua história.</span>
+          </h1>
+
+          <p class="hero-subtitle-text">
+            Especialista no tratamento da dependência emocional e pesquisadora de relações abusivas. Mais de
+            <strong>5.000 atendimentos</strong> guiando pessoas na libertação de padrões dolorosos e na construção de
+            relações saudáveis.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#" class="btn btn-hero-primary js-open-appointment">
+              Agendar conversa <i class="fab fa-whatsapp whatsapp-icon"></i>
+            </a>
+            <a href="#sobre" class="btn btn-hero-outline">
+              Conhecer Raquel Vieira <i class="fas fa-chevron-right arrow-icon"></i>
+            </a>
+          </div>
+
+          <div class="hero-trust-indicator">
+            <i class="fas fa-check-circle check-icon"></i>
+            <span>Atendimento 100% sigiloso e acolhedor</span>
+          </div>
         </div>
       </div>
 
-      <div class="hero-image-wrapper">
-        <div class="hero-img-box">
-          <img src="imagens/raquel-hero.jpg"
-            alt="Dra. Raquel Vieira - Psicanalista especialista em dependência emocional">
+      <!-- Right Photo Column (Image Layered Behind Badges & Curve Separator Overlay) -->
+      <div class="hero-right-col">
+        <div class="hero-photo-container">
+          <!-- Background Photo Layer -->
+          <img src="imagens/raquel-hero.jpg" alt="Dra. Raquel Vieira - Psicanalista Especialista"
+            class="hero-photo-img bg-photo">
+
+          <!-- Organic S-Curve Partition Overlay (Positioned right against the photo) -->
+          <div class="hero-curve-separator">
+            <svg class="curve-svg" viewBox="0 0 120 800" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0,0 L70,0 C20,260 110,520 15,800 L0,800 Z" fill="#faf6f0" />
+              <path d="M70,0 C20,260 110,520 15,800" stroke="#e2d4c3" stroke-width="2.5" fill="none" opacity="0.85" />
+              <path d="M67,0 C17,260 107,520 12,800" stroke="#bfa37e" stroke-width="1.5" fill="none" opacity="0.95" />
+            </svg>
+          </div>
+
         </div>
-        <div class="floating-badge">
-          <i class="fas fa-user-check"></i>
-          <span><strong>+5.000</strong> Atendimentos Clínicos</span>
+      </div>
+    </div>
+
+    <!-- Integrated Bottom Statistics Floating Bar -->
+    <div class="container hero-stats-container">
+      <div class="hero-stats-bar">
+        <!-- Stat Item 1 -->
+        <div class="hero-stat-card">
+          <div class="stat-icon-circle">
+            <i class="fas fa-user-group"></i>
+          </div>
+          <div class="stat-details">
+            <h3 class="stat-main-val">+5.000</h3>
+            <p class="stat-sub-text">Atendimentos realizados com excelência</p>
+          </div>
         </div>
-        <button class="video-badge-btn js-open-video" data-video-title="Vídeo de Apresentação - Raquel Vieira">
-          <div class="play-icon-circle"><i class="fas fa-play"></i></div>
-          <span class="video-badge-text">Assista ao vídeo de apresentação</span>
-        </button>
+
+        <!-- Stat Item 2 -->
+        <div class="hero-stat-card">
+          <div class="stat-icon-circle">
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="stat-details">
+            <h3 class="stat-main-val">10+</h3>
+            <p class="stat-sub-text">Anos de experiência em saúde mental</p>
+          </div>
+        </div>
+
+        <!-- Stat Item 3 -->
+        <div class="hero-stat-card">
+          <div class="stat-icon-circle">
+            <i class="fas fa-heart"></i>
+          </div>
+          <div class="stat-details">
+            <h3 class="stat-main-val">100%</h3>
+            <p class="stat-sub-text">Atendimento humanizado e sigiloso</p>
+          </div>
+        </div>
+
+        <!-- Stat Item 4 -->
+        <div class="hero-stat-card">
+          <div class="stat-icon-circle">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <div class="stat-details">
+            <h3 class="stat-main-val">Transformação</h3>
+            <p class="stat-sub-text">Resultados reais que mudam vidas</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Clinic Treatments Carousel Section -->
+  <!-- Clinic Treatments Carousel Section (Redesigned) -->
   <section class="clinic-carousel-section" id="atendimentos">
+    <!-- Botanical Leaf Watermark -->
+    <div class="section-leaf-watermark leaf-wm-left">
+      <svg width="220" height="300" viewBox="0 0 220 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M60 280C60 280 80 180 160 140C220 110 200 30 200 30C200 30 140 60 120 140C100 220 60 280 60 280Z" stroke="#d5c4b1" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+        <path d="M90 230C90 230 110 170 170 145C200 130 195 70 195 70" stroke="#d5c4b1" stroke-width="1.5" stroke-linecap="round" opacity="0.2"/>
+        <path d="M50 240C50 240 90 210 130 130" stroke="#d5c4b1" stroke-width="1.5" stroke-linecap="round" opacity="0.2"/>
+      </svg>
+    </div>
+
     <div class="container">
       <div class="section-header-center">
         <span class="section-tag"><i class="fas fa-stethoscope"></i> ATENDIMENTOS CLÍNICOS</span>
-        <h2 class="section-title">O que é tratado na clínica</h2>
-        <p class="section-subtitle-center">Deslize para conhecer as principais áreas de acompanhamento terapêutico.</p>
+        <h2 class="section-title">O que é <em class="title-italic-gold">tratado</em> na clínica</h2>
+        <p class="section-subtitle-center">Deslize para conhecer as <strong>principais áreas</strong> de acompanhamento terapêutico.</p>
       </div>
 
       <div class="carousel-wrapper">
@@ -194,23 +308,108 @@
 
       <!-- Pagination Dots -->
       <div class="carousel-dots" id="carouselDots"></div>
+
+      <!-- Bottom Pillars Bar -->
+      <div class="atendimentos-pillars-bar">
+        <div class="atend-pillar-item">
+          <div class="atend-pillar-icon"><i class="fas fa-spa"></i></div>
+          <div class="atend-pillar-text">
+            <strong>Abordagem integrativa</strong>
+            <span>Técnicas validadas e personalizadas.</span>
+          </div>
+        </div>
+        <div class="atend-pillar-item">
+          <div class="atend-pillar-icon"><i class="fas fa-hand-holding-heart"></i></div>
+          <div class="atend-pillar-text">
+            <strong>Atendimento humanizado</strong>
+            <span>Acolhimento, empatia e escuta ativa.</span>
+          </div>
+        </div>
+        <div class="atend-pillar-item">
+          <div class="atend-pillar-icon"><i class="fas fa-award"></i></div>
+          <div class="atend-pillar-text">
+            <strong>Experiência comprovada</strong>
+            <span>Mais de 5.000 atendimentos com resultados reais.</span>
+          </div>
+        </div>
+        <div class="atend-pillar-item">
+          <div class="atend-pillar-icon"><i class="fas fa-seedling"></i></div>
+          <div class="atend-pillar-text">
+            <strong>Transformação real</strong>
+            <span>Processos profundos que geram mudanças duradouras.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- About Section -->
+  <!-- About Section (Redesigned) -->
   <section class="about" id="sobre">
+    <!-- Botanical Leaf Watermark Right -->
+    <div class="section-leaf-watermark leaf-wm-right">
+      <svg width="180" height="260" viewBox="0 0 200 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M140 260C140 260 120 170 50 130C-10 100 10 20 10 20C10 20 70 50 90 130C110 210 140 260 140 260Z" stroke="#d5c4b1" stroke-width="2" stroke-linecap="round" opacity="0.25"/>
+        <path d="M110 210C110 210 90 150 30 125C0 110 5 50 5 50" stroke="#d5c4b1" stroke-width="1.5" stroke-linecap="round" opacity="0.18"/>
+      </svg>
+    </div>
+
     <div class="container about-grid">
-      <div class="about-img-box">
-        <img src="imagens/raquel-sobre.jpg" alt="Raquel Vieira - Especialista em Dependência Emocional">
-        <div class="about-experience-badge">
-          <span class="exp-number">+5.000</span>
-          <span class="exp-text">Histórias e atendimentos acompanhados</span>
+      <div class="about-img-col">
+        <div class="about-img-box">
+          <!-- Rotating Circular Seal -->
+          <div class="about-rotating-seal">
+            <svg viewBox="0 0 200 200" class="seal-svg">
+              <defs>
+                <path id="sealTextPath" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/>
+              </defs>
+              <circle cx="100" cy="100" r="82" fill="rgba(245,237,227,0.92)" stroke="#c4a882" stroke-width="1.5"/>
+              <text class="seal-text">
+                <textPath href="#sealTextPath" startOffset="0%">ESCUTA QUE ACOLHE • TRANSFORMA QUE LIBERTA •</textPath>
+              </text>
+              <foreignObject x="60" y="60" width="80" height="80">
+                <div class="seal-heart-icon">
+                  <i class="fas fa-heart"></i>
+                </div>
+              </foreignObject>
+            </svg>
+          </div>
+
+          <img src="imagens/raquel-sobre.jpg" alt="Raquel Vieira - Especialista em Dependência Emocional">
+
+          <!-- Experience Badge -->
+          <div class="about-experience-badge">
+            <div class="exp-icon"><i class="fas fa-user-group"></i></div>
+            <div>
+              <span class="exp-number">+5.000</span>
+              <span class="exp-text">HISTÓRIAS E ATENDIMENTOS ACOMPANHADOS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mini Value Icons Row -->
+        <div class="about-values-row">
+          <div class="about-value-item">
+            <div class="about-value-icon"><i class="fas fa-headset"></i></div>
+            <span>ESCUTA<br>ACOLHEDORA</span>
+          </div>
+          <div class="about-value-item">
+            <div class="about-value-icon"><i class="fas fa-lock"></i></div>
+            <span>SIGILO<br>ABSOLUTO</span>
+          </div>
+          <div class="about-value-item">
+            <div class="about-value-icon"><i class="fas fa-hand-holding-heart"></i></div>
+            <span>ATENDIMENTO<br>HUMANIZADO</span>
+          </div>
+          <div class="about-value-item">
+            <div class="about-value-icon"><i class="fas fa-seedling"></i></div>
+            <span>TRANSFORMAÇÃO<br>REAL</span>
+          </div>
         </div>
       </div>
 
       <div class="about-content">
-        <span class="section-tag">QUEM É RAQUEL VIEIRA</span>
-        <h2 class="section-title">Especialista no tratamento da dependência emocional e relações abusivas</h2>
+        <span class="section-tag"><i class="fas fa-leaf"></i> QUEM É RAQUEL VIEIRA</span>
+        <h2 class="section-title">Especialista no tratamento da <span class="highlight-gold">dependência emocional</span> e <span class="highlight-gold">relações abusivas</span></h2>
 
         <p class="about-text Highlight-lead">
           <strong>Raquel é muito mais que uma terapeuta:</strong> é uma das mais respeitadas especialistas no tratamento
@@ -219,16 +418,22 @@
           emocional, compreenderem suas histórias e pararem de repetir padrões que causam sofrimento.
         </p>
 
-        <p class="about-text">
-          Sua experiência clínica reúne <strong>mais de 5.000 atendimentos</strong>, acompanhando pessoas em processos
-          de compreensão de suas dores, elaboração de traumas e construção de relações saudáveis consigo mesmas e com os
-          outros.
-        </p>
+        <div class="about-icon-paragraph">
+          <div class="about-para-icon"><i class="fas fa-user-group"></i></div>
+          <p class="about-text">
+            Sua experiência clínica reúne <strong>mais de 5.000 atendimentos</strong>, acompanhando pessoas em processos
+            de compreensão de suas dores, elaboração de traumas e construção de relações saudáveis consigo mesmas e com os
+            outros.
+          </p>
+        </div>
 
-        <p class="about-text">
-          Seu propósito é oferecer uma <strong>escuta acolhedora e transformadora</strong>, ajudando seus pacientes no
-          desenvolvimento de sua autonomia emocional.
-        </p>
+        <div class="about-icon-paragraph">
+          <div class="about-para-icon"><i class="fas fa-heart"></i></div>
+          <p class="about-text">
+            Seu propósito é oferecer uma <strong>escuta acolhedora e transformadora</strong>, ajudando seus pacientes no
+            desenvolvimento de sua autonomia emocional.
+          </p>
+        </div>
 
         <div class="formacao-box">
           <h3 class="formacao-title"><i class="fas fa-graduation-cap"></i> Formação & Especializações</h3>
@@ -248,13 +453,14 @@
     </div>
   </section>
 
+
   <!-- Course / Therapeutic Program Section -->
   <section class="course-section" id="curso">
     <div class="container">
       <!-- Header -->
       <div class="section-header-center">
         <span class="section-tag"><i class="fas fa-heart-circle-check"></i> PROGRAMA TERAPÊUTICO</span>
-        <h2 class="section-title">Jornada de Libertação Emocional</h2>
+        <h2 class="section-title">Jornada de <em class="title-italic-gold">Libertação</em> Emocional</h2>
         <p class="section-subtitle">Rompa os padrões de dor e recupere o controle da sua história</p>
       </div>
 
@@ -456,8 +662,8 @@
   <section class="reflections">
     <div class="container">
       <div class="section-header-center">
-        <span class="section-tag">CONTEÚDOS E REFLEXÕES</span>
-        <h2 class="section-title">Vídeos e reflexões sobre autonomia e relações</h2>
+        <span class="section-tag"><i class="fas fa-video"></i> CONTEÚDOS E REFLEXÕES</span>
+        <h2 class="section-title">Vídeos e reflexões sobre <em class="title-italic-gold">autonomia</em> e relações</h2>
       </div>
 
       <div class="video-grid">
@@ -510,8 +716,8 @@
   <section class="stats">
     <div class="container stats-grid">
       <div class="stats-info">
-        <span class="section-tag">EXPERIÊNCIA CLÍNICA</span>
-        <h2 class="section-title">Resultados pautados na ética e na autonomia</h2>
+        <span class="section-tag"><i class="fas fa-award"></i> EXPERIÊNCIA CLÍNICA</span>
+        <h2 class="section-title">Resultados pautados na <em class="title-italic-gold">ética</em> e na autonomia</h2>
         <p>Acompanhando pessoas na compreensão de suas dores, elaboração de traumas e construção de relações
           verdadeiramente saudáveis.</p>
       </div>
@@ -537,8 +743,8 @@
   <section class="testimonials" id="depoimentos">
     <div class="container">
       <div class="section-header-center">
-        <span class="section-tag">DEPOIMENTOS</span>
-        <h2 class="section-title">Palavras que acolhem</h2>
+        <span class="section-tag"><i class="fas fa-quote-left"></i> DEPOIMENTOS</span>
+        <h2 class="section-title">Palavras que <em class="title-italic-gold">acolhem</em></h2>
       </div>
 
       <div class="testimonials-grid">
@@ -594,8 +800,8 @@
   <section class="faq" id="perguntas">
     <div class="container">
       <div class="section-header-center">
-        <span class="section-tag">PERGUNTAS FREQUENTES</span>
-        <h2 class="section-title">Dúvidas comuns sobre o acompanhamento</h2>
+        <span class="section-tag"><i class="fas fa-circle-question"></i> PERGUNTAS FREQUENTES</span>
+        <h2 class="section-title">Dúvidas comuns sobre o <em class="title-italic-gold">acompanhamento</em></h2>
       </div>
 
       <div class="faq-wrapper">
