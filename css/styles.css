@@ -169,9 +169,15 @@ button {
 }
 
 .logo-img {
-  height: 85px;
+  height: 50px;
+  max-height: 52px;
   width: auto;
   object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo-wrapper:hover .logo-img {
+  transform: scale(1.02);
 }
 
 .nav-center {
@@ -1314,9 +1320,12 @@ button {
 }
 
 .footer-brand .logo-img {
-  filter: brightness(0) invert(1) opacity(0.9);
-  height: 52px;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.25));
+  height: 60px;
+  max-height: 65px;
+  width: auto;
   margin-bottom: 1.2rem;
+  display: block;
 }
 
 .footer-brand p {
