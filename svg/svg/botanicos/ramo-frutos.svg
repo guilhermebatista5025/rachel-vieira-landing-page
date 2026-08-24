@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="146" height="444" viewBox="139.0 33.0 146.0 444.0" fill="none">
+<defs><radialGradient id="gB" cx="35%" cy="30%" r="70%"><stop offset="0" stop-color="#F3DCAE"/><stop offset="1" stop-color="#CE9A4C"/></radialGradient></defs>
+<path d="M200.0 470.0 C180.0 340.0 230.0 200.0 250.0 40.0" stroke="#C9A05C" stroke-width="1.9" fill="none" stroke-linecap="round"/>
+<path d="M197.1 446.5 Q178.9 440.5 156.6 429.4" stroke="#C9A05C" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+<circle cx="156.6" cy="429.4" r="8.5" fill="url(#gB)"/>
+<path d="M195.4 410.8 Q211.2 404.1 230.5 391.7" stroke="#C9A05C" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+<circle cx="230.5" cy="391.7" r="8.0" fill="url(#gB)"/>
+<path d="M197.1 362.3 Q178.1 352.9 154.9 335.5" stroke="#C9A05C" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+<circle cx="154.9" cy="335.5" r="9.0" fill="url(#gB)"/>
+<path d="M201.5 321.1 Q220.9 315.4 244.6 304.9" stroke="#C9A05C" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+<circle cx="244.6" cy="304.9" r="8.5" fill="url(#gB)"/>
+<path d="M210.0 266.2 Q193.0 255.9 172.2 236.7" stroke="#C9A05C" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+<circle cx="172.2" cy="236.7" r="8.6" fill="url(#gB)"/>
+<path d="M218.0 223.0 Q236.9 218.5 260.1 210.1" stroke="#C9A05C" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+<circle cx="260.1" cy="210.1" r="8.0" fill="url(#gB)"/>
+<path d="M228.3 169.9 Q214.3 161.1 197.2 144.8" stroke="#C9A05C" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+<circle cx="197.2" cy="144.8" r="7.6" fill="url(#gB)"/>
+<path d="M236.0 129.1 Q251.5 125.3 270.3 118.2" stroke="#C9A05C" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+<circle cx="270.3" cy="118.2" r="7.0" fill="url(#gB)"/>
+<path d="M243.2 87.4 Q232.4 81.1 219.3 69.3" stroke="#C9A05C" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+<circle cx="219.3" cy="69.3" r="6.4" fill="url(#gB)"/>
+<path d="M248.1 54.3 Q259.1 51.2 272.5 45.4" stroke="#C9A05C" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+<circle cx="272.5" cy="45.4" r="6.0" fill="url(#gB)"/>
+</svg>
