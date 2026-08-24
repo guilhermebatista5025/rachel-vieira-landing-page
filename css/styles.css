@@ -3790,9 +3790,21 @@ textarea.form-input {
 }
 
 .about .about-foliage-right {
-  top: -3rem;
-  right: -1.5rem;
-  width: clamp(190px, 22vw, 330px);
+  top: -9rem;
+  right: -6.5rem;
+  width: clamp(150px, 17vw, 250px);
+  opacity: 0.46;
+  transform: rotate(4deg);
+  transform-origin: top right;
+}
+
+.about .about-foliage-right-fill {
+  top: 1rem;
+  right: -5rem;
+  width: clamp(165px, 15vw, 220px);
+  opacity: 0.34;
+  transform: rotate(-7deg) scale(0.88);
+  transform-origin: top right;
 }
 
 .about .about-foliage-left {
@@ -3807,6 +3819,16 @@ textarea.form-input {
   left: -4rem;
   width: clamp(210px, 24vw, 340px);
   opacity: 0.58;
+}
+
+.about .about-end-palm-shadow {
+  right: -1rem;
+  bottom: -0.5rem;
+  width: clamp(250px, 26vw, 380px);
+  opacity: 0.42;
+  transform: rotate(-3deg);
+  transform-origin: bottom center;
+  filter: blur(0.2px);
 }
 
 .about .about-grid {
