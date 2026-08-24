@@ -36,7 +36,6 @@
           <li><a href="#atendimentos" class="nav-link">Atendimentos</a></li>
           <li><a href="#sobre" class="nav-link">Sobre</a></li>
           <li><a href="#curso" class="nav-link">Curso</a></li>
-          <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
           <li><a href="#perguntas" class="nav-link">Perguntas</a></li>
           <li><a href="#contato" class="nav-link">Contato</a></li>
           <li class="mobile-cta-only"><a href="#" class="btn btn-primary js-open-appointment">Agendar conversa</a></li>
@@ -190,111 +189,127 @@
     </div>
   </section>
 
-  <!-- Clinic Treatments Carousel Section (Redesigned) -->
+  <!-- Clinic Treatments Carousel Section (Redesigned from reference) -->
   <section class="clinic-carousel-section" id="atendimentos">
-    <!-- Botanical Leaf Watermark -->
-    <div class="section-leaf-watermark leaf-wm-left">
-      <svg width="220" height="300" viewBox="0 0 220 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M60 280C60 280 80 180 160 140C220 110 200 30 200 30C200 30 140 60 120 140C100 220 60 280 60 280Z" stroke="#d5c4b1" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
-        <path d="M90 230C90 230 110 170 170 145C200 130 195 70 195 70" stroke="#d5c4b1" stroke-width="1.5" stroke-linecap="round" opacity="0.2"/>
-        <path d="M50 240C50 240 90 210 130 130" stroke="#d5c4b1" stroke-width="1.5" stroke-linecap="round" opacity="0.2"/>
-      </svg>
-    </div>
+    <!-- Botanical Leaf Watermarks -->
+    <img src="imagens/svg/botanicos/ramo-contorno.svg" alt="" class="section-leaf-watermark leaf-wm-left">
+    <img src="imagens/svg/botanicos/sombra-palmeira.svg" alt="" class="section-leaf-watermark leaf-wm-right">
 
     <div class="container">
       <div class="section-header-center">
-        <span class="section-tag"><i class="fas fa-stethoscope"></i> ATENDIMENTOS CLÍNICOS</span>
-        <h2 class="section-title">O que é <em class="title-italic-gold">tratado</em> na clínica</h2>
+        <span class="section-tag">
+          <img src="imagens/svg/icones/icone-folha.svg" alt="" class="tag-svg-icon">
+          ATENDIMENTOS CLÍNICOS
+        </span>
+        <h2 class="section-title">O que é <span class="highlight-gold">tratado</span> na clínica</h2>
         <p class="section-subtitle-center">Deslize para conhecer as <strong>principais áreas</strong> de acompanhamento terapêutico.</p>
       </div>
 
       <div class="carousel-wrapper">
         <button class="carousel-control prev-btn" id="carouselPrev" aria-label="Anterior">
-          <i class="fas fa-chevron-left"></i>
+          <img src="imagens/svg/botoes/botao-anterior.svg" alt="">
         </button>
 
         <div class="carousel-track-container" id="carouselTrackContainer">
           <div class="carousel-track" id="carouselTrack">
-            <!-- Slide 1 -->
-            <div class="carousel-slide">
-              <div class="treatment-card js-open-detail-modal" data-detail-id="dependencia">
-                <div class="treatment-icon"><i class="fas fa-link-slash"></i></div>
-                <h3 class="treatment-title">Dependência Emocional</h3>
-                <p class="treatment-desc">Libertação de apegos dolorosos, resgate da autonomia e superação do medo de
-                  ficar sós.</p>
-                <div class="treatment-card-footer">
-                  <span>Ver detalhes</span>
-                  <i class="fas fa-arrow-right"></i>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 2 -->
-            <div class="carousel-slide">
-              <div class="treatment-card js-open-detail-modal" data-detail-id="abusivas">
-                <div class="treatment-icon"><i class="fas fa-shield-heart"></i></div>
-                <h3 class="treatment-title">Relações Abusivas</h3>
-                <p class="treatment-desc">Identificação de manipulações (gaslighting), quebra de ciclos nocivos e
-                  reconstrução da identidade.</p>
-                <div class="treatment-card-footer">
-                  <span>Ver detalhes</span>
-                  <i class="fas fa-arrow-right"></i>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="carousel-slide">
-              <div class="treatment-card js-open-detail-modal" data-detail-id="psicanalise">
-                <div class="treatment-icon"><i class="fas fa-brain"></i></div>
-                <h3 class="treatment-title">Psicanálise & Ansiedade</h3>
-                <p class="treatment-desc">Investigação de causas inconscientes, angústias profundas e manejo do estado
-                  de alerta constante.</p>
-                <div class="treatment-card-footer">
-                  <span>Ver detalhes</span>
-                  <i class="fas fa-arrow-right"></i>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 4 -->
+            <!-- Slide 1: Constelação Familiar -->
             <div class="carousel-slide">
               <div class="treatment-card js-open-detail-modal" data-detail-id="constelacao">
-                <div class="treatment-icon"><i class="fas fa-diagram-project"></i></div>
-                <h3 class="treatment-title">Constelação Familiar</h3>
-                <p class="treatment-desc">Cura de feridas sistêmicas, desconstrução de lealdades invisíveis e repetições
-                  transgeracionais.</p>
+                <img src="imagens/svg/cards/card-arvore.svg" alt="" class="card-bg-watermark">
+                <div class="treatment-icon">
+                  <img src="imagens/svg/botoes/botao-familia.svg" alt="Constelação Familiar" class="card-svg-icon">
+                </div>
+                <h3 class="treatment-title">Constelação<br>Familiar</h3>
+                <div class="treatment-title-line"></div>
+                <p class="treatment-desc">Cura de feridas sistêmicas, desconstrução de lealdades invisíveis e repetições transgeracionais.</p>
                 <div class="treatment-card-footer">
                   <span>Ver detalhes</span>
-                  <i class="fas fa-arrow-right"></i>
+                  <span class="treatment-arrow" aria-hidden="true">→</span>
                 </div>
               </div>
             </div>
 
-            <!-- Slide 5 -->
+            <!-- Slide 2: Renascimento & Traumas -->
             <div class="carousel-slide">
               <div class="treatment-card js-open-detail-modal" data-detail-id="traumas">
-                <div class="treatment-icon"><i class="fas fa-wind"></i></div>
-                <h3 class="treatment-title">Renascimento & Traumas</h3>
-                <p class="treatment-desc">Técnicas integrativas de respiração consciente para liberação de memórias e
-                  traumas no corpo.</p>
+                <img src="imagens/svg/cards/card-onda-dourada.svg" alt="" class="card-bg-watermark">
+                <div class="treatment-icon">
+                  <img src="imagens/svg/botoes/botao-borboleta.svg" alt="Renascimento & Traumas" class="card-svg-icon">
+                </div>
+                <h3 class="treatment-title">Renascimento &<br>Traumas</h3>
+                <div class="treatment-title-line"></div>
+                <p class="treatment-desc">Técnicas integrativas de respiração consciente para liberação de memórias e traumas no corpo.</p>
                 <div class="treatment-card-footer">
                   <span>Ver detalhes</span>
-                  <i class="fas fa-arrow-right"></i>
+                  <span class="treatment-arrow" aria-hidden="true">→</span>
                 </div>
               </div>
             </div>
 
-            <!-- Slide 6 -->
+            <!-- Slide 3: Autoestima & Limites -->
             <div class="carousel-slide">
               <div class="treatment-card js-open-detail-modal" data-detail-id="autonomia">
-                <div class="treatment-icon"><i class="fas fa-hand-holding-heart"></i></div>
-                <h3 class="treatment-title">Autoestima & Limites</h3>
-                <p class="treatment-desc">Fortalecimento do valor próprio, comunicação assertiva e imposição de limites
-                  sem culpa.</p>
+                <img src="imagens/svg/cards/card-folhagem.svg" alt="" class="card-bg-watermark">
+                <div class="treatment-icon">
+                  <img src="imagens/svg/botoes/botao-mao-coracao.svg" alt="Autoestima & Limites" class="card-svg-icon">
+                </div>
+                <h3 class="treatment-title">Autoestima &<br>Limites</h3>
+                <div class="treatment-title-line"></div>
+                <p class="treatment-desc">Fortalecimento do valor próprio, comunicação assertiva e imposição de limites sem culpa.</p>
                 <div class="treatment-card-footer">
                   <span>Ver detalhes</span>
-                  <i class="fas fa-arrow-right"></i>
+                  <span class="treatment-arrow" aria-hidden="true">→</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4: Dependência Emocional -->
+            <div class="carousel-slide">
+              <div class="treatment-card js-open-detail-modal" data-detail-id="dependencia">
+                <img src="imagens/svg/cards/card-folhagem.svg" alt="" class="card-bg-watermark">
+                <div class="treatment-icon">
+                  <img src="imagens/svg/botoes/botao-folha.svg" alt="Dependência Emocional" class="card-svg-icon">
+                </div>
+                <h3 class="treatment-title">Dependência<br>Emocional</h3>
+                <div class="treatment-title-line"></div>
+                <p class="treatment-desc">Libertação de apegos dolorosos, resgate da autonomia e superação do medo de ficar sós.</p>
+                <div class="treatment-card-footer">
+                  <span>Ver detalhes</span>
+                  <span class="treatment-arrow" aria-hidden="true">→</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 5: Relações Abusivas -->
+            <div class="carousel-slide">
+              <div class="treatment-card js-open-detail-modal" data-detail-id="abusivas">
+                <img src="imagens/svg/cards/card-onda-dourada.svg" alt="" class="card-bg-watermark">
+                <div class="treatment-icon">
+                  <img src="imagens/svg/botoes/botao-escudo.svg" alt="Relações Abusivas" class="card-svg-icon">
+                </div>
+                <h3 class="treatment-title">Relações<br>Abusivas</h3>
+                <div class="treatment-title-line"></div>
+                <p class="treatment-desc">Identificação de manipulações (gaslighting), quebra de ciclos nocivos e reconstrução da identidade.</p>
+                <div class="treatment-card-footer">
+                  <span>Ver detalhes</span>
+                  <span class="treatment-arrow" aria-hidden="true">→</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 6: Psicanálise & Ansiedade -->
+            <div class="carousel-slide">
+              <div class="treatment-card js-open-detail-modal" data-detail-id="psicanalise">
+                <img src="imagens/svg/cards/card-arvore.svg" alt="" class="card-bg-watermark">
+                <div class="treatment-icon">
+                  <img src="imagens/svg/botoes/botao-selo.svg" alt="Psicanálise & Ansiedade" class="card-svg-icon">
+                </div>
+                <h3 class="treatment-title">Psicanálise &<br>Ansiedade</h3>
+                <div class="treatment-title-line"></div>
+                <p class="treatment-desc">Investigação de causas inconscientes, angústias profundas e manejo do estado de alerta constante.</p>
+                <div class="treatment-card-footer">
+                  <span>Ver detalhes</span>
+                  <span class="treatment-arrow" aria-hidden="true">→</span>
                 </div>
               </div>
             </div>
@@ -302,113 +317,66 @@
         </div>
 
         <button class="carousel-control next-btn" id="carouselNext" aria-label="Próximo">
-          <i class="fas fa-chevron-right"></i>
+          <img src="imagens/svg/botoes/botao-proximo.svg" alt="">
         </button>
       </div>
 
       <!-- Pagination Dots -->
       <div class="carousel-dots" id="carouselDots"></div>
-
-      <!-- Bottom Pillars Bar -->
-      <div class="atendimentos-pillars-bar">
-        <div class="atend-pillar-item">
-          <div class="atend-pillar-icon"><i class="fas fa-spa"></i></div>
-          <div class="atend-pillar-text">
-            <strong>Abordagem integrativa</strong>
-            <span>Técnicas validadas e personalizadas.</span>
-          </div>
-        </div>
-        <div class="atend-pillar-item">
-          <div class="atend-pillar-icon"><i class="fas fa-hand-holding-heart"></i></div>
-          <div class="atend-pillar-text">
-            <strong>Atendimento humanizado</strong>
-            <span>Acolhimento, empatia e escuta ativa.</span>
-          </div>
-        </div>
-        <div class="atend-pillar-item">
-          <div class="atend-pillar-icon"><i class="fas fa-award"></i></div>
-          <div class="atend-pillar-text">
-            <strong>Experiência comprovada</strong>
-            <span>Mais de 5.000 atendimentos com resultados reais.</span>
-          </div>
-        </div>
-        <div class="atend-pillar-item">
-          <div class="atend-pillar-icon"><i class="fas fa-seedling"></i></div>
-          <div class="atend-pillar-text">
-            <strong>Transformação real</strong>
-            <span>Processos profundos que geram mudanças duradouras.</span>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
   <!-- About Section (Redesigned) -->
   <section class="about" id="sobre">
-    <!-- Botanical Leaf Watermark Right -->
-    <div class="section-leaf-watermark leaf-wm-right">
-      <svg width="180" height="260" viewBox="0 0 200 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M140 260C140 260 120 170 50 130C-10 100 10 20 10 20C10 20 70 50 90 130C110 210 140 260 140 260Z" stroke="#d5c4b1" stroke-width="2" stroke-linecap="round" opacity="0.25"/>
-        <path d="M110 210C110 210 90 150 30 125C0 110 5 50 5 50" stroke="#d5c4b1" stroke-width="1.5" stroke-linecap="round" opacity="0.18"/>
-      </svg>
-    </div>
+    <img src="svg-2/fundos/folhagem-canto-direito.svg" alt="" class="about-foliage about-foliage-right" aria-hidden="true">
+    <img src="svg-2/fundos/folhagem-canto-esquerdo.svg" alt="" class="about-foliage about-foliage-left" aria-hidden="true">
+    <img src="svg-2/fundos/folhagem-inferior.svg" alt="" class="about-foliage about-foliage-bottom" aria-hidden="true">
 
     <div class="container about-grid">
       <div class="about-img-col">
         <div class="about-img-box">
-          <!-- Rotating Circular Seal -->
           <div class="about-rotating-seal">
-            <svg viewBox="0 0 200 200" class="seal-svg">
-              <defs>
-                <path id="sealTextPath" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/>
-              </defs>
-              <circle cx="100" cy="100" r="82" fill="rgba(245,237,227,0.92)" stroke="#c4a882" stroke-width="1.5"/>
-              <text class="seal-text">
-                <textPath href="#sealTextPath" startOffset="0%">ESCUTA QUE ACOLHE • TRANSFORMA QUE LIBERTA •</textPath>
-              </text>
-              <foreignObject x="60" y="60" width="80" height="80">
-                <div class="seal-heart-icon">
-                  <i class="fas fa-heart"></i>
-                </div>
-              </foreignObject>
-            </svg>
+            <img src="svg-2/assinatura/selo-circular.svg" alt="Escuta que acolhe, transforma que liberta" class="seal-svg">
           </div>
 
-          <img src="imagens/raquel-sobre.jpg" alt="Raquel Vieira - Especialista em Dependência Emocional">
+          <img src="imagens/raquel-sobre.jpg" alt="Raquel Vieira - Especialista em Dependência Emocional" class="about-photo">
+          <img src="svg-2/ui/moldura-foto.svg" alt="" class="about-photo-frame" aria-hidden="true">
+          <img src="svg-2/ui/sparkle.svg" alt="" class="about-sparkle about-sparkle-top" aria-hidden="true">
+          <img src="svg-2/ui/sparkle.svg" alt="" class="about-sparkle about-sparkle-bottom" aria-hidden="true">
 
-          <!-- Experience Badge -->
-          <div class="about-experience-badge">
-            <div class="exp-icon"><i class="fas fa-user-group"></i></div>
-            <div>
-              <span class="exp-number">+5.000</span>
-              <span class="exp-text">HISTÓRIAS E ATENDIMENTOS ACOMPANHADOS</span>
+          <div class="about-profile-panel">
+            <div class="about-experience-badge">
+              <div class="exp-icon"><img src="svg-2/icones/icone-grupo.svg" alt="" aria-hidden="true"></div>
+              <div>
+                <span class="exp-number">+5.000</span>
+                <span class="exp-text">HISTÓRIAS E ATENDIMENTOS ACOMPANHADOS</span>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <!-- Mini Value Icons Row -->
-        <div class="about-values-row">
-          <div class="about-value-item">
-            <div class="about-value-icon"><i class="fas fa-headset"></i></div>
-            <span>ESCUTA<br>ACOLHEDORA</span>
-          </div>
-          <div class="about-value-item">
-            <div class="about-value-icon"><i class="fas fa-lock"></i></div>
-            <span>SIGILO<br>ABSOLUTO</span>
-          </div>
-          <div class="about-value-item">
-            <div class="about-value-icon"><i class="fas fa-hand-holding-heart"></i></div>
-            <span>ATENDIMENTO<br>HUMANIZADO</span>
-          </div>
-          <div class="about-value-item">
-            <div class="about-value-icon"><i class="fas fa-seedling"></i></div>
-            <span>TRANSFORMAÇÃO<br>REAL</span>
+            <div class="about-values-row">
+              <div class="about-value-item">
+                <div class="about-value-icon"><img src="svg-2/icones/icone-escuta-acolhedora.svg" alt="" aria-hidden="true"></div>
+                <span>ESCUTA<br>ACOLHEDORA</span>
+              </div>
+              <div class="about-value-item">
+                <div class="about-value-icon"><img src="svg-2/icones/icone-sigilo.svg" alt="" aria-hidden="true"></div>
+                <span>SIGILO<br>ABSOLUTO</span>
+              </div>
+              <div class="about-value-item">
+                <div class="about-value-icon"><img src="svg-2/icones/icone-usuario.svg" alt="" aria-hidden="true"></div>
+                <span>ATENDIMENTO<br>HUMANIZADO</span>
+              </div>
+              <div class="about-value-item">
+                <div class="about-value-icon"><img src="svg-2/icones/icone-folha.svg" alt="" aria-hidden="true"></div>
+                <span>TRANSFORMAÇÃO<br>REAL</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="about-content">
-        <span class="section-tag"><i class="fas fa-leaf"></i> QUEM É RAQUEL VIEIRA</span>
+        <span class="section-tag"><img src="svg-2/icones/icone-ramo-eyebrow.svg" alt="" aria-hidden="true"> QUEM É RAQUEL VIEIRA</span>
         <h2 class="section-title">Especialista no tratamento da <span class="highlight-gold">dependência emocional</span> e <span class="highlight-gold">relações abusivas</span></h2>
 
         <p class="about-text Highlight-lead">
@@ -418,241 +386,19 @@
           emocional, compreenderem suas histórias e pararem de repetir padrões que causam sofrimento.
         </p>
 
-        <div class="about-icon-paragraph">
-          <div class="about-para-icon"><i class="fas fa-user-group"></i></div>
-          <p class="about-text">
-            Sua experiência clínica reúne <strong>mais de 5.000 atendimentos</strong>, acompanhando pessoas em processos
-            de compreensão de suas dores, elaboração de traumas e construção de relações saudáveis consigo mesmas e com os
-            outros.
-          </p>
-        </div>
-
-        <div class="about-icon-paragraph">
-          <div class="about-para-icon"><i class="fas fa-heart"></i></div>
-          <p class="about-text">
-            Seu propósito é oferecer uma <strong>escuta acolhedora e transformadora</strong>, ajudando seus pacientes no
-            desenvolvimento de sua autonomia emocional.
-          </p>
-        </div>
-
         <div class="formacao-box">
-          <h3 class="formacao-title"><i class="fas fa-graduation-cap"></i> Formação & Especializações</h3>
+          <h3 class="formacao-title"><span class="formacao-title-icon"><img src="svg-2/icones/icone-formatura.svg" alt="" aria-hidden="true"></span> Formação & Especializações</h3>
           <p class="formacao-desc">
             Psicanalista clínica, especialista em saúde mental e dependência emocional. Constelação familiar e
             renascimento.
           </p>
           <div class="formacao-tags">
-            <span class="tag-pill"><i class="fas fa-brain"></i> Psicanalista Clínica</span>
-            <span class="tag-pill"><i class="fas fa-heartbeat"></i> Saúde Mental & Dependência Emocional</span>
-            <span class="tag-pill"><i class="fas fa-search"></i> Relações Abusivas</span>
-            <span class="tag-pill"><i class="fas fa-users-rays"></i> Constelação Familiar</span>
-            <span class="tag-pill"><i class="fas fa-wind"></i> Renascimento</span>
+            <span class="tag-pill"><img src="svg-2/icones/icone-psicanalise.svg" alt="" aria-hidden="true"> Psicanalista Clínica</span>
+            <span class="tag-pill"><img src="svg-2/icones/icone-coracao-solido.svg" alt="" aria-hidden="true"> Saúde Mental & Dependência Emocional</span>
+            <span class="tag-pill"><img src="svg-2/icones/icone-lupa.svg" alt="" aria-hidden="true"> Relações Abusivas</span>
+            <span class="tag-pill"><img src="svg-2/icones/icone-constelacao.svg" alt="" aria-hidden="true"> Constelação Familiar</span>
+            <span class="tag-pill"><img src="svg-2/icones/icone-renascimento.svg" alt="" aria-hidden="true"> Renascimento</span>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Course / Therapeutic Program Section -->
-  <section class="course-section" id="curso">
-    <div class="container">
-      <!-- Header -->
-      <div class="section-header-center">
-        <span class="section-tag"><i class="fas fa-heart-circle-check"></i> PROGRAMA TERAPÊUTICO</span>
-        <h2 class="section-title">Jornada de <em class="title-italic-gold">Libertação</em> Emocional</h2>
-        <p class="section-subtitle">Rompa os padrões de dor e recupere o controle da sua história</p>
-      </div>
-
-      <!-- Intro Reflection Card -->
-      <div class="course-intro-card">
-        <p class="course-lead-text">
-          Reconhecer a dependência emocional e a repetição de padrões dolorosos é o primeiro passo para transformar a
-          sua história.
-        </p>
-
-        <div class="course-paragraphs">
-          <p>
-            Você sabe que aceita menos do que merece e que tolera o intolerável. Você já aceitou — ou até ainda aceita
-            — abusos e desrespeitos nos relacionamentos. Sabe que já teve muitos prejuízos, que vive em estado de
-            alerta e ansiedade, mas não consegue se libertar.
-          </p>
-          <p>
-            Quantas vezes você já prometeu para você mesmo que nunca mais voltaria para pessoas e lugares que te
-            machucam, mas, quando se percebe, está lá novamente, repetindo esses padrões de dor e sofrimento?
-          </p>
-          <p>
-            Você já tentou várias fórmulas: fez cursos, leu livros e aprendeu técnicas. Por um momento até ajudou, mas
-            se viu novamente tolerando o intolerável. Isso não é fraqueza e também não é porque você "não tem vergonha
-            na cara": <strong>é dependência emocional.</strong>
-          </p>
-          <p>
-            Você sabe o que precisa fazer, mas o seu emocional não dá conta. As decisões ficam pesadas e você não
-            consegue sustentar o que quer e precisa fazer. É você repetindo padrões e fazendo o que está programado
-            para fazer: <em>sobreviver</em>. Mas o que você precisa entender é que, enquanto não romper com esses
-            padrões, seu emocional vai continuar decidindo por você. Dessa forma, você não consegue se posicionar nos
-            relacionamentos e continua tolerando o intolerável.
-          </p>
-        </div>
-
-        <div class="course-highlight-banner">
-          <i class="fas fa-heart-pulse"></i>
-          <span>Você não precisa mais continuar tolerando o que te machuca.</span>
-        </div>
-      </div>
-
-      <!-- What is the Program -->
-      <div class="course-about-box">
-        <div class="course-about-badge"><i class="fas fa-video"></i> 5 Vídeos Terapêuticos + Exercícios Práticos</div>
-        <h3 class="course-subheading">O que é o programa terapêutico?</h3>
-        <p class="course-about-desc">
-          O programa terapêutico que criei não é uma simples técnica ou mais um curso para você fazer. É um programa
-          desenvolvido para quem deseja compreender por que permanece em relações que causam sofrimento, fortalecer a
-          autoestima, reconhecer e tratar compulsões, aprender a se posicionar e romper padrões de dependência
-          emocional. São apenas <strong>cinco vídeos terapêuticos com exercícios práticos</strong> para ajudar você a
-          olhar para as suas emoções, reconhecer padrões e construir relações saudáveis.
-        </p>
-      </div>
-
-      <!-- Audience: Para quem é este programa? -->
-      <div class="course-block">
-        <h3 class="course-subheading center">Para quem é esse programa terapêutico?</h3>
-        <div class="course-audience-grid">
-          <div class="audience-card">
-            <div class="audience-icon"><i class="fas fa-dove"></i></div>
-            <h4>Libertação</h4>
-            <p>Para quem ainda sofre em relações abusivas e não consegue se libertar.</p>
-          </div>
-
-          <div class="audience-card">
-            <div class="audience-icon"><i class="fas fa-compass"></i></div>
-            <h4>Posicionamento</h4>
-            <p>Para quem já tentou várias fórmulas e ainda não consegue se posicionar nos relacionamentos.</p>
-          </div>
-
-          <div class="audience-card">
-            <div class="audience-icon"><i class="fas fa-feather"></i></div>
-            <h4>Paz Interior</h4>
-            <p>Para quem vive em ansiedade e estado de alerta constante, mesmo quando tudo parece estar bem.</p>
-          </div>
-
-          <div class="audience-card">
-            <div class="audience-icon"><i class="fas fa-house-user"></i></div>
-            <h4>Privacidade</h4>
-            <p>Para quem quer fazer terapia no conforto de casa, sem precisar se expor para outras pessoas.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Advantages: Vantagens de ter acesso ao programa -->
-      <div class="course-block">
-        <h3 class="course-subheading center">Por que é interessante e quais as vantagens de ter acesso?</h3>
-        <div class="course-advantages-grid">
-          <div class="advantage-card">
-            <div class="adv-check"><i class="fas fa-check-circle"></i></div>
-            <div>
-              <h4>Sem teoria exaustiva</h4>
-              <p>Sem técnicas cansativas e sem necessidade de estudos complexos.</p>
-            </div>
-          </div>
-
-          <div class="advantage-card">
-            <div class="adv-check"><i class="fas fa-check-circle"></i></div>
-            <div>
-              <h4>Sem cobranças</h4>
-              <p>Processo sem esforços excessivos, sem cobranças e no seu ritmo.</p>
-            </div>
-          </div>
-
-          <div class="advantage-card">
-            <div class="adv-check"><i class="fas fa-check-circle"></i></div>
-            <div>
-              <h4>Sem exposição</h4>
-              <p>Sem medo de expor seus sentimentos e livre de inseguranças.</p>
-            </div>
-          </div>
-
-          <div class="advantage-card">
-            <div class="adv-check"><i class="fas fa-check-circle"></i></div>
-            <div>
-              <h4>Acesso vitalício</h4>
-              <p>Você faz quando quiser, no seu próprio tempo e no seu ritmo.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Compare: Imagine o Futuro vs Se Não Fizer Nada -->
-      <div class="course-comparison-wrapper">
-        <h3 class="course-subheading center">Compare os caminhos</h3>
-        <div class="comparison-grid">
-          <!-- Positive / Future -->
-          <div class="comparison-card positive">
-            <div class="comparison-header">
-              <i class="fas fa-sun"></i>
-              <div>
-                <span class="comparison-tag">A SUA NOVA REALIDADE</span>
-                <h4>Imagine como vai ser futuramente</h4>
-              </div>
-            </div>
-            <ul class="comparison-list">
-              <li>
-                <i class="fas fa-circle-check"></i>
-                <span>As decisões que antes te travavam ficam mais simples e você começa a se perceber se
-                  posicionando, impondo limites às situações e às pessoas que te machucam.</span>
-              </li>
-              <li>
-                <i class="fas fa-circle-check"></i>
-                <span>Você agindo no seu ritmo, respeitando seus sentimentos, sem cobranças e sem ansiedade.</span>
-              </li>
-              <li>
-                <i class="fas fa-circle-check"></i>
-                <span>Você agindo diferente não porque é uma pessoa diferente, mas porque agora aprendeu a se cuidar e
-                  se amar como realmente merece — simplesmente porque agora seu valor é reconhecido.</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Negative / Passive -->
-          <div class="comparison-card negative">
-            <div class="comparison-header">
-              <i class="fas fa-triangle-exclamation"></i>
-              <div>
-                <span class="comparison-tag">O CUSTO DE NÃO FAZER NADA</span>
-                <h4>Como vai ser se você não fizer nada por você</h4>
-              </div>
-            </div>
-            <ul class="comparison-list">
-              <li>
-                <i class="fas fa-xmark"></i>
-                <span>Se você fechar essa página e não fizer nada, seu estado emocional continua o mesmo. O sistema
-                  nervoso continua em alerta e a ansiedade destruindo seu emocional.</span>
-              </li>
-              <li>
-                <i class="fas fa-xmark"></i>
-                <span>Você aceitando o inaceitável e tolerando o intolerável nos seus relacionamentos.</span>
-              </li>
-              <li>
-                <i class="fas fa-xmark"></i>
-                <span>Não porque você não se esforça ou não quer, mas porque o esforço sem mudança interna não vale de
-                  nada.</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Final CTA Button Box -->
-      <div class="course-cta-box">
-        <div class="cta-inner">
-          <h3>Pronta para dar o primeiro passo na sua libertação?</h3>
-          <p>Garanta seu acesso ao programa terapêutico e comece hoje mesmo a transformar sua história.</p>
-          <a href="#" class="btn btn-primary btn-cta-course">
-            <span>Quero romper os padrões e reconquistar minha liberdade</span>
-            <i class="fas fa-arrow-right"></i>
-          </a>
-          <span class="cta-micro-note"><i class="fas fa-shield-halved"></i> Acesso imediato e vitalício ao
-            programa</span>
         </div>
       </div>
     </div>
@@ -675,8 +421,7 @@
           </div>
           <div class="video-content">
             <h3 class="video-title">Como libertar-se da dependência emocional</h3>
-            <p class="video-desc">Compreendendo as razões do apego excessivo e os passos práticos para a autonomia.
-            </p>
+            <p class="video-desc">Compreendendo as razões do apego excessivo e os passos práticos para a autonomia.</p>
           </div>
         </div>
 
@@ -735,63 +480,6 @@
       <div class="stat-item">
         <div class="stat-number">100%</div>
         <div class="stat-label">compromisso com a sua autonomia emocional</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials Section -->
-  <section class="testimonials" id="depoimentos">
-    <div class="container">
-      <div class="section-header-center">
-        <span class="section-tag"><i class="fas fa-quote-left"></i> DEPOIMENTOS</span>
-        <h2 class="section-title">Palavras que <em class="title-italic-gold">acolhem</em></h2>
-      </div>
-
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="quote-mark">“</div>
-          <p class="testimonial-text">
-            "Raquel me ajudou a sair de um ciclo de dependência emocional que parecia não ter fim. Sua escuta é única,
-            acolhedora e me deu a autonomia necessária para reconstruir minha vida."
-          </p>
-          <div class="testimonial-author">
-            <div class="author-avatar">PS</div>
-            <div>
-              <div class="author-name">Patrícia S.</div>
-              <div class="author-location">São Paulo - SP</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <div class="quote-mark">“</div>
-          <p class="testimonial-text">
-            "Identificar os padrões da relação abusiva que eu vivia foi libertador. A condução da Raquel com a
-            psicanálise e o renascimento transformaram a forma como me vejo e me me relaciono."
-          </p>
-          <div class="testimonial-author">
-            <div class="author-avatar">FL</div>
-            <div>
-              <div class="author-name">Fernanda L.</div>
-              <div class="author-location">Curitiba - PR</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <div class="quote-mark">“</div>
-          <p class="testimonial-text">
-            "Profissional extremamente ética, sensível e qualificada. Mais de 5.000 atendimentos refletem na sabedoria
-            e clareza que ela transmite em cada sessão."
-          </p>
-          <div class="testimonial-author">
-            <div class="author-avatar">RM</div>
-            <div>
-              <div class="author-name">Renata M.</div>
-              <div class="author-location">Belo Horizonte - MG</div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>

@@ -316,7 +316,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const setTrackPosition = (index, animated = true) => {
       if (!allSlides[0]) return;
       const slideWidth = allSlides[0].getBoundingClientRect().width;
-      const gap = 24; // 1.5rem gap
+      const gap = parseFloat(window.getComputedStyle(carouselTrack).columnGap) || 0;
       const moveAmount = (slideWidth + gap) * index;
 
       if (animated) {
