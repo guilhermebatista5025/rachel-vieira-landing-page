@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Rachel Vieira - Psicanálise & Acolhimento
+   Raquel Vieira - Psicanálise & Acolhimento
    Main JavaScript Application Logic
    ========================================================================== */
 
@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
   openVideoBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      const videoTitle = btn.dataset.videoTitle || 'Apresentação Rachel Vieira';
+      const videoTitle = btn.dataset.videoTitle || 'Apresentação Raquel Vieira';
       const modalTitleEl = videoModal ? videoModal.querySelector('.modal-title') : null;
       if (modalTitleEl) modalTitleEl.textContent = videoTitle;
       if (videoModal) videoModal.classList.add('active');
@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const phone = document.getElementById('fieldPhone').value.trim();
       const message = document.getElementById('fieldMessage').value.trim();
 
-      const textMessage = `Olá, Dra. Rachel! Meu nome é ${name}. Gostaria de agendar uma consulta. ${message}`;
+      const textMessage = `Olá, Dra. Raquel! Meu nome é ${name}. Gostaria de agendar uma consulta. ${message}`;
       const encodedMsg = encodeURIComponent(textMessage);
 
       // WhatsApp link trigger
@@ -454,5 +454,113 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     bindModalClicks();
+  }
+
+  // 6. Demonstrative Google Reviews Carousel
+  const googleReviewsViewport = document.getElementById('googleReviewsViewport');
+  const googleReviewsTrack = document.getElementById('googleReviewsTrack');
+  const googleReviewPrev = document.getElementById('googleReviewPrev');
+  const googleReviewNext = document.getElementById('googleReviewNext');
+  const googleReviewDots = document.getElementById('googleReviewDots');
+
+  if (googleReviewsViewport && googleReviewsTrack && googleReviewPrev && googleReviewNext && googleReviewDots) {
+    const reviewCards = Array.from(googleReviewsTrack.querySelectorAll('.google-review-card'));
+    const reviewShell = googleReviewsViewport.closest('.google-reviews-glass');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let reviewIndex = 0;
+    let reviewTimer = null;
+    let reviewResizeTimer = null;
+
+    const visibleReviews = () => {
+      if (window.innerWidth <= 640) return 1;
+      if (window.innerWidth <= 900) return 2;
+      return 3;
+    };
+
+    const maxReviewIndex = () => Math.max(0, reviewCards.length - visibleReviews());
+
+    const updateReviewCards = () => {
+      const visibleCount = visibleReviews();
+      reviewCards.forEach((card, index) => {
+        const isVisible = index >= reviewIndex && index < reviewIndex + visibleCount;
+        card.setAttribute('aria-hidden', String(!isVisible));
+      });
+
+      Array.from(googleReviewDots.children).forEach((dot, index) => {
+        dot.classList.toggle('active', index === reviewIndex);
+        dot.setAttribute('aria-current', index === reviewIndex ? 'true' : 'false');
+      });
+    };
+
+    const goToReview = (index, animated = true) => {
+      const maxIndex = maxReviewIndex();
+      reviewIndex = Math.min(Math.max(index, 0), maxIndex);
+      const targetCard = reviewCards[reviewIndex];
+      if (!targetCard) return;
+
+      googleReviewsViewport.scrollTo({
+        left: targetCard.offsetLeft - googleReviewsTrack.offsetLeft,
+        behavior: animated && !reduceMotion.matches ? 'smooth' : 'auto'
+      });
+      updateReviewCards();
+    };
+
+    const createReviewDots = () => {
+      googleReviewDots.innerHTML = '';
+      for (let index = 0; index <= maxReviewIndex(); index++) {
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.setAttribute('aria-label', `Mostrar grupo de avaliações ${index + 1}`);
+        dot.addEventListener('click', () => goToReview(index));
+        googleReviewDots.appendChild(dot);
+      }
+      updateReviewCards();
+    };
+
+    const nextReview = () => {
+      goToReview(reviewIndex >= maxReviewIndex() ? 0 : reviewIndex + 1);
+    };
+
+    const previousReview = () => {
+      goToReview(reviewIndex <= 0 ? maxReviewIndex() : reviewIndex - 1);
+    };
+
+    const stopReviewTimer = () => {
+      if (reviewTimer) window.clearInterval(reviewTimer);
+      reviewTimer = null;
+    };
+
+    const startReviewTimer = () => {
+      stopReviewTimer();
+      if (maxReviewIndex() > 0) {
+        reviewTimer = window.setInterval(nextReview, 3500);
+      }
+    };
+
+    googleReviewPrev.addEventListener('click', previousReview);
+    googleReviewNext.addEventListener('click', nextReview);
+
+    if (reviewShell) {
+      reviewShell.addEventListener('mouseenter', stopReviewTimer);
+      reviewShell.addEventListener('mouseleave', startReviewTimer);
+      reviewShell.addEventListener('focusin', stopReviewTimer);
+      reviewShell.addEventListener('focusout', (event) => {
+        if (!reviewShell.contains(event.relatedTarget)) startReviewTimer();
+      });
+    }
+
+    window.addEventListener('resize', () => {
+      window.clearTimeout(reviewResizeTimer);
+      reviewResizeTimer = window.setTimeout(() => {
+        reviewIndex = Math.min(reviewIndex, maxReviewIndex());
+        createReviewDots();
+        goToReview(reviewIndex, false);
+        startReviewTimer();
+      }, 120);
+    });
+
+    createReviewDots();
+    goToReview(0, false);
+    startReviewTimer();
   }
 });
