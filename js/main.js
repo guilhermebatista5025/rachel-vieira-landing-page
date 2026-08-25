@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Raquel Vieira - Psicanálise & Acolhimento
+   Rachel Vieira - Psicanálise & Acolhimento
    Main JavaScript Application Logic
    ========================================================================== */
 
@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
   openVideoBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      const videoTitle = btn.dataset.videoTitle || 'Apresentação Raquel Vieira';
+      const videoTitle = btn.dataset.videoTitle || 'Apresentação Rachel Vieira';
       const modalTitleEl = videoModal ? videoModal.querySelector('.modal-title') : null;
       if (modalTitleEl) modalTitleEl.textContent = videoTitle;
       if (videoModal) videoModal.classList.add('active');
@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const phone = document.getElementById('fieldPhone').value.trim();
       const message = document.getElementById('fieldMessage').value.trim();
 
-      const textMessage = `Olá, Dra. Raquel! Meu nome é ${name}. Gostaria de agendar uma consulta. ${message}`;
+      const textMessage = `Olá, Dra. Rachel! Meu nome é ${name}. Gostaria de agendar uma consulta. ${message}`;
       const encodedMsg = encodeURIComponent(textMessage);
 
       // WhatsApp link trigger
@@ -388,6 +388,37 @@ document.addEventListener('DOMContentLoaded', () => {
         autoSlideTimer = setInterval(nextSlide, 4000);
       });
     }
+
+    // Touch Swipe Support for Mobile Devices
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    carouselTrack.addEventListener('touchstart', (e) => {
+      if (e.touches.length === 1) {
+        touchStartX = e.touches[0].clientX;
+        touchEndX = touchStartX;
+        clearInterval(autoSlideTimer);
+      }
+    }, { passive: true });
+
+    carouselTrack.addEventListener('touchmove', (e) => {
+      if (e.touches.length === 1) {
+        touchEndX = e.touches[0].clientX;
+      }
+    }, { passive: true });
+
+    carouselTrack.addEventListener('touchend', () => {
+      const swipeDistance = touchStartX - touchEndX;
+      if (Math.abs(swipeDistance) > 40) {
+        if (swipeDistance > 0) {
+          nextSlide();
+        } else {
+          prevSlide();
+        }
+      }
+      clearInterval(autoSlideTimer);
+      autoSlideTimer = setInterval(nextSlide, 4000);
+    });
 
     // Attach click listeners to all slides (including cloned ones) for details popup
     const bindModalClicks = () => {

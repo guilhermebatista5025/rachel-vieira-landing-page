@@ -1,12 +1,21 @@
 /* ==========================================================================
-   Raquel Vieira - Psicanálise & Acolhimento
+
+   Rachel Vieira - Psicanálise & Acolhimento
+
    Design System & Main Stylesheet
+
    Palette:
+
    - #5d4932 (Primary Dark Coffee)
+
    - #8c7a68 (Medium Warm Taupe)
+
    - #a39282 (Muted Warm Taupe)
+
    - #bcaa97 (Soft Tan)
+
    - #d4c4b3 (Light Sand / Beige)
+
    ========================================================================== */
 
 :root {
@@ -16,7 +25,6 @@
   --c-taupe: #a39282;
   --c-tan: #bcaa97;
   --c-sand: #d4c4b3;
-
   /* Derived & Functional Colors */
   --c-bg: #fdfbf7;
   --c-bg-alt: #f7f3ed;
@@ -27,23 +35,23 @@
   --c-border: rgba(188, 170, 151, 0.35);
   --c-shadow: rgba(93, 73, 50, 0.08);
   --c-gold: #c9a468;
-
   /* Typography */
   --ff-title: 'Lora', 'Libre Caslon Text', 'Cormorant Garamond', Georgia, serif;
   --ff-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-
   /* Spacing & Radii */
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 24px;
   --radius-pill: 50px;
-
   --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 /* Reset & Base Styles */
+
 *,
+
 *::before,
+
 *::after {
   box-sizing: border-box;
   margin: 0;
@@ -88,6 +96,7 @@ button {
 }
 
 /* Container */
+
 .container {
   width: 90%;
   max-width: 1200px;
@@ -96,6 +105,7 @@ button {
 }
 
 /* Buttons */
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -135,6 +145,7 @@ button {
 }
 
 /* Header & Navigation */
+
 .header {
   position: fixed;
   top: 0;
@@ -192,6 +203,7 @@ button {
     left: 50%;
     transform: translateX(-50%);
   }
+
 }
 
 .nav-menu {
@@ -232,6 +244,7 @@ button {
 }
 
 .nav-link:hover::after,
+
 .nav-link.active::after {
   width: 100%;
 }
@@ -247,8 +260,11 @@ button {
 }
 
 /* ==========================================================================
+
    Remodeled Full-Width Hero Section (Serene Wisdom Boutique - 100vh Fit)
+
    ========================================================================== */
+
 .hero-full {
   position: relative;
   width: 100%;
@@ -266,6 +282,7 @@ button {
 }
 
 /* Botanical Watermark Backgrounds */
+
 .hero-leaf-bg {
   position: absolute;
   pointer-events: none;
@@ -283,6 +300,7 @@ button {
 }
 
 /* Main Grid Layout (Full Edge-to-Edge 2-Column Layout) */
+
 .hero-main-wrapper {
   position: relative;
   width: 100%;
@@ -295,6 +313,7 @@ button {
 }
 
 /* Left Content Column */
+
 .hero-left-col {
   position: relative;
   background: #faf6f0;
@@ -326,6 +345,7 @@ button {
 }
 
 /* Tag Pill */
+
 .hero-tag-pill {
   display: inline-flex;
   align-items: center;
@@ -351,6 +371,7 @@ button {
 }
 
 /* Main Title (Lighter Weight & Refined Scale - Lora Font) */
+
 .hero-title-main {
   font-family: var(--ff-title);
   font-size: clamp(2rem, 2.7vw + 0.6rem, 3.2rem);
@@ -379,6 +400,7 @@ button {
 }
 
 /* Subtitle Paragraph */
+
 .hero-subtitle-text {
   font-size: clamp(0.95rem, 0.8vw + 0.45rem, 1.12rem);
   color: var(--c-text-secondary);
@@ -393,6 +415,7 @@ button {
 }
 
 /* CTA Group */
+
 .hero-cta-group {
   display: flex;
   flex-wrap: wrap;
@@ -458,6 +481,7 @@ button {
 }
 
 /* Trust Indicator */
+
 .hero-trust-indicator {
   display: flex;
   align-items: center;
@@ -473,6 +497,7 @@ button {
 }
 
 /* Right Photo Column (Absolute - Full Height Behind Stats Card) */
+
 .hero-right-col {
   position: absolute;
   top: 0;
@@ -490,6 +515,7 @@ button {
 }
 
 /* Photo Fills Entire Right Side Top-to-Bottom */
+
 .hero-photo-img.bg-photo {
   position: absolute;
   top: 0;
@@ -503,6 +529,7 @@ button {
 }
 
 /* Organic Curved Partition Overlay (Positioned right over photo edge) */
+
 .hero-curve-separator {
   position: absolute;
   top: 0;
@@ -521,6 +548,7 @@ button {
 }
 
 /* Golden Swoosh Wave Accent from SVG Assets */
+
 .hero-swoosh-accent {
   position: absolute;
   top: -10px;
@@ -539,6 +567,7 @@ button {
 }
 
 /* Golden Botanical Branch Overlay along the Curve */
+
 .hero-botanical-branch-accent {
   position: absolute;
   bottom: 5%;
@@ -558,6 +587,7 @@ button {
 }
 
 /* Floating Glass Badge attached to the Curvature */
+
 .curve-floating-badge {
   position: absolute;
   top: 24%;
@@ -616,12 +646,15 @@ button {
   0% {
     transform: translateY(0);
   }
+
   100% {
     transform: translateY(-8px);
   }
+
 }
 
 /* Floating Top Glass Badge */
+
 .floating-badge-top {
   position: absolute;
   top: 25px;
@@ -677,6 +710,7 @@ button {
 }
 
 /* Floating Bottom Video Badge Button */
+
 .floating-video-btn {
   position: absolute;
   bottom: 25px;
@@ -738,6 +772,7 @@ button {
 }
 
 /* Integrated Bottom Statistics Floating Bar (Overlaying Image at Bottom) */
+
 .hero-stats-container {
   position: absolute;
   bottom: 1.2rem;
@@ -813,6 +848,7 @@ button {
 }
 
 /* Responsive Media Queries */
+
 @media (max-width: 1100px) {
   .hero-full {
     height: auto;
@@ -841,6 +877,7 @@ button {
   .hero-stat-card:nth-child(2)::after {
     display: none;
   }
+
 }
 
 @media (max-width: 850px) {
@@ -861,6 +898,7 @@ button {
   }
 
   .hero-photo-container,
+
   .hero-photo-img {
     min-height: 380px;
   }
@@ -875,12 +913,15 @@ button {
   }
 
   .floating-badge-top,
+
   .floating-video-btn {
     right: 4%;
   }
+
 }
 
 /* Pillars Section */
+
 .pillars {
   padding: 60px 0;
   margin-top: -30px;
@@ -943,6 +984,7 @@ button {
 }
 
 /* About Section */
+
 .about {
   padding: 90px 0;
   background-color: var(--c-bg);
@@ -996,6 +1038,7 @@ button {
 }
 
 /* Services / Offerings Section */
+
 .services {
   padding: 90px 0;
 }
@@ -1052,6 +1095,7 @@ button {
 }
 
 /* Reflections / Videos Section */
+
 .reflections {
   padding: 90px 0;
   background-color: var(--c-bg-alt);
@@ -1150,6 +1194,7 @@ button {
 }
 
 /* Stats / Impact Section */
+
 .stats {
   padding: 80px 0;
   background: linear-gradient(135deg, var(--c-dark) 0%, #463725 100%);
@@ -1199,6 +1244,7 @@ button {
 }
 
 /* Testimonials Section */
+
 .testimonials {
   padding: 90px 0;
 }
@@ -1270,6 +1316,7 @@ button {
 }
 
 /* FAQ Accordion Section */
+
 .faq {
   padding: 90px 0;
   background-color: var(--c-bg-alt);
@@ -1329,6 +1376,7 @@ button {
 }
 
 /* Footer Section */
+
 .footer {
   background-color: #3b2e20;
   color: #dfd7cc;
@@ -1363,8 +1411,14 @@ button {
 .footer-column-title {
   font-family: var(--ff-title);
   font-size: 1.25rem;
-  color: #ffffff;
+  color: #CD9C50;
   margin-bottom: 1.2rem;
+}
+
+.btn-footer {
+  background-color: var(--c-dark);
+  color: #CD9C50;
+  box-shadow: 0 4px 14px rgba(93, 73, 50, 0.25);
 }
 
 .footer-links {
@@ -1432,6 +1486,7 @@ button {
 }
 
 /* Modals */
+
 .modal-backdrop {
   position: fixed;
   top: 0;
@@ -1531,6 +1586,7 @@ textarea.form-input {
 }
 
 /* Video Modal */
+
 .video-modal-card {
   max-width: 800px;
   padding: 1.5rem;
@@ -1551,6 +1607,7 @@ textarea.form-input {
 }
 
 /* Responsive Styles */
+
 @media (max-width: 1199px) {
   .container {
     width: 92%;
@@ -1566,9 +1623,11 @@ textarea.form-input {
   }
 
   .pillars-grid,
+
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
 }
 
 @media (max-width: 992px) {
@@ -1619,6 +1678,7 @@ textarea.form-input {
   }
 
   .video-grid,
+
   .testimonials-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1627,6 +1687,7 @@ textarea.form-input {
     grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
   }
+
 }
 
 @media (max-width: 768px) {
@@ -1699,8 +1760,11 @@ textarea.form-input {
   }
 
   .pillars-grid,
+
   .services-grid,
+
   .video-grid,
+
   .testimonials-grid {
     grid-template-columns: 1fr;
   }
@@ -1735,6 +1799,7 @@ textarea.form-input {
     gap: 1rem;
     text-align: center;
   }
+
 }
 
 @media (max-width: 480px) {
@@ -1764,10 +1829,13 @@ textarea.form-input {
   .modal-card {
     padding: 1.8rem 1.2rem;
   }
+
 }
 
 /* ==========================================================================
+
    Formação & Specialization Enhancements
+
    ========================================================================== */
 
 .Highlight-lead {
@@ -1801,7 +1869,6 @@ textarea.form-input {
 }
 
 @keyframes floatAnim {
-
   0%,
   100% {
     transform: translateY(0);
@@ -1810,6 +1877,7 @@ textarea.form-input {
   50% {
     transform: translateY(-8px);
   }
+
 }
 
 .about-experience-badge {
@@ -1916,7 +1984,9 @@ textarea.form-input {
 }
 
 /* ==========================================================================
+
    Course / Therapeutic Program Section Styles
+
    ========================================================================== */
 
 .course-section {
@@ -1935,6 +2005,7 @@ textarea.form-input {
 }
 
 /* Intro Reflection Card */
+
 .course-intro-card {
   background: var(--c-card);
   border-radius: var(--radius-lg);
@@ -1991,6 +2062,7 @@ textarea.form-input {
 }
 
 /* Course About Box */
+
 .course-about-box {
   background: var(--c-card);
   border-radius: var(--radius-lg);
@@ -2036,11 +2108,13 @@ textarea.form-input {
 }
 
 /* Blocks */
+
 .course-block {
   margin-bottom: 3.5rem;
 }
 
 /* Audience Grid */
+
 .course-audience-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -2096,6 +2170,7 @@ textarea.form-input {
 }
 
 /* Advantages Grid */
+
 .course-advantages-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -2140,6 +2215,7 @@ textarea.form-input {
 }
 
 /* Comparison Section */
+
 .course-comparison-wrapper {
   margin-bottom: 4rem;
 }
@@ -2242,6 +2318,7 @@ textarea.form-input {
 }
 
 /* CTA Box */
+
 .course-cta-box {
   background: linear-gradient(135deg, #5d4932 0%, #423527 100%);
   border-radius: var(--radius-lg);
@@ -2299,12 +2376,14 @@ textarea.form-input {
 }
 
 /* Responsive adjustments */
+
 @media (max-width: 768px) {
   .course-section {
     padding: 3.5rem 0;
   }
 
   .course-intro-card,
+
   .course-about-box {
     padding: 1.75rem 1.25rem;
   }
@@ -2328,10 +2407,13 @@ textarea.form-input {
   .btn-cta-course {
     width: 100%;
   }
+
 }
 
 /* ==========================================================================
+
    Clinic Treatments Dynamic Carousel Styles
+
    ========================================================================== */
 
 .clinic-carousel-section {
@@ -2501,6 +2583,7 @@ textarea.form-input {
 }
 
 /* Carousel Controls */
+
 .carousel-control {
   position: absolute;
   top: 50%;
@@ -2560,10 +2643,13 @@ textarea.form-input {
 }
 
 /* ==========================================================================
+
    Section Rhythm & Color Hierarchy
+
    ========================================================================== */
 
 /* Stats Section (Dark Accent Section) */
+
 .stats {
   padding: 5.5rem 0;
   background-color: var(--c-dark);
@@ -2625,6 +2711,7 @@ textarea.form-input {
 }
 
 /* Reflections Section */
+
 .reflections {
   padding: 5.5rem 0;
   background-color: var(--c-bg);
@@ -2727,6 +2814,7 @@ textarea.form-input {
 }
 
 /* Testimonials Section */
+
 .testimonials {
   padding: 5.5rem 0;
   background-color: var(--c-bg-alt);
@@ -2801,6 +2889,7 @@ textarea.form-input {
 }
 
 /* FAQ Section */
+
 .faq {
   padding: 5.5rem 0;
   background-color: var(--c-bg);
@@ -2866,6 +2955,7 @@ textarea.form-input {
 }
 
 /* Responsive adjustments */
+
 @media (max-width: 992px) {
   .carousel-slide {
     flex: 0 0 calc(50% - 0.75rem);
@@ -2874,6 +2964,7 @@ textarea.form-input {
   .stats-grid {
     grid-template-columns: 1fr 1fr;
   }
+
 }
 
 @media (max-width: 768px) {
@@ -2882,6 +2973,7 @@ textarea.form-input {
   }
 
   .course-intro-card,
+
   .course-about-box {
     padding: 1.75rem 1.25rem;
   }
@@ -2905,6 +2997,7 @@ textarea.form-input {
   .btn-cta-course {
     width: 100%;
   }
+
 }
 
 @media (max-width: 600px) {
@@ -2923,13 +3016,17 @@ textarea.form-input {
   .stats-grid {
     grid-template-columns: 1fr;
   }
+
 }
 
 /* ==========================================================================
+
    REDESIGNED SECTIONS — Premium Boutique Aesthetic
+
    ========================================================================== */
 
 /* Botanical Leaf Watermark (Shared) */
+
 .section-leaf-watermark {
   position: absolute;
   pointer-events: none;
@@ -2948,6 +3045,7 @@ textarea.form-input {
 }
 
 /* Title Italic Gold Highlight */
+
 .title-italic-gold {
   font-style: italic;
   color: #a8793b;
@@ -2965,12 +3063,14 @@ textarea.form-input {
 }
 
 /* Section Tag with Icon */
+
 .section-tag i {
   margin-right: 0.4rem;
   font-size: 0.85rem;
 }
 
 /* ---- Atendimentos Pillars Bar ---- */
+
 .atendimentos-pillars-bar {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -3034,6 +3134,7 @@ textarea.form-input {
 }
 
 /* ---- About Section Redesign ---- */
+
 .about {
   position: relative;
   overflow: hidden;
@@ -3051,6 +3152,7 @@ textarea.form-input {
 }
 
 /* Rotating Seal */
+
 .about-rotating-seal {
   position: absolute;
   top: -30px;
@@ -3069,6 +3171,7 @@ textarea.form-input {
   to {
     transform: rotate(360deg);
   }
+
 }
 
 .seal-svg {
@@ -3095,6 +3198,7 @@ textarea.form-input {
 }
 
 /* Experience Badge Redesign */
+
 .about-experience-badge {
   position: absolute;
   bottom: -15px;
@@ -3142,6 +3246,7 @@ textarea.form-input {
 }
 
 /* Values Row Below Photo */
+
 .about-values-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -3177,6 +3282,7 @@ textarea.form-input {
 }
 
 /* Icon Paragraph Bullets */
+
 .about-icon-paragraph {
   display: flex;
   align-items: flex-start;
@@ -3203,12 +3309,14 @@ textarea.form-input {
 }
 
 /* highlight-gold in about section title */
+
 .about .highlight-gold {
   font-style: normal;
   font-weight: 600;
 }
 
 /* ---- Treatment Cards Refinement ---- */
+
 .treatment-card {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(8px);
@@ -3216,6 +3324,7 @@ textarea.form-input {
 }
 
 /* ---- Testimonials Premium ---- */
+
 .testimonial-card {
   border-top: 3px solid transparent;
   transition: var(--transition);
@@ -3236,6 +3345,7 @@ textarea.form-input {
 }
 
 /* ---- FAQ Refinement ---- */
+
 .faq-item:hover {
   border-color: rgba(196, 168, 130, 0.5);
 }
@@ -3250,6 +3360,7 @@ textarea.form-input {
 }
 
 /* ---- Footer Premium ---- */
+
 .footer {
   background: linear-gradient(180deg, #3b2e20 0%, #2a1f14 100%);
 }
@@ -3264,6 +3375,7 @@ textarea.form-input {
 }
 
 /* ---- Stats Section Gradient ---- */
+
 .stats {
   background: linear-gradient(135deg, #5d4932 0%, #3b2e20 50%, #2a1f14 100%);
 }
@@ -3273,6 +3385,7 @@ textarea.form-input {
 }
 
 /* ---- Responsive for New Elements ---- */
+
 @media (max-width: 992px) {
   .atendimentos-pillars-bar {
     grid-template-columns: repeat(2, 1fr);
@@ -3293,6 +3406,7 @@ textarea.form-input {
     top: -20px;
     left: -20px;
   }
+
 }
 
 @media (max-width: 768px) {
@@ -3326,6 +3440,7 @@ textarea.form-input {
     flex-direction: column;
     align-items: flex-start;
   }
+
 }
 
 @media (max-width: 480px) {
@@ -3336,10 +3451,13 @@ textarea.form-input {
   .about-values-row {
     grid-template-columns: repeat(2, 1fr);
   }
+
 }
 
 /* ===========================================================================
+
    Atendimentos — faithful composition from the supplied reference
+
    ========================================================================== */
 
 .clinic-carousel-section {
@@ -3362,7 +3480,7 @@ textarea.form-input {
     radial-gradient(ellipse at 94% 78%, rgba(189, 156, 115, 0.1), transparent 24%);
 }
 
-.clinic-carousel-section > .container {
+.clinic-carousel-section>.container {
   width: 90%;
   max-width: 1200px;
   padding: 0 1rem;
@@ -3664,7 +3782,7 @@ textarea.form-input {
 }
 
 @media (max-width: 992px) {
-  .clinic-carousel-section > .container {
+  .clinic-carousel-section>.container {
     width: 90%;
   }
 
@@ -3687,6 +3805,7 @@ textarea.form-input {
   .clinic-carousel-section .atend-pillar-item:nth-child(2)::after {
     display: none;
   }
+
 }
 
 @media (max-width: 700px) {
@@ -3694,7 +3813,7 @@ textarea.form-input {
     padding: 3.8rem 0 2.4rem;
   }
 
-  .clinic-carousel-section > .container {
+  .clinic-carousel-section>.container {
     width: 90%;
   }
 
@@ -3761,15 +3880,19 @@ textarea.form-input {
   }
 
   .clinic-carousel-section .atend-pillar-icon,
+
   .clinic-carousel-section .pillar-svg-icon {
     width: 68px;
     height: 68px;
     min-width: 68px;
   }
+
 }
 
 /* ===========================================================================
+
    Sobre — composition based on the supplied reference
+
    ========================================================================== */
 
 .about {
@@ -3864,7 +3987,7 @@ textarea.form-input {
   content: none;
 }
 
-.about .about-img-box > .about-photo {
+.about .about-img-box>.about-photo {
   width: 100%;
   height: 100%;
   border-radius: inherit;
@@ -4233,6 +4356,7 @@ textarea.form-input {
   .about .section-title {
     font-size: clamp(2.05rem, 3.8vw, 2.65rem);
   }
+
 }
 
 @media (max-width: 820px) {
@@ -4253,6 +4377,7 @@ textarea.form-input {
   .about .about-content {
     padding-top: 0;
   }
+
 }
 
 @media (max-width: 560px) {
@@ -4279,7 +4404,7 @@ textarea.form-input {
     border-radius: 54px 34px 36px 36px;
   }
 
-  .about .about-img-box > .about-photo {
+  .about .about-img-box>.about-photo {
     height: 455px;
   }
 
@@ -4347,6 +4472,7 @@ textarea.form-input {
   }
 
   .about .about-value-icon,
+
   .about .about-value-icon img {
     width: 29px;
     height: 29px;
@@ -4420,10 +4546,11 @@ textarea.form-input {
     line-height: 1.25;
     white-space: normal;
   }
+
 }
 
 @media (max-width: 380px) {
-  .about .about-img-box > .about-photo {
+  .about .about-img-box>.about-photo {
     height: 420px;
   }
 
@@ -4439,5 +4566,556 @@ textarea.form-input {
     max-width: calc(100% - 0.5rem);
     margin-right: 0.25rem;
     margin-left: 0.25rem;
+  }
+
+}
+
+/* ==========================================================================
+   Comprehensive 100% Responsive Design System (UI/UX Pro Max Rules)
+   ========================================================================== */
+
+/* Global Prevent Overflow & Touch Fixes */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important;
+  position: relative;
+}
+
+img,
+svg,
+iframe,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Modals Z-Index & Form Input Auto-Zoom Fix */
+.modal-backdrop {
+  z-index: 25000 !important;
+}
+
+.modal-card {
+  max-width: 92% !important;
+  max-height: 88vh !important;
+  overflow-y: auto !important;
+  border-radius: 24px !important;
+  padding: 2.2rem 1.5rem !important;
+}
+
+.modal-close {
+  width: 44px !important;
+  height: 44px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50% !important;
+  background: rgba(93, 73, 50, 0.08) !important;
+}
+
+.form-input {
+  font-size: 1rem !important;
+  /* Prevents iOS Safari 16px auto-zoom */
+}
+
+/* Touch Targets Standard (Min 44px) */
+.btn,
+.nav-link,
+.faq-question,
+.carousel-control,
+.social-icon,
+.modal-close {
+  min-height: 44px;
+}
+
+/* --- Breakpoint: Laptops & Tablets Landscape (max-width: 1199px) --- */
+@media (max-width: 1199px) {
+  .container {
+    width: 92% !important;
+  }
+
+  .hero-left-col {
+    padding: 1.5rem 2rem 1.5rem 3vw !important;
+  }
+
+  .hero-title-main {
+    font-size: clamp(2rem, 3.2vw, 2.8rem) !important;
+  }
+
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+  }
+}
+
+/* --- Breakpoint: Tablets Portrait & Laptops Small (max-width: 992px) --- */
+@media (max-width: 992px) {
+  .header-container {
+    height: 75px !important;
+  }
+
+  .logo-img {
+    height: 42px !important;
+  }
+
+  .header-cta-btn {
+    display: none !important;
+  }
+
+  .mobile-toggle {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 44px !important;
+    height: 44px !important;
+    font-size: 1.4rem !important;
+    color: var(--c-dark) !important;
+    border-radius: 50% !important;
+    cursor: pointer !important;
+  }
+
+  .nav-center {
+    position: static !important;
+    transform: none !important;
+  }
+
+  .nav-menu {
+    position: fixed !important;
+    top: 75px !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    height: calc(100vh - 75px) !important;
+    background: rgba(253, 251, 247, 0.98) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    padding: 2.5rem 1.5rem !important;
+    gap: 1.5rem !important;
+    transform: translateY(-120%) !important;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    box-shadow: 0 20px 40px rgba(93, 73, 50, 0.15) !important;
+    border-bottom: 1px solid var(--c-border) !important;
+    overflow-y: auto !important;
+    z-index: 9999 !important;
+  }
+
+  .nav-menu.active {
+    transform: translateY(0) !important;
+  }
+
+  .nav-link {
+    font-size: 1.15rem !important;
+    padding: 0.75rem 1rem !important;
+    width: 100% !important;
+    text-align: center !important;
+    font-weight: 600 !important;
+  }
+
+  .mobile-cta-only {
+    display: block !important;
+    width: 100% !important;
+    margin-top: 0.5rem !important;
+  }
+
+  .mobile-cta-only .btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  /* Hero Section Responsiveness */
+  .hero-full {
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    padding-top: 95px !important;
+    padding-bottom: 2.5rem !important;
+  }
+
+  .hero-main-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: none !important;
+    width: 100% !important;
+  }
+
+  .hero-left-col {
+    width: 100% !important;
+    padding: 1.5rem 1.2rem 2rem !important;
+    justify-content: center !important;
+    text-align: center !important;
+    background: transparent !important;
+  }
+
+  .hero-left-inner {
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .hero-tag-pill {
+    font-size: 0.72rem !important;
+    letter-spacing: 0.8px !important;
+    padding: 0.45rem 0.9rem !important;
+    max-width: 100% !important;
+    text-align: center !important;
+    white-space: normal !important;
+    line-height: 1.4 !important;
+  }
+
+  .hero-title-main {
+    font-size: clamp(1.8rem, 5.5vw, 2.5rem) !important;
+    text-align: center !important;
+  }
+
+  .hero-subtitle-text {
+    max-width: 100% !important;
+    text-align: center !important;
+    font-size: 1rem !important;
+  }
+
+  .hero-cta-group {
+    justify-content: center !important;
+    width: 100% !important;
+  }
+
+  .btn-hero-primary,
+  .btn-hero-outline {
+    width: 100% !important;
+    max-width: 360px !important;
+    justify-content: center !important;
+  }
+
+  .hero-trust-indicator {
+    justify-content: center !important;
+  }
+
+  .hero-right-col {
+    position: relative !important;
+    width: 100% !important;
+    height: 380px !important;
+    min-height: 380px !important;
+    top: auto !important;
+    bottom: auto !important;
+    right: auto !important;
+    margin-top: 1.5rem !important;
+    border-radius: 24px !important;
+    overflow: hidden !important;
+  }
+
+  .hero-curve-separator {
+    display: none !important;
+  }
+
+  .hero-photo-img.bg-photo {
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-position: center 25% !important;
+  }
+
+  .hero-stats-row,
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.2rem !important;
+  }
+
+  .footer-top {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 2.5rem !important;
+  }
+}
+
+/* --- Breakpoint: Mobile Phones (max-width: 768px) --- */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: clamp(1.75rem, 6vw, 2.2rem) !important;
+  }
+
+  .section-tag {
+    font-size: 0.72rem !important;
+    letter-spacing: 1.5px !important;
+  }
+
+  .hero-left-col {
+    padding: 1.2rem 0.5rem 1.5rem !important;
+  }
+
+  .hero-right-col {
+    height: 320px !important;
+    min-height: 320px !important;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .about-img-box {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  .carousel-wrapper {
+    padding: 0 !important;
+  }
+
+  .carousel-control {
+    display: none !important;
+  }
+
+  .carousel-slide {
+    flex-basis: 100% !important;
+  }
+}
+
+/* --- Breakpoint: Small Mobile Phones (max-width: 576px) --- */
+@media (max-width: 576px) {
+  .container {
+    width: 94% !important;
+    padding: 0 0.5rem !important;
+  }
+
+  .header-container {
+    height: 68px !important;
+  }
+
+  .logo-img {
+    height: 38px !important;
+  }
+
+  .hero-full {
+    padding-top: 82px !important;
+  }
+
+  .hero-tag-pill {
+    font-size: 0.65rem !important;
+    padding: 0.35rem 0.75rem !important;
+    letter-spacing: 0.5px !important;
+  }
+
+  .hero-tag-pill .tag-svg-icon {
+    width: 15px !important;
+    height: 15px !important;
+  }
+
+  .hero-title-main {
+    font-size: clamp(1.6rem, 7vw, 2.1rem) !important;
+    line-height: 1.22 !important;
+  }
+
+  .hero-subtitle-text {
+    font-size: 0.92rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .hero-right-col {
+    height: 280px !important;
+    min-height: 280px !important;
+  }
+
+  .hero-stats-row,
+  .stats-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .stat-item {
+    border-left: none !important;
+    border-bottom: 1px solid rgba(212, 196, 179, 0.25) !important;
+    padding-bottom: 1rem !important;
+  }
+
+  .stat-item:last-child {
+    border-bottom: none !important;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .footer-bottom {
+    flex-direction: column !important;
+    gap: 0.8rem !important;
+    text-align: center !important;
+  }
+}
+
+/* --- Breakpoint: Ultra-Small Screens (max-width: 380px) --- */
+@media (max-width: 380px) {
+  .hero-title-main {
+    font-size: 1.5rem !important;
+  }
+
+  .btn {
+    padding: 0.75rem 1.2rem !important;
+    font-size: 0.88rem !important;
+  }
+
+  .hero-right-col {
+    height: 240px !important;
+    min-height: 240px !important;
+  }
+}
+
+/* Ensure Navbar is 100% Centered on Desktop Screens (> 992px) */
+@media (min-width: 993px) {
+  .header-container {
+    position: relative !important;
+  }
+
+  .nav-center {
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .nav-menu {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 2rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+  }
+}
+
+
+/* ==========================================================================
+   Botanical Floating SVG System (svg/svg/botanicos)
+   ========================================================================== */
+
+.botanical-element {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  user-select: none;
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+}
+
+@keyframes floatSlight {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(6px) rotate(-1.5deg);
+  }
+}
+
+/* Hero Section Botanicals */
+.hero-botanical-top-left {
+  top: 90px;
+  left: 2%;
+  width: 140px;
+  opacity: 0.55;
+  animation: floatGentle 7s ease-in-out infinite;
+  filter: drop-shadow(0 4px 12px rgba(168, 121, 59, 0.15));
+}
+
+.hero-botanical-shadow-left {
+  top: 15%;
+  left: -20px;
+  width: 260px;
+  opacity: 0.22;
+  mix-blend-mode: multiply;
+}
+
+.hero-botanical-bottom-left {
+  bottom: 25px;
+  left: 3%;
+  width: 110px;
+  opacity: 0.5;
+  animation: floatSlight 6.5s ease-in-out infinite;
+}
+
+.hero-botanical-photo-top-right {
+  top: 15px;
+  right: 15px;
+  width: 110px;
+  opacity: 0.75;
+  z-index: 5;
+  animation: floatGentle 6s ease-in-out infinite 1s;
+}
+
+/* Reflections Botanicals */
+.reflections-botanical-palm {
+  top: 50%;
+  left: -40px;
+  transform: translateY(-50%);
+  width: 240px;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.reflections-botanical-branch {
+  top: 35px;
+  right: 4%;
+  width: 120px;
+  opacity: 0.45;
+  animation: floatGentle 6.5s ease-in-out infinite;
+}
+
+/* FAQ Botanicals */
+.faq-botanical-top {
+  top: 30px;
+  right: 5%;
+  width: 110px;
+  opacity: 0.45;
+  animation: floatSlight 7.5s ease-in-out infinite;
+}
+
+.faq-botanical-tree {
+  bottom: -30px;
+  left: 3%;
+  width: 260px;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+/* Responsive Hide for Mobile to Keep Ultra Clean Layout */
+@media (max-width: 992px) {
+  .hero-botanical-top-left {
+    width: 85px;
+    top: 95px;
+    left: 1%;
+    opacity: 0.4;
+  }
+
+  .hero-botanical-shadow-left {
+    width: 160px;
+  }
+
+  .hero-botanical-bottom-left,
+  .hero-botanical-photo-top-right,
+  .reflections-botanical-branch,
+  .faq-botanical-top {
+    display: none;
   }
 }
