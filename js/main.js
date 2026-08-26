@@ -261,7 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const encodedMsg = encodeURIComponent(textMessage);
 
       // WhatsApp link trigger
-      const whatsappUrl = `https://wa.me/5511999999999?text=${encodedMsg}`;
+      const whatsappUrl = `https://wa.me/553388215629?text=${encodedMsg}`;
       window.open(whatsappUrl, '_blank');
 
       appointmentModal.classList.remove('active');
