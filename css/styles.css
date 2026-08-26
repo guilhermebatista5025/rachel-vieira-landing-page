@@ -36,8 +36,8 @@
   --c-shadow: rgba(93, 73, 50, 0.08);
   --c-gold: #c9a468;
   /* Typography */
-  --ff-title: 'Lora', 'Libre Caslon Text', 'Cormorant Garamond', Georgia, serif;
-  --ff-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --ff-title: "Lora", "Libre Caslon Text", "Cormorant Garamond", Georgia, serif;
+  --ff-body: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
   /* Spacing & Radii */
   --radius-sm: 8px;
   --radius-md: 16px;
@@ -49,9 +49,7 @@
 /* Reset & Base Styles */
 
 *,
-
 *::before,
-
 *::after {
   box-sizing: border-box;
   margin: 0;
@@ -178,11 +176,14 @@ button {
   color: #ffffff;
   font-size: 2rem;
   box-shadow: 0 10px 28px rgba(20, 92, 47, 0.3);
-  transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .whatsapp-float::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: -3px;
   z-index: -1;
@@ -286,7 +287,6 @@ button {
     left: 50%;
     transform: translateX(-50%);
   }
-
 }
 
 .nav-menu {
@@ -316,7 +316,7 @@ button {
 }
 
 .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -4px;
   left: 0;
@@ -327,7 +327,6 @@ button {
 }
 
 .nav-link:hover::after,
-
 .nav-link.active::after {
   width: 100%;
 }
@@ -412,10 +411,10 @@ button {
 .hero-foliage-left {
   position: absolute;
   top: 0;
-  left: 0;
+  left: -70px;
   width: 280px;
   height: auto;
-  opacity: 0.22;
+  opacity: 0.8;
   pointer-events: none;
   z-index: 1;
 }
@@ -633,7 +632,6 @@ button {
   100% {
     transform: translateY(-8px);
   }
-
 }
 
 /* Integrated Bottom Statistics Floating Bar (Overlaying Image at Bottom) */
@@ -653,9 +651,21 @@ button {
   overflow: hidden;
   isolation: isolate;
   background:
-    radial-gradient(circle at 12% -25%, rgba(255, 255, 255, 0.98), transparent 36%),
-    radial-gradient(circle at 82% 0%, rgba(213, 176, 116, 0.2), transparent 35%),
-    linear-gradient(125deg, rgba(255, 255, 255, 0.67), rgba(255, 250, 242, 0.38));
+    radial-gradient(
+      circle at 12% -25%,
+      rgba(255, 255, 255, 0.98),
+      transparent 36%
+    ),
+    radial-gradient(
+      circle at 82% 0%,
+      rgba(213, 176, 116, 0.2),
+      transparent 35%
+    ),
+    linear-gradient(
+      125deg,
+      rgba(255, 255, 255, 0.67),
+      rgba(255, 250, 242, 0.38)
+    );
   backdrop-filter: blur(28px) saturate(165%);
   -webkit-backdrop-filter: blur(28px) saturate(165%);
   border-radius: 24px;
@@ -671,7 +681,7 @@ button {
 }
 
 .hero-stats-bar::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -72%;
   left: -8%;
@@ -680,12 +690,16 @@ button {
   z-index: -1;
   pointer-events: none;
   border-radius: 50%;
-  background: linear-gradient(110deg, rgba(255, 255, 255, 0.58), rgba(255, 255, 255, 0.04));
+  background: linear-gradient(
+    110deg,
+    rgba(255, 255, 255, 0.58),
+    rgba(255, 255, 255, 0.04)
+  );
   transform: rotate(-9deg);
 }
 
 .hero-stats-bar::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 1px;
   z-index: -1;
@@ -703,7 +717,7 @@ button {
 }
 
 .hero-stat-card:not(:last-child)::after {
-  content: '';
+  content: "";
   position: absolute;
   right: -0.5rem;
   top: 15%;
@@ -718,7 +732,11 @@ button {
   min-width: 40px;
   border-radius: 50%;
   background:
-    radial-gradient(circle at 30% 22%, rgba(255, 255, 255, 0.96), transparent 38%),
+    radial-gradient(
+      circle at 30% 22%,
+      rgba(255, 255, 255, 0.96),
+      transparent 38%
+    ),
     rgba(244, 230, 210, 0.58);
   border: 1px solid rgba(255, 255, 255, 0.82);
   box-shadow:
@@ -777,7 +795,6 @@ button {
   .hero-stat-card:nth-child(2)::after {
     display: none;
   }
-
 }
 
 @media (max-width: 850px) {
@@ -798,7 +815,6 @@ button {
   }
 
   .hero-photo-container,
-
   .hero-photo-img {
     min-height: 380px;
   }
@@ -811,7 +827,6 @@ button {
   .hero-stat-card::after {
     display: none;
   }
-
 }
 
 /* About Section */
@@ -1004,7 +1019,9 @@ button {
 .faq-answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.4s ease;
+  transition:
+    max-height 0.4s ease,
+    padding 0.4s ease;
   padding: 0 1.6rem;
   color: var(--c-text-secondary);
   font-size: 0.95rem;
@@ -1052,13 +1069,13 @@ button {
 .footer-column-title {
   font-family: var(--ff-title);
   font-size: 1.25rem;
-  color: #CD9C50;
+  color: #cd9c50;
   margin-bottom: 1.2rem;
 }
 
 .btn-footer {
   background-color: var(--c-dark);
-  color: #CD9C50;
+  color: #cd9c50;
   box-shadow: 0 4px 14px rgba(93, 73, 50, 0.25);
 }
 
@@ -1253,7 +1270,6 @@ textarea.form-input {
   .container {
     width: 92%;
   }
-
 }
 
 @media (max-width: 992px) {
@@ -1278,7 +1294,7 @@ textarea.form-input {
     max-width: 500px;
     margin: 0 auto;
   }
-.video-grid {
+  .video-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1286,7 +1302,6 @@ textarea.form-input {
     grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
   }
-
 }
 
 @media (max-width: 768px) {
@@ -1340,7 +1355,7 @@ textarea.form-input {
     padding-top: 100px;
     padding-bottom: 50px;
   }
-.video-grid {
+  .video-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1358,7 +1373,6 @@ textarea.form-input {
     gap: 1rem;
     text-align: center;
   }
-
 }
 
 @media (max-width: 480px) {
@@ -1370,7 +1384,6 @@ textarea.form-input {
   .modal-card {
     padding: 1.8rem 1.2rem;
   }
-
 }
 
 /* ==========================================================================
@@ -1394,7 +1407,6 @@ textarea.form-input {
   50% {
     transform: translateY(-8px);
   }
-
 }
 
 .about-experience-badge {
@@ -1508,8 +1520,6 @@ textarea.form-input {
 }
 
 /* Responsive adjustments */
-
-
 
 /* ==========================================================================
 
@@ -1790,13 +1800,21 @@ textarea.form-input {
   overflow: hidden;
   isolation: isolate;
   background:
-    radial-gradient(circle at 8% 18%, rgba(196, 168, 130, 0.2), transparent 25%),
-    radial-gradient(circle at 94% 82%, rgba(168, 121, 59, 0.14), transparent 27%),
+    radial-gradient(
+      circle at 8% 18%,
+      rgba(196, 168, 130, 0.2),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 94% 82%,
+      rgba(168, 121, 59, 0.14),
+      transparent 27%
+    ),
     linear-gradient(135deg, #fdfbf7 0%, #f7f0e7 52%, #fcf8f2 100%);
 }
 
 .reflections::before {
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
   pointer-events: none;
@@ -1804,19 +1822,21 @@ textarea.form-input {
   left: -125px;
   width: 410px;
   height: 560px;
-  background: url('../assets/svg/reflexoes/swoosh-grande.svg') center / contain no-repeat;
+  background: url("../assets/svg/reflexoes/swoosh-grande.svg") center / contain
+    no-repeat;
   opacity: 0.34;
 }
 
 .reflections::after {
-  content: '';
+  content: "";
   position: absolute;
   right: -160px;
   bottom: -250px;
   z-index: 0;
   width: 520px;
   height: 520px;
-  background: url('../assets/svg/reflexoes/arco-folhagem.svg') center / contain no-repeat;
+  background: url("../assets/svg/reflexoes/arco-folhagem.svg") center / contain
+    no-repeat;
   pointer-events: none;
 }
 
@@ -1839,7 +1859,11 @@ textarea.form-input {
   width: 390px;
   opacity: 0.2;
   transform: rotate(18deg);
-  -webkit-mask-image: radial-gradient(ellipse at center, #000 36%, transparent 94%);
+  -webkit-mask-image: radial-gradient(
+    ellipse at center,
+    #000 36%,
+    transparent 94%
+  );
   mask-image: radial-gradient(ellipse at center, #000 36%, transparent 94%);
 }
 
@@ -1946,11 +1970,15 @@ textarea.form-input {
 }
 
 .video-featured-visual::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(90deg, rgba(38, 27, 18, 0.08) 30%, rgba(38, 27, 18, 0.42) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(38, 27, 18, 0.08) 30%,
+    rgba(38, 27, 18, 0.42) 100%
+  );
   pointer-events: none;
 }
 
@@ -2100,7 +2128,11 @@ textarea.form-input {
   }
 
   .video-featured-visual::after {
-    background: linear-gradient(180deg, rgba(38, 27, 18, 0.04) 42%, rgba(38, 27, 18, 0.42) 100%);
+    background: linear-gradient(
+      180deg,
+      rgba(38, 27, 18, 0.04) 42%,
+      rgba(38, 27, 18, 0.42) 100%
+    );
   }
 
   .reflections-appointment {
@@ -2187,14 +2219,22 @@ textarea.form-input {
   isolation: isolate;
   padding: 5.5rem 0;
   background:
-    radial-gradient(circle at 14% 16%, rgba(255, 255, 255, 0.92), transparent 25%),
-    radial-gradient(circle at 88% 82%, rgba(196, 168, 130, 0.22), transparent 30%),
+    radial-gradient(
+      circle at 14% 16%,
+      rgba(255, 255, 255, 0.92),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 88% 82%,
+      rgba(196, 168, 130, 0.22),
+      transparent 30%
+    ),
     linear-gradient(135deg, #f8f2ea 0%, #f1e7da 48%, #fbf7f1 100%);
 }
 
 .google-reviews-section::before,
 .google-reviews-section::after {
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
   border-radius: 50%;
@@ -2269,7 +2309,11 @@ textarea.form-input {
   padding: 1.25rem;
   border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: 30px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.56), rgba(255, 250, 243, 0.28));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.56),
+    rgba(255, 250, 243, 0.28)
+  );
   box-shadow:
     0 28px 70px -36px rgba(75, 48, 26, 0.42),
     inset 0 1px 0 rgba(255, 255, 255, 0.8);
@@ -2367,7 +2411,10 @@ textarea.form-input {
   background: rgba(255, 255, 255, 0.48);
   color: #5d4932;
   box-shadow: 0 7px 18px rgba(75, 48, 26, 0.1);
-  transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease;
 }
 
 .google-reviews-controls button:hover {
@@ -2408,19 +2455,25 @@ textarea.form-input {
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.75);
   border-radius: 22px;
-  background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.72), rgba(255, 249, 241, 0.42));
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.72),
+    rgba(255, 249, 241, 0.42)
+  );
   box-shadow:
     0 16px 34px -24px rgba(75, 48, 26, 0.36),
     inset 0 1px 0 rgba(255, 255, 255, 0.82);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
   scroll-snap-align: start;
 }
 
 .google-review-card::after {
-  content: '“';
+  content: "“";
   position: absolute;
   right: 16px;
   bottom: -33px;
@@ -2509,7 +2562,9 @@ textarea.form-input {
   height: 8px;
   border-radius: 999px;
   background: rgba(93, 73, 50, 0.24);
-  transition: width 0.25s ease, background-color 0.25s ease;
+  transition:
+    width 0.25s ease,
+    background-color 0.25s ease;
 }
 
 .google-reviews-dots button.active {
@@ -2643,7 +2698,9 @@ textarea.form-input {
 .faq-answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.4s ease;
+  transition:
+    max-height 0.4s ease,
+    padding 0.4s ease;
   padding: 0 1.8rem;
 }
 
@@ -2664,10 +2721,7 @@ textarea.form-input {
   .carousel-slide {
     flex: 0 0 calc(50% - 0.75rem);
   }
-
 }
-
-
 
 @media (max-width: 600px) {
   .carousel-wrapper {
@@ -2681,7 +2735,6 @@ textarea.form-input {
   .carousel-control {
     display: none;
   }
-
 }
 
 /* ==========================================================================
@@ -2772,7 +2825,6 @@ textarea.form-input {
   to {
     transform: rotate(360deg);
   }
-
 }
 
 .seal-svg {
@@ -2912,7 +2964,6 @@ textarea.form-input {
 /* ---- Responsive for New Elements ---- */
 
 @media (max-width: 992px) {
-
   .about-values-row {
     grid-template-columns: repeat(4, 1fr);
     gap: 0.3rem;
@@ -2924,11 +2975,9 @@ textarea.form-input {
     top: -20px;
     left: -20px;
   }
-
 }
 
 @media (max-width: 768px) {
-
   .about-grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
@@ -2945,15 +2994,12 @@ textarea.form-input {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.8rem;
   }
-
 }
 
 @media (max-width: 480px) {
-
   .about-values-row {
     grid-template-columns: repeat(2, 1fr);
   }
-
 }
 
 /* ===========================================================================
@@ -2963,26 +3009,40 @@ textarea.form-input {
    ========================================================================== */
 
 .clinic-carousel-section {
+  position: relative;
   padding: 4.65rem 0 2.65rem;
   background:
-    radial-gradient(circle at 50% 34%, rgba(255, 255, 255, 0.96) 0, rgba(255, 255, 255, 0.38) 36%, transparent 62%),
+    radial-gradient(
+      circle at 50% 34%,
+      rgba(255, 255, 255, 0.96) 0,
+      rgba(255, 255, 255, 0.38) 36%,
+      transparent 62%
+    ),
     linear-gradient(135deg, #fbf8f3 0%, #f8f3ec 54%, #fcfaf6 100%);
   border: 0;
   isolation: isolate;
 }
 
 .clinic-carousel-section::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   z-index: -1;
   pointer-events: none;
   background:
-    radial-gradient(ellipse at 8% 55%, rgba(189, 156, 115, 0.09), transparent 24%),
-    radial-gradient(ellipse at 94% 78%, rgba(189, 156, 115, 0.1), transparent 24%);
+    radial-gradient(
+      ellipse at 8% 55%,
+      rgba(189, 156, 115, 0.09),
+      transparent 24%
+    ),
+    radial-gradient(
+      ellipse at 94% 78%,
+      rgba(189, 156, 115, 0.1),
+      transparent 24%
+    );
 }
 
-.clinic-carousel-section>.container {
+.clinic-carousel-section > .container {
   width: 90%;
   max-width: 1200px;
   padding: 0 1rem;
@@ -3024,13 +3084,19 @@ textarea.form-input {
 }
 
 .clinic-carousel-section .section-title::after {
-  content: '';
+  content: "";
   display: block;
   width: 62px;
   height: 2px;
   margin: 1.2rem auto 1.05rem;
   border-radius: 999px;
-  background: linear-gradient(90deg, transparent, #c58a31 28%, #c58a31 72%, transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #c58a31 28%,
+    #c58a31 72%,
+    transparent
+  );
 }
 
 .clinic-carousel-section .highlight-gold {
@@ -3071,8 +3137,18 @@ textarea.form-input {
   opacity: 0.42;
   filter: blur(3px);
   transform: rotate(180deg);
-  -webkit-mask-image: radial-gradient(ellipse at center, #000 35%, rgba(0, 0, 0, 0.82) 58%, transparent 100%);
-  mask-image: radial-gradient(ellipse at center, #000 35%, rgba(0, 0, 0, 0.82) 58%, transparent 100%);
+  -webkit-mask-image: radial-gradient(
+    ellipse at center,
+    #000 35%,
+    rgba(0, 0, 0, 0.82) 58%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    ellipse at center,
+    #000 35%,
+    rgba(0, 0, 0, 0.82) 58%,
+    transparent 100%
+  );
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
 }
@@ -3105,7 +3181,11 @@ textarea.form-input {
   border: 1px solid rgba(255, 255, 255, 0.88);
   border-radius: 28px;
   background:
-    radial-gradient(circle at 12% 0%, rgba(255, 255, 255, 0.96), transparent 34%),
+    radial-gradient(
+      circle at 12% 0%,
+      rgba(255, 255, 255, 0.96),
+      transparent 34%
+    ),
     linear-gradient(145deg, rgba(255, 255, 255, 0.7), rgba(248, 239, 226, 0.42));
   box-shadow: none;
   backdrop-filter: blur(24px) saturate(145%);
@@ -3133,14 +3213,19 @@ textarea.form-input {
 }
 
 .clinic-carousel-section .treatment-visual::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   z-index: 1;
   pointer-events: none;
   border-radius: inherit;
-  background:
-    linear-gradient(120deg, rgba(255, 255, 255, 0.48) 0%, transparent 28%, transparent 72%, rgba(255, 255, 255, 0.2) 100%);
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.48) 0%,
+    transparent 28%,
+    transparent 72%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
 }
 
 .clinic-carousel-section .treatment-visual img {
@@ -3217,7 +3302,9 @@ textarea.form-input {
   width: 72px;
   height: 72px;
   max-width: none;
-  transition: transform 0.3s ease, filter 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
 }
 
 .clinic-carousel-section .carousel-control:hover {
@@ -3257,7 +3344,7 @@ textarea.form-input {
 }
 
 @media (max-width: 992px) {
-  .clinic-carousel-section>.container {
+  .clinic-carousel-section > .container {
     width: 90%;
   }
 
@@ -3272,7 +3359,6 @@ textarea.form-input {
   .clinic-carousel-section .treatment-title {
     font-size: 1.55rem;
   }
-
 }
 
 @media (max-width: 700px) {
@@ -3280,7 +3366,7 @@ textarea.form-input {
     padding: 3.8rem 0 2.4rem;
   }
 
-  .clinic-carousel-section>.container {
+  .clinic-carousel-section > .container {
     width: 90%;
   }
 
@@ -3336,7 +3422,6 @@ textarea.form-input {
   .clinic-carousel-section .carousel-control {
     display: none;
   }
-
 }
 
 /* ===========================================================================
@@ -3347,7 +3432,8 @@ textarea.form-input {
 
 .about {
   padding: 3.5rem 0 4rem;
-  background: #faf5ef url('../assets/svg/sobre/fundo-secao.svg') center / cover no-repeat;
+  background: #faf5ef url("../assets/svg/sobre/fundo-secao.svg") center / cover
+    no-repeat;
   isolation: isolate;
 }
 
@@ -3395,9 +3481,9 @@ textarea.form-input {
 }
 
 .about .about-end-palm-shadow {
-  right: -1rem;
+  right: -3.3rem;
   bottom: -0.5rem;
-  width: clamp(250px, 26vw, 380px);
+  width: 320px;
   opacity: 0.42;
   transform: rotate(-3deg);
   transform-origin: bottom center;
@@ -3437,7 +3523,7 @@ textarea.form-input {
   content: none;
 }
 
-.about .about-img-box>.about-photo {
+.about .about-img-box > .about-photo {
   width: 100%;
   height: 100%;
   border-radius: inherit;
@@ -3504,7 +3590,8 @@ textarea.form-input {
   border: 1px solid rgba(225, 176, 93, 0.42);
   border-radius: 25px;
   color: #fffaf2;
-  background: #4a3016 url('../assets/svg/sobre/card-estatistica-shell.svg') center / 100% 100% no-repeat;
+  background: #4a3016 url("../assets/svg/sobre/card-estatistica-shell.svg")
+    center / 100% 100% no-repeat;
   box-shadow: 0 22px 42px rgba(65, 37, 16, 0.24);
 }
 
@@ -3570,7 +3657,7 @@ textarea.form-input {
 }
 
 .about .about-value-item:not(:last-child)::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 8%;
   right: 0;
@@ -3631,12 +3718,13 @@ textarea.form-input {
 }
 
 .about .section-title::after {
-  content: '';
+  content: "";
   display: block;
   width: 72px;
   height: 2px;
   margin-top: 0.9rem;
-  background: url('../assets/svg/sobre/divisor-dourado-curto.svg') left center / 100% 100% no-repeat;
+  background: url("../assets/svg/sobre/divisor-dourado-curto.svg") left center /
+    100% 100% no-repeat;
   overflow: hidden;
 }
 
@@ -3658,7 +3746,9 @@ textarea.form-input {
   border: 1px solid rgba(222, 184, 128, 0.42);
   border-left-width: 1px;
   border-radius: 22px;
-  background: rgba(255, 251, 246, 0.82) url('../assets/svg/sobre/card-formacao-shell.svg') center / 100% 100% no-repeat;
+  background: rgba(255, 251, 246, 0.82)
+    url("../assets/svg/sobre/card-formacao-shell.svg") center / 100% 100%
+    no-repeat;
   box-shadow: 0 14px 32px rgba(87, 53, 25, 0.07);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -3708,7 +3798,8 @@ textarea.form-input {
   max-width: 100%;
   padding: 0.4rem 0.72rem;
   border-color: rgba(210, 181, 148, 0.55);
-  background: #fff url('../assets/svg/sobre/pill-clara.svg') center / 100% 100% no-repeat;
+  background: #fff url("../assets/svg/sobre/pill-clara.svg") center / 100% 100%
+    no-repeat;
   color: #55371f;
   font-size: 0.71rem;
   overflow-wrap: anywhere;
@@ -3722,12 +3813,14 @@ textarea.form-input {
 
 .about .tag-pill:nth-child(3) {
   border-color: #62401f;
-  background: #4a3016 url('../assets/svg/sobre/pill-escura.svg') center / 100% 100% no-repeat;
+  background: #4a3016 url("../assets/svg/sobre/pill-escura.svg") center / 100%
+    100% no-repeat;
   color: #fffaf3;
 }
 
 .about .tag-pill:nth-child(3) img {
-  filter: brightness(0) saturate(100%) invert(78%) sepia(49%) saturate(532%) hue-rotate(357deg) brightness(95%);
+  filter: brightness(0) saturate(100%) invert(78%) sepia(49%) saturate(532%)
+    hue-rotate(357deg) brightness(95%);
 }
 
 @media (max-width: 1100px) {
@@ -3767,7 +3860,6 @@ textarea.form-input {
   .about .section-title {
     font-size: clamp(2.05rem, 3.8vw, 2.65rem);
   }
-
 }
 
 @media (max-width: 820px) {
@@ -3788,7 +3880,6 @@ textarea.form-input {
   .about .about-content {
     padding-top: 0;
   }
-
 }
 
 @media (max-width: 560px) {
@@ -3815,7 +3906,7 @@ textarea.form-input {
     border-radius: 54px 34px 36px 36px;
   }
 
-  .about .about-img-box>.about-photo {
+  .about .about-img-box > .about-photo {
     height: 455px;
   }
 
@@ -3883,7 +3974,6 @@ textarea.form-input {
   }
 
   .about .about-value-icon,
-
   .about .about-value-icon img {
     width: 29px;
     height: 29px;
@@ -3946,11 +4036,10 @@ textarea.form-input {
     line-height: 1.25;
     white-space: normal;
   }
-
 }
 
 @media (max-width: 380px) {
-  .about .about-img-box>.about-photo {
+  .about .about-img-box > .about-photo {
     height: 420px;
   }
 
@@ -3967,7 +4056,6 @@ textarea.form-input {
     margin-right: 0.25rem;
     margin-left: 0.25rem;
   }
-
 }
 
 /* ==========================================================================
@@ -4373,7 +4461,6 @@ svg {
   }
 }
 
-
 /* ==========================================================================
    Botanical Floating SVG System
    ========================================================================== */
@@ -4387,7 +4474,8 @@ svg {
 }
 
 @keyframes floatGentle {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0) rotate(0deg);
   }
   50% {
@@ -4396,7 +4484,8 @@ svg {
 }
 
 @keyframes floatSlight {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0) rotate(0deg);
   }
   50% {
@@ -4411,7 +4500,8 @@ svg {
   width: 185px;
   opacity: 0.84;
   animation: floatGentle 7s ease-in-out infinite;
-  filter: brightness(1.08) saturate(1.12) drop-shadow(0 5px 14px rgba(137, 84, 26, 0.24));
+  filter: brightness(1.08) saturate(1.12)
+    drop-shadow(0 5px 14px rgba(137, 84, 26, 0.24));
 }
 
 .hero-botanical-shadow-left {
@@ -4468,9 +4558,9 @@ svg {
   .hero-botanical-shadow-left {
     width: 160px;
   }
-.hero-botanical-bottom-left,
-.hero-botanical-photo-top-right,
-.faq-botanical-top {
+  .hero-botanical-bottom-left,
+  .hero-botanical-photo-top-right,
+  .faq-botanical-top {
     display: none;
   }
 }

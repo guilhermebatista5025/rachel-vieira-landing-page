@@ -1,800 +1,1447 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raquel Vieira | Psicanálise & Acolhimento</title>
+    <meta
+      name="description"
+      content="Um espaço de acolhimento para você se escutar e se transformar. Psicanálise com sensibilidade, ética e presença com Raquel Vieira."
+    />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Raquel Vieira | Psicanálise & Acolhimento</title>
-  <meta name="description"
-    content="Um espaço de acolhimento para você se escutar e se transformar. Psicanálise com sensibilidade, ética e presença com Raquel Vieira.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
-  <!-- FontAwesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
 
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css">
-</head>
+  <body>
+    <!-- Header & Navigation -->
+    <header class="header" id="header">
+      <div class="container header-container">
+        <a href="#" class="logo-wrapper" title="Raquel Vieira Psicanálise">
+          <img
+            src="assets/svg/marca/raquel-vieira-logo.svg"
+            alt="Logo Raquel Vieira"
+            class="logo-img"
+          />
+        </a>
 
-<body>
+        <nav class="nav-center">
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="#hero" class="nav-link">Inicio</a></li>
+            <li><a href="#sobre" class="nav-link">Sobre</a></li>
+            <li><a href="#atendimentos" class="nav-link">Atendimentos</a></li>
+            <li><a href="#curso" class="nav-link">Curso</a></li>
+            <li><a href="#perguntas" class="nav-link">Perguntas</a></li>
+            <li><a href="#contato" class="nav-link">Contato</a></li>
+            <li class="mobile-cta-only">
+              <a href="#" class="btn btn-primary js-open-appointment"
+                >Agendar conversa</a
+              >
+            </li>
+          </ul>
+        </nav>
 
-  <!-- Header & Navigation -->
-  <header class="header" id="header">
-    <div class="container header-container">
-      <a href="#" class="logo-wrapper" title="Raquel Vieira Psicanálise">
-        <img src="assets/svg/marca/raquel-vieira-logo.svg" alt="Logo Raquel Vieira" class="logo-img">
-      </a>
-
-
-      <nav class="nav-center">
-        <ul class="nav-menu" id="navMenu">
-          <li><a href="#hero" class="nav-link">Inicio</a></li>
-          <li><a href="#sobre" class="nav-link">Sobre</a></li>
-          <li><a href="#atendimentos" class="nav-link">Atendimentos</a></li>
-          <li><a href="#curso" class="nav-link">Curso</a></li>
-          <li><a href="#perguntas" class="nav-link">Perguntas</a></li>
-          <li><a href="#contato" class="nav-link">Contato</a></li>
-          <li class="mobile-cta-only"><a href="#" class="btn btn-primary js-open-appointment">Agendar conversa</a></li>
-        </ul>
-      </nav>
-
-      <div class="header-right">
-        <a href="#" class="btn btn-primary header-cta-btn js-open-appointment">Agendar conversa</a>
-        <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menu">
-          <i class="fas fa-bars"></i>
-        </button>
+        <div class="header-right">
+          <a href="#" class="btn btn-primary header-cta-btn js-open-appointment"
+            >Agendar conversa</a
+          >
+          <button
+            class="mobile-toggle"
+            id="mobileToggle"
+            aria-label="Abrir menu"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main class="page-sections">
-  <!-- Hero Section (Remodeled Full Width - Strict 100vh Viewport Fit) -->
-  <section class="hero-full" id="hero">
-    <!-- Floating botanical SVGs -->
-    <img src="assets/svg/hero/ramo-dourado-grande.svg" alt="" class="botanical-element hero-botanical-top-left" aria-hidden="true">
-    <img src="assets/svg/compartilhados/sombra-folhas-suave.svg" alt="" class="botanical-element hero-botanical-shadow-left" aria-hidden="true">
-    <img src="assets/svg/compartilhados/ramo-frutos.svg" alt="" class="botanical-element hero-botanical-bottom-left" aria-hidden="true">
+    <main class="page-sections">
+      <!-- Hero Section (Remodeled Full Width - Strict 100vh Viewport Fit) -->
+      <section class="hero-full" id="hero">
+        <!-- Floating botanical SVGs -->
+        <img
+          src="assets/svg/compartilhados/sombra-folhas-suave.svg"
+          alt=""
+          class="botanical-element hero-botanical-shadow-left"
+          aria-hidden="true"
+        />
+        <img
+          src="assets/svg/compartilhados/ramo-frutos.svg"
+          alt=""
+          class="botanical-element hero-botanical-bottom-left"
+          aria-hidden="true"
+        />
 
-    <!-- SVG ClipPath for Image S-Curve Contour -->
-    <svg width="0" height="0" style="position: absolute; pointer-events: none;">
-      <defs>
-        <clipPath id="sCurveClip" clipPathUnits="objectBoundingBox">
-          <path d="M 0.12,0 C 0.02,0.32 0.20,0.68 0.03,1 L 1,1 L 1,0 Z" />
-        </clipPath>
-      </defs>
-    </svg>
+        <!-- SVG ClipPath for Image S-Curve Contour -->
+        <svg
+          width="0"
+          height="0"
+          style="position: absolute; pointer-events: none"
+        >
+          <defs>
+            <clipPath id="sCurveClip" clipPathUnits="objectBoundingBox">
+              <path d="M 0.12,0 C 0.02,0.32 0.20,0.68 0.03,1 L 1,1 L 1,0 Z" />
+            </clipPath>
+          </defs>
+        </svg>
 
-    <!-- Botanical Leaf Background Watermarks -->
-    <div class="hero-leaf-bg leaf-bottom-left">
-      <svg width="180" height="180" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M40 180C40 180 60 120 120 100C180 80 190 20 190 20C190 20 130 40 100 100C70 160 40 180 40 180Z"
-          stroke="#d5c4b1" stroke-width="2" stroke-linecap="round" opacity="0.45" />
-        <path d="M70 150C70 150 90 110 140 95C170 85 180 50 180 50" stroke="#d5c4b1" stroke-width="1.5"
-          stroke-linecap="round" opacity="0.35" />
-        <path d="M30 140C30 140 70 130 100 80" stroke="#d5c4b1" stroke-width="1.5" stroke-linecap="round"
-          opacity="0.35" />
-      </svg>
-    </div>
-    <div class="hero-leaf-bg leaf-bottom-right">
-      <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M160 180C160 180 140 120 80 100C20 80 10 20 10 20C10 20 70 40 100 100C130 160 160 180 160 180Z"
-          stroke="#d5c4b1" stroke-width="2" stroke-linecap="round" opacity="0.4" />
-        <path d="M130 150C130 150 110 110 60 95C30 85 20 50 20 50" stroke="#d5c4b1" stroke-width="1.5"
-          stroke-linecap="round" opacity="0.3" />
-      </svg>
-    </div>
+        <!-- Botanical Leaf Background Watermarks -->
+        <div class="hero-leaf-bg leaf-bottom-left">
+          <svg
+            width="180"
+            height="180"
+            viewBox="0 0 200 200"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M40 180C40 180 60 120 120 100C180 80 190 20 190 20C190 20 130 40 100 100C70 160 40 180 40 180Z"
+              stroke="#d5c4b1"
+              stroke-width="2"
+              stroke-linecap="round"
+              opacity="0.45"
+            />
+            <path
+              d="M70 150C70 150 90 110 140 95C170 85 180 50 180 50"
+              stroke="#d5c4b1"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              opacity="0.35"
+            />
+            <path
+              d="M30 140C30 140 70 130 100 80"
+              stroke="#d5c4b1"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              opacity="0.35"
+            />
+          </svg>
+        </div>
+        <div class="hero-leaf-bg leaf-bottom-right">
+          <svg
+            width="200"
+            height="200"
+            viewBox="0 0 200 200"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M160 180C160 180 140 120 80 100C20 80 10 20 10 20C10 20 70 40 100 100C130 160 160 180 160 180Z"
+              stroke="#d5c4b1"
+              stroke-width="2"
+              stroke-linecap="round"
+              opacity="0.4"
+            />
+            <path
+              d="M130 150C130 150 110 110 60 95C30 85 20 50 20 50"
+              stroke="#d5c4b1"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              opacity="0.3"
+            />
+          </svg>
+        </div>
 
-    <div class="hero-main-wrapper">
-      <!-- Left Content Column -->
-      <div class="hero-left-col">
-        <img src="assets/svg/compartilhados/folhagem-canto-esquerdo.svg" alt="" class="hero-foliage-bg hero-foliage-left" aria-hidden="true">
-        
-        <div class="hero-left-inner">
-          <div class="hero-tag-pill">
-            <img src="assets/svg/compartilhados/icone-ramo-eyebrow.svg" alt="" class="tag-svg-icon" width="18" height="18">
-            <span>DEPENDÊNCIA EMOCIONAL • RELAÇÕES ABUSIVAS • PSICANÁLISE CLÍNICA</span>
+        <div class="hero-main-wrapper">
+          <!-- Left Content Column -->
+          <div class="hero-left-col">
+            <img
+              src="assets/svg/compartilhados/folhagem-canto-esquerdo.svg"
+              alt=""
+              class="hero-foliage-bg hero-foliage-left"
+              aria-hidden="true"
+            />
+
+            <div class="hero-left-inner">
+              <div class="hero-tag-pill">
+                <img
+                  src="assets/svg/compartilhados/icone-ramo-eyebrow.svg"
+                  alt=""
+                  class="tag-svg-icon"
+                  width="18"
+                  height="18"
+                />
+                <span
+                  >DEPENDÊNCIA EMOCIONAL • RELAÇÕES ABUSIVAS • PSICANÁLISE
+                  CLÍNICA</span
+                >
+              </div>
+
+              <h1 class="hero-title-main">
+                Desenvolva sua<br />
+                autonomia emocional e<br />
+                ressignifique <span class="highlight-gold">sua história.</span>
+                <img
+                  src="assets/svg/compartilhados/sparkle.svg"
+                  alt=""
+                  class="hero-sparkle hero-sparkle-title"
+                  aria-hidden="true"
+                />
+              </h1>
+
+              <p class="hero-subtitle-text">
+                Especialista no tratamento da dependência emocional e
+                pesquisadora de relações abusivas. Mais de
+                <strong>5.000 atendimentos</strong> guiando pessoas na
+                libertação de padrões dolorosos e na construção de relações
+                saudáveis.
+              </p>
+
+              <div class="hero-cta-group">
+                <a href="#" class="btn btn-hero-primary js-open-appointment">
+                  Agendar conversa <i class="fab fa-whatsapp whatsapp-icon"></i>
+                </a>
+                <a href="#sobre" class="btn btn-hero-outline">
+                  Conhecer Raquel Vieira
+                  <i class="fas fa-chevron-right arrow-icon"></i>
+                </a>
+              </div>
+
+              <div class="hero-trust-indicator">
+                <img
+                  src="assets/svg/compartilhados/icone-sigilo.svg"
+                  alt=""
+                  class="trust-svg-icon"
+                  width="20"
+                  height="20"
+                />
+                <span>Atendimento 100% sigiloso e acolhedor</span>
+              </div>
+            </div>
           </div>
 
-          <h1 class="hero-title-main">
-            Desenvolva sua<br>
-            autonomia emocional e<br>
-            ressignifique <span class="highlight-gold">sua história.</span>
-            <img src="assets/svg/compartilhados/sparkle.svg" alt="" class="hero-sparkle hero-sparkle-title" aria-hidden="true">
-          </h1>
+          <!-- Right Photo Column (Image Layered Behind Badges & Curve Separator Overlay) -->
+          <div class="hero-right-col">
+            <div class="hero-photo-container">
+              <!-- Background Photo Layer -->
+              <img
+                src="imagens/raquel-hero.jpg"
+                alt="Dra. Raquel Vieira - Psicanalista Especialista"
+                class="hero-photo-img bg-photo"
+              />
 
-          <p class="hero-subtitle-text">
-            Especialista no tratamento da dependência emocional e pesquisadora de relações abusivas. Mais de
-            <strong>5.000 atendimentos</strong> guiando pessoas na libertação de padrões dolorosos e na construção de
-            relações saudáveis.
+              <!-- Organic S-Curve Partition Overlay -->
+              <div class="hero-curve-separator">
+                <svg
+                  class="curve-svg"
+                  viewBox="0 0 400 800"
+                  preserveAspectRatio="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <!-- Solid Background Filler Matching Left Column -->
+                  <path
+                    d="M0,0 L270,0 C120,130 100,260 230,400 C360,540 380,680 0,800 L0,800 Z"
+                    fill="#faf6f0"
+                  />
+                  <!-- Primary Elegant Gold Contour Stroke -->
+                  <path
+                    d="M270,0 C120,130 100,260 230,400 C360,540 380,680 0,800"
+                    stroke="#c4a882"
+                    stroke-width="3.5"
+                    fill="none"
+                    opacity="0.95"
+                  />
+                  <!-- Secondary Delicate Dashed Accent Contour -->
+                  <path
+                    d="M263,0 C113,130 93,260 223,400 C353,540 373,680 0,795"
+                    stroke="#a8793b"
+                    stroke-width="1.5"
+                    stroke-dasharray="8 5"
+                    fill="none"
+                    opacity="0.7"
+                  />
+                  <!-- Soft White Inner Highlight Glow Line -->
+                  <path
+                    d="M274,0 C124,130 104,260 234,400 C364,540 384,680 0,804"
+                    stroke="#ffffff"
+                    stroke-width="1.8"
+                    fill="none"
+                    opacity="0.6"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Integrated Bottom Statistics Floating Bar -->
+        <div class="container hero-stats-container">
+          <div class="hero-stats-bar">
+            <!-- Stat Item 1 -->
+            <div class="hero-stat-card">
+              <div class="stat-icon-circle">
+                <img
+                  src="assets/svg/compartilhados/icone-grupo.svg"
+                  alt=""
+                  width="22"
+                  height="22"
+                />
+              </div>
+              <div class="stat-details">
+                <h3 class="stat-main-val">+5.000</h3>
+                <p class="stat-sub-text">
+                  Atendimentos realizados com excelência
+                </p>
+              </div>
+            </div>
+
+            <!-- Stat Item 2 -->
+            <div class="hero-stat-card">
+              <div class="stat-icon-circle">
+                <img
+                  src="assets/svg/compartilhados/icone-formatura.svg"
+                  alt=""
+                  width="22"
+                  height="22"
+                />
+              </div>
+              <div class="stat-details">
+                <h3 class="stat-main-val">10+</h3>
+                <p class="stat-sub-text">Anos de experiência em saúde mental</p>
+              </div>
+            </div>
+
+            <!-- Stat Item 3 -->
+            <div class="hero-stat-card">
+              <div class="stat-icon-circle">
+                <img
+                  src="assets/svg/compartilhados/icone-sigilo.svg"
+                  alt=""
+                  width="22"
+                  height="22"
+                />
+              </div>
+              <div class="stat-details">
+                <h3 class="stat-main-val">100%</h3>
+                <p class="stat-sub-text">Atendimento humanizado e sigiloso</p>
+              </div>
+            </div>
+
+            <!-- Stat Item 4 -->
+            <div class="hero-stat-card">
+              <div class="stat-icon-circle">
+                <img
+                  src="assets/svg/compartilhados/icone-folha.svg"
+                  alt=""
+                  width="22"
+                  height="22"
+                />
+              </div>
+              <div class="stat-details">
+                <h3 class="stat-main-val">Transformação</h3>
+                <p class="stat-sub-text">Resultados reais que mudam vidas</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Clinic Treatments Carousel Section (Redesigned from reference) -->
+      <section class="clinic-carousel-section" id="atendimentos">
+        <!-- Botanical Leaf Watermarks -->
+        <img
+          src="assets/svg/compartilhados/ramo-contorno.svg"
+          alt=""
+          class="section-leaf-watermark leaf-wm-left"
+        />
+        <img
+          src="assets/svg/compartilhados/sombra-palmeira.svg"
+          alt=""
+          class="section-leaf-watermark leaf-wm-right"
+        />
+
+        <div class="container">
+          <div class="section-header-center">
+            <span class="section-tag">
+              <img
+                src="assets/svg/tratamentos/icone-folha.svg"
+                alt=""
+                class="tag-svg-icon"
+              />
+              ATENDIMENTOS CLÍNICOS
+            </span>
+            <h2 class="section-title">
+              O que é <span class="highlight-gold">tratado</span> na clínica
+            </h2>
+            <p class="section-subtitle-center">
+              Deslize para conhecer as <strong>principais áreas</strong> de
+              acompanhamento terapêutico.
+            </p>
+          </div>
+
+          <div class="carousel-wrapper">
+            <button
+              class="carousel-control prev-btn"
+              id="carouselPrev"
+              aria-label="Anterior"
+            >
+              <img src="assets/svg/tratamentos/botao-anterior.svg" alt="" />
+            </button>
+
+            <div class="carousel-track-container" id="carouselTrackContainer">
+              <div class="carousel-track" id="carouselTrack">
+                <!-- Slide 1: Constelação Familiar -->
+                <div class="carousel-slide">
+                  <div
+                    class="treatment-card js-open-detail-modal"
+                    data-detail-id="constelacao"
+                  >
+                    <div class="treatment-visual">
+                      <img
+                        src="imagens/tratamentos/constelacao-familiar.jpg"
+                        alt="Árvore de vidro simbolizando vínculos entre gerações"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <div class="treatment-card-body">
+                      <h3 class="treatment-title">Constelação<br />Familiar</h3>
+                      <div class="treatment-title-line"></div>
+                      <p class="treatment-desc">
+                        Cura de feridas sistêmicas, desconstrução de lealdades
+                        invisíveis e repetições transgeracionais.
+                      </p>
+                      <div class="treatment-card-footer">
+                        <span>Ver detalhes</span>
+                        <span class="treatment-arrow" aria-hidden="true"
+                          >→</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 2: Renascimento & Traumas -->
+                <div class="carousel-slide">
+                  <div
+                    class="treatment-card js-open-detail-modal"
+                    data-detail-id="traumas"
+                  >
+                    <div class="treatment-visual">
+                      <img
+                        src="imagens/tratamentos/renascimento-traumas.jpg"
+                        alt="Borboleta de vidro emergindo de um casulo"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <div class="treatment-card-body">
+                      <h3 class="treatment-title">
+                        Renascimento &<br />Traumas
+                      </h3>
+                      <div class="treatment-title-line"></div>
+                      <p class="treatment-desc">
+                        Técnicas integrativas de respiração consciente para
+                        liberação de memórias e traumas no corpo.
+                      </p>
+                      <div class="treatment-card-footer">
+                        <span>Ver detalhes</span>
+                        <span class="treatment-arrow" aria-hidden="true"
+                          >→</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 3: Autoestima & Limites -->
+                <div class="carousel-slide">
+                  <div
+                    class="treatment-card js-open-detail-modal"
+                    data-detail-id="autonomia"
+                  >
+                    <div class="treatment-visual">
+                      <img
+                        src="imagens/tratamentos/autoestima-limites.jpg"
+                        alt="Mãos de vidro protegendo um coração luminoso"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <div class="treatment-card-body">
+                      <h3 class="treatment-title">Autoestima &<br />Limites</h3>
+                      <div class="treatment-title-line"></div>
+                      <p class="treatment-desc">
+                        Fortalecimento do valor próprio, comunicação assertiva e
+                        imposição de limites sem culpa.
+                      </p>
+                      <div class="treatment-card-footer">
+                        <span>Ver detalhes</span>
+                        <span class="treatment-arrow" aria-hidden="true"
+                          >→</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 4: Dependência Emocional -->
+                <div class="carousel-slide">
+                  <div
+                    class="treatment-card js-open-detail-modal"
+                    data-detail-id="dependencia"
+                  >
+                    <div class="treatment-visual">
+                      <img
+                        src="imagens/tratamentos/dependencia-emocional.jpg"
+                        alt="Laços de vidro se abrindo em caminhos independentes"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <div class="treatment-card-body">
+                      <h3 class="treatment-title">
+                        Dependência<br />Emocional
+                      </h3>
+                      <div class="treatment-title-line"></div>
+                      <p class="treatment-desc">
+                        Libertação de apegos dolorosos, resgate da autonomia e
+                        superação do medo de ficar sós.
+                      </p>
+                      <div class="treatment-card-footer">
+                        <span>Ver detalhes</span>
+                        <span class="treatment-arrow" aria-hidden="true"
+                          >→</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 5: Relações Abusivas -->
+                <div class="carousel-slide">
+                  <div
+                    class="treatment-card js-open-detail-modal"
+                    data-detail-id="abusivas"
+                  >
+                    <div class="treatment-visual">
+                      <img
+                        src="imagens/tratamentos/relacoes-abusivas.jpg"
+                        alt="Escudo de vidro protegendo um novo ramo"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <div class="treatment-card-body">
+                      <h3 class="treatment-title">Relações<br />Abusivas</h3>
+                      <div class="treatment-title-line"></div>
+                      <p class="treatment-desc">
+                        Identificação de manipulações (gaslighting), quebra de
+                        ciclos nocivos e reconstrução da identidade.
+                      </p>
+                      <div class="treatment-card-footer">
+                        <span>Ver detalhes</span>
+                        <span class="treatment-arrow" aria-hidden="true"
+                          >→</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 6: Psicanálise & Ansiedade -->
+                <div class="carousel-slide">
+                  <div
+                    class="treatment-card js-open-detail-modal"
+                    data-detail-id="psicanalise"
+                  >
+                    <div class="treatment-visual">
+                      <img
+                        src="imagens/tratamentos/psicanalise-ansiedade.jpg"
+                        alt="Silhueta de vidro com pensamentos se tornando serenos"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <div class="treatment-card-body">
+                      <h3 class="treatment-title">
+                        Psicanálise &<br />Ansiedade
+                      </h3>
+                      <div class="treatment-title-line"></div>
+                      <p class="treatment-desc">
+                        Investigação de causas inconscientes, angústias
+                        profundas e manejo do estado de alerta constante.
+                      </p>
+                      <div class="treatment-card-footer">
+                        <span>Ver detalhes</span>
+                        <span class="treatment-arrow" aria-hidden="true"
+                          >→</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button
+              class="carousel-control next-btn"
+              id="carouselNext"
+              aria-label="Próximo"
+            >
+              <img src="assets/svg/tratamentos/botao-proximo.svg" alt="" />
+            </button>
+          </div>
+
+          <!-- Pagination Dots -->
+          <div class="carousel-dots" id="carouselDots"></div>
+        </div>
+      </section>
+
+      <!-- About Section (Redesigned) -->
+      <section class="about" id="sobre">
+        <img
+          src="assets/svg/sobre/folhagem-canto-direito.svg"
+          alt=""
+          class="about-foliage about-foliage-right"
+          aria-hidden="true"
+        />
+        <img
+          src="assets/svg/sobre/folhagem-canto-direito.svg"
+          alt=""
+          class="about-foliage about-foliage-right-fill"
+          aria-hidden="true"
+        />
+        <img
+          src="assets/svg/compartilhados/folhagem-canto-esquerdo.svg"
+          alt=""
+          class="about-foliage about-foliage-left"
+          aria-hidden="true"
+        />
+        <img
+          src="assets/svg/sobre/folhagem-inferior.svg"
+          alt=""
+          class="about-foliage about-foliage-bottom"
+          aria-hidden="true"
+        />
+        <img
+          src="assets/svg/compartilhados/sombra-palmeira.svg"
+          alt=""
+          class="about-foliage about-end-palm-shadow"
+          aria-hidden="true"
+        />
+
+        <div class="container about-grid">
+          <div class="about-img-col">
+            <div class="about-img-box">
+              <div class="about-rotating-seal">
+                <img
+                  src="assets/svg/sobre/selo-circular.svg"
+                  alt="Escuta que acolhe, transforma que liberta"
+                  class="seal-svg"
+                />
+              </div>
+
+              <img
+                src="imagens/raquel-sobre.jpg"
+                alt="Raquel Vieira - Especialista em Dependência Emocional"
+                class="about-photo"
+              />
+              <img
+                src="assets/svg/sobre/moldura-foto.svg"
+                alt=""
+                class="about-photo-frame"
+                aria-hidden="true"
+              />
+              <img
+                src="assets/svg/compartilhados/sparkle.svg"
+                alt=""
+                class="about-sparkle about-sparkle-top"
+                aria-hidden="true"
+              />
+              <img
+                src="assets/svg/compartilhados/sparkle.svg"
+                alt=""
+                class="about-sparkle about-sparkle-bottom"
+                aria-hidden="true"
+              />
+
+              <div class="about-profile-panel">
+                <div class="about-experience-badge">
+                  <div class="exp-icon">
+                    <img
+                      src="assets/svg/compartilhados/icone-grupo.svg"
+                      alt=""
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <div>
+                    <span class="exp-number">+5.000</span>
+                    <span class="exp-text"
+                      >HISTÓRIAS E ATENDIMENTOS ACOMPANHADOS</span
+                    >
+                  </div>
+                </div>
+
+                <div class="about-values-row">
+                  <div class="about-value-item">
+                    <div class="about-value-icon">
+                      <img
+                        src="assets/svg/sobre/icone-escuta-acolhedora.svg"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                    </div>
+                    <span>ESCUTA<br />ACOLHEDORA</span>
+                  </div>
+                  <div class="about-value-item">
+                    <div class="about-value-icon">
+                      <img
+                        src="assets/svg/compartilhados/icone-sigilo.svg"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                    </div>
+                    <span>SIGILO<br />ABSOLUTO</span>
+                  </div>
+                  <div class="about-value-item">
+                    <div class="about-value-icon">
+                      <img
+                        src="assets/svg/sobre/icone-usuario.svg"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                    </div>
+                    <span>ATENDIMENTO<br />HUMANIZADO</span>
+                  </div>
+                  <div class="about-value-item">
+                    <div class="about-value-icon">
+                      <img
+                        src="assets/svg/compartilhados/icone-folha.svg"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                    </div>
+                    <span>TRANSFORMAÇÃO<br />REAL</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-content">
+            <span class="section-tag"
+              ><img
+                src="assets/svg/compartilhados/icone-ramo-eyebrow.svg"
+                alt=""
+                aria-hidden="true"
+              />
+              QUEM É RAQUEL VIEIRA</span
+            >
+            <h2 class="section-title">
+              Especialista no tratamento da
+              <span class="highlight-gold">dependência emocional</span> e
+              <span class="highlight-gold">relações abusivas</span>
+            </h2>
+
+            <p class="about-text Highlight-lead">
+              <strong>Raquel é muito mais que uma terapeuta:</strong> é uma das
+              mais respeitadas especialistas no tratamento da dependência
+              emocional e pesquisadoras de relações abusivas. Sua trajetória
+              profissional é marcada pelo compromisso com a transformação
+              emocional e pela facilidade de ajudar pessoas a se libertarem da
+              dependência emocional, compreenderem suas histórias e pararem de
+              repetir padrões que causam sofrimento.
+            </p>
+
+            <div class="formacao-box">
+              <h3 class="formacao-title">
+                <span class="formacao-title-icon"
+                  ><img
+                    src="assets/svg/compartilhados/icone-formatura.svg"
+                    alt=""
+                    aria-hidden="true"
+                /></span>
+                Formação & Especializações
+              </h3>
+              <p class="formacao-desc">
+                Psicanalista clínica, especialista em saúde mental e dependência
+                emocional. Constelação familiar e renascimento.
+              </p>
+              <div class="formacao-tags">
+                <span class="tag-pill"
+                  ><img
+                    src="assets/svg/sobre/icone-psicanalise.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  Psicanalista Clínica</span
+                >
+                <span class="tag-pill"
+                  ><img
+                    src="assets/svg/sobre/icone-coracao-solido.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  Saúde Mental & Dependência Emocional</span
+                >
+                <span class="tag-pill"
+                  ><img
+                    src="assets/svg/sobre/icone-lupa.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  Relações Abusivas</span
+                >
+                <span class="tag-pill"
+                  ><img
+                    src="assets/svg/sobre/icone-constelacao.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  Constelação Familiar</span
+                >
+                <span class="tag-pill"
+                  ><img
+                    src="assets/svg/sobre/icone-renascimento.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  Renascimento</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reflections / Content Section -->
+      <section class="reflections">
+        <img
+          src="assets/svg/compartilhados/sombra-folhas-suave.svg"
+          alt=""
+          class="reflections-decor reflections-decor-shadow"
+          aria-hidden="true"
+        />
+        <img
+          src="assets/svg/compartilhados/sparkle.svg"
+          alt=""
+          class="reflections-decor reflections-sparkle reflections-sparkle-top"
+          aria-hidden="true"
+        />
+        <img
+          src="assets/svg/compartilhados/sparkle.svg"
+          alt=""
+          class="reflections-decor reflections-sparkle reflections-sparkle-bottom"
+          aria-hidden="true"
+        />
+        <div class="container">
+          <div class="section-header-center">
+            <span class="section-tag"
+              ><img
+                src="assets/svg/compartilhados/icone-ramo-eyebrow.svg"
+                alt=""
+                aria-hidden="true"
+              />
+              CONTEÚDOS E REFLEXÕES</span
+            >
+            <h2 class="section-title">
+              Uma conversa para transformar sua forma de
+              <em class="title-italic-gold">se relacionar</em>
+            </h2>
+            <span class="reflections-divider" aria-hidden="true">
+              <span></span>
+              <img
+                src="assets/svg/compartilhados/icone-ramo-eyebrow.svg"
+                alt=""
+              />
+              <span></span>
+            </span>
+            <p class="reflections-intro">
+              Um conteúdo direto e acolhedor para compreender padrões emocionais
+              e dar o primeiro passo em direção à sua autonomia.
+            </p>
+          </div>
+
+          <div class="video-grid featured-video-grid">
+            <a
+              href="#"
+              class="video-card video-featured-card js-open-video"
+              data-video-title="Como libertar-se da dependência emocional"
+              aria-label="Assistir ao vídeo: Como libertar-se da dependência emocional"
+            >
+              <div class="video-thumb-container video-featured-visual">
+                <img
+                  src="imagens/thumb-1.jpg"
+                  alt="Como libertar-se da dependência emocional"
+                />
+                <span class="video-feature-label"
+                  ><i class="fas fa-star" aria-hidden="true"></i> VÍDEO EM
+                  DESTAQUE</span
+                >
+                <div class="play-overlay-btn"><i class="fas fa-play"></i></div>
+                <span class="video-duration">06:15</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="reflections-appointment">
+            <span class="reflections-appointment-icon" aria-hidden="true">
+              <img
+                src="assets/svg/compartilhados/icone-ramo-eyebrow.svg"
+                alt=""
+              />
+            </span>
+            <div class="reflections-appointment-copy">
+              <strong>Quer conversar sobre o que você está vivendo?</strong>
+              <span
+                >Um espaço seguro para acolher, compreender e transformar.</span
+              >
+            </div>
+            <a
+              href="#"
+              class="btn reflections-appointment-btn js-open-appointment"
+            >
+              Agendar atendimento com Raquel
+              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Demonstrative Google Reviews Section -->
+      <section
+        class="google-reviews-section"
+        id="avaliacoes"
+        aria-labelledby="googleReviewsTitle"
+      >
+        <img
+          src="assets/svg/compartilhados/ramo-contorno.svg"
+          alt=""
+          class="google-reviews-botanical"
+          aria-hidden="true"
+        />
+
+        <div class="container">
+          <div class="section-header-center google-reviews-heading">
+            <span class="section-tag google-reviews-tag">
+              AVALIAÇÕES GOOGLE
+            </span>
+            <h2 class="section-title" id="googleReviewsTitle">
+              Experiências de quem<br />
+              escolheu <em class="title-italic-gold">se transformar</em>
+            </h2>
+            <p>
+              Cards demonstrativos inspirados no Google, preparados para receber
+              avaliações reais e verificadas.
+            </p>
+          </div>
+
+          <div class="google-reviews-glass">
+            <div class="google-reviews-summary">
+              <div class="google-summary-brand">
+                <span class="google-logo-orb"
+                  ><img src="assets/svg/avaliacoes/google-g.svg" alt="Google"
+                /></span>
+                <div>
+                  <strong>Avaliações Google</strong>
+                  <span>Apresentação demonstrativa</span>
+                </div>
+              </div>
+
+              <div
+                class="google-summary-rating"
+                aria-label="Nota demonstrativa 5 de 5"
+              >
+                <strong>5,0</strong>
+                <span class="google-stars" aria-hidden="true">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i>
+                </span>
+              </div>
+
+              <div class="google-reviews-controls">
+                <button
+                  type="button"
+                  id="googleReviewPrev"
+                  aria-label="Avaliação anterior"
+                >
+                  <i class="fas fa-arrow-left" aria-hidden="true"></i>
+                </button>
+                <button
+                  type="button"
+                  id="googleReviewNext"
+                  aria-label="Próxima avaliação"
+                >
+                  <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="google-reviews-viewport" id="googleReviewsViewport">
+              <div class="google-reviews-track" id="googleReviewsTrack">
+                <article class="google-review-card">
+                  <div class="google-review-person">
+                    <span class="google-review-avatar">A</span>
+                    <div>
+                      <strong>Paciente A.</strong
+                      ><span>Exemplo ilustrativo</span>
+                    </div>
+                    <img
+                      src="assets/svg/avaliacoes/google-g.svg"
+                      alt=""
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <div class="google-review-stars" aria-label="5 de 5 estrelas">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i>
+                  </div>
+                  <p>
+                    “Encontrei um espaço acolhedor para compreender meus padrões
+                    e começar a estabelecer limites com mais segurança.”
+                  </p>
+                </article>
+
+                <article class="google-review-card">
+                  <div class="google-review-person">
+                    <span class="google-review-avatar">M</span>
+                    <div>
+                      <strong>Paciente M.</strong
+                      ><span>Exemplo ilustrativo</span>
+                    </div>
+                    <img
+                      src="assets/svg/avaliacoes/google-g.svg"
+                      alt=""
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <div class="google-review-stars" aria-label="5 de 5 estrelas">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i>
+                  </div>
+                  <p>
+                    “A escuta cuidadosa me ajudou a perceber situações que eu
+                    normalizava e a recuperar pouco a pouco minha autonomia.”
+                  </p>
+                </article>
+
+                <article class="google-review-card">
+                  <div class="google-review-person">
+                    <span class="google-review-avatar">C</span>
+                    <div>
+                      <strong>Paciente C.</strong
+                      ><span>Exemplo ilustrativo</span>
+                    </div>
+                    <img
+                      src="assets/svg/avaliacoes/google-g.svg"
+                      alt=""
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <div class="google-review-stars" aria-label="5 de 5 estrelas">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i>
+                  </div>
+                  <p>
+                    “Foi importante ter um acompanhamento respeitoso, sem
+                    julgamentos e comprometido com o meu próprio processo.”
+                  </p>
+                </article>
+
+                <article class="google-review-card">
+                  <div class="google-review-person">
+                    <span class="google-review-avatar">L</span>
+                    <div>
+                      <strong>Paciente L.</strong
+                      ><span>Exemplo ilustrativo</span>
+                    </div>
+                    <img
+                      src="assets/svg/avaliacoes/google-g.svg"
+                      alt=""
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <div class="google-review-stars" aria-label="5 de 5 estrelas">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i>
+                  </div>
+                  <p>
+                    “Hoje consigo reconhecer melhor minhas necessidades e tomar
+                    decisões com mais clareza, consciência e tranquilidade.”
+                  </p>
+                </article>
+
+                <article class="google-review-card">
+                  <div class="google-review-person">
+                    <span class="google-review-avatar">R</span>
+                    <div>
+                      <strong>Paciente R.</strong
+                      ><span>Exemplo ilustrativo</span>
+                    </div>
+                    <img
+                      src="assets/svg/avaliacoes/google-g.svg"
+                      alt=""
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <div class="google-review-stars" aria-label="5 de 5 estrelas">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i>
+                  </div>
+                  <p>
+                    “O processo trouxe novas perspectivas sobre minha história e
+                    me ajudou a construir relações mais saudáveis.”
+                  </p>
+                </article>
+              </div>
+            </div>
+
+            <div
+              class="google-reviews-dots"
+              id="googleReviewDots"
+              aria-label="Navegação das avaliações"
+            ></div>
+          </div>
+
+          <p class="google-reviews-disclaimer">
+            <i class="fas fa-circle-info" aria-hidden="true"></i> Conteúdo
+            fictício para demonstração visual. Substitua por avaliações reais
+            antes da publicação.
           </p>
+        </div>
+      </section>
 
-          <div class="hero-cta-group">
-            <a href="#" class="btn btn-hero-primary js-open-appointment">
-              Agendar conversa <i class="fab fa-whatsapp whatsapp-icon"></i>
-            </a>
-            <a href="#sobre" class="btn btn-hero-outline">
-              Conhecer Raquel Vieira <i class="fas fa-chevron-right arrow-icon"></i>
-            </a>
+      <!-- FAQ Section -->
+      <section
+        class="faq"
+        id="perguntas"
+        style="position: relative; overflow: hidden"
+      >
+        <img
+          src="assets/svg/compartilhados/ramo-frutos.svg"
+          alt=""
+          class="botanical-element faq-botanical-top"
+          aria-hidden="true"
+        />
+        <img
+          src="assets/svg/faq/arvore-suave.svg"
+          alt=""
+          class="botanical-element faq-botanical-tree"
+          aria-hidden="true"
+        />
+
+        <div class="container">
+          <div class="section-header-center">
+            <span class="section-tag"
+              ><i class="fas fa-circle-question"></i> PERGUNTAS FREQUENTES</span
+            >
+            <h2 class="section-title">
+              Dúvidas comuns sobre o
+              <em class="title-italic-gold">acompanhamento</em>
+            </h2>
           </div>
 
-          <div class="hero-trust-indicator">
-            <img src="assets/svg/compartilhados/icone-sigilo.svg" alt="" class="trust-svg-icon" width="20" height="20">
-            <span>Atendimento 100% sigiloso e acolhedor</span>
+          <div class="faq-wrapper">
+            <div class="faq-item active">
+              <button class="faq-question">
+                <span
+                  >Como funciona o tratamento da dependência emocional?</span
+                >
+                <i class="fas fa-plus faq-icon"></i>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  O tratamento foca em compreender as origens do apego doloroso,
+                  desconstruir crenças de desvalor e fortalecer sua autonomia
+                  emocional. Através de uma escuta acolhedora, você aprende a
+                  parar de repetir padrões de sofrimento e construir relações
+                  saudáveis consigo e com os outros.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Como identificar se estou em uma relação abusiva?</span>
+                <i class="fas fa-plus faq-icon"></i>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Relações abusivas vão muito além da violência física —
+                  envolvem manipulação psicológica, invalidação de sentimentos e
+                  perda gradual de autonomia. No espaço terapêutico, analisamos
+                  com ética e sigilo a sua história para que você possa retomar
+                  o controle da sua vida.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Quais formações e técnicas Raquel utiliza?</span>
+                <i class="fas fa-plus faq-icon"></i>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Raquel Vieira é psicanalista clínica, especialista em saúde
+                  mental e dependência emocional, com formação e atuação em
+                  Constelação Familiar e Renascimento (Rebirthing), integrando
+                  saberes para uma transformação profunda.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Os atendimentos podem ser realizados online?</span>
+                <i class="fas fa-plus faq-icon"></i>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Sim! Os atendimentos são oferecidos tanto na modalidade
+                  presencial quanto online (via videochamada segura e sigilosa),
+                  garantindo o mesmo nível de acolhimento e privacidade para
+                  pacientes no Brasil e no exterior.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Como agendar uma consulta inicial?</span>
+                <i class="fas fa-plus faq-icon"></i>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Basta clicar em qualquer botão "Agendar conversa" na página
+                  para entrar em contato diretamente via WhatsApp ou preencher o
+                  formulário rápido de agendamento.
+                </p>
+              </div>
+            </div>
           </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contato">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <img
+              src="assets/svg/marca/raquel-vieira-logo.svg"
+              alt="Raquel Vieira"
+              class="logo-img"
+            />
+            <p>
+              Psicanálise clínica, tratamento da dependência emocional, relações
+              abusivas, constelação familiar e renascimento. Mais de 5.000
+              atendimentos acompanhando caminhos de liberdade e autonomia.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="footer-column-title">Navegação</h4>
+            <ul class="footer-links">
+              <li><a href="#sobre">Sobre Raquel</a></li>
+              <li><a href="#atendimentos">Atendimentos</a></li>
+              <li><a href="#curso">Programa Terapêutico</a></li>
+              <li><a href="#recursos">Recursos</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-column-title">Contato</h4>
+            <ul class="contact-info">
+              <li><i class="fas fa-phone-alt"></i> (11) 99999-9999</li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                contato@raquelvieiraemocional.com.br
+              </li>
+              <li><i class="fas fa-map-marker-alt"></i> São Paulo - SP</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-column-title">Redes Sociais</h4>
+            <div class="social-links">
+              <a href="#" class="social-icon" title="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="social-icon" title="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#" class="social-icon" title="YouTube"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+            <div style="margin-top: 1.5rem">
+              <button
+                class="btn btn-footer js-open-appointment"
+                style="width: 100%"
+              >
+                Agendar conversa
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>
+            © 2026 Raquel Vieira Psicanálise. Todos os direitos reservados.
+          </div>
+          <div>Desenvolvido com ética e cuidado.</div>
         </div>
       </div>
+    </footer>
 
-      <!-- Right Photo Column (Image Layered Behind Badges & Curve Separator Overlay) -->
-      <div class="hero-right-col">
-        <div class="hero-photo-container">
-          <img src="assets/svg/hero/ramo-dourado-cheio.svg" alt="" class="botanical-element hero-botanical-photo-top-right" aria-hidden="true">
-          
-          <!-- Background Photo Layer -->
-          <img src="imagens/raquel-hero.jpg" alt="Dra. Raquel Vieira - Psicanalista Especialista"
-            class="hero-photo-img bg-photo">
+    <!-- Floating WhatsApp Button -->
+    <a
+      href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20conversa."
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Conversar pelo WhatsApp"
+      title="Conversar pelo WhatsApp"
+    >
+      <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
 
-          <!-- Organic S-Curve Partition Overlay -->
-          <div class="hero-curve-separator">
-            <svg class="curve-svg" viewBox="0 0 400 800" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Solid Background Filler Matching Left Column -->
-              <path d="M0,0 L270,0 C120,130 100,260 230,400 C360,540 380,680 0,800 L0,800 Z" fill="#faf6f0" />
-              <!-- Primary Elegant Gold Contour Stroke -->
-              <path d="M270,0 C120,130 100,260 230,400 C360,540 380,680 0,800" stroke="#c4a882" stroke-width="3.5" fill="none" opacity="0.95" />
-              <!-- Secondary Delicate Dashed Accent Contour -->
-              <path d="M263,0 C113,130 93,260 223,400 C353,540 373,680 0,795" stroke="#a8793b" stroke-width="1.5" stroke-dasharray="8 5" fill="none" opacity="0.7" />
-              <!-- Soft White Inner Highlight Glow Line -->
-              <path d="M274,0 C124,130 104,260 234,400 C364,540 384,680 0,804" stroke="#ffffff" stroke-width="1.8" fill="none" opacity="0.6" />
-            </svg>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- Integrated Bottom Statistics Floating Bar -->
-    <div class="container hero-stats-container">
-      <div class="hero-stats-bar">
-        <!-- Stat Item 1 -->
-        <div class="hero-stat-card">
-          <div class="stat-icon-circle">
-            <img src="assets/svg/compartilhados/icone-grupo.svg" alt="" width="22" height="22">
-          </div>
-          <div class="stat-details">
-            <h3 class="stat-main-val">+5.000</h3>
-            <p class="stat-sub-text">Atendimentos realizados com excelência</p>
-          </div>
-        </div>
-
-        <!-- Stat Item 2 -->
-        <div class="hero-stat-card">
-          <div class="stat-icon-circle">
-            <img src="assets/svg/compartilhados/icone-formatura.svg" alt="" width="22" height="22">
-          </div>
-          <div class="stat-details">
-            <h3 class="stat-main-val">10+</h3>
-            <p class="stat-sub-text">Anos de experiência em saúde mental</p>
-          </div>
-        </div>
-
-        <!-- Stat Item 3 -->
-        <div class="hero-stat-card">
-          <div class="stat-icon-circle">
-            <img src="assets/svg/compartilhados/icone-sigilo.svg" alt="" width="22" height="22">
-          </div>
-          <div class="stat-details">
-            <h3 class="stat-main-val">100%</h3>
-            <p class="stat-sub-text">Atendimento humanizado e sigiloso</p>
-          </div>
-        </div>
-
-        <!-- Stat Item 4 -->
-        <div class="hero-stat-card">
-          <div class="stat-icon-circle">
-            <img src="assets/svg/compartilhados/icone-folha.svg" alt="" width="22" height="22">
-          </div>
-          <div class="stat-details">
-            <h3 class="stat-main-val">Transformação</h3>
-            <p class="stat-sub-text">Resultados reais que mudam vidas</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Clinic Treatments Carousel Section (Redesigned from reference) -->
-  <section class="clinic-carousel-section" id="atendimentos">
-    <!-- Botanical Leaf Watermarks -->
-    <img src="assets/svg/compartilhados/ramo-contorno.svg" alt="" class="section-leaf-watermark leaf-wm-left">
-    <img src="assets/svg/compartilhados/sombra-palmeira.svg" alt="" class="section-leaf-watermark leaf-wm-right">
-
-    <div class="container">
-      <div class="section-header-center">
-        <span class="section-tag">
-          <img src="assets/svg/tratamentos/icone-folha.svg" alt="" class="tag-svg-icon">
-          ATENDIMENTOS CLÍNICOS
-        </span>
-        <h2 class="section-title">O que é <span class="highlight-gold">tratado</span> na clínica</h2>
-        <p class="section-subtitle-center">Deslize para conhecer as <strong>principais áreas</strong> de acompanhamento terapêutico.</p>
-      </div>
-
-      <div class="carousel-wrapper">
-        <button class="carousel-control prev-btn" id="carouselPrev" aria-label="Anterior">
-          <img src="assets/svg/tratamentos/botao-anterior.svg" alt="">
+    <!-- Appointment Modal -->
+    <div class="modal-backdrop" id="appointmentModal">
+      <div class="modal-card">
+        <button class="modal-close js-close-modal" aria-label="Fechar">
+          <i class="fas fa-times"></i>
         </button>
-
-        <div class="carousel-track-container" id="carouselTrackContainer">
-          <div class="carousel-track" id="carouselTrack">
-            <!-- Slide 1: Constelação Familiar -->
-            <div class="carousel-slide">
-              <div class="treatment-card js-open-detail-modal" data-detail-id="constelacao">
-                <div class="treatment-visual">
-                  <img src="imagens/tratamentos/constelacao-familiar.jpg" alt="Árvore de vidro simbolizando vínculos entre gerações" loading="lazy" decoding="async">
-                </div>
-                <div class="treatment-card-body">
-                  <h3 class="treatment-title">Constelação<br>Familiar</h3>
-                  <div class="treatment-title-line"></div>
-                  <p class="treatment-desc">Cura de feridas sistêmicas, desconstrução de lealdades invisíveis e repetições transgeracionais.</p>
-                  <div class="treatment-card-footer">
-                    <span>Ver detalhes</span>
-                    <span class="treatment-arrow" aria-hidden="true">→</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 2: Renascimento & Traumas -->
-            <div class="carousel-slide">
-              <div class="treatment-card js-open-detail-modal" data-detail-id="traumas">
-                <div class="treatment-visual">
-                  <img src="imagens/tratamentos/renascimento-traumas.jpg" alt="Borboleta de vidro emergindo de um casulo" loading="lazy" decoding="async">
-                </div>
-                <div class="treatment-card-body">
-                  <h3 class="treatment-title">Renascimento &<br>Traumas</h3>
-                  <div class="treatment-title-line"></div>
-                  <p class="treatment-desc">Técnicas integrativas de respiração consciente para liberação de memórias e traumas no corpo.</p>
-                  <div class="treatment-card-footer">
-                    <span>Ver detalhes</span>
-                    <span class="treatment-arrow" aria-hidden="true">→</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 3: Autoestima & Limites -->
-            <div class="carousel-slide">
-              <div class="treatment-card js-open-detail-modal" data-detail-id="autonomia">
-                <div class="treatment-visual">
-                  <img src="imagens/tratamentos/autoestima-limites.jpg" alt="Mãos de vidro protegendo um coração luminoso" loading="lazy" decoding="async">
-                </div>
-                <div class="treatment-card-body">
-                  <h3 class="treatment-title">Autoestima &<br>Limites</h3>
-                  <div class="treatment-title-line"></div>
-                  <p class="treatment-desc">Fortalecimento do valor próprio, comunicação assertiva e imposição de limites sem culpa.</p>
-                  <div class="treatment-card-footer">
-                    <span>Ver detalhes</span>
-                    <span class="treatment-arrow" aria-hidden="true">→</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 4: Dependência Emocional -->
-            <div class="carousel-slide">
-              <div class="treatment-card js-open-detail-modal" data-detail-id="dependencia">
-                <div class="treatment-visual">
-                  <img src="imagens/tratamentos/dependencia-emocional.jpg" alt="Laços de vidro se abrindo em caminhos independentes" loading="lazy" decoding="async">
-                </div>
-                <div class="treatment-card-body">
-                  <h3 class="treatment-title">Dependência<br>Emocional</h3>
-                  <div class="treatment-title-line"></div>
-                  <p class="treatment-desc">Libertação de apegos dolorosos, resgate da autonomia e superação do medo de ficar sós.</p>
-                  <div class="treatment-card-footer">
-                    <span>Ver detalhes</span>
-                    <span class="treatment-arrow" aria-hidden="true">→</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 5: Relações Abusivas -->
-            <div class="carousel-slide">
-              <div class="treatment-card js-open-detail-modal" data-detail-id="abusivas">
-                <div class="treatment-visual">
-                  <img src="imagens/tratamentos/relacoes-abusivas.jpg" alt="Escudo de vidro protegendo um novo ramo" loading="lazy" decoding="async">
-                </div>
-                <div class="treatment-card-body">
-                  <h3 class="treatment-title">Relações<br>Abusivas</h3>
-                  <div class="treatment-title-line"></div>
-                  <p class="treatment-desc">Identificação de manipulações (gaslighting), quebra de ciclos nocivos e reconstrução da identidade.</p>
-                  <div class="treatment-card-footer">
-                    <span>Ver detalhes</span>
-                    <span class="treatment-arrow" aria-hidden="true">→</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 6: Psicanálise & Ansiedade -->
-            <div class="carousel-slide">
-              <div class="treatment-card js-open-detail-modal" data-detail-id="psicanalise">
-                <div class="treatment-visual">
-                  <img src="imagens/tratamentos/psicanalise-ansiedade.jpg" alt="Silhueta de vidro com pensamentos se tornando serenos" loading="lazy" decoding="async">
-                </div>
-                <div class="treatment-card-body">
-                  <h3 class="treatment-title">Psicanálise &<br>Ansiedade</h3>
-                  <div class="treatment-title-line"></div>
-                  <p class="treatment-desc">Investigação de causas inconscientes, angústias profundas e manejo do estado de alerta constante.</p>
-                  <div class="treatment-card-footer">
-                    <span>Ver detalhes</span>
-                    <span class="treatment-arrow" aria-hidden="true">→</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <button class="carousel-control next-btn" id="carouselNext" aria-label="Próximo">
-          <img src="assets/svg/tratamentos/botao-proximo.svg" alt="">
-        </button>
-      </div>
-
-      <!-- Pagination Dots -->
-      <div class="carousel-dots" id="carouselDots"></div>
-    </div>
-  </section>
-
-  <!-- About Section (Redesigned) -->
-  <section class="about" id="sobre">
-    <img src="assets/svg/sobre/folhagem-canto-direito.svg" alt="" class="about-foliage about-foliage-right" aria-hidden="true">
-    <img src="assets/svg/sobre/folhagem-canto-direito.svg" alt="" class="about-foliage about-foliage-right-fill" aria-hidden="true">
-    <img src="assets/svg/compartilhados/folhagem-canto-esquerdo.svg" alt="" class="about-foliage about-foliage-left" aria-hidden="true">
-    <img src="assets/svg/sobre/folhagem-inferior.svg" alt="" class="about-foliage about-foliage-bottom" aria-hidden="true">
-    <img src="assets/svg/compartilhados/sombra-palmeira.svg" alt="" class="about-foliage about-end-palm-shadow" aria-hidden="true">
-
-    <div class="container about-grid">
-      <div class="about-img-col">
-        <div class="about-img-box">
-          <div class="about-rotating-seal">
-            <img src="assets/svg/sobre/selo-circular.svg" alt="Escuta que acolhe, transforma que liberta" class="seal-svg">
-          </div>
-
-          <img src="imagens/raquel-sobre.jpg" alt="Raquel Vieira - Especialista em Dependência Emocional" class="about-photo">
-          <img src="assets/svg/sobre/moldura-foto.svg" alt="" class="about-photo-frame" aria-hidden="true">
-          <img src="assets/svg/compartilhados/sparkle.svg" alt="" class="about-sparkle about-sparkle-top" aria-hidden="true">
-          <img src="assets/svg/compartilhados/sparkle.svg" alt="" class="about-sparkle about-sparkle-bottom" aria-hidden="true">
-
-          <div class="about-profile-panel">
-            <div class="about-experience-badge">
-              <div class="exp-icon"><img src="assets/svg/compartilhados/icone-grupo.svg" alt="" aria-hidden="true"></div>
-              <div>
-                <span class="exp-number">+5.000</span>
-                <span class="exp-text">HISTÓRIAS E ATENDIMENTOS ACOMPANHADOS</span>
-              </div>
-            </div>
-
-            <div class="about-values-row">
-              <div class="about-value-item">
-                <div class="about-value-icon"><img src="assets/svg/sobre/icone-escuta-acolhedora.svg" alt="" aria-hidden="true"></div>
-                <span>ESCUTA<br>ACOLHEDORA</span>
-              </div>
-              <div class="about-value-item">
-                <div class="about-value-icon"><img src="assets/svg/compartilhados/icone-sigilo.svg" alt="" aria-hidden="true"></div>
-                <span>SIGILO<br>ABSOLUTO</span>
-              </div>
-              <div class="about-value-item">
-                <div class="about-value-icon"><img src="assets/svg/sobre/icone-usuario.svg" alt="" aria-hidden="true"></div>
-                <span>ATENDIMENTO<br>HUMANIZADO</span>
-              </div>
-              <div class="about-value-item">
-                <div class="about-value-icon"><img src="assets/svg/compartilhados/icone-folha.svg" alt="" aria-hidden="true"></div>
-                <span>TRANSFORMAÇÃO<br>REAL</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="about-content">
-        <span class="section-tag"><img src="assets/svg/compartilhados/icone-ramo-eyebrow.svg" alt="" aria-hidden="true"> QUEM É RAQUEL VIEIRA</span>
-        <h2 class="section-title">Especialista no tratamento da <span class="highlight-gold">dependência emocional</span> e <span class="highlight-gold">relações abusivas</span></h2>
-
-        <p class="about-text Highlight-lead">
-          <strong>Raquel é muito mais que uma terapeuta:</strong> é uma das mais respeitadas especialistas no tratamento
-          da dependência emocional e pesquisadoras de relações abusivas. Sua trajetória profissional é marcada pelo
-          compromisso com a transformação emocional e pela facilidade de ajudar pessoas a se libertarem da dependência
-          emocional, compreenderem suas histórias e pararem de repetir padrões que causam sofrimento.
+        <h3 class="modal-title">Agendar conversa</h3>
+        <p class="modal-desc">
+          Preencha seus dados para iniciar seu contato direto via WhatsApp com a
+          Dra. Raquel Vieira.
         </p>
 
-        <div class="formacao-box">
-          <h3 class="formacao-title"><span class="formacao-title-icon"><img src="assets/svg/compartilhados/icone-formatura.svg" alt="" aria-hidden="true"></span> Formação & Especializações</h3>
-          <p class="formacao-desc">
-            Psicanalista clínica, especialista em saúde mental e dependência emocional. Constelação familiar e
-            renascimento.
-          </p>
-          <div class="formacao-tags">
-            <span class="tag-pill"><img src="assets/svg/sobre/icone-psicanalise.svg" alt="" aria-hidden="true"> Psicanalista Clínica</span>
-            <span class="tag-pill"><img src="assets/svg/sobre/icone-coracao-solido.svg" alt="" aria-hidden="true"> Saúde Mental & Dependência Emocional</span>
-            <span class="tag-pill"><img src="assets/svg/sobre/icone-lupa.svg" alt="" aria-hidden="true"> Relações Abusivas</span>
-            <span class="tag-pill"><img src="assets/svg/sobre/icone-constelacao.svg" alt="" aria-hidden="true"> Constelação Familiar</span>
-            <span class="tag-pill"><img src="assets/svg/sobre/icone-renascimento.svg" alt="" aria-hidden="true"> Renascimento</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Reflections / Content Section -->
-  <section class="reflections">
-    <img src="assets/svg/compartilhados/sombra-folhas-suave.svg" alt=""
-      class="reflections-decor reflections-decor-shadow" aria-hidden="true">
-    <img src="assets/svg/compartilhados/sparkle.svg" alt=""
-      class="reflections-decor reflections-sparkle reflections-sparkle-top" aria-hidden="true">
-    <img src="assets/svg/compartilhados/sparkle.svg" alt=""
-      class="reflections-decor reflections-sparkle reflections-sparkle-bottom" aria-hidden="true">
-    <div class="container">
-      <div class="section-header-center">
-        <span class="section-tag"><img src="assets/svg/compartilhados/icone-ramo-eyebrow.svg" alt="" aria-hidden="true"> CONTEÚDOS E REFLEXÕES</span>
-        <h2 class="section-title">Uma conversa para transformar sua forma de <em class="title-italic-gold">se relacionar</em></h2>
-        <span class="reflections-divider" aria-hidden="true">
-          <span></span>
-          <img src="assets/svg/compartilhados/icone-ramo-eyebrow.svg" alt="">
-          <span></span>
-        </span>
-        <p class="reflections-intro">Um conteúdo direto e acolhedor para compreender padrões emocionais e dar o primeiro passo em direção à sua autonomia.</p>
-      </div>
-
-      <div class="video-grid featured-video-grid">
-        <a href="#" class="video-card video-featured-card js-open-video"
-          data-video-title="Como libertar-se da dependência emocional"
-          aria-label="Assistir ao vídeo: Como libertar-se da dependência emocional">
-          <div class="video-thumb-container video-featured-visual">
-            <img src="imagens/thumb-1.jpg" alt="Como libertar-se da dependência emocional">
-            <span class="video-feature-label"><i class="fas fa-star" aria-hidden="true"></i> VÍDEO EM DESTAQUE</span>
-            <div class="play-overlay-btn"><i class="fas fa-play"></i></div>
-            <span class="video-duration">06:15</span>
-          </div>
-        </a>
-      </div>
-
-      <div class="reflections-appointment">
-        <span class="reflections-appointment-icon" aria-hidden="true">
-          <img src="assets/svg/compartilhados/icone-ramo-eyebrow.svg" alt="">
-        </span>
-        <div class="reflections-appointment-copy">
-          <strong>Quer conversar sobre o que você está vivendo?</strong>
-          <span>Um espaço seguro para acolher, compreender e transformar.</span>
-        </div>
-        <a href="#" class="btn reflections-appointment-btn js-open-appointment">
-          Agendar atendimento com Raquel <i class="fas fa-arrow-right" aria-hidden="true"></i>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Demonstrative Google Reviews Section -->
-  <section class="google-reviews-section" id="avaliacoes" aria-labelledby="googleReviewsTitle">
-    <img src="assets/svg/compartilhados/ramo-contorno.svg" alt="" class="google-reviews-botanical" aria-hidden="true">
-
-    <div class="container">
-      <div class="section-header-center google-reviews-heading">
-        <span class="section-tag google-reviews-tag">
-          AVALIAÇÕES GOOGLE
-        </span>
-        <h2 class="section-title" id="googleReviewsTitle">Experiências de quem<br> escolheu <em class="title-italic-gold">se transformar</em></h2>
-        <p>Cards demonstrativos inspirados no Google, preparados para receber avaliações reais e verificadas.</p>
-      </div>
-
-      <div class="google-reviews-glass">
-        <div class="google-reviews-summary">
-          <div class="google-summary-brand">
-            <span class="google-logo-orb"><img src="assets/svg/avaliacoes/google-g.svg" alt="Google"></span>
-            <div>
-              <strong>Avaliações Google</strong>
-              <span>Apresentação demonstrativa</span>
-            </div>
+        <form id="appointmentForm">
+          <div class="form-group">
+            <label for="fieldName" class="form-label">Nome Completo</label>
+            <input
+              type="text"
+              id="fieldName"
+              class="form-input"
+              placeholder="Seu nome"
+              required
+            />
           </div>
 
-          <div class="google-summary-rating" aria-label="Nota demonstrativa 5 de 5">
-            <strong>5,0</strong>
-            <span class="google-stars" aria-hidden="true">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-            </span>
+          <div class="form-group">
+            <label for="fieldPhone" class="form-label"
+              >Telefone / WhatsApp</label
+            >
+            <input
+              type="tel"
+              id="fieldPhone"
+              class="form-input"
+              placeholder="(11) 99999-9999"
+              required
+            />
           </div>
 
-          <div class="google-reviews-controls">
-            <button type="button" id="googleReviewPrev" aria-label="Avaliação anterior">
-              <i class="fas fa-arrow-left" aria-hidden="true"></i>
-            </button>
-            <button type="button" id="googleReviewNext" aria-label="Próxima avaliação">
-              <i class="fas fa-arrow-right" aria-hidden="true"></i>
-            </button>
+          <div class="form-group">
+            <label for="fieldMessage" class="form-label"
+              >Mensagem (opcional)</label
+            >
+            <textarea
+              id="fieldMessage"
+              class="form-input"
+              placeholder="Como posso te ajudar no momento?"
+            ></textarea>
           </div>
-        </div>
 
-        <div class="google-reviews-viewport" id="googleReviewsViewport">
-          <div class="google-reviews-track" id="googleReviewsTrack">
-            <article class="google-review-card">
-              <div class="google-review-person">
-                <span class="google-review-avatar">A</span>
-                <div><strong>Paciente A.</strong><span>Exemplo ilustrativo</span></div>
-                <img src="assets/svg/avaliacoes/google-g.svg" alt="" aria-hidden="true">
-              </div>
-              <div class="google-review-stars" aria-label="5 de 5 estrelas">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              </div>
-              <p>“Encontrei um espaço acolhedor para compreender meus padrões e começar a estabelecer limites com mais segurança.”</p>
-            </article>
-
-            <article class="google-review-card">
-              <div class="google-review-person">
-                <span class="google-review-avatar">M</span>
-                <div><strong>Paciente M.</strong><span>Exemplo ilustrativo</span></div>
-                <img src="assets/svg/avaliacoes/google-g.svg" alt="" aria-hidden="true">
-              </div>
-              <div class="google-review-stars" aria-label="5 de 5 estrelas">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              </div>
-              <p>“A escuta cuidadosa me ajudou a perceber situações que eu normalizava e a recuperar pouco a pouco minha autonomia.”</p>
-            </article>
-
-            <article class="google-review-card">
-              <div class="google-review-person">
-                <span class="google-review-avatar">C</span>
-                <div><strong>Paciente C.</strong><span>Exemplo ilustrativo</span></div>
-                <img src="assets/svg/avaliacoes/google-g.svg" alt="" aria-hidden="true">
-              </div>
-              <div class="google-review-stars" aria-label="5 de 5 estrelas">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              </div>
-              <p>“Foi importante ter um acompanhamento respeitoso, sem julgamentos e comprometido com o meu próprio processo.”</p>
-            </article>
-
-            <article class="google-review-card">
-              <div class="google-review-person">
-                <span class="google-review-avatar">L</span>
-                <div><strong>Paciente L.</strong><span>Exemplo ilustrativo</span></div>
-                <img src="assets/svg/avaliacoes/google-g.svg" alt="" aria-hidden="true">
-              </div>
-              <div class="google-review-stars" aria-label="5 de 5 estrelas">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              </div>
-              <p>“Hoje consigo reconhecer melhor minhas necessidades e tomar decisões com mais clareza, consciência e tranquilidade.”</p>
-            </article>
-
-            <article class="google-review-card">
-              <div class="google-review-person">
-                <span class="google-review-avatar">R</span>
-                <div><strong>Paciente R.</strong><span>Exemplo ilustrativo</span></div>
-                <img src="assets/svg/avaliacoes/google-g.svg" alt="" aria-hidden="true">
-              </div>
-              <div class="google-review-stars" aria-label="5 de 5 estrelas">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              </div>
-              <p>“O processo trouxe novas perspectivas sobre minha história e me ajudou a construir relações mais saudáveis.”</p>
-            </article>
-          </div>
-        </div>
-
-        <div class="google-reviews-dots" id="googleReviewDots" aria-label="Navegação das avaliações"></div>
-      </div>
-
-      <p class="google-reviews-disclaimer"><i class="fas fa-circle-info" aria-hidden="true"></i> Conteúdo fictício para demonstração visual. Substitua por avaliações reais antes da publicação.</p>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section class="faq" id="perguntas" style="position: relative; overflow: hidden;">
-    <img src="assets/svg/compartilhados/ramo-frutos.svg" alt="" class="botanical-element faq-botanical-top" aria-hidden="true">
-    <img src="assets/svg/faq/arvore-suave.svg" alt="" class="botanical-element faq-botanical-tree" aria-hidden="true">
-
-    <div class="container">
-      <div class="section-header-center">
-        <span class="section-tag"><i class="fas fa-circle-question"></i> PERGUNTAS FREQUENTES</span>
-        <h2 class="section-title">Dúvidas comuns sobre o <em class="title-italic-gold">acompanhamento</em></h2>
-      </div>
-
-      <div class="faq-wrapper">
-        <div class="faq-item active">
-          <button class="faq-question">
-            <span>Como funciona o tratamento da dependência emocional?</span>
-            <i class="fas fa-plus faq-icon"></i>
+          <button type="submit" class="btn btn-primary" style="width: 100%">
+            Enviar mensagem no WhatsApp <i class="fab fa-whatsapp"></i>
           </button>
-          <div class="faq-answer">
-            <p>O tratamento foca em compreender as origens do apego doloroso, desconstruir crenças de desvalor e
-              fortalecer sua autonomia emocional. Através de uma escuta acolhedora, você aprende a parar de repetir
-              padrões de sofrimento e construir relações saudáveis consigo e com os outros.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Como identificar se estou em uma relação abusiva?</span>
-            <i class="fas fa-plus faq-icon"></i>
-          </button>
-          <div class="faq-answer">
-            <p>Relações abusivas vão muito além da violência física — envolvem manipulação psicológica, invalidação de
-              sentimentos e perda gradual de autonomia. No espaço terapêutico, analisamos com ética e sigilo a sua
-              história para que você possa retomar o controle da sua vida.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Quais formações e técnicas Raquel utiliza?</span>
-            <i class="fas fa-plus faq-icon"></i>
-          </button>
-          <div class="faq-answer">
-            <p>Raquel Vieira é psicanalista clínica, especialista em saúde mental e dependência emocional, com
-              formação e atuação em Constelação Familiar e Renascimento (Rebirthing), integrando saberes para uma
-              transformação profunda.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Os atendimentos podem ser realizados online?</span>
-            <i class="fas fa-plus faq-icon"></i>
-          </button>
-          <div class="faq-answer">
-            <p>Sim! Os atendimentos são oferecidos tanto na modalidade presencial quanto online (via videochamada
-              segura e sigilosa), garantindo o mesmo nível de acolhimento e privacidade para pacientes no Brasil e no
-              exterior.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Como agendar uma consulta inicial?</span>
-            <i class="fas fa-plus faq-icon"></i>
-          </button>
-          <div class="faq-answer">
-            <p>Basta clicar em qualquer botão "Agendar conversa" na página para entrar em contato diretamente via
-              WhatsApp ou preencher o formulário rápido de agendamento.</p>
-          </div>
-        </div>
+        </form>
       </div>
     </div>
-  </section>
 
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer" id="contato">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <img src="assets/svg/marca/raquel-vieira-logo.svg" alt="Raquel Vieira" class="logo-img">
-          <p>Psicanálise clínica, tratamento da dependência emocional, relações abusivas, constelação familiar e
-            renascimento. Mais de 5.000 atendimentos acompanhando caminhos de liberdade e autonomia.</p>
-        </div>
-
-        <div>
-          <h4 class="footer-column-title">Navegação</h4>
-          <ul class="footer-links">
-            <li><a href="#sobre">Sobre Raquel</a></li>
-            <li><a href="#atendimentos">Atendimentos</a></li>
-            <li><a href="#curso">Programa Terapêutico</a></li>
-            <li><a href="#recursos">Recursos</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="footer-column-title">Contato</h4>
-          <ul class="contact-info">
-            <li><i class="fas fa-phone-alt"></i> (11) 99999-9999</li>
-            <li><i class="fas fa-envelope"></i> contato@raquelvieiraemocional.com.br</li>
-            <li><i class="fas fa-map-marker-alt"></i> São Paulo - SP</li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="footer-column-title">Redes Sociais</h4>
-          <div class="social-links">
-            <a href="#" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="social-icon" title="YouTube"><i class="fab fa-youtube"></i></a>
-          </div>
-          <div style="margin-top: 1.5rem;">
-            <button class="btn btn-footer js-open-appointment" style="width: 100%;">Agendar conversa</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div>© 2026 Raquel Vieira Psicanálise. Todos os direitos reservados.</div>
-        <div>Desenvolvido com ética e cuidado.</div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20conversa."
-    class="whatsapp-float" target="_blank" rel="noopener noreferrer"
-    aria-label="Conversar pelo WhatsApp" title="Conversar pelo WhatsApp">
-    <i class="fab fa-whatsapp" aria-hidden="true"></i>
-  </a>
-
-  <!-- Appointment Modal -->
-  <div class="modal-backdrop" id="appointmentModal">
-    <div class="modal-card">
-      <button class="modal-close js-close-modal" aria-label="Fechar"><i class="fas fa-times"></i></button>
-      <h3 class="modal-title">Agendar conversa</h3>
-      <p class="modal-desc">Preencha seus dados para iniciar seu contato direto via WhatsApp com a Dra. Raquel Vieira.
-      </p>
-
-      <form id="appointmentForm">
-        <div class="form-group">
-          <label for="fieldName" class="form-label">Nome Completo</label>
-          <input type="text" id="fieldName" class="form-input" placeholder="Seu nome" required>
-        </div>
-
-        <div class="form-group">
-          <label for="fieldPhone" class="form-label">Telefone / WhatsApp</label>
-          <input type="tel" id="fieldPhone" class="form-input" placeholder="(11) 99999-9999" required>
-        </div>
-
-        <div class="form-group">
-          <label for="fieldMessage" class="form-label">Mensagem (opcional)</label>
-          <textarea id="fieldMessage" class="form-input" placeholder="Como posso te ajudar no momento?"></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar mensagem no WhatsApp <i
-            class="fab fa-whatsapp"></i></button>
-      </form>
-    </div>
-  </div>
-
-  <!-- Video Modal -->
-  <div class="modal-backdrop" id="videoModal">
-    <div class="modal-card video-modal-card">
-      <button class="modal-close js-close-modal" aria-label="Fechar" style="color: #fff;"><i
-          class="fas fa-times"></i></button>
-      <h3 class="modal-title" style="color: #fff; text-align: center;">Vídeo de Apresentação</h3>
-      <div class="video-player-frame">
-        <i class="fas fa-circle-notch fa-spin" style="font-size: 2.5rem; color: var(--c-sand);"></i>
-        <p style="font-size: 0.95rem; color: var(--c-sand);">Carregando apresentação...</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Interactive Detail Modal -->
-  <div class="modal-backdrop" id="detailModal">
-    <div class="modal-card detail-modal-card">
-      <button class="modal-close js-close-modal" aria-label="Fechar"><i class="fas fa-times"></i></button>
-      <div class="detail-modal-header">
-        <div class="detail-modal-icon" id="detailModalIcon"><i class="fas fa-sparkles"></i></div>
-        <div>
-          <span class="detail-modal-category" id="detailModalCategory">ÁREA DE ATUAÇÃO</span>
-          <h3 class="detail-modal-title" id="detailModalTitle">Título</h3>
-        </div>
-      </div>
-      <div class="detail-modal-body">
-        <p id="detailModalDesc" class="detail-modal-desc">Descrição...</p>
-
-        <div class="detail-highlights-box">
-          <h4><i class="fas fa-check-circle"></i> O que é trabalhado neste acompanhamento:</h4>
-          <ul id="detailModalList" class="detail-modal-list">
-            <!-- Dynamic items populated via JS -->
-          </ul>
-        </div>
-      </div>
-      <div class="detail-modal-footer">
-        <button class="btn btn-primary js-open-appointment" style="width: 100%;">
-          Agendar conversa sobre este tema <i class="fab fa-whatsapp"></i>
+    <!-- Video Modal -->
+    <div class="modal-backdrop" id="videoModal">
+      <div class="modal-card video-modal-card">
+        <button
+          class="modal-close js-close-modal"
+          aria-label="Fechar"
+          style="color: #fff"
+        >
+          <i class="fas fa-times"></i>
         </button>
+        <h3 class="modal-title" style="color: #fff; text-align: center">
+          Vídeo de Apresentação
+        </h3>
+        <div class="video-player-frame">
+          <i
+            class="fas fa-circle-notch fa-spin"
+            style="font-size: 2.5rem; color: var(--c-sand)"
+          ></i>
+          <p style="font-size: 0.95rem; color: var(--c-sand)">
+            Carregando apresentação...
+          </p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Main JavaScript File -->
-  <script src="js/main.js"></script>
-</body>
+    <!-- Interactive Detail Modal -->
+    <div class="modal-backdrop" id="detailModal">
+      <div class="modal-card detail-modal-card">
+        <button class="modal-close js-close-modal" aria-label="Fechar">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="detail-modal-header">
+          <div class="detail-modal-icon" id="detailModalIcon">
+            <i class="fas fa-sparkles"></i>
+          </div>
+          <div>
+            <span class="detail-modal-category" id="detailModalCategory"
+              >ÁREA DE ATUAÇÃO</span
+            >
+            <h3 class="detail-modal-title" id="detailModalTitle">Título</h3>
+          </div>
+        </div>
+        <div class="detail-modal-body">
+          <p id="detailModalDesc" class="detail-modal-desc">Descrição...</p>
 
+          <div class="detail-highlights-box">
+            <h4>
+              <i class="fas fa-check-circle"></i> O que é trabalhado neste
+              acompanhamento:
+            </h4>
+            <ul id="detailModalList" class="detail-modal-list">
+              <!-- Dynamic items populated via JS -->
+            </ul>
+          </div>
+        </div>
+        <div class="detail-modal-footer">
+          <button
+            class="btn btn-primary js-open-appointment"
+            style="width: 100%"
+          >
+            Agendar conversa sobre este tema <i class="fab fa-whatsapp"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main JavaScript File -->
+    <script src="js/main.js"></script>
+  </body>
 </html>
