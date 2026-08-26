@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: "Abordagens integrativas e sistêmicas que auxiliam na identificação de lealdades invisíveis à história familiar e na liberação de traumas corporais retidos no sistema nervoso através da respiração consciente.",
       items: [
         "Identificação de repetições de padrões transgeracionais",
-        "Cura e reposicionamento no sistema familiar",
+        "Ressignificação e reposicionamento no sistema familiar",
         "Liberação de bloqueios emocionais acumulados no corpo",
         "Restabelecimento do fluxo de energia vital e paz interna"
       ]
@@ -563,4 +563,72 @@ document.addEventListener('DOMContentLoaded', () => {
     goToReview(0, false);
     startReviewTimer();
   }
+
+  // ==========================================================================
+  // 5-SECOND COURSE TRANSITION REFRESH/LOADING SCREEN
+  // ==========================================================================
+  const transitionOverlay = document.getElementById('courseTransitionOverlay');
+  const transitionProgressBar = document.getElementById('transitionProgressBar');
+  const transitionTimerCount = document.getElementById('transitionTimerCount');
+  const transitionStatusText = document.getElementById('transitionStatusText');
+
+  const courseLinks = document.querySelectorAll('a[href*="pages/index.html"]');
+
+  courseLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetUrl = link.getAttribute('href');
+
+      if (!transitionOverlay) {
+        window.location.href = targetUrl;
+        return;
+      }
+
+      // Show Transition Overlay
+      transitionOverlay.classList.add('active');
+      transitionOverlay.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+
+      let secondsLeft = 5;
+      const totalTimeMs = 5000;
+      const intervalMs = 40;
+      let elapsedTimeMs = 0;
+
+      const statusMessages = [
+        "Preparando a sua experiência de transformação...",
+        "Carregando o programa terapêutico guiado...",
+        "Redirecionando para a Jornada da Libertação..."
+      ];
+
+      if (transitionTimerCount) transitionTimerCount.textContent = secondsLeft;
+      if (transitionStatusText) transitionStatusText.textContent = statusMessages[0];
+
+      const progressInterval = setInterval(() => {
+        elapsedTimeMs += intervalMs;
+        const percentage = Math.min(100, (elapsedTimeMs / totalTimeMs) * 100);
+        
+        if (transitionProgressBar) {
+          transitionProgressBar.style.width = percentage.toFixed(1) + '%';
+        }
+
+        const currentSeconds = Math.max(1, Math.ceil((totalTimeMs - elapsedTimeMs) / 1000));
+        if (transitionTimerCount && currentSeconds !== secondsLeft) {
+          secondsLeft = currentSeconds;
+          transitionTimerCount.textContent = secondsLeft;
+          
+          if (secondsLeft === 3 && transitionStatusText) {
+            transitionStatusText.textContent = statusMessages[1];
+          } else if (secondsLeft === 1 && transitionStatusText) {
+            transitionStatusText.textContent = statusMessages[2];
+          }
+        }
+
+        if (elapsedTimeMs >= totalTimeMs) {
+          clearInterval(progressInterval);
+          window.location.href = targetUrl;
+        }
+      }, intervalMs);
+    });
+  });
 });
+

@@ -37,7 +37,7 @@
             <li><a href="#hero" class="nav-link">Início</a></li>
             <li><a href="#sobre" class="nav-link">Sobre</a></li>
             <li><a href="#atendimentos" class="nav-link">Atendimentos</a></li>
-            <li><a href="#curso" class="nav-link">Curso</a></li>
+            <li><a href="pages/index.html" class="nav-link">Curso</a></li>
             <li><a href="#perguntas" class="nav-link">Perguntas</a></li>
             <li><a href="#contato" class="nav-link">Contato</a></li>
             <li class="mobile-cta-only">
@@ -251,7 +251,7 @@
               <div class="carousel-track" id="carouselTrack">
                 <!-- Slide 1: Constelação Familiar -->
                 <div class="carousel-slide">
-                  <div class="treatment-card js-open-detail-modal" data-detail-id="constelacao">
+                  <div class="treatment-card">
                     <div class="treatment-visual">
                       <img
                         src="imagens/tratamentos/constelacao-familiar.jpg"
@@ -263,14 +263,14 @@
                     <div class="treatment-card-body">
                       <h3 class="treatment-title">Constelação<br />Familiar</h3>
                       <div class="treatment-title-line"></div>
-                      <p class="treatment-desc">Cura de feridas sistêmicas, desconstrução de lealdades invisíveis e repetições transgeracionais.</p>
+                      <p class="treatment-desc">Ressignificação de feridas sistêmicas, desconstrução de lealdades invisíveis e repetições transgeracionais.</p>
                     </div>
                   </div>
                 </div>
 
                 <!-- Slide 2: Renascimento & Traumas -->
                 <div class="carousel-slide">
-                  <div class="treatment-card js-open-detail-modal" data-detail-id="traumas">
+                  <div class="treatment-card">
                     <div class="treatment-visual">
                       <img src="imagens/tratamentos/renascimento-traumas.jpg" alt="Borboleta de vidro emergindo de um casulo" loading="lazy" decoding="async" />
                     </div>
@@ -284,7 +284,7 @@
 
                 <!-- Slide 3: Autoestima & Limites -->
                 <div class="carousel-slide">
-                  <div class="treatment-card js-open-detail-modal" data-detail-id="autonomia">
+                  <div class="treatment-card">
                     <div class="treatment-visual">
                       <img
                         src="imagens/tratamentos/autoestima-limites.jpg"
@@ -303,7 +303,7 @@
 
                 <!-- Slide 4: Dependência Emocional -->
                 <div class="carousel-slide">
-                  <div class="treatment-card js-open-detail-modal" data-detail-id="dependencia">
+                  <div class="treatment-card">
                     <div class="treatment-visual">
                       <img
                         src="imagens/tratamentos/dependencia-emocional.jpg"
@@ -322,7 +322,7 @@
 
                 <!-- Slide 5: Relações Abusivas -->
                 <div class="carousel-slide">
-                  <div class="treatment-card js-open-detail-modal" data-detail-id="abusivas">
+                  <div class="treatment-card">
                     <div class="treatment-visual">
                       <img src="imagens/tratamentos/relacoes-abusivas.jpg" alt="Escudo de vidro protegendo um novo ramo" loading="lazy" decoding="async" />
                     </div>
@@ -336,7 +336,7 @@
 
                 <!-- Slide 6: Psicanálise & Ansiedade -->
                 <div class="carousel-slide">
-                  <div class="treatment-card js-open-detail-modal" data-detail-id="psicanalise">
+                  <div class="treatment-card">
                     <div class="treatment-visual">
                       <img
                         src="imagens/tratamentos/psicanalise-ansiedade.jpg"
@@ -500,14 +500,14 @@
 
           <div class="reflections-appointment">
             <span class="reflections-appointment-icon" aria-hidden="true">
-              <img src="assets/svg/compartilhados/icone-ramo-eyebrow.svg" alt="" />
+              <img src="logoOFC/icone-vendas.png" alt="Borboleta Jornada da Libertação" />
             </span>
             <div class="reflections-appointment-copy">
-              <strong>Quer conversar sobre o que você está vivendo?</strong>
-              <span>Um espaço seguro para acolher, compreender e transformar.</span>
+              <strong>Deseja iniciar sua Jornada da Libertação Emocional?</strong>
+              <span>Um programa terapêutico guiado para entender suas emoções, quebrar padrões e se transformar.</span>
             </div>
-            <a href="#" class="btn reflections-appointment-btn js-open-appointment">
-              Agendar atendimento com Raquel
+            <a href="pages/index.html" class="btn reflections-appointment-btn">
+              Conhecer a Jornada da Libertação
               <i class="fas fa-arrow-right" aria-hidden="true"></i>
             </a>
           </div>
@@ -857,7 +857,31 @@
       </div>
     </div>
 
-    <!-- Main JavaScript File -->
-    <script src="js/main.js"></script>
-  </body>
+  <!-- 5-Second Course Transition Loading Screen Overlay -->
+  <div class="course-transition-overlay" id="courseTransitionOverlay" aria-hidden="true">
+    <div class="transition-content-box">
+      <div class="transition-logo-circle">
+        <img src="logoOFC/icone-vendas.png" alt="Borboleta Jornada da Libertação" class="transition-logo-img" />
+      </div>
+
+      <h3 class="transition-title">Jornada da Libertação Emocional</h3>
+      
+      <p class="transition-subtitle" id="transitionStatusText">
+        Preparando a sua experiência de transformação...
+      </p>
+
+      <div class="transition-progress-wrapper">
+        <div class="transition-progress-bar" id="transitionProgressBar"></div>
+      </div>
+
+      <div class="transition-timer-badge">
+        <i class="fas fa-spinner fa-spin"></i>
+        <span>Carregando em <strong id="transitionTimerCount">5</strong>s</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
 </html>
