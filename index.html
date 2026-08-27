@@ -73,7 +73,7 @@
             <!-- Background Ambient Glow & Botanical Shadow Decors -->
             <div class="hero-ambient-glow" aria-hidden="true"></div>
             <img src="assets/svg/compartilhados/sombra-folhas-suave.svg" alt="" class="hero-ambient-foliage" aria-hidden="true" />
-            <img src="assets/svg/hero/ramo-dourado-grande.svg" alt="" class="hero-ambient-branch" aria-hidden="true" />
+            <img src="assets/svg/compartilhados/folhagem-canto-esquerdo.svg" alt="" class="hero-foliage-left" aria-hidden="true" />
 
             <div class="hero-left-inner">
               <div class="hero-tag-pill">
@@ -200,7 +200,7 @@
       <!-- Clinic Treatments Carousel Section (Redesigned from reference) -->
       <section class="clinic-carousel-section" id="atendimentos">
         <!-- Botanical Leaf Watermarks -->
-        <img src="assets/svg/compartilhados/ramo-contorno.svg" alt="" class="section-leaf-watermark leaf-wm-left" />
+
         <img src="assets/svg/compartilhados/sombra-palmeira.svg" alt="" class="section-leaf-watermark leaf-wm-right" />
 
         <div class="container">
@@ -338,6 +338,12 @@
 
       <!-- About Section (Redesigned) -->
       <section class="about" id="sobre">
+        <img
+          src="assets/svg/compartilhados/sombra-palmeira.svg"
+          alt=""
+          class="about-treatment-palm"
+          aria-hidden="true"
+        />
         <div class="container about-grid">
           <div class="about-img-col">
             <div class="about-img-box">
@@ -425,56 +431,138 @@
         </div>
       </section>
 
-      <!-- Reflections / Content Section -->
-      <section class="reflections">
-        <img src="assets/svg/compartilhados/sombra-folhas-suave.svg" alt="" class="reflections-decor reflections-decor-shadow" aria-hidden="true" />
-        <img src="assets/svg/compartilhados/sparkle.svg" alt="" class="reflections-decor reflections-sparkle reflections-sparkle-top" aria-hidden="true" />
-        <img src="assets/svg/compartilhados/sparkle.svg" alt="" class="reflections-decor reflections-sparkle reflections-sparkle-bottom" aria-hidden="true" />
-        <div class="container">
-          <div class="section-header-center">
-            <span class="section-tag">CONTEÚDOS E REFLEXÕES</span>
-            <h2 class="section-title">
-              Uma conversa para transformar sua forma de
-              <em class="title-italic-gold">se relacionar</em>
-            </h2>
-            <span class="reflections-divider" aria-hidden="true">
-              <span></span>
-              <img src="assets/svg/compartilhados/icone-ramo-eyebrow.svg" alt="" />
-              <span></span>
-            </span>
-            <p class="reflections-intro">
-              Um conteúdo direto e acolhedor para compreender padrões emocionais e dar o primeiro passo em direção à sua autonomia.
-            </p>
-          </div>
+      <!-- Reflections / Content Section (Redesigned per Reference Image) -->
+      <section class="reflections" id="recursos">
+        <!-- Ambient Background Decors -->
 
-          <div class="video-grid featured-video-grid">
-            <a
-              href="#"
-              class="video-card video-featured-card js-open-video"
-              data-video-title="Como libertar-se da dependência emocional"
-              aria-label="Assistir ao vídeo: Como libertar-se da dependência emocional"
-            >
-              <div class="video-thumb-container video-featured-visual">
-                <img src="imagens/thumb-1.jpg" alt="Como libertar-se da dependência emocional" />
-                <span class="video-feature-label"><i class="fas fa-star" aria-hidden="true"></i> VÍDEO EM DESTAQUE</span>
-                <div class="play-overlay-btn"><i class="fas fa-play"></i></div>
-                <span class="video-duration">06:15</span>
+        <div class="container reflections-container">
+          <div class="reflections-grid">
+            <!-- Left Column: Eyebrow, Title, Quote, Tags & Purple Card -->
+            <div class="reflections-left-col">
+              <span class="reflections-eyebrow">CONTEÚDOS E REFLEXÕES</span>
+              <h2 class="reflections-main-title">
+                Uma conversa que pode destravar padrões e transformar sua forma de <em class="title-italic-gold">se relacionar</em>
+              </h2>
+
+              <div class="reflections-quote-box">
+                <span class="quote-mark" aria-hidden="true">“</span>
+                <p class="reflections-intro-desc">
+                  Um conteúdo direto, acolhedor e profundo para reconhecer bloqueios emocionais, gerar clareza e dar o primeiro passo rumo à sua autonomia.
+                </p>
               </div>
-            </a>
-          </div>
 
-          <div class="reflections-appointment">
-            <span class="reflections-appointment-icon" aria-hidden="true">
-              <img src="logoOFC/icone-vendas.png" alt="Borboleta Jornada da Libertação" />
-            </span>
-            <div class="reflections-appointment-copy">
-              <strong>Deseja iniciar sua Jornada da Libertação Emocional?</strong>
-              <span>Um programa terapêutico guiado para entender suas emoções, quebrar padrões e se transformar.</span>
+              <!-- Meta Features Pill -->
+              <div class="reflections-meta-pill">
+                <span><i class="far fa-clock"></i> 6 minutos</span>
+                <span class="dot">•</span>
+                <span><i class="far fa-heart"></i> acolhedor</span>
+                <span class="dot">•</span>
+                <span><i class="fas fa-seedling"></i> transformador</span>
+              </div>
+
+              <!-- Purple CTA Card (Jornada Card) -->
+              <div class="reflections-jornada-card">
+                <div class="jornada-card-icon">
+                  <img src="logoOFC/icone-vendas.png" alt="Jornada da Libertação Emocional" />
+                </div>
+                <h3 class="jornada-card-title">Pronta para iniciar sua<br />Jornada da Libertação Emocional?</h3>
+                <ul class="jornada-card-bullets">
+                  <li>
+                    <span class="bullet-check"><i class="fas fa-check"></i></span>
+                    <span>Entenda suas emoções com clareza</span>
+                  </li>
+                  <li>
+                    <span class="bullet-check"><i class="fas fa-check"></i></span>
+                    <span>Quebre padrões que se repetem</span>
+                  </li>
+                  <li>
+                    <span class="bullet-check"><i class="fas fa-check"></i></span>
+                    <span>Dê o primeiro passo para se transformar</span>
+                  </li>
+                </ul>
+                <a href="pages/index.html" class="btn jornada-card-cta">
+                  QUERO COMEÇAR AGORA <i class="fas fa-arrow-right"></i>
+                </a>
+                <div class="jornada-card-footer-meta">
+                  <span>acesso imediato</span> • <span>conteúdo guiado</span> • <span>primeiro passo com segurança</span>
+                </div>
+              </div>
+
+              <div class="reflections-saiba-mais-wrapper">
+                <a href="pages/index.html" class="reflections-saiba-mais-link">
+                  Saiba mais <i class="fas fa-chevron-right"></i>
+                </a>
+              </div>
             </div>
-            <a href="pages/index.html" class="btn reflections-appointment-btn">
-              Conhecer a Jornada da Libertação
-              <i class="fas fa-arrow-right" aria-hidden="true"></i>
-            </a>
+
+            <!-- Right Column: Vertical Video Card & Meta Row -->
+            <div class="reflections-right-col">
+              <div class="reflections-video-card">
+                <div class="reflections-video-thumb">
+                  <video
+                    id="reflectionsInlineVideo"
+                    class="reflections-inline-video"
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                    poster="imagens/thumb-1.jpg"
+                    aria-label="Vídeo de apresentação de Raquel Vieira"
+                  >
+                    <source id="reflectionsWebmSource" src="assets/video/video-oficial.webm" type="video/webm" />
+                    <source src="assets/video/video-oficial.mp4" type="video/mp4" />
+                    Seu navegador não suporta a exibição deste vídeo.
+                  </video>
+                  <span class="reflections-video-badge"><i class="fas fa-star"></i> VÍDEO EM DESTAQUE</span>
+                  <div class="reflections-video-controls" aria-label="Controles do vídeo">
+                    <input
+                      id="reflectionsVideoProgress"
+                      class="reflections-video-progress"
+                      type="range"
+                      min="0"
+                      max="100"
+                      step="0.1"
+                      value="0"
+                      aria-label="Progresso do vídeo"
+                    />
+                    <div class="reflections-video-controls-row">
+                      <button id="reflectionsVideoPlay" class="reflections-video-control-btn" type="button" aria-label="Reproduzir vídeo" title="Reproduzir">
+                        <i class="fas fa-play" aria-hidden="true"></i>
+                      </button>
+                      <span id="reflectionsVideoTime" class="reflections-video-time">0:00 / 0:00</span>
+                      <span class="reflections-video-controls-spacer"></span>
+                      <button id="reflectionsVideoMute" class="reflections-video-control-btn" type="button" aria-label="Ativar som" title="Ativar som">
+                        <i class="fas fa-volume-mute" aria-hidden="true"></i>
+                      </button>
+                      <button id="reflectionsVideoFullscreen" class="reflections-video-control-btn" type="button" aria-label="Abrir em tela cheia" title="Tela cheia">
+                        <i class="fas fa-expand" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bottom Meta Row under Video -->
+              <div class="reflections-video-meta-row">
+                <div class="video-meta-item meta-created-by">
+                  <span class="meta-label">CONTEÚDO CRIADO POR</span>
+                  <span class="meta-val">Especialista em desenvolvimento emocional e relacionamentos</span>
+                </div>
+                <div class="video-meta-item">
+                  <span class="meta-icon"><i class="fas fa-users"></i></span>
+                  <div class="meta-text">
+                    <strong>+10 mil</strong>
+                    <span>mulheres impactadas</span>
+                  </div>
+                </div>
+                <div class="video-meta-item">
+                  <span class="meta-icon"><i class="fas fa-shield-alt"></i></span>
+                  <div class="meta-text">
+                    <span>Conteúdo seguro, ético e acolhedor</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -685,13 +773,23 @@
             </p>
             <div class="social-links" style="margin-top: 1.2rem">
               <a
-                href="https://www.instagram.com/raquelvieiraterapeuta?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw=="
+                href="https://www.instagram.com/raquelvieiraterapeuta?igsi=MWZnZmdjNHNtY3V4YQ=="
                 class="social-icon"
                 title="Instagram"
+                aria-label="Abrir o Instagram de Raquel Vieira"
                 target="_blank"
                 rel="noopener noreferrer"
-                ><i class="fab fa-instagram"></i
-              ></a>
+              >
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a
+                href="mailto:raquelemocional@gmail.com"
+                class="social-icon"
+                title="E-mail"
+                aria-label="Enviar e-mail para Raquel Vieira"
+              >
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+              </a>
             </div>
           </div>
 
@@ -718,12 +816,12 @@
           <div>
             <h4 class="footer-column-title">Contato</h4>
             <ul class="contact-info">
-              <li><i class="fas fa-phone-alt"></i> (33) 8821-5629</li>
+              <li><i class="fas fa-phone-alt"></i> (33) 98821-5629</li>
               <li>
                 <i class="fas fa-envelope"></i>
-                contato@raquelvieiraemocional.com.br
+                <a href="mailto:raquelemocional@gmail.com">raquelemocional@gmail.com</a>
               </li>
-              <li><i class="fas fa-map-marker-alt"></i> São Paulo - SP</li>
+              <li><i class="fas fa-map-marker-alt"></i> Minas Gerais - MG</li>
             </ul>
             <div style="margin-top: 1.4rem">
               <button class="btn btn-footer js-open-appointment" style="width: 100%">Agendar conversa</button>
@@ -780,20 +878,6 @@
 
           <button type="submit" class="btn btn-primary" style="width: 100%">Enviar mensagem no WhatsApp <i class="fab fa-whatsapp"></i></button>
         </form>
-      </div>
-    </div>
-
-    <!-- Video Modal -->
-    <div class="modal-backdrop" id="videoModal">
-      <div class="modal-card video-modal-card">
-        <button class="modal-close js-close-modal" aria-label="Fechar" style="color: #fff">
-          <i class="fas fa-times"></i>
-        </button>
-        <h3 class="modal-title" style="color: #fff; text-align: center">Vídeo de Apresentação</h3>
-        <div class="video-player-frame">
-          <i class="fas fa-circle-notch fa-spin" style="font-size: 2.5rem; color: var(--c-sand)"></i>
-          <p style="font-size: 0.95rem; color: var(--c-sand)">Carregando apresentação...</p>
-        </div>
       </div>
     </div>
 
@@ -854,12 +938,13 @@
         <p>Os dados preenchidos nos formulários de contato ou direcionados para agendamento via WhatsApp são utilizados única e exclusivamente para o contato direto e atendimento clínico com a Dra. Raquel Vieira. Não realizamos qualquer compartilhamento com terceiros.</p>
         
         <h4>4. Seus Direitos</h4>
-        <p>Você pode, a qualquer momento, solicitar esclarecimentos sobre o tratamento dos seus dados ou a exclusão de qualquer registro de contato através do e-mail: <strong>contato@raquelvieiraemocional.com.br</strong>.</p>
+        <p>Você pode, a qualquer momento, solicitar esclarecimentos sobre o tratamento dos seus dados ou a exclusão de qualquer registro de contato através do e-mail: <strong>raquelemocional@gmail.com</strong>.</p>
       <div class="privacy-modal-footer" style="display: flex; gap: 12px; flex-wrap: wrap;">
         <a href="pages/termos-privacidade.html" class="btn" style="background: var(--c-bg-alt); color: var(--c-dark); border: 1px solid rgba(188, 170, 151, 0.5); flex: 1; text-align: center; text-decoration: none; font-size: 0.88rem;">Ver Termos Completos <i class="fas fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i></a>
         <button type="button" class="btn btn-primary js-close-modal" style="flex: 1; font-size: 0.88rem;">Entendi e Concordo</button>
       </div>
     </div>
+  </div>
   </div>
 
   <!-- 5-Second Course Transition Loading Screen Overlay -->

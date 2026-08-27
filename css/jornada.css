@@ -657,12 +657,30 @@ img {
 
 .price-cash {
   display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  gap: 5px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
   white-space: nowrap;
   position: relative;
   left: 15px;
+}
+
+.price-original {
+  color: var(--text-muted);
+  font-size: 0.68rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.price-original s {
+  text-decoration-color: #b45309;
+  text-decoration-thickness: 1.5px;
+}
+
+.price-offer-row {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
 }
 
 .price-cash-val {
@@ -1085,6 +1103,14 @@ img {
     flex-shrink: 1;
   }
 
+  .price-original {
+    font-size: 0.58rem;
+  }
+
+  .price-offer-row {
+    gap: 2px;
+  }
+
   .price-cash-val {
     font-size: 0.78rem;
     font-weight: 800;
@@ -1121,6 +1147,28 @@ img {
 
   .footer-logo {
     height: 82px;
+  }
+}
+
+@media (max-width: 600px) {
+  .checkout-row-top {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .price-details {
+    width: 100%;
+    flex: 0 0 100%;
+    justify-content: center;
+  }
+
+  .btn-primary-cta {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .checkout-badges-row {
+    justify-content: center;
   }
 }
 

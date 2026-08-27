@@ -98,13 +98,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 4. Modal Handling (Appointment, Video, Interactive Details & Privacy)
+  // 4. Modal Handling (Appointment, Interactive Details & Privacy)
   const appointmentModal = document.getElementById('appointmentModal');
-  const videoModal = document.getElementById('videoModal');
   const detailModal = document.getElementById('detailModal');
   const privacyModal = document.getElementById('privacyModal');
   const openAppointmentBtns = document.querySelectorAll('.js-open-appointment');
-  const openVideoBtns = document.querySelectorAll('.js-open-video');
   const openDetailBtns = document.querySelectorAll('.js-open-detail-modal');
   const closeModalBtns = document.querySelectorAll('.js-close-modal');
 
@@ -191,15 +189,184 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  openVideoBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const videoTitle = btn.dataset.videoTitle || 'Apresentação Raquel Vieira';
-      const modalTitleEl = videoModal ? videoModal.querySelector('.modal-title') : null;
-      if (modalTitleEl) modalTitleEl.textContent = videoTitle;
-      if (videoModal) videoModal.classList.add('active');
-    });
-  });
+  const reflectionsSection = document.querySelector('.reflections');
+  const reflectionsInlineVideo = document.getElementById('reflectionsInlineVideo');
+  const reflectionsWebmSource = document.getElementById('reflectionsWebmSource');
+  const reflectionsVideoFrame = document.querySelector('.reflections-video-thumb');
+  const reflectionsVideoPlay = document.getElementById('reflectionsVideoPlay');
+  const reflectionsVideoMute = document.getElementById('reflectionsVideoMute');
+  const reflectionsVideoFullscreen = document.getElementById('reflectionsVideoFullscreen');
+  const reflectionsVideoProgress = document.getElementById('reflectionsVideoProgress');
+  const reflectionsVideoTime = document.getElementById('reflectionsVideoTime');
+
+  if (reflectionsSection && reflectionsInlineVideo) {
+    reflectionsInlineVideo.muted = true;
+    let isVideoVisible = false;
+    let mp4FallbackActivated = false;
+    let fallbackTimer = null;
+
+    const clearFallbackTimer = () => {
+      if (fallbackTimer) {
+        window.clearTimeout(fallbackTimer);
+        fallbackTimer = null;
+      }
+    };
+
+    const activateMp4Fallback = () => {
+      if (mp4FallbackActivated || reflectionsInlineVideo.currentSrc.endsWith('.mp4')) return;
+
+      mp4FallbackActivated = true;
+      clearFallbackTimer();
+      reflectionsInlineVideo.src = 'assets/video/video-oficial.mp4';
+      reflectionsInlineVideo.load();
+
+      if (isVideoVisible) {
+        reflectionsInlineVideo.play().catch(() => {});
+      }
+    };
+
+    const scheduleFallbackCheck = () => {
+      clearFallbackTimer();
+
+      if (mp4FallbackActivated) return;
+
+      fallbackTimer = window.setTimeout(() => {
+        if (reflectionsInlineVideo.readyState < HTMLMediaElement.HAVE_FUTURE_DATA) {
+          activateMp4Fallback();
+        }
+      }, 8000);
+    };
+
+    if (reflectionsWebmSource) {
+      reflectionsWebmSource.addEventListener('error', activateMp4Fallback);
+    }
+
+    reflectionsInlineVideo.addEventListener('playing', clearFallbackTimer);
+    reflectionsInlineVideo.addEventListener('canplay', clearFallbackTimer);
+    reflectionsInlineVideo.addEventListener('stalled', scheduleFallbackCheck);
+
+    const formatVideoTime = value => {
+      if (!Number.isFinite(value)) return '0:00';
+
+      const minutes = Math.floor(value / 60);
+      const seconds = Math.floor(value % 60).toString().padStart(2, '0');
+      return `${minutes}:${seconds}`;
+    };
+
+    const updatePlayControl = () => {
+      if (!reflectionsVideoPlay) return;
+
+      const isPaused = reflectionsInlineVideo.paused;
+      const icon = reflectionsVideoPlay.querySelector('i');
+      if (icon) icon.className = isPaused ? 'fas fa-play' : 'fas fa-pause';
+      reflectionsVideoPlay.setAttribute('aria-label', isPaused ? 'Reproduzir vídeo' : 'Pausar vídeo');
+      reflectionsVideoPlay.title = isPaused ? 'Reproduzir' : 'Pausar';
+    };
+
+    const updateMuteControl = () => {
+      if (!reflectionsVideoMute) return;
+
+      const isMuted = reflectionsInlineVideo.muted;
+      const icon = reflectionsVideoMute.querySelector('i');
+      if (icon) icon.className = isMuted ? 'fas fa-volume-mute' : 'fas fa-volume-up';
+      reflectionsVideoMute.setAttribute('aria-label', isMuted ? 'Ativar som' : 'Desativar som');
+      reflectionsVideoMute.title = isMuted ? 'Ativar som' : 'Desativar som';
+    };
+
+    const updateVideoProgress = () => {
+      const duration = reflectionsInlineVideo.duration;
+      const currentTime = reflectionsInlineVideo.currentTime;
+      const progress = Number.isFinite(duration) && duration > 0 ? (currentTime / duration) * 100 : 0;
+
+      if (reflectionsVideoProgress) {
+        reflectionsVideoProgress.value = String(progress);
+        reflectionsVideoProgress.style.setProperty('--video-progress', `${progress}%`);
+      }
+
+      if (reflectionsVideoTime) {
+        reflectionsVideoTime.textContent = `${formatVideoTime(currentTime)} / ${formatVideoTime(duration)}`;
+      }
+    };
+
+    const toggleVideoPlayback = () => {
+      if (reflectionsInlineVideo.paused) {
+        reflectionsInlineVideo.play().catch(() => {});
+      } else {
+        reflectionsInlineVideo.pause();
+      }
+    };
+
+    if (reflectionsVideoPlay) {
+      reflectionsVideoPlay.addEventListener('click', toggleVideoPlayback);
+    }
+
+    reflectionsInlineVideo.addEventListener('click', toggleVideoPlayback);
+
+    if (reflectionsVideoMute) {
+      reflectionsVideoMute.addEventListener('click', () => {
+        reflectionsInlineVideo.muted = !reflectionsInlineVideo.muted;
+      });
+    }
+
+    if (reflectionsVideoProgress) {
+      reflectionsVideoProgress.addEventListener('input', () => {
+        if (!Number.isFinite(reflectionsInlineVideo.duration)) return;
+        reflectionsInlineVideo.currentTime = (Number(reflectionsVideoProgress.value) / 100) * reflectionsInlineVideo.duration;
+      });
+    }
+
+    if (reflectionsVideoFullscreen && reflectionsVideoFrame) {
+      reflectionsVideoFullscreen.addEventListener('click', () => {
+        if (document.fullscreenElement) {
+          document.exitFullscreen();
+        } else if (reflectionsVideoFrame.requestFullscreen) {
+          reflectionsVideoFrame.requestFullscreen();
+        } else if (reflectionsInlineVideo.webkitEnterFullscreen) {
+          reflectionsInlineVideo.webkitEnterFullscreen();
+        }
+      });
+
+      document.addEventListener('fullscreenchange', () => {
+        const isFullscreen = Boolean(document.fullscreenElement);
+        const icon = reflectionsVideoFullscreen.querySelector('i');
+        if (icon) icon.className = isFullscreen ? 'fas fa-compress' : 'fas fa-expand';
+        reflectionsVideoFullscreen.setAttribute('aria-label', isFullscreen ? 'Sair da tela cheia' : 'Abrir em tela cheia');
+      });
+    }
+
+    reflectionsInlineVideo.addEventListener('play', updatePlayControl);
+    reflectionsInlineVideo.addEventListener('pause', updatePlayControl);
+    reflectionsInlineVideo.addEventListener('volumechange', updateMuteControl);
+    reflectionsInlineVideo.addEventListener('timeupdate', updateVideoProgress);
+    reflectionsInlineVideo.addEventListener('loadedmetadata', updateVideoProgress);
+    reflectionsInlineVideo.addEventListener('durationchange', updateVideoProgress);
+
+    updatePlayControl();
+    updateMuteControl();
+    updateVideoProgress();
+
+    const videoObserver = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          isVideoVisible = entry.isIntersecting;
+
+          if (entry.isIntersecting) {
+            scheduleFallbackCheck();
+            reflectionsInlineVideo.play().catch(() => {});
+          } else {
+            clearFallbackTimer();
+            reflectionsInlineVideo.pause();
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+        rootMargin: '0px 0px -10% 0px'
+      }
+    );
+
+    videoObserver.observe(reflectionsSection);
+  }
 
   openDetailBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
@@ -233,17 +400,27 @@ document.addEventListener('DOMContentLoaded', () => {
   closeModalBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       if (appointmentModal) appointmentModal.classList.remove('active');
-      if (videoModal) videoModal.classList.remove('active');
       if (detailModal) detailModal.classList.remove('active');
       if (privacyModal) privacyModal.classList.remove('active');
     });
   });
 
   // Close modals on clicking backdrop
-  [appointmentModal, videoModal, detailModal, privacyModal].forEach(modal => {
+  [appointmentModal, detailModal, privacyModal].forEach(modal => {
     if (modal) {
       modal.addEventListener('click', (e) => {
         if (e.target === modal) {
+          modal.classList.remove('active');
+        }
+      });
+    }
+  });
+
+  // Close modals on pressing Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      [appointmentModal, detailModal, privacyModal].forEach(modal => {
+        if (modal && modal.classList.contains('active')) {
           modal.classList.remove('active');
         }
       });
@@ -587,6 +764,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       // Show Transition Overlay
+      if (transitionProgressBar) transitionProgressBar.style.width = '0%';
       transitionOverlay.classList.add('active');
       transitionOverlay.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
@@ -621,6 +799,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }, intervalMs);
     });
+  });
+
+  window.addEventListener('pageshow', () => {
+    if (!transitionOverlay) return;
+
+    transitionOverlay.classList.remove('active');
+    transitionOverlay.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (transitionProgressBar) transitionProgressBar.style.width = '0%';
   });
 
   // 10. Cookie Consent Banner & Privacy Policy Trigger
