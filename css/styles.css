@@ -1861,19 +1861,6 @@ textarea.form-input {
   opacity: 0.34;
 }
 
-.reflections::after {
-  content: "";
-  position: absolute;
-  right: -160px;
-  bottom: -250px;
-  z-index: 0;
-  width: 520px;
-  height: 520px;
-  background: url("../assets/svg/reflexoes/arco-folhagem.svg") center / contain
-    no-repeat;
-  pointer-events: none;
-}
-
 .reflections > .container {
   position: relative;
   z-index: 1;
