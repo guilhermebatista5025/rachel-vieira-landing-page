@@ -343,11 +343,68 @@
       <p class="footer-text">
         Jornada da Libertação Emocional • Programa Terapêutico Guiado por Raquel Vieira. Todos os direitos reservados.
       </p>
+      <div class="footer-links-row" style="margin-top: 12px; margin-bottom: 12px; display: flex; gap: 16px; justify-content: center; font-size: 0.82rem;">
+        <a href="termos-privacidade.html#privacidade" style="color: #cbd5e1; text-decoration: underline;">Política de Privacidade</a>
+        <span style="color: rgba(255,255,255,0.3);">•</span>
+        <a href="termos-privacidade.html#termos" style="color: #cbd5e1; text-decoration: underline;">Termos de Uso</a>
+      </div>
       <div class="footer-copyright">
         &copy; 2026 Raquel Vieira Psicanálise. Desenvolvido com excelência e acolhimento.
       </div>
     </div>
   </footer>
+
+  <!-- Privacy Policy Modal -->
+  <div class="video-modal-overlay" id="privacyModal" style="z-index: 100000;">
+    <div class="privacy-modal-card">
+      <button class="video-modal-close js-privacy-close" aria-label="Fechar">
+        <i class="fas fa-xmark"></i>
+      </button>
+      <div class="privacy-modal-header">
+        <div class="privacy-modal-icon">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <div>
+          <span style="font-size: 0.72rem; font-weight: 700; color: #c9a468; letter-spacing: 0.1em; text-transform: uppercase;">TRANSPARÊNCIA E ÉTICA</span>
+          <h3 style="font-family: 'Lora', serif; font-size: 1.3rem; color: #5d4932; margin: 0;">Política de Privacidade & Cookies</h3>
+        </div>
+      </div>
+      <div class="privacy-modal-body">
+        <h4>1. Compromisso com a sua Privacidade</h4>
+        <p>Valorizamos a sua privacidade e o sigilo absoluto. Suas informações e dados de navegação são tratados em estrita conformidade com a Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018) e os princípios éticos da prática psicanalítica.</p>
+        
+        <h4>2. O que são e como usamos Cookies?</h4>
+        <p>Cookies são pequenos arquivos salvos no seu dispositivo para registrar preferências e gerar estatísticas anônimas de visitas, garantindo que o site funcione com rapidez, segurança e proporcione a melhor experiência de navegação.</p>
+        
+        <h4>3. Coleta e Tratamento de Informações</h4>
+        <p>Os dados preenchidos nos formulários de contato ou direcionados para agendamento via WhatsApp são utilizados única e exclusivamente para o contato direto e atendimento clínico com a Dra. Raquel Vieira. Não realizamos qualquer compartilhamento com terceiros.</p>
+        
+        <h4>4. Seus Direitos</h4>
+        <p>Você pode, a qualquer momento, solicitar esclarecimentos sobre o tratamento dos seus dados ou a exclusão de qualquer registro de contato através do e-mail: <strong>contato@raquelvieiraemocional.com.br</strong>.</p>
+      </div>
+      <div class="privacy-modal-footer">
+        <button type="button" class="privacy-modal-close-btn js-privacy-close">Entendi e Concordo</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Cookie Consent Popup Card -->
+  <div class="cookie-banner floating-cookie" id="cookieBanner" role="region" aria-label="Aviso de Cookies">
+    <div class="cookie-banner-container">
+      <div class="cookie-banner-header">
+        <span class="cookie-banner-icon"><i class="fas fa-cookie-bite"></i></span>
+        <span class="cookie-banner-heading">Privacidade & Cookies</span>
+      </div>
+      <p class="cookie-banner-text">
+        <strong>Cookies:</strong> a gente guarda estatísticas de visitas para melhorar sua experiência de navegação. Ao continuar, você concorda com nossa <a href="#" class="cookie-policy-link" id="cookiePolicyBtn">política de privacidade</a>.
+      </p>
+      <div class="cookie-banner-actions">
+        <button type="button" class="cookie-banner-btn" id="cookieAcceptBtn">
+          CONCORDAR E FECHAR
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- Page Interaction JavaScript -->
   <script src="../js/jornada.js"></script>

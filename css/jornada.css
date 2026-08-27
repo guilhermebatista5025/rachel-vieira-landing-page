@@ -1123,3 +1123,226 @@ img {
     height: 82px;
   }
 }
+
+/* ==========================================================================
+   Floating Cookie Consent Popup Card & Privacy Policy Modal (Jornada)
+   ========================================================================== */
+
+.cookie-banner {
+  position: fixed;
+  bottom: 28px;
+  left: 28px;
+  max-width: 440px;
+  width: calc(100% - 56px);
+  z-index: 99999;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid rgba(188, 170, 151, 0.45);
+  box-shadow: 0 16px 40px rgba(66, 53, 39, 0.16), 0 4px 12px rgba(0, 0, 0, 0.05);
+  transform: translateY(30px) scale(0.95);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease, visibility 0.4s;
+  pointer-events: none;
+}
+
+.cookie-banner.active {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.cookie-banner-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px 22px;
+}
+
+.cookie-banner-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cookie-banner-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(201, 164, 104, 0.16);
+  color: #5d4932;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.cookie-banner-heading {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: #5d4932;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.cookie-banner-text {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #3b3024;
+  margin: 0;
+}
+
+.cookie-banner-text strong {
+  color: #1f1811;
+  font-weight: 700;
+}
+
+.cookie-policy-link {
+  color: #1f1811;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.cookie-policy-link:hover {
+  color: #c9a468;
+}
+
+.cookie-banner-actions {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-top: 4px;
+}
+
+.cookie-banner-btn {
+  width: 100%;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: transparent;
+  color: #423527;
+  border: 1px solid #7d6e5d;
+  border-radius: 6px;
+  padding: 10px 18px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+}
+
+.cookie-banner-btn:hover {
+  background: #5d4932;
+  color: #ffffff;
+  border-color: #5d4932;
+  box-shadow: 0 4px 12px rgba(93, 73, 50, 0.22);
+}
+
+.cookie-banner-btn:active {
+  transform: scale(0.98);
+}
+
+/* Privacy Modal Styling (Jornada) */
+.privacy-modal-card {
+  max-width: 600px;
+  width: 90%;
+  padding: 32px;
+  background: #ffffff;
+  border-radius: 16px;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.privacy-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(188, 170, 151, 0.25);
+  margin-bottom: 18px;
+}
+
+.privacy-modal-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(201, 164, 104, 0.15);
+  color: #5d4932;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.privacy-modal-body {
+  overflow-y: auto;
+  padding-right: 6px;
+  margin-bottom: 24px;
+}
+
+.privacy-modal-body h4 {
+  font-family: 'Lora', serif;
+  font-size: 1.05rem;
+  color: #5d4932;
+  margin: 14px 0 6px;
+}
+
+.privacy-modal-body h4:first-child {
+  margin-top: 0;
+}
+
+.privacy-modal-body p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #6e6154;
+  margin-bottom: 12px;
+}
+
+.privacy-modal-footer {
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+.privacy-modal-close-btn {
+  background: #5d4932;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  transition: opacity 0.2s;
+}
+
+.privacy-modal-close-btn:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .cookie-banner {
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    width: auto;
+    max-width: none;
+    border-radius: 16px;
+  }
+
+  .cookie-banner-container {
+    padding: 16px 18px;
+    gap: 10px;
+  }
+}
+
+

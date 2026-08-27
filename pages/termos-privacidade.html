@@ -1,0 +1,641 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Política de Privacidade e Termos de Uso | Raquel Vieira Psicanálise</title>
+    <meta
+      name="description"
+      content="Conheça a Política de Privacidade e os Termos de Uso de Raquel Vieira | Psicanálise & Acolhimento. Transparência, ética e segurança para seus dados."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/styles.css" />
+
+    <style>
+      /* Dedicated Legal Page Styles */
+      .legal-page-header {
+        background: #ffffff;
+        border-bottom: 1px solid rgba(188, 170, 151, 0.35);
+        padding: 16px 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 20px rgba(93, 73, 50, 0.05);
+      }
+
+      .legal-header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .legal-back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--c-dark, #5d4932);
+        font-family: var(--ff-body);
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-decoration: none;
+        padding: 8px 16px;
+        border-radius: var(--radius-pill, 50px);
+        background: var(--c-bg-alt, #f7f3ed);
+        border: 1px solid rgba(188, 170, 151, 0.4);
+        transition: var(--transition);
+      }
+
+      .legal-back-link:hover {
+        background: var(--c-dark, #5d4932);
+        color: #ffffff;
+        transform: translateX(-3px);
+      }
+
+      .legal-hero {
+        background: linear-gradient(180deg, #fdfbf7 0%, #f7f3ed 100%);
+        padding: 60px 0 40px;
+        text-align: center;
+        position: relative;
+        border-bottom: 1px solid rgba(188, 170, 151, 0.25);
+      }
+
+      .legal-hero-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-family: var(--ff-body);
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--c-gold, #c9a468);
+        background: rgba(201, 164, 104, 0.12);
+        padding: 6px 18px;
+        border-radius: var(--radius-pill, 50px);
+        border: 1px solid rgba(201, 164, 104, 0.3);
+        margin-bottom: 16px;
+      }
+
+      .legal-hero-title {
+        font-family: var(--ff-title);
+        font-size: clamp(2rem, 4vw, 2.8rem);
+        color: var(--c-dark, #5d4932);
+        margin-bottom: 14px;
+        line-height: 1.25;
+      }
+
+      .legal-hero-subtitle {
+        font-family: var(--ff-body);
+        font-size: 1.05rem;
+        color: var(--c-text-secondary, #6e6154);
+        max-width: 640px;
+        margin: 0 auto;
+        line-height: 1.6;
+      }
+
+      .legal-nav-tabs {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        margin-top: 32px;
+        flex-wrap: wrap;
+      }
+
+      .legal-tab-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 26px;
+        font-family: var(--ff-body);
+        font-size: 0.95rem;
+        font-weight: 700;
+        border-radius: var(--radius-pill, 50px);
+        text-decoration: none;
+        border: 1.5px solid rgba(93, 73, 50, 0.25);
+        background: #ffffff;
+        color: var(--c-dark, #5d4932);
+        transition: var(--transition);
+        box-shadow: 0 4px 14px rgba(93, 73, 50, 0.04);
+      }
+
+      .legal-tab-btn:hover,
+      .legal-tab-btn.active {
+        background: var(--c-dark, #5d4932);
+        color: #ffffff;
+        border-color: var(--c-dark, #5d4932);
+        box-shadow: 0 6px 20px rgba(93, 73, 50, 0.2);
+      }
+
+      .legal-main-content {
+        padding: 60px 0 80px;
+        background: var(--c-bg, #fdfbf7);
+      }
+
+      .legal-card {
+        background: #ffffff;
+        border-radius: var(--radius-lg, 24px);
+        border: 1px solid rgba(188, 170, 151, 0.35);
+        box-shadow: 0 12px 35px rgba(93, 73, 50, 0.06);
+        padding: clamp(24px, 5vw, 48px);
+        margin-bottom: 48px;
+        scroll-margin-top: 100px;
+      }
+
+      .legal-card-header {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid rgba(188, 170, 151, 0.25);
+        margin-bottom: 28px;
+      }
+
+      .legal-card-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 16px;
+        background: rgba(201, 164, 104, 0.15);
+        color: var(--c-dark, #5d4932);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
+        flex-shrink: 0;
+      }
+
+      .legal-card-header h2 {
+        font-family: var(--ff-title);
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        color: var(--c-dark, #5d4932);
+        margin: 0;
+      }
+
+      .legal-card-body h3 {
+        font-family: var(--ff-title);
+        font-size: 1.25rem;
+        color: var(--c-dark, #5d4932);
+        margin: 28px 0 12px;
+      }
+
+      .legal-card-body h3:first-child {
+        margin-top: 0;
+      }
+
+      .legal-card-body p {
+        font-family: var(--ff-body);
+        font-size: 0.96rem;
+        line-height: 1.75;
+        color: var(--c-text-secondary, #6e6154);
+        margin-bottom: 18px;
+      }
+
+      .legal-card-body ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 20px 0;
+      }
+
+      .legal-card-body ul li {
+        position: relative;
+        padding-left: 28px;
+        margin-bottom: 12px;
+        font-family: var(--ff-body);
+        font-size: 0.95rem;
+        line-height: 1.65;
+        color: var(--c-text-secondary, #6e6154);
+      }
+
+      .legal-card-body ul li::before {
+        content: "\f00c";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        position: absolute;
+        left: 0;
+        top: 2px;
+        color: var(--c-gold, #c9a468);
+        font-size: 0.85rem;
+      }
+
+      .legal-badge-effective {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--c-bg-alt, #f7f3ed);
+        padding: 10px 18px;
+        border-radius: var(--radius-sm, 8px);
+        font-family: var(--ff-body);
+        font-size: 0.88rem;
+        font-weight: 600;
+        color: var(--c-dark, #5d4932);
+        border: 1px solid rgba(188, 170, 151, 0.4);
+        margin-top: 10px;
+      }
+
+      .legal-cta-box {
+        background: linear-gradient(135deg, #5d4932 0%, #423527 100%);
+        border-radius: var(--radius-lg, 24px);
+        padding: clamp(32px, 5vw, 48px);
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+        box-shadow: 0 16px 40px rgba(93, 73, 50, 0.25);
+      }
+
+      .legal-cta-text h3 {
+        font-family: var(--ff-title);
+        font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+        color: #ffffff;
+        margin-bottom: 8px;
+      }
+
+      .legal-cta-text p {
+        font-family: var(--ff-body);
+        font-size: 0.95rem;
+        color: var(--c-sand, #d4c4b3);
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      @media (max-width: 768px) {
+        .legal-cta-box {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .legal-cta-box .btn {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Top Header -->
+    <header class="legal-page-header">
+      <div class="container legal-header-inner">
+        <a href="../index.html" class="legal-back-link" title="Voltar à Página Inicial">
+          <i class="fas fa-arrow-left"></i>
+          <span>Voltar ao início</span>
+        </a>
+
+        <a href="../index.html" class="logo-wrapper" title="Raquel Vieira Psicanálise">
+          <img src="../assets/svg/marca/raquel-vieira-logo.svg" alt="Logo Raquel Vieira" class="logo-img" style="height: 48px;" />
+        </a>
+
+        <a href="https://wa.me/553388215629?text=Ol%C3%A1%2C%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20o%20atendimento." target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 8px 18px; font-size: 0.85rem;">
+          Contato <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Banner -->
+      <section class="legal-hero">
+        <div class="container">
+          <span class="legal-hero-tag">
+            <i class="fas fa-scale-balanced"></i> Transparência & Ética
+          </span>
+          <h1 class="legal-hero-title">Política de Privacidade & Termos de Uso</h1>
+          <p class="legal-hero-subtitle">
+            Nosso compromisso com o respeito, a segurança e a proteção dos seus dados pessoais e de navegação no site Raquel Vieira | Psicanálise & Acolhimento.
+          </p>
+
+          <div class="legal-nav-tabs">
+            <a href="#privacidade" class="legal-tab-btn active">
+              <i class="fas fa-shield-halved"></i> Política de Privacidade
+            </a>
+            <a href="#termos" class="legal-tab-btn">
+              <i class="fas fa-file-contract"></i> Termos de Uso
+            </a>
+            <a href="#compromisso" class="legal-tab-btn">
+              <i class="fas fa-handshake"></i> Compromisso do Usuário
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Legal Content -->
+      <section class="legal-main-content">
+        <div class="container" style="max-width: 900px;">
+          
+          <!-- Section 1: Política de Privacidade -->
+          <article class="legal-card" id="privacidade">
+            <div class="legal-card-header">
+              <div class="legal-card-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <div>
+                <span style="font-size: 0.78rem; font-weight: 700; color: var(--c-gold, #c9a468); letter-spacing: 0.08em; text-transform: uppercase;">POLÍTICA DE PRIVACIDADE</span>
+                <h2>Política de Privacidade</h2>
+              </div>
+            </div>
+
+            <div class="legal-card-body">
+              <p>
+                A sua privacidade é importante para nós. É política do <strong>Raquel Vieira | Psicanálise & Acolhimento</strong> respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no site <strong>Raquel Vieira | Psicanálise & Acolhimento</strong>, e outros sites que possuímos e operamos.
+              </p>
+
+              <p>
+                Solicitamos informações pessoais apenas quando realmente precisamos delas para lhe fornecer um serviço. Fazemo-lo por meios justos e legais, com o seu conhecimento e consentimento. Também informamos por que estamos coletando e como será usado.
+              </p>
+
+              <p>
+                Apenas retemos as informações coletadas pelo tempo necessário para fornecer o serviço solicitado. Quando armazenamos dados, protegemos dentro de meios comercialmente aceitáveis para evitar perdas e roubos, bem como acesso, divulgação, cópia, uso ou modificação não autorizados.
+              </p>
+
+              <p>
+                Não compartilhamos informações de identificação pessoal publicamente ou com terceiros, exceto quando exigido por lei.
+              </p>
+
+              <p>
+                O nosso site pode ter links para sites externos que não são operados por nós. Esteja ciente de que não temos controle sobre o conteúdo e práticas desses sites e não podemos aceitar responsabilidade por suas respectivas políticas de privacidade.
+              </p>
+
+              <p>
+                Você é livre para recusar a nossa solicitação de informações pessoais, entendendo que talvez não possamos fornecer alguns dos serviços desejados.
+              </p>
+
+              <p>
+                O uso continuado de nosso site será considerado como aceitação de nossas práticas em torno de privacidade e informações pessoais. Se você tiver alguma dúvida sobre como lidamos com dados do usuário e informações pessoais, entre em contacto connosco.
+              </p>
+
+              <h3 id="cookies"><i class="fas fa-cookie-bite" style="color: var(--c-gold, #c9a468); margin-right: 8px;"></i> Uso de Cookies e Anúncios</h3>
+              
+              <p>
+                O serviço Google AdSense que usamos para veicular publicidade usa um cookie DoubleClick para veicular anúncios mais relevantes em toda a Web e limitar o número de vezes que um determinado anúncio é exibido para você.
+              </p>
+
+              <p>
+                Para mais informações sobre o Google AdSense, consulte as FAQs oficiais sobre privacidade do Google AdSense.
+              </p>
+
+              <p>
+                Utilizamos anúncios para compensar os custos de funcionamento deste site e fornecer financiamento para futuros desenvolvimentos. Os cookies de publicidade comportamental usados por este site foram projetados para garantir que você forneça os anúncios mais relevantes sempre que possível, rastreando anonimamente seus interesses e apresentando coisas semelhantes que possam ser do seu interesse.
+              </p>
+
+              <p>
+                Vários parceiros anunciam em nosso nome e os cookies de rastreamento de afiliados simplesmente nos permitem ver se nossos clientes acessaram o site através de um dos sites de nossos parceiros, para que possamos creditá-los adequadamente e, quando aplicável, permitir que nossos parceiros afiliados ofereçam qualquer promoção que pode fornecê-lo para fazer uma compra.
+              </p>
+
+              <h3 id="compromisso"><i class="fas fa-handshake" style="color: var(--c-gold, #c9a468); margin-right: 8px;"></i> Compromisso do Usuário</h3>
+              
+              <p>
+                O usuário se compromete a fazer uso adequado dos conteúdos e da informação que o <strong>Raquel Vieira | Psicanálise & Acolhimento</strong> oferece no site e com caráter enunciativo, mas não limitativo:
+              </p>
+
+              <ul>
+                <li><strong>A)</strong> Não se envolver em atividades que sejam ilegais ou contrárias à boa fé a à ordem pública;</li>
+                <li><strong>B)</strong> Não difundir propaganda ou conteúdo de natureza racista, xenofóbica, jogos de sorte ou azar, qualquer tipo de pornografia ilegal, de apologia ao terrorismo ou contra os direitos humanos;</li>
+                <li><strong>C)</strong> Não causar danos aos sistemas físicos (hardwares) e lógicos (softwares) do Raquel Vieira | Psicanálise & Acolhimento, de seus fornecedores ou terceiros, para introduzir ou disseminar vírus informáticos ou quaisquer outros sistemas de hardware ou software que sejam capazes de causar danos anteriormente mencionados.</li>
+              </ul>
+
+              <h3><i class="fas fa-circle-info" style="color: var(--c-gold, #c9a468); margin-right: 8px;"></i> Mais informações</h3>
+              
+              <p>
+                Esperemos que esteja esclarecido e, como mencionado anteriormente, se houver algo que você não tem certeza se precisa ou não, geralmente é mais seguro deixar os cookies ativados, caso interaja com um dos recursos que você usa em nosso site.
+              </p>
+
+              <div class="legal-badge-effective">
+                <i class="fas fa-clock"></i>
+                <span>Esta política é efetiva a partir de <strong>27 August 2026 11:06</strong></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Section 2: Termos de Uso -->
+          <article class="legal-card" id="termos">
+            <div class="legal-card-header">
+              <div class="legal-card-icon">
+                <i class="fas fa-file-contract"></i>
+              </div>
+              <div>
+                <span style="font-size: 0.78rem; font-weight: 700; color: var(--c-gold, #c9a468); letter-spacing: 0.08em; text-transform: uppercase;">TERMOS DE SERVIÇO</span>
+                <h2>Termos de Uso</h2>
+              </div>
+            </div>
+
+            <div class="legal-card-body">
+              <h3>1. Termos</h3>
+              <p>
+                Ao acessar ao site <strong>Raquel Vieira | Psicanálise & Acolhimento</strong>, concorda em cumprir estes termos de serviço, todas as leis e regulamentos aplicáveis e concorda que é responsável pelo cumprimento de todas as leis locais aplicáveis. Se você não concordar com algum desses termos, está proibido de usar ou acessar este site. Os materiais contidos neste site são protegidos pelas leis de direitos autorais e marcas comerciais aplicáveis.
+              </p>
+
+              <h3>2. Uso de Licença</h3>
+              <p>
+                É concedida permissão para baixar temporariamente uma cópia dos materiais (informações ou software) no site Raquel Vieira | Psicanálise & Acolhimento , apenas para visualização transitória pessoal e não comercial. Esta é a concessão de uma licença, não uma transferência de título e, sob esta licença, você não pode:
+              </p>
+
+              <ul>
+                <li>modificar ou copiar os materiais;</li>
+                <li>usar os materiais para qualquer finalidade comercial ou para exibição pública (comercial ou não comercial);</li>
+                <li>tentar descompilar ou fazer engenharia reversa de qualquer software contido no site Raquel Vieira | Psicanálise & Acolhimento;</li>
+                <li>remover quaisquer direitos autorais ou outras notações de propriedade dos materiais; ou</li>
+                <li>transferir os materiais para outra pessoa ou 'espelhe' os materiais em qualquer outro servidor.</li>
+              </ul>
+
+              <p>
+                Esta licença será automaticamente rescindida se você violar alguma dessas restrições e poderá ser rescindida por Raquel Vieira | Psicanálise & Acolhimento a qualquer momento. Ao encerrar a visualização desses materiais ou após o término desta licença, você deve apagar todos os materiais baixados em sua posse, seja em formato eletrónico ou impresso.
+              </p>
+
+              <h3>3. Isenção de responsabilidade</h3>
+              <p>
+                Os materiais no site da Raquel Vieira | Psicanálise & Acolhimento são fornecidos 'como estão'. Raquel Vieira | Psicanálise & Acolhimento não oferece garantias, expressas ou implícitas, e, por este meio, isenta e nega todas as outras garantias, incluindo, sem limitação, garantias implícitas ou condições de comercialização, adequação a um fim específico ou não violação de propriedade intelectual ou outra violação de direitos.
+              </p>
+              <p>
+                Além disso, o Raquel Vieira | Psicanálise & Acolhimento não garante ou faz qualquer representação relativa à precisão, aos resultados prováveis ou à confiabilidade do uso dos materiais em seu site ou de outra forma relacionado a esses materiais ou em sites vinculados a este site.
+              </p>
+
+              <h3>4. Limitações</h3>
+              <p>
+                Em nenhum caso o Raquel Vieira | Psicanálise & Acolhimento ou seus fornecedores serão responsáveis por quaisquer danos (incluindo, sem limitação, danos por perda de dados ou lucro ou devido a interrupção dos negócios) decorrentes do uso ou da incapacidade de usar os materiais em Raquel Vieira | Psicanálise & Acolhimento, mesmo que Raquel Vieira | Psicanálise & Acolhimento ou um representante autorizado da Raquel Vieira | Psicanálise & Acolhimento tenha sido notificado oralmente ou por escrito da possibilidade de tais danos. Como algumas jurisdições não permitem limitações em garantias implícitas, ou limitações de responsabilidade por danos conseqüentes ou incidentais, essas limitações podem não se aplicar a você.
+              </p>
+
+              <h3>5. Precisão dos materiais</h3>
+              <p>
+                Os materiais exibidos no site da Raquel Vieira | Psicanálise & Acolhimento podem incluir erros técnicos, tipográficos ou fotográficos. Raquel Vieira | Psicanálise & Acolhimento não garante que qualquer material em seu site seja preciso, completo ou atual. Raquel Vieira | Psicanálise & Acolhimento pode fazer alterações nos materiais contidos em seu site a qualquer momento, sem aviso prévio. No entanto, Raquel Vieira | Psicanálise & Acolhimento não se compromete a atualizar os materiais.
+              </p>
+
+              <h3>6. Links</h3>
+              <p>
+                O Raquel Vieira | Psicanálise & Acolhimento não analisou todos os sites vinculados ao seu site e não é responsável pelo conteúdo de nenhum site vinculado. A inclusão de qualquer link não implica endosso por Raquel Vieira | Psicanálise & Acolhimento do site. O uso de qualquer site vinculado é por conta e risco do usuário.
+              </p>
+
+              <h3>Modificações</h3>
+              <p>
+                O Raquel Vieira | Psicanálise & Acolhimento pode revisar estes termos de serviço do site a qualquer momento, sem aviso prévio. Ao usar este site, você concorda em ficar vinculado à versão atual desses termos de serviço.
+              </p>
+
+              <h3>Lei aplicável</h3>
+              <p>
+                Estes termos e condições são regidos e interpretados de acordo com as leis do Raquel Vieira | Psicanálise & Acolhimento e você se submete irrevogavelmente à jurisdição exclusiva dos tribunais naquele estado ou localidade.
+              </p>
+            </div>
+          </article>
+
+          <!-- Contact Call to Action Box -->
+          <div class="legal-cta-box">
+            <div class="legal-cta-text">
+              <h3>Dúvidas sobre seus dados ou atendimento?</h3>
+              <p>
+                Nossa equipe está à disposição para esclarecer qualquer questão com respeito, privacidade e sigilo ético.
+              </p>
+            </div>
+            <a
+              href="https://wa.me/553388215629?text=Ol%C3%A1%2C%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20privacidade%20e%20atendimento."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary"
+              style="background: #ffffff; color: var(--c-dark, #5d4932); border-color: #ffffff; font-weight: 700; white-space: nowrap;"
+            >
+              Falar no WhatsApp <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contato">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <img src="../assets/svg/marca/raquel-vieira-logo.svg" alt="Raquel Vieira" class="logo-img" />
+            <p>
+              Psicanálise clínica, tratamento da dependência emocional, relações abusivas, constelação familiar e renascimento. Mais de 5.000 atendimentos
+              acompanhando caminhos de liberdade e autonomia.
+            </p>
+            <div class="social-links" style="margin-top: 1.2rem">
+              <a
+                href="https://www.instagram.com/raquelvieiraterapeuta?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw=="
+                class="social-icon"
+                title="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="footer-column-title">Navegação</h4>
+            <ul class="footer-links">
+              <li><a href="../index.html#sobre">Sobre Raquel</a></li>
+              <li><a href="../index.html#atendimentos">Atendimentos</a></li>
+              <li><a href="index.html">Programa Terapêutico</a></li>
+              <li><a href="../index.html#perguntas">Dúvidas Frequentes</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-column-title">Legal & Privacidade</h4>
+            <ul class="footer-links">
+              <li><a href="#privacidade">Política de Privacidade</a></li>
+              <li><a href="#termos">Termos de Uso</a></li>
+              <li><a href="#cookies">Uso de Cookies</a></li>
+              <li><a href="#compromisso">Compromisso do Usuário</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-column-title">Contato</h4>
+            <ul class="contact-info">
+              <li><i class="fas fa-phone-alt"></i> (33) 8821-5629</li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                contato@raquelvieiraemocional.com.br
+              </li>
+              <li><i class="fas fa-map-marker-alt"></i> São Paulo - SP</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>© 2026 Raquel Vieira Psicanálise. Todos os direitos reservados.</div>
+          <div class="footer-bottom-links">
+            <a href="#privacidade" style="color: var(--c-sand, #d4c4b3); text-decoration: underline;">Política de Privacidade</a> • 
+            <a href="#termos" style="color: var(--c-sand, #d4c4b3); text-decoration: underline;">Termos de Uso</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a
+      href="https://wa.me/553388215629?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20conversa."
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Conversar pelo WhatsApp"
+      title="Conversar pelo WhatsApp"
+    >
+      <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+
+    <!-- Floating Cookie Consent Popup Card -->
+    <div class="cookie-banner floating-cookie" id="cookieBanner" role="region" aria-label="Aviso de Cookies">
+      <div class="cookie-banner-container">
+        <div class="cookie-banner-header">
+          <span class="cookie-banner-icon"><i class="fas fa-cookie-bite"></i></span>
+          <span class="cookie-banner-heading">Privacidade & Cookies</span>
+        </div>
+        <p class="cookie-banner-text">
+          <strong>Cookies:</strong> a gente guarda estatísticas de visitas para melhorar sua experiência de navegação. Ao continuar, você concorda com nossa <a href="#privacidade" class="cookie-policy-link">política de privacidade</a>.
+        </p>
+        <div class="cookie-banner-actions">
+          <button type="button" class="cookie-banner-btn" id="cookieAcceptBtn">
+            CONCORDAR E FECHAR
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Tab smooth scroll and active state handler
+      document.addEventListener('DOMContentLoaded', () => {
+        const tabs = document.querySelectorAll('.legal-tab-btn');
+        tabs.forEach(tab => {
+          tab.addEventListener('click', function(e) {
+            tabs.forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
+          });
+        });
+
+        // Cookie Consent logic
+        const cookieBanner = document.getElementById('cookieBanner');
+        const cookieAcceptBtn = document.getElementById('cookieAcceptBtn');
+        const COOKIE_CONSENT_KEY = 'raquel_vieira_cookie_consent';
+
+        if (cookieBanner) {
+          const isConsentGiven = localStorage.getItem(COOKIE_CONSENT_KEY);
+          if (!isConsentGiven) {
+            setTimeout(() => {
+              cookieBanner.classList.add('active');
+            }, 600);
+          }
+
+          if (cookieAcceptBtn) {
+            cookieAcceptBtn.addEventListener('click', () => {
+              localStorage.setItem(COOKIE_CONSENT_KEY, 'true');
+              cookieBanner.classList.remove('active');
+            });
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

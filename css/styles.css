@@ -407,6 +407,43 @@ button {
   overflow: hidden;
 }
 
+/* Ambient Background Visual Elements */
+.hero-ambient-glow {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  width: 460px;
+  height: 460px;
+  background: radial-gradient(circle, rgba(201, 164, 104, 0.18) 0%, rgba(250, 246, 240, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+  filter: blur(35px);
+}
+
+.hero-ambient-foliage {
+  position: absolute;
+  top: -30px;
+  left: -50px;
+  width: 320px;
+  height: auto;
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-ambient-branch {
+  position: absolute;
+  bottom: 20px;
+  left: -80px;
+  width: 280px;
+  height: auto;
+  opacity: 0.07;
+  pointer-events: none;
+  z-index: 1;
+  transform: rotate(12deg);
+}
+
 .hero-foliage-left {
   position: absolute;
   top: 0;
@@ -425,7 +462,14 @@ button {
   z-index: 2;
 }
 
-/* Tag Pill */
+/* Top Row: Tag Pill & Google Rating Badge */
+.hero-top-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.1rem;
+}
 
 .hero-tag-pill {
   display: inline-flex;
@@ -434,21 +478,88 @@ button {
   padding: 0.4rem 1.05rem;
   border-radius: var(--radius-pill);
   border: 1px solid rgba(196, 168, 130, 0.45);
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(6px);
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 1.2px;
   color: var(--c-dark);
   text-transform: uppercase;
-  margin-bottom: 1.1rem;
+  margin-bottom: 0;
   box-shadow: 0 2px 10px rgba(93, 73, 50, 0.04);
+}
+
+.tag-bullet {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #c9a468;
+  box-shadow: 0 0 6px rgba(201, 164, 104, 0.6);
+  flex-shrink: 0;
 }
 
 .hero-tag-pill .tag-svg-icon {
   width: 18px;
   height: 18px;
   object-fit: contain;
+}
+
+.hero-rating-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.38rem 0.95rem;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(196, 168, 130, 0.45);
+  font-size: 0.78rem;
+  color: var(--c-dark);
+  box-shadow: 0 2px 10px rgba(93, 73, 50, 0.04);
+  font-weight: 600;
+  backdrop-filter: blur(8px);
+}
+
+.hero-stars-mini {
+  display: inline-flex;
+  gap: 2px;
+  color: #e5a93c;
+  font-size: 0.72rem;
+}
+
+/* Feature Chips */
+.hero-feature-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-bottom: 1.25rem;
+}
+
+.hero-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(196, 168, 130, 0.35);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #5d4932;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  backdrop-filter: blur(6px);
+}
+
+.hero-chip:hover {
+  background: #ffffff;
+  border-color: #c9a468;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(93, 73, 50, 0.08);
+}
+
+.hero-chip i {
+  color: #c9a468;
+  font-size: 0.82rem;
 }
 
 /* Main Title (Lighter Weight & Refined Scale - Lora Font) */
@@ -598,11 +709,18 @@ button {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  padding: 0.5rem 0.9rem 0.5rem 0.5rem;
+  padding: 0.55rem 0.95rem 0.55rem 0.55rem;
   background: #ffffff;
   border: 1px solid rgba(196, 168, 130, 0.35);
   border-radius: 16px;
   box-shadow: 0 2px 10px rgba(93, 73, 50, 0.04);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-trust-badge:hover {
+  transform: translateY(-2px);
+  border-color: #c9a468;
+  box-shadow: 0 6px 16px rgba(93, 73, 50, 0.1);
 }
 
 .trust-badge-icon {
@@ -1105,6 +1223,12 @@ button {
   box-shadow: 0 4px 14px rgba(93, 73, 50, 0.25);
 }
 
+.btn-footer:hover {
+  background-color: #483827;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(93, 73, 50, 0.35);
+}
+
 .footer-links {
   list-style: none;
 }
@@ -1167,6 +1291,25 @@ button {
   align-items: center;
   font-size: 0.82rem;
   color: #8c7e70;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-bottom-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-bottom-links a {
+  color: #b5a99b;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: var(--transition);
+}
+
+.footer-bottom-links a:hover {
+  color: #cd9c50;
 }
 
 /* Modals */
@@ -4775,19 +4918,21 @@ svg {
 }
 
 .transition-title {
-  font-family: 'Libre Caslon Text', 'Lora', Georgia, serif;
-  font-size: 1.55rem;
-  font-weight: 700;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.65rem;
+  font-weight: 800;
   color: #FFFFFF;
-  letter-spacing: 0.02em;
+  letter-spacing: -0.02em;
   line-height: 1.25;
 }
 
 .transition-subtitle {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 0.95rem;
-  color: #CBD5E1;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.82);
   line-height: 1.5;
-  min-height: 2.7em;
+  min-height: 2.2em;
 }
 
 .transition-progress-wrapper {
@@ -4807,18 +4952,230 @@ svg {
   width: 0%;
   background: linear-gradient(90deg, #7C3AED 0%, #C084FC 50%, #F59E0B 100%);
   border-radius: 999px;
+  transition: width 0.05s linear;
 }
 
 .transition-timer-badge {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: #E2E8F0;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #F1F5F9;
   background: rgba(255, 255, 255, 0.1);
   padding: 6px 16px;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
+
+/* ==========================================================================
+   Floating Cookie Consent Popup Card & Privacy Policy Modal
+   ========================================================================== */
+
+.cookie-banner {
+  position: fixed;
+  bottom: 28px;
+  left: 28px;
+  max-width: 440px;
+  width: calc(100% - 56px);
+  z-index: 99999;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid rgba(188, 170, 151, 0.45);
+  box-shadow: 0 16px 40px rgba(66, 53, 39, 0.16), 0 4px 12px rgba(0, 0, 0, 0.05);
+  transform: translateY(30px) scale(0.95);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease, visibility 0.4s;
+  pointer-events: none;
+}
+
+.cookie-banner.active {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.cookie-banner-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px 22px;
+}
+
+.cookie-banner-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cookie-banner-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(201, 164, 104, 0.16);
+  color: #5d4932;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.cookie-banner-heading {
+  font-family: var(--ff-body);
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: #5d4932;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.cookie-banner-text {
+  font-family: var(--ff-body);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #3b3024;
+  margin: 0;
+}
+
+.cookie-banner-text strong {
+  color: #1f1811;
+  font-weight: 700;
+}
+
+.cookie-policy-link {
+  color: #1f1811;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.cookie-policy-link:hover {
+  color: var(--c-gold, #c9a468);
+}
+
+.cookie-banner-actions {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-top: 4px;
+}
+
+.cookie-banner-btn {
+  width: 100%;
+  font-family: var(--ff-body);
+  background: transparent;
+  color: #423527;
+  border: 1px solid #7d6e5d;
+  border-radius: 6px;
+  padding: 10px 18px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+}
+
+.cookie-banner-btn:hover {
+  background: #5d4932;
+  color: #ffffff;
+  border-color: #5d4932;
+  box-shadow: 0 4px 12px rgba(93, 73, 50, 0.22);
+}
+
+.cookie-banner-btn:active {
+  transform: scale(0.98);
+}
+
+/* Privacy Modal Styling */
+.privacy-modal-card {
+  max-width: 600px;
+  padding: 32px;
+  background: #ffffff;
+  border-radius: var(--radius-md, 16px);
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.privacy-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(188, 170, 151, 0.25);
+  margin-bottom: 18px;
+}
+
+.privacy-modal-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(201, 164, 104, 0.15);
+  color: #5d4932;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.privacy-modal-body {
+  overflow-y: auto;
+  padding-right: 6px;
+  margin-bottom: 24px;
+}
+
+.privacy-modal-body h4 {
+  font-family: var(--ff-title);
+  font-size: 1.05rem;
+  color: #5d4932;
+  margin: 14px 0 6px;
+}
+
+.privacy-modal-body h4:first-child {
+  margin-top: 0;
+}
+
+.privacy-modal-body p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--c-text-secondary, #6e6154);
+  margin-bottom: 12px;
+}
+
+.privacy-modal-footer {
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+/* Mobile Responsiveness for Floating Cookie Popup */
+@media (max-width: 768px) {
+  .cookie-banner {
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    width: auto;
+    max-width: none;
+    border-radius: 16px;
+  }
+
+  .cookie-banner-container {
+    padding: 16px 18px;
+    gap: 10px;
+  }
+  
+  .privacy-modal-card {
+    padding: 24px 18px;
+    max-height: 92vh;
+  }
+}
+
 

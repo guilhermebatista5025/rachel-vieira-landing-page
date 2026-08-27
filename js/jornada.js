@@ -94,4 +94,56 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // 4. Cookie Consent Banner & Privacy Policy Trigger
+  const cookieBanner = document.getElementById('cookieBanner');
+  const cookieAcceptBtn = document.getElementById('cookieAcceptBtn');
+  const cookiePolicyBtn = document.getElementById('cookiePolicyBtn');
+  const privacyModal = document.getElementById('privacyModal');
+  const privacyCloseBtns = document.querySelectorAll('.js-privacy-close');
+  const COOKIE_CONSENT_KEY = 'raquel_vieira_cookie_consent';
+
+  if (cookieBanner) {
+    const isConsentGiven = localStorage.getItem(COOKIE_CONSENT_KEY);
+
+    if (!isConsentGiven) {
+      setTimeout(() => {
+        cookieBanner.classList.add('active');
+      }, 600);
+    }
+
+    if (cookieAcceptBtn) {
+      cookieAcceptBtn.addEventListener('click', () => {
+        localStorage.setItem(COOKIE_CONSENT_KEY, 'true');
+        cookieBanner.classList.remove('active');
+      });
+    }
+
+    if (cookiePolicyBtn && privacyModal) {
+      cookiePolicyBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        privacyModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    }
+
+    privacyCloseBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (privacyModal) {
+          privacyModal.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+    });
+
+    if (privacyModal) {
+      privacyModal.addEventListener('click', (e) => {
+        if (e.target === privacyModal) {
+          privacyModal.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+    }
+  }
 });
+

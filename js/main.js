@@ -98,10 +98,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 4. Modal Handling (Appointment, Video & Interactive Details)
+  // 4. Modal Handling (Appointment, Video, Interactive Details & Privacy)
   const appointmentModal = document.getElementById('appointmentModal');
   const videoModal = document.getElementById('videoModal');
   const detailModal = document.getElementById('detailModal');
+  const privacyModal = document.getElementById('privacyModal');
   const openAppointmentBtns = document.querySelectorAll('.js-open-appointment');
   const openVideoBtns = document.querySelectorAll('.js-open-video');
   const openDetailBtns = document.querySelectorAll('.js-open-detail-modal');
@@ -234,11 +235,12 @@ document.addEventListener('DOMContentLoaded', () => {
       if (appointmentModal) appointmentModal.classList.remove('active');
       if (videoModal) videoModal.classList.remove('active');
       if (detailModal) detailModal.classList.remove('active');
+      if (privacyModal) privacyModal.classList.remove('active');
     });
   });
 
   // Close modals on clicking backdrop
-  [appointmentModal, videoModal, detailModal].forEach(modal => {
+  [appointmentModal, videoModal, detailModal, privacyModal].forEach(modal => {
     if (modal) {
       modal.addEventListener('click', (e) => {
         if (e.target === modal) {
@@ -565,7 +567,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================================================
-  // 5-SECOND COURSE TRANSITION REFRESH/LOADING SCREEN
+  // FAST COURSE TRANSITION REFRESH/LOADING SCREEN
   // ==========================================================================
   const transitionOverlay = document.getElementById('courseTransitionOverlay');
   const transitionProgressBar = document.getElementById('transitionProgressBar');
@@ -589,18 +591,16 @@ document.addEventListener('DOMContentLoaded', () => {
       transitionOverlay.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
 
-      let secondsLeft = 5;
-      const totalTimeMs = 5000;
-      const intervalMs = 40;
+      const totalTimeMs = 1200;
+      const intervalMs = 20;
       let elapsedTimeMs = 0;
 
       const statusMessages = [
         "Preparando a sua experiência de transformação...",
-        "Carregando o programa terapêutico guiado...",
-        "Redirecionando para a Jornada da Libertação..."
+        "Entrando na Jornada da Libertação..."
       ];
 
-      if (transitionTimerCount) transitionTimerCount.textContent = secondsLeft;
+      if (transitionTimerCount) transitionTimerCount.textContent = '1';
       if (transitionStatusText) transitionStatusText.textContent = statusMessages[0];
 
       const progressInterval = setInterval(() => {
@@ -611,16 +611,8 @@ document.addEventListener('DOMContentLoaded', () => {
           transitionProgressBar.style.width = percentage.toFixed(1) + '%';
         }
 
-        const currentSeconds = Math.max(1, Math.ceil((totalTimeMs - elapsedTimeMs) / 1000));
-        if (transitionTimerCount && currentSeconds !== secondsLeft) {
-          secondsLeft = currentSeconds;
-          transitionTimerCount.textContent = secondsLeft;
-          
-          if (secondsLeft === 3 && transitionStatusText) {
-            transitionStatusText.textContent = statusMessages[1];
-          } else if (secondsLeft === 1 && transitionStatusText) {
-            transitionStatusText.textContent = statusMessages[2];
-          }
+        if (elapsedTimeMs >= 600 && transitionStatusText) {
+          transitionStatusText.textContent = statusMessages[1];
         }
 
         if (elapsedTimeMs >= totalTimeMs) {
@@ -630,5 +622,37 @@ document.addEventListener('DOMContentLoaded', () => {
       }, intervalMs);
     });
   });
+
+  // 10. Cookie Consent Banner & Privacy Policy Trigger
+  const cookieBanner = document.getElementById('cookieBanner');
+  const cookieAcceptBtn = document.getElementById('cookieAcceptBtn');
+  const cookiePolicyBtn = document.getElementById('cookiePolicyBtn');
+  const COOKIE_CONSENT_KEY = 'raquel_vieira_cookie_consent';
+
+  if (cookieBanner) {
+    const isConsentGiven = localStorage.getItem(COOKIE_CONSENT_KEY);
+
+    // If not accepted yet, reveal the banner smoothly after 600ms
+    if (!isConsentGiven) {
+      setTimeout(() => {
+        cookieBanner.classList.add('active');
+      }, 600);
+    }
+
+    if (cookieAcceptBtn) {
+      cookieAcceptBtn.addEventListener('click', () => {
+        localStorage.setItem(COOKIE_CONSENT_KEY, 'true');
+        cookieBanner.classList.remove('active');
+      });
+    }
+
+    if (cookiePolicyBtn && privacyModal) {
+      cookiePolicyBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        privacyModal.classList.add('active');
+      });
+    }
+  }
 });
+
 

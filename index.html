@@ -70,10 +70,28 @@
         <div class="hero-main-wrapper">
           <!-- Left Content Column -->
           <div class="hero-left-col">
+            <!-- Background Ambient Glow & Botanical Shadow Decors -->
+            <div class="hero-ambient-glow" aria-hidden="true"></div>
+            <img src="assets/svg/compartilhados/sombra-folhas-suave.svg" alt="" class="hero-ambient-foliage" aria-hidden="true" />
+            <img src="assets/svg/hero/ramo-dourado-grande.svg" alt="" class="hero-ambient-branch" aria-hidden="true" />
+
             <div class="hero-left-inner">
-              <div class="hero-tag-pill">
-                <img src="assets/svg/compartilhados/icone-ramo-eyebrow.svg" alt="" class="tag-svg-icon" width="18" height="18" />
-                <span>DEPENDÊNCIA EMOCIONAL • RELAÇÕES ABUSIVAS • PSICANÁLISE CLÍNICA</span>
+              <!-- Top Row Badges -->
+              <div class="hero-top-row">
+                <div class="hero-tag-pill">
+                  <span class="tag-bullet"></span>
+                  <span>DEPENDÊNCIA EMOCIONAL • RELAÇÕES ABUSIVAS • PSICANÁLISE CLÍNICA</span>
+                </div>
+                <div class="hero-rating-pill" title="Avaliações de Pacientes">
+                  <div class="hero-stars-mini" aria-hidden="true">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <span><strong>5.0</strong> Excelência Clínica</span>
+                </div>
               </div>
 
               <h1 class="hero-title-main">
@@ -82,6 +100,13 @@
                 ressignifique <span class="highlight-gold">sua história.</span>
                 <img src="assets/svg/compartilhados/sparkle.svg" alt="" class="hero-sparkle hero-sparkle-title" aria-hidden="true" />
               </h1>
+
+              <!-- Quick Clinical Feature Chips -->
+              <div class="hero-feature-chips">
+                <span class="hero-chip"><i class="fas fa-video"></i> Online & Presencial</span>
+                <span class="hero-chip"><i class="fas fa-shield-heart"></i> Espaço 100% Seguro</span>
+                <span class="hero-chip"><i class="fas fa-globe-americas"></i> Brasil & Exterior</span>
+              </div>
 
               <!-- Right Photo Column (Image Layered Behind Badges & Curve Separator Overlay) -->
               <div class="hero-right-col">
@@ -374,13 +399,13 @@
                     <div class="about-value-icon">
                       <img src="assets/svg/sobre/icone-usuario.svg" alt="" aria-hidden="true" />
                     </div>
-                    <span>ATENDIMENTO<br />HUMANIZADO</span>
+                    <span>ATENDIMENTO<br/>HUMANIZADO</span>
                   </div>
                   <div class="about-value-item">
                     <div class="about-value-icon">
                       <img src="assets/svg/compartilhados/icone-folha.svg" alt="" aria-hidden="true" />
                     </div>
-                    <span>TRANSFORMAÇÃO<br />REAL</span>
+                    <span>TRANSFORMAÇÃO<br/>REAL</span>
                   </div>
                 </div>
               </div>
@@ -388,7 +413,7 @@
           </div>
 
           <div class="about-content">
-            <span class="section-tag"><img src="assets/svg/compartilhados/icone-ramo-eyebrow.svg" alt="" aria-hidden="true" /> QUEM É RAQUEL VIEIRA</span>
+            <span class="section-tag">QUEM É RAQUEL VIEIRA</span>
             <h2 class="section-title">
               Especialista no tratamento da
               <span class="highlight-gold">dependência emocional</span> e
@@ -679,6 +704,16 @@
               Psicanálise clínica, tratamento da dependência emocional, relações abusivas, constelação familiar e renascimento. Mais de 5.000 atendimentos
               acompanhando caminhos de liberdade e autonomia.
             </p>
+            <div class="social-links" style="margin-top: 1.2rem">
+              <a
+                href="https://www.instagram.com/raquelvieiraterapeuta?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw=="
+                class="social-icon"
+                title="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
           </div>
 
           <div>
@@ -686,8 +721,18 @@
             <ul class="footer-links">
               <li><a href="#sobre">Sobre Raquel</a></li>
               <li><a href="#atendimentos">Atendimentos</a></li>
-              <li><a href="#curso">Programa Terapêutico</a></li>
-              <li><a href="#recursos">Recursos</a></li>
+              <li><a href="pages/index.html">Programa Terapêutico</a></li>
+              <li><a href="#perguntas">Dúvidas Frequentes</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-column-title">Legal & Privacidade</h4>
+            <ul class="footer-links">
+              <li><a href="pages/termos-privacidade.html#privacidade">Política de Privacidade</a></li>
+              <li><a href="pages/termos-privacidade.html#termos">Termos de Uso</a></li>
+              <li><a href="pages/termos-privacidade.html#cookies">Uso de Cookies</a></li>
+              <li><a href="pages/termos-privacidade.html#compromisso">Compromisso do Usuário</a></li>
             </ul>
           </div>
 
@@ -701,19 +746,7 @@
               </li>
               <li><i class="fas fa-map-marker-alt"></i> São Paulo - SP</li>
             </ul>
-          </div>
-
-          <div>
-            <h4 class="footer-column-title">Redes Sociais</h4>
-            <div class="social-links">
-              <a
-                href="https://www.instagram.com/raquelvieiraterapeuta?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw=="
-                class="social-icon"
-                title="Instagram"
-                ><i class="fab fa-instagram"></i
-              ></a>
-            </div>
-            <div style="margin-top: 1.5rem">
+            <div style="margin-top: 1.4rem">
               <button class="btn btn-footer js-open-appointment" style="width: 100%">Agendar conversa</button>
             </div>
           </div>
@@ -721,7 +754,10 @@
 
         <div class="footer-bottom">
           <div>© 2026 Raquel Vieira Psicanálise. Todos os direitos reservados.</div>
-          <div>Desenvolvido com ética e cuidado.</div>
+          <div class="footer-bottom-links">
+            <a href="pages/termos-privacidade.html#privacidade">Política de Privacidade</a> • 
+            <a href="pages/termos-privacidade.html#termos">Termos de Uso</a>
+          </div>
         </div>
       </div>
     </footer>
@@ -813,6 +849,40 @@
       </div>
     </div>
 
+  <!-- Privacy Policy Modal -->
+  <div class="modal-backdrop" id="privacyModal" role="dialog" aria-modal="true" aria-labelledby="privacyModalTitle">
+    <div class="modal-card privacy-modal-card">
+      <button class="modal-close js-close-modal" aria-label="Fechar">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="privacy-modal-header">
+        <div class="privacy-modal-icon">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <div>
+          <span class="detail-modal-category">TRANSPARÊNCIA E ÉTICA</span>
+          <h3 class="modal-title" id="privacyModalTitle" style="margin-bottom: 0;">Política de Privacidade & Cookies</h3>
+        </div>
+      </div>
+      <div class="privacy-modal-body">
+        <h4>1. Compromisso com a sua Privacidade</h4>
+        <p>Valorizamos a sua privacidade e o sigilo absoluto. Suas informações e dados de navegação são tratados em estrita conformidade com a Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018) e os princípios éticos da prática psicanalítica.</p>
+        
+        <h4>2. O que são e como usamos Cookies?</h4>
+        <p>Cookies são pequenos arquivos salvos no seu dispositivo para registrar preferências e gerar estatísticas anônimas de visitas, garantindo que o site funcione com rapidez, segurança e proporcione a melhor experiência de navegação.</p>
+        
+        <h4>3. Coleta e Tratamento de Informações</h4>
+        <p>Os dados preenchidos nos formulários de contato ou direcionados para agendamento via WhatsApp são utilizados única e exclusivamente para o contato direto e atendimento clínico com a Dra. Raquel Vieira. Não realizamos qualquer compartilhamento com terceiros.</p>
+        
+        <h4>4. Seus Direitos</h4>
+        <p>Você pode, a qualquer momento, solicitar esclarecimentos sobre o tratamento dos seus dados ou a exclusão de qualquer registro de contato através do e-mail: <strong>contato@raquelvieiraemocional.com.br</strong>.</p>
+      <div class="privacy-modal-footer" style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="pages/termos-privacidade.html" class="btn" style="background: var(--c-bg-alt); color: var(--c-dark); border: 1px solid rgba(188, 170, 151, 0.5); flex: 1; text-align: center; text-decoration: none; font-size: 0.88rem;">Ver Termos Completos <i class="fas fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i></a>
+        <button type="button" class="btn btn-primary js-close-modal" style="flex: 1; font-size: 0.88rem;">Entendi e Concordo</button>
+      </div>
+    </div>
+  </div>
+
   <!-- 5-Second Course Transition Loading Screen Overlay -->
   <div class="course-transition-overlay" id="courseTransitionOverlay" aria-hidden="true">
     <div class="transition-content-box">
@@ -832,7 +902,25 @@
 
       <div class="transition-timer-badge">
         <i class="fas fa-spinner fa-spin"></i>
-        <span>Carregando em <strong id="transitionTimerCount">5</strong>s</span>
+        <span id="transitionTimerBadgeText">Redirecionando em <strong id="transitionTimerCount">1</strong>s...</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Cookie Consent Popup Card -->
+  <div class="cookie-banner floating-cookie" id="cookieBanner" role="region" aria-label="Aviso de Cookies">
+    <div class="cookie-banner-container">
+      <div class="cookie-banner-header">
+        <span class="cookie-banner-icon"><i class="fas fa-cookie-bite"></i></span>
+        <span class="cookie-banner-heading">Privacidade & Cookies</span>
+      </div>
+      <p class="cookie-banner-text">
+        <strong>Cookies:</strong> a gente guarda estatísticas de visitas para melhorar sua experiência de navegação. Ao continuar, você concorda com nossa <a href="#" class="cookie-policy-link" id="cookiePolicyBtn">política de privacidade</a>.
+      </p>
+      <div class="cookie-banner-actions">
+        <button type="button" class="cookie-banner-btn" id="cookieAcceptBtn">
+          CONCORDAR E FECHAR
+        </button>
       </div>
     </div>
   </div>
