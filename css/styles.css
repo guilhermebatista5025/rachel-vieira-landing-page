@@ -2500,8 +2500,44 @@ textarea.form-input {
 
 @media (max-width: 992px) {
   .reflections-grid {
-    grid-template-columns: 1fr;
-    gap: 2.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .reflections-left-col {
+    display: contents;
+  }
+
+  .reflections-eyebrow {
+    order: 1;
+  }
+
+  .reflections-main-title {
+    order: 2;
+  }
+
+  .reflections-quote-box {
+    order: 3;
+  }
+
+  .reflections-meta-pill {
+    order: 4;
+  }
+
+  .reflections-right-col {
+    order: 5;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .reflections-jornada-card {
+    order: 6;
+  }
+
+  .reflections-saiba-mais-wrapper {
+    order: 7;
   }
 
   .reflections-video-card {
