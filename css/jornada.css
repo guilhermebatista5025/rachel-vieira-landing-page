@@ -1160,6 +1160,33 @@ img {
     width: 100%;
     flex: 0 0 100%;
     justify-content: center;
+    gap: 11px;
+  }
+
+  .price-divider {
+    margin: 0 3px;
+  }
+
+  .price-cash {
+    gap: 2px;
+    transform: translateX(10px);
+  }
+
+  .price-installments {
+    transform: translateX(-20px);
+  }
+
+  .price-original {
+    font-size: 0.66rem;
+    line-height: 1.1;
+  }
+
+  .price-cash-val {
+    font-size: 0.92rem;
+  }
+
+  .price-cash-sub {
+    font-size: 0.7rem;
   }
 
   .btn-primary-cta {
