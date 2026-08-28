@@ -428,7 +428,38 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 5. Appointment Form Submission
+  // 5. Phone Input Mask & Filter ((DDD) 99999-9999)
+  const phoneInput = document.getElementById('fieldPhone');
+  if (phoneInput) {
+    // Prevent typing non-numeric characters directly
+    phoneInput.addEventListener('keypress', (e) => {
+      if (!/\d/.test(e.key) && !e.ctrlKey && !e.metaKey) {
+        e.preventDefault();
+      }
+    });
+
+    // Auto format mask on input/paste
+    phoneInput.addEventListener('input', (e) => {
+      let digits = e.target.value.replace(/\D/g, ''); // Keep only numbers
+      if (digits.length > 11) digits = digits.slice(0, 11);
+
+      if (digits.length === 0) {
+        e.target.value = '';
+      } else if (digits.length <= 2) {
+        e.target.value = `(${digits}`;
+      } else if (digits.length <= 6) {
+        e.target.value = `(${digits.slice(0, 2)}) ${digits.slice(2)}`;
+      } else if (digits.length <= 10) {
+        // Formato para fixo / digitação parcial: (XX) XXXX-XXXX
+        e.target.value = `(${digits.slice(0, 2)}) ${digits.slice(2, 6)}-${digits.slice(6)}`;
+      } else {
+        // Formato para celular: (XX) XXXXX-XXXX (11 dígitos)
+        e.target.value = `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7, 11)}`;
+      }
+    });
+  }
+
+  // Appointment Form Submission
   const appointmentForm = document.getElementById('appointmentForm');
   if (appointmentForm) {
     appointmentForm.addEventListener('submit', (e) => {
@@ -437,7 +468,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const phone = document.getElementById('fieldPhone').value.trim();
       const message = document.getElementById('fieldMessage').value.trim();
 
-      const textMessage = `Olá, Dra. Raquel! Meu nome é ${name}. Gostaria de agendar uma consulta. ${message}`;
+      const textMessage = `Olá, Dra. Raquel! Meu nome é ${name}${phone ? ` (${phone})` : ''}. Gostaria de agendar uma consulta.${message ? ' ' + message : ''}`;
       const encodedMsg = encodeURIComponent(textMessage);
 
       // WhatsApp link trigger
