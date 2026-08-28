@@ -241,6 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
       reflectionsWebmSource.addEventListener('error', activateMp4Fallback);
     }
 
+    reflectionsInlineVideo.addEventListener('error', clearFallbackTimer);
     reflectionsInlineVideo.addEventListener('playing', clearFallbackTimer);
     reflectionsInlineVideo.addEventListener('canplay', clearFallbackTimer);
     reflectionsInlineVideo.addEventListener('stalled', scheduleFallbackCheck);

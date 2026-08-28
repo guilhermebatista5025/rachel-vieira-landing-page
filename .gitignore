@@ -1,2 +1,12 @@
-# Vídeos locais são grandes demais para o limite de arquivos do GitHub.
-assets/video/
+# Vídeos pesados locais
+assets/video/*.mp4
+assets/video/*.webm
+assets/video/*.mov
+assets/video/*.avi
+!assets/video/README.md
+!assets/video/.gitkeep
+
+# Diretórios temporários do ambiente
+~
+.DS_Store
+Thumbs.db
