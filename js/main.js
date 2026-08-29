@@ -778,7 +778,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const transitionTimerCount = document.getElementById('transitionTimerCount');
   const transitionStatusText = document.getElementById('transitionStatusText');
 
-  const courseLinks = document.querySelectorAll('a[href*="pages/index.html"]');
+  const courseLinks = document.querySelectorAll('a[href*="pages/jornada.html"]');
 
   courseLinks.forEach(link => {
     link.addEventListener('click', (e) => {
