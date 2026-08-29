@@ -4,10 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="assets/favicon/favicon-1.png" />
-    <title>Raquel Vieira | Psicanálise & Acolhimento</title>
+    <link rel="canonical" href="https://www.raquelvieiraemocional.com.br/" />
+    <title>
+      Raquel Vieira | Psicanálise, Dependência Emocional e Relações Abusivas
+    </title>
     <meta
       name="description"
-      content="Um espaço de acolhimento para você se escutar e se transformar. Psicanálise com sensibilidade, ética e presença com Raquel Vieira."
+      content="Raquel Vieira atua com psicanálise clínica e acompanhamento voltado à dependência emocional, relações abusivas, autoestima e autonomia emocional."
+    />
+
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Raquel Vieira | Psicanálise, Dependência Emocional e Relações Abusivas"
+    />
+    <meta
+      property="og:description"
+      content="Psicanálise clínica e acompanhamento voltado à autonomia emocional, dependência emocional e relações abusivas."
+    />
+    <meta
+      property="og:url"
+      content="https://www.raquelvieiraemocional.com.br/"
+    />
+    <meta
+      property="og:image"
+      content="https://www.raquelvieiraemocional.com.br/imagens/raquel-hero.jpg"
+    />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Raquel Vieira" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta
+      name="twitter:title"
+      content="Raquel Vieira | Psicanálise e Autonomia Emocional"
+    />
+    <meta
+      name="twitter:description"
+      content="Psicanálise clínica e acompanhamento para dependência emocional e relações abusivas."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.raquelvieiraemocional.com.br/imagens/raquel-hero.jpg"
     />
 
     <!-- Google Fonts -->
@@ -19,7 +57,34 @@
     />
 
     <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://www.raquelvieiraemocional.com.br/#raquel-vieira",
+            "name": "Raquel Vieira",
+            "jobTitle": "Psicanalista Clínica",
+            "url": "https://www.raquelvieiraemocional.com.br/",
+            "description": "Raquel Vieira atua com psicanálise clínica, dependência emocional e relações abusivas."
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.raquelvieiraemocional.com.br/#website",
+            "url": "https://www.raquelvieiraemocional.com.br/",
+            "name": "Raquel Vieira",
+            "description": "Psicanálise clínica, dependência emocional e relações abusivas.",
+            "inLanguage": "pt-BR"
+          }
+        ]
+      }
+    </script>
 
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="css/styles.css" />
@@ -30,7 +95,11 @@
     <header class="header" id="header">
       <div class="container header-container">
         <a href="#" class="logo-wrapper" title="Raquel Vieira Psicanálise">
-          <img src="assets/svg/marca/raquel-vieira-logo.svg" alt="Logo Raquel Vieira" class="logo-img" />
+          <img
+            src="assets/svg/marca/raquel-vieira-logo.svg"
+            alt="Logo Raquel Vieira"
+            class="logo-img"
+          />
         </a>
 
         <nav class="nav-center">
@@ -42,14 +111,22 @@
             <li><a href="#perguntas" class="nav-link">Perguntas</a></li>
             <li><a href="#contato" class="nav-link">Contato</a></li>
             <li class="mobile-cta-only">
-              <a href="#" class="btn btn-primary js-open-appointment">Agendar conversa</a>
+              <a href="#" class="btn btn-primary js-open-appointment"
+                >Agendar conversa</a
+              >
             </li>
           </ul>
         </nav>
 
         <div class="header-right">
-          <a href="#" class="btn btn-primary header-cta-btn js-open-appointment">Agendar conversa</a>
-          <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menu">
+          <a href="#" class="btn btn-primary header-cta-btn js-open-appointment"
+            >Agendar conversa</a
+          >
+          <button
+            class="mobile-toggle"
+            id="mobileToggle"
+            aria-label="Abrir menu"
+          >
             <i class="fas fa-bars"></i>
           </button>
         </div>
@@ -60,7 +137,11 @@
       <!-- Hero Section (Remodeled Full Width - Strict 100vh Viewport Fit) -->
       <section class="hero-full" id="hero">
         <!-- SVG ClipPath for Image S-Curve Contour -->
-        <svg width="0" height="0" style="position: absolute; pointer-events: none">
+        <svg
+          width="0"
+          height="0"
+          style="position: absolute; pointer-events: none"
+        >
           <defs>
             <clipPath id="sCurveClip" clipPathUnits="objectBoundingBox">
               <path d="M 0.12,0 C 0.02,0.32 0.20,0.68 0.03,1 L 1,1 L 1,0 Z" />
@@ -73,34 +154,71 @@
           <div class="hero-left-col">
             <!-- Background Ambient Glow & Botanical Shadow Decors -->
             <div class="hero-ambient-glow" aria-hidden="true"></div>
-            <img src="assets/svg/compartilhados/sombra-folhas-suave.svg" alt="" class="hero-ambient-foliage" aria-hidden="true" />
-            <img src="assets/svg/compartilhados/folhagem-canto-esquerdo.svg" alt="" class="hero-foliage-left" aria-hidden="true" />
+            <img
+              src="assets/svg/compartilhados/sombra-folhas-suave.svg"
+              alt=""
+              class="hero-ambient-foliage"
+              aria-hidden="true"
+            />
+            <img
+              src="assets/svg/compartilhados/folhagem-canto-esquerdo.svg"
+              alt=""
+              class="hero-foliage-left"
+              aria-hidden="true"
+            />
 
             <div class="hero-left-inner">
               <div class="hero-tag-pill">
-                <span>DEPENDÊNCIA EMOCIONAL • RELAÇÕES ABUSIVAS • PSICANÁLISE CLÍNICA</span>
+                <span
+                  >DEPENDÊNCIA EMOCIONAL • RELAÇÕES ABUSIVAS • PSICANÁLISE
+                  CLÍNICA</span
+                >
               </div>
 
               <h1 class="hero-title-main">
                 Desenvolva sua<br />
                 autonomia emocional e<br />
-                <span class="hero-ressignifique">ressignifique</span> <span class="highlight-gold">sua história.</span>
-                <img src="assets/svg/compartilhados/sparkle.svg" alt="" class="hero-sparkle hero-sparkle-title" aria-hidden="true" />
+                <span class="hero-ressignifique">ressignifique</span>
+                <span class="highlight-gold">sua história.</span>
+                <img
+                  src="assets/svg/compartilhados/sparkle.svg"
+                  alt=""
+                  class="hero-sparkle hero-sparkle-title"
+                  aria-hidden="true"
+                />
               </h1>
 
               <!-- Right Photo Column (Image Layered Behind Badges & Curve Separator Overlay) -->
               <div class="hero-right-col">
                 <div class="hero-photo-container">
                   <!-- Background Photo Layer -->
-                  <img src="imagens/raquel-hero.jpg" alt="Dra. Raquel Vieira - Psicanalista Especialista" class="hero-photo-img bg-photo" />
+                  <img
+                    src="imagens/raquel-hero.jpg"
+                    alt="Dra. Raquel Vieira - Psicanalista Especialista"
+                    class="hero-photo-img bg-photo"
+                  />
 
                   <!-- Organic S-Curve Partition Overlay -->
                   <div class="hero-curve-separator">
-                    <svg class="curve-svg" viewBox="0 0 400 800" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg
+                      class="curve-svg"
+                      viewBox="0 0 400 800"
+                      preserveAspectRatio="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
                       <!-- Solid Background Filler Matching Left Column -->
-                      <path d="M0,0 L270,0 C120,130 100,260 230,400 C360,540 380,680 0,800 L0,800 Z" fill="#faf6f0" />
+                      <path
+                        d="M0,0 L270,0 C120,130 100,260 230,400 C360,540 380,680 0,800 L0,800 Z"
+                        fill="#faf6f0"
+                      />
                       <!-- Primary Elegant Gold Contour Stroke -->
-                      <path d="M270,0 C120,130 100,260 230,400 C360,540 380,680 0,800" stroke="#c4a882" stroke-width="3.5" fill="none" opacity="0.95" />
+                      <path
+                        d="M270,0 C120,130 100,260 230,400 C360,540 380,680 0,800"
+                        stroke="#c4a882"
+                        stroke-width="3.5"
+                        fill="none"
+                        opacity="0.95"
+                      />
                       <!-- Secondary Delicate Dashed Accent Contour -->
                       <path
                         d="M263,0 C113,130 93,260 223,400 C353,540 373,680 0,795"
@@ -111,19 +229,30 @@
                         opacity="0.7"
                       />
                       <!-- Soft White Inner Highlight Glow Line -->
-                      <path d="M274,0 C124,130 104,260 234,400 C364,540 384,680 0,804" stroke="#ffffff" stroke-width="1.8" fill="none" opacity="0.6" />
+                      <path
+                        d="M274,0 C124,130 104,260 234,400 C364,540 384,680 0,804"
+                        stroke="#ffffff"
+                        stroke-width="1.8"
+                        fill="none"
+                        opacity="0.6"
+                      />
                     </svg>
                   </div>
                 </div>
               </div>
 
               <p class="hero-subtitle-text">
-                Especialista no tratamento da dependência emocional e pesquisadora de relações abusivas. Mais de
-                <strong>5.000 atendimentos</strong> guiando pessoas na libertação de padrões dolorosos e na construção de relações saudáveis.
+                Especialista no tratamento da dependência emocional e
+                pesquisadora de relações abusivas. Mais de
+                <strong>5.000 atendimentos</strong> guiando pessoas na
+                libertação de padrões dolorosos e na construção de relações
+                saudáveis.
               </p>
 
               <div class="hero-cta-group">
-                <a href="#" class="btn btn-hero-primary js-open-appointment"> Agendar conversa <i class="fab fa-whatsapp whatsapp-icon"></i> </a>
+                <a href="#" class="btn btn-hero-primary js-open-appointment">
+                  Agendar conversa <i class="fab fa-whatsapp whatsapp-icon"></i>
+                </a>
                 <a href="#sobre" class="btn btn-hero-outline">
                   Conhecer Raquel Vieira
                   <i class="fas fa-chevron-right arrow-icon"></i>
@@ -132,16 +261,40 @@
 
               <div class="hero-trust-badges">
                 <div class="hero-trust-badge">
-                  <span class="trust-badge-icon"><img src="assets/svg/compartilhados/icone-sigilo.svg" alt="" width="16" height="16" /></span>
-                  <span class="trust-badge-text">Atendimento 100%<br />sigiloso e acolhedor</span>
+                  <span class="trust-badge-icon"
+                    ><img
+                      src="assets/svg/compartilhados/icone-sigilo.svg"
+                      alt=""
+                      width="16"
+                      height="16"
+                  /></span>
+                  <span class="trust-badge-text"
+                    >Atendimento 100%<br />sigiloso e acolhedor</span
+                  >
                 </div>
                 <div class="hero-trust-badge">
-                  <span class="trust-badge-icon"><img src="assets/svg/compartilhados/icone-grupo.svg" alt="" width="16" height="16" /></span>
-                  <span class="trust-badge-text">Mais de 5.000 vidas<br />transformadas</span>
+                  <span class="trust-badge-icon"
+                    ><img
+                      src="assets/svg/compartilhados/icone-grupo.svg"
+                      alt=""
+                      width="16"
+                      height="16"
+                  /></span>
+                  <span class="trust-badge-text"
+                    >Mais de 5.000 vidas<br />transformadas</span
+                  >
                 </div>
                 <div class="hero-trust-badge">
-                  <span class="trust-badge-icon"><img src="assets/svg/sobre/icone-coracao-solido.svg" alt="" width="16" height="16" /></span>
-                  <span class="trust-badge-text">Abordagem clínica<br />humanizada</span>
+                  <span class="trust-badge-icon"
+                    ><img
+                      src="assets/svg/sobre/icone-coracao-solido.svg"
+                      alt=""
+                      width="16"
+                      height="16"
+                  /></span>
+                  <span class="trust-badge-text"
+                    >Abordagem clínica<br />humanizada</span
+                  >
                 </div>
               </div>
             </div>
@@ -154,18 +307,30 @@
             <!-- Stat Item 1 -->
             <div class="hero-stat-card">
               <div class="stat-icon-circle">
-                <img src="assets/svg/compartilhados/icone-grupo.svg" alt="" width="22" height="22" />
+                <img
+                  src="assets/svg/compartilhados/icone-grupo.svg"
+                  alt=""
+                  width="22"
+                  height="22"
+                />
               </div>
               <div class="stat-details">
                 <h3 class="stat-main-val">+5.000</h3>
-                <p class="stat-sub-text">Atendimentos realizados com excelência</p>
+                <p class="stat-sub-text">
+                  Atendimentos realizados com excelência
+                </p>
               </div>
             </div>
 
             <!-- Stat Item 2 -->
             <div class="hero-stat-card">
               <div class="stat-icon-circle">
-                <img src="assets/svg/compartilhados/icone-formatura.svg" alt="" width="22" height="22" />
+                <img
+                  src="assets/svg/compartilhados/icone-formatura.svg"
+                  alt=""
+                  width="22"
+                  height="22"
+                />
               </div>
               <div class="stat-details">
                 <h3 class="stat-main-val">10+</h3>
@@ -176,7 +341,12 @@
             <!-- Stat Item 3 -->
             <div class="hero-stat-card">
               <div class="stat-icon-circle">
-                <img src="assets/svg/compartilhados/icone-sigilo.svg" alt="" width="22" height="22" />
+                <img
+                  src="assets/svg/compartilhados/icone-sigilo.svg"
+                  alt=""
+                  width="22"
+                  height="22"
+                />
               </div>
               <div class="stat-details">
                 <h3 class="stat-main-val">100%</h3>
@@ -187,7 +357,12 @@
             <!-- Stat Item 4 -->
             <div class="hero-stat-card">
               <div class="stat-icon-circle">
-                <img src="assets/svg/compartilhados/icone-folha.svg" alt="" width="22" height="22" />
+                <img
+                  src="assets/svg/compartilhados/icone-folha.svg"
+                  alt=""
+                  width="22"
+                  height="22"
+                />
               </div>
               <div class="stat-details">
                 <h3 class="stat-main-val">Transformação</h3>
@@ -202,20 +377,37 @@
       <section class="clinic-carousel-section" id="atendimentos">
         <!-- Botanical Leaf Watermarks -->
 
-        <img src="assets/svg/compartilhados/sombra-palmeira.svg" alt="" class="section-leaf-watermark leaf-wm-right" />
+        <img
+          src="assets/svg/compartilhados/sombra-palmeira.svg"
+          alt=""
+          class="section-leaf-watermark leaf-wm-right"
+        />
 
         <div class="container">
           <div class="section-header-center">
             <span class="section-tag">
-              <img src="assets/svg/tratamentos/icone-folha.svg" alt="" class="tag-svg-icon" />
+              <img
+                src="assets/svg/tratamentos/icone-folha.svg"
+                alt=""
+                class="tag-svg-icon"
+              />
               ATENDIMENTOS CLÍNICOS
             </span>
-            <h2 class="section-title">O que é <span class="highlight-gold">tratado</span> na clínica</h2>
-            <p class="section-subtitle-center">Deslize para conhecer as <strong>principais áreas</strong> de acompanhamento terapêutico.</p>
+            <h2 class="section-title">
+              O que é <span class="highlight-gold">tratado</span> na clínica
+            </h2>
+            <p class="section-subtitle-center">
+              Deslize para conhecer as <strong>principais áreas</strong> de
+              acompanhamento terapêutico.
+            </p>
           </div>
 
           <div class="carousel-wrapper">
-            <button class="carousel-control prev-btn" id="carouselPrev" aria-label="Anterior">
+            <button
+              class="carousel-control prev-btn"
+              id="carouselPrev"
+              aria-label="Anterior"
+            >
               <img src="assets/svg/tratamentos/botao-anterior.svg" alt="" />
             </button>
 
@@ -235,7 +427,10 @@
                     <div class="treatment-card-body">
                       <h3 class="treatment-title">Constelação<br />Familiar</h3>
                       <div class="treatment-title-line"></div>
-                      <p class="treatment-desc">Ressignificação de feridas sistêmicas, desconstrução de lealdades invisíveis e repetições transgeracionais.</p>
+                      <p class="treatment-desc">
+                        Ressignificação de feridas sistêmicas, desconstrução de
+                        lealdades invisíveis e repetições transgeracionais.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -244,12 +439,22 @@
                 <div class="carousel-slide">
                   <div class="treatment-card">
                     <div class="treatment-visual">
-                      <img src="imagens/tratamentos/renascimento-traumas.jpg" alt="Borboleta de vidro emergindo de um casulo" loading="lazy" decoding="async" />
+                      <img
+                        src="imagens/tratamentos/renascimento-traumas.jpg"
+                        alt="Borboleta de vidro emergindo de um casulo"
+                        loading="lazy"
+                        decoding="async"
+                      />
                     </div>
                     <div class="treatment-card-body">
-                      <h3 class="treatment-title">Renascimento &<br />Traumas</h3>
+                      <h3 class="treatment-title">
+                        Renascimento &<br />Traumas
+                      </h3>
                       <div class="treatment-title-line"></div>
-                      <p class="treatment-desc">Técnicas integrativas de respiração consciente para liberação de memórias e traumas no corpo.</p>
+                      <p class="treatment-desc">
+                        Técnicas integrativas de respiração consciente para
+                        liberação de memórias e traumas no corpo.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -268,7 +473,10 @@
                     <div class="treatment-card-body">
                       <h3 class="treatment-title">Autoestima &<br />Limites</h3>
                       <div class="treatment-title-line"></div>
-                      <p class="treatment-desc">Fortalecimento do valor próprio, comunicação assertiva e imposição de limites sem culpa.</p>
+                      <p class="treatment-desc">
+                        Fortalecimento do valor próprio, comunicação assertiva e
+                        imposição de limites sem culpa.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -285,9 +493,14 @@
                       />
                     </div>
                     <div class="treatment-card-body">
-                      <h3 class="treatment-title">Dependência<br />Emocional</h3>
+                      <h3 class="treatment-title">
+                        Dependência<br />Emocional
+                      </h3>
                       <div class="treatment-title-line"></div>
-                      <p class="treatment-desc">Libertação de apegos dolorosos, resgate da autonomia e superação do medo de ficar sós.</p>
+                      <p class="treatment-desc">
+                        Libertação de apegos dolorosos, resgate da autonomia e
+                        superação do medo de ficar sós.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -296,12 +509,20 @@
                 <div class="carousel-slide">
                   <div class="treatment-card">
                     <div class="treatment-visual">
-                      <img src="imagens/tratamentos/relacoes-abusivas.jpg" alt="Escudo de vidro protegendo um novo ramo" loading="lazy" decoding="async" />
+                      <img
+                        src="imagens/tratamentos/relacoes-abusivas.jpg"
+                        alt="Escudo de vidro protegendo um novo ramo"
+                        loading="lazy"
+                        decoding="async"
+                      />
                     </div>
                     <div class="treatment-card-body">
                       <h3 class="treatment-title">Relações<br />Abusivas</h3>
                       <div class="treatment-title-line"></div>
-                      <p class="treatment-desc">Identificação de manipulações (gaslighting), quebra de ciclos nocivos e reconstrução da identidade.</p>
+                      <p class="treatment-desc">
+                        Identificação de manipulações (gaslighting), quebra de
+                        ciclos nocivos e reconstrução da identidade.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -318,16 +539,25 @@
                       />
                     </div>
                     <div class="treatment-card-body">
-                      <h3 class="treatment-title">Psicanálise &<br />Ansiedade</h3>
+                      <h3 class="treatment-title">
+                        Psicanálise &<br />Ansiedade
+                      </h3>
                       <div class="treatment-title-line"></div>
-                      <p class="treatment-desc">Investigação de causas inconscientes, angústias profundas e manejo do estado de alerta constante.</p>
+                      <p class="treatment-desc">
+                        Investigação de causas inconscientes, angústias
+                        profundas e manejo do estado de alerta constante.
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <button class="carousel-control next-btn" id="carouselNext" aria-label="Próximo">
+            <button
+              class="carousel-control next-btn"
+              id="carouselNext"
+              aria-label="Próximo"
+            >
               <img src="assets/svg/tratamentos/botao-proximo.svg" alt="" />
             </button>
           </div>
@@ -346,11 +576,15 @@
           aria-hidden="true"
         />
 
-        <div class="about-mobile-exclusive" aria-labelledby="about-mobile-title">
+        <div
+          class="about-mobile-exclusive"
+          aria-labelledby="about-mobile-title"
+        >
           <span class="about-mobile-eyebrow">QUEM É RAQUEL VIEIRA</span>
 
           <h2 class="about-mobile-title" id="about-mobile-title">
-            Especialista no tratamento da <em>dependência emocional</em> e relações abusivas
+            Especialista no tratamento da <em>dependência emocional</em> e
+            relações abusivas
           </h2>
 
           <div class="about-mobile-divider" aria-hidden="true">
@@ -360,20 +594,39 @@
           </div>
 
           <p class="about-mobile-intro">
-            Acolhedora, experiente e comprometida com a sua <strong>transformação.</strong> Ajudo homens e mulheres a <strong>romperem padrões</strong> de dependência emocional e relações abusivas e a reconstruírem uma <strong>vida mais leve e livre.</strong>
+            Acolhedora, experiente e comprometida com a sua
+            <strong>transformação.</strong> Ajudo homens e mulheres a
+            <strong>romperem padrões</strong> de dependência emocional e
+            relações abusivas e a reconstruírem uma
+            <strong>vida mais leve e livre.</strong>
           </p>
 
-          <div class="about-mobile-benefits" aria-label="Diferenciais do atendimento">
+          <div
+            class="about-mobile-benefits"
+            aria-label="Diferenciais do atendimento"
+          >
             <div class="about-mobile-benefit">
-              <img src="assets/svg/sobre/icone-escuta-acolhedora.svg" alt="" aria-hidden="true" />
+              <img
+                src="assets/svg/sobre/icone-escuta-acolhedora.svg"
+                alt=""
+                aria-hidden="true"
+              />
               <span>Atendimento<br />acolhedor</span>
             </div>
             <div class="about-mobile-benefit">
-              <img src="assets/svg/sobre/icone-usuario.svg" alt="" aria-hidden="true" />
+              <img
+                src="assets/svg/sobre/icone-usuario.svg"
+                alt=""
+                aria-hidden="true"
+              />
               <span>Abordagem<br />humanizada</span>
             </div>
             <div class="about-mobile-benefit">
-              <img src="assets/svg/compartilhados/icone-folha.svg" alt="" aria-hidden="true" />
+              <img
+                src="assets/svg/compartilhados/icone-folha.svg"
+                alt=""
+                aria-hidden="true"
+              />
               <span>Foco em transformação<br />emocional</span>
             </div>
           </div>
@@ -381,20 +634,63 @@
           <div class="about-mobile-formation">
             <div class="about-mobile-formation-heading">
               <span class="about-mobile-formation-icon">
-                <img src="assets/svg/compartilhados/icone-formatura.svg" alt="" aria-hidden="true" />
+                <img
+                  src="assets/svg/compartilhados/icone-formatura.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
               </span>
               <h3>Formação &amp; Especializações</h3>
             </div>
 
-            <p>Bases sólidas e abordagens integradas para um cuidado profundo e transformador.</p>
+            <p>
+              Bases sólidas e abordagens integradas para um cuidado profundo e
+              transformador.
+            </p>
 
             <div class="about-mobile-tags">
-              <span><img src="assets/svg/sobre/icone-psicanalise.svg" alt="" aria-hidden="true" />Psicanalista Clínica</span>
-              <span><img src="assets/svg/sobre/icone-coracao-solido.svg" alt="" aria-hidden="true" />Saúde Mental</span>
-              <span><img src="assets/svg/sobre/icone-usuario.svg" alt="" aria-hidden="true" />Dependência Emocional</span>
-              <span class="is-featured"><img src="assets/svg/sobre/icone-lupa.svg" alt="" aria-hidden="true" />Relações Abusivas</span>
-              <span><img src="assets/svg/sobre/icone-constelacao.svg" alt="" aria-hidden="true" />Constelação Familiar</span>
-              <span><img src="assets/svg/sobre/icone-renascimento.svg" alt="" aria-hidden="true" />Renascimento</span>
+              <span
+                ><img
+                  src="assets/svg/sobre/icone-psicanalise.svg"
+                  alt=""
+                  aria-hidden="true"
+                />Psicanalista Clínica</span
+              >
+              <span
+                ><img
+                  src="assets/svg/sobre/icone-coracao-solido.svg"
+                  alt=""
+                  aria-hidden="true"
+                />Saúde Mental</span
+              >
+              <span
+                ><img
+                  src="assets/svg/sobre/icone-usuario.svg"
+                  alt=""
+                  aria-hidden="true"
+                />Dependência Emocional</span
+              >
+              <span class="is-featured"
+                ><img
+                  src="assets/svg/sobre/icone-lupa.svg"
+                  alt=""
+                  aria-hidden="true"
+                />Relações Abusivas</span
+              >
+              <span
+                ><img
+                  src="assets/svg/sobre/icone-constelacao.svg"
+                  alt=""
+                  aria-hidden="true"
+                />Constelação Familiar</span
+              >
+              <span
+                ><img
+                  src="assets/svg/sobre/icone-renascimento.svg"
+                  alt=""
+                  aria-hidden="true"
+                />Renascimento</span
+              >
             </div>
           </div>
 
@@ -404,57 +700,106 @@
             <i class="fas fa-chevron-right" aria-hidden="true"></i>
           </a>
 
-          <p class="about-mobile-closing">SUA JORNADA DE TRANSFORMAÇÃO COMEÇA AQUI</p>
-          <div class="about-mobile-closing-line" aria-hidden="true"><span></span><i class="far fa-heart"></i><span></span></div>
+          <p class="about-mobile-closing">
+            SUA JORNADA DE TRANSFORMAÇÃO COMEÇA AQUI
+          </p>
+          <div class="about-mobile-closing-line" aria-hidden="true">
+            <span></span><i class="far fa-heart"></i><span></span>
+          </div>
         </div>
 
         <div class="container about-grid">
           <div class="about-img-col">
             <div class="about-img-box">
               <div class="about-rotating-seal">
-                <img src="assets/svg/sobre/selo-circular.svg" alt="Escuta que acolhe, transforma que liberta" class="seal-svg" />
+                <img
+                  src="assets/svg/sobre/selo-circular.svg"
+                  alt="Escuta que acolhe, transforma que liberta"
+                  class="seal-svg"
+                />
               </div>
 
-              <img src="imagens/raquel-sobre.jpg" alt="Raquel Vieira - Especialista em Dependência Emocional" class="about-photo" />
-              <img src="assets/svg/sobre/moldura-foto.svg" alt="" class="about-photo-frame" aria-hidden="true" />
-              <img src="assets/svg/compartilhados/sparkle.svg" alt="" class="about-sparkle about-sparkle-top" aria-hidden="true" />
-              <img src="assets/svg/compartilhados/sparkle.svg" alt="" class="about-sparkle about-sparkle-bottom" aria-hidden="true" />
+              <img
+                src="imagens/raquel-sobre.jpg"
+                alt="Raquel Vieira - Especialista em Dependência Emocional"
+                class="about-photo"
+              />
+              <img
+                src="assets/svg/sobre/moldura-foto.svg"
+                alt=""
+                class="about-photo-frame"
+                aria-hidden="true"
+              />
+              <img
+                src="assets/svg/compartilhados/sparkle.svg"
+                alt=""
+                class="about-sparkle about-sparkle-top"
+                aria-hidden="true"
+              />
+              <img
+                src="assets/svg/compartilhados/sparkle.svg"
+                alt=""
+                class="about-sparkle about-sparkle-bottom"
+                aria-hidden="true"
+              />
 
               <div class="about-profile-panel">
                 <div class="about-experience-badge">
                   <div class="exp-icon">
-                    <img src="assets/svg/compartilhados/icone-grupo.svg" alt="" aria-hidden="true" />
+                    <img
+                      src="assets/svg/compartilhados/icone-grupo.svg"
+                      alt=""
+                      aria-hidden="true"
+                    />
                   </div>
                   <div>
                     <span class="exp-number">+5.000</span>
-                    <span class="exp-text">HISTÓRIAS E ATENDIMENTOS ACOMPANHADOS</span>
+                    <span class="exp-text"
+                      >HISTÓRIAS E ATENDIMENTOS ACOMPANHADOS</span
+                    >
                   </div>
                 </div>
 
                 <div class="about-values-row">
                   <div class="about-value-item">
                     <div class="about-value-icon">
-                      <img src="assets/svg/sobre/icone-escuta-acolhedora.svg" alt="" aria-hidden="true" />
+                      <img
+                        src="assets/svg/sobre/icone-escuta-acolhedora.svg"
+                        alt=""
+                        aria-hidden="true"
+                      />
                     </div>
                     <span>ESCUTA<br />ACOLHEDORA</span>
                   </div>
                   <div class="about-value-item">
                     <div class="about-value-icon">
-                      <img src="assets/svg/compartilhados/icone-sigilo.svg" alt="" aria-hidden="true" />
+                      <img
+                        src="assets/svg/compartilhados/icone-sigilo.svg"
+                        alt=""
+                        aria-hidden="true"
+                      />
                     </div>
                     <span>SIGILO<br />ABSOLUTO</span>
                   </div>
                   <div class="about-value-item">
                     <div class="about-value-icon">
-                      <img src="assets/svg/sobre/icone-usuario.svg" alt="" aria-hidden="true" />
+                      <img
+                        src="assets/svg/sobre/icone-usuario.svg"
+                        alt=""
+                        aria-hidden="true"
+                      />
                     </div>
-                    <span>ATENDIMENTO<br/>HUMANIZADO</span>
+                    <span>ATENDIMENTO<br />HUMANIZADO</span>
                   </div>
                   <div class="about-value-item">
                     <div class="about-value-icon">
-                      <img src="assets/svg/compartilhados/icone-folha.svg" alt="" aria-hidden="true" />
+                      <img
+                        src="assets/svg/compartilhados/icone-folha.svg"
+                        alt=""
+                        aria-hidden="true"
+                      />
                     </div>
-                    <span>TRANSFORMAÇÃO<br/>REAL</span>
+                    <span>TRANSFORMAÇÃO<br />REAL</span>
                   </div>
                 </div>
               </div>
@@ -470,25 +815,70 @@
             </h2>
 
             <p class="about-text Highlight-lead">
-              <strong>Raquel é muito mais que uma terapeuta:</strong> é uma das mais respeitadas especialistas no tratamento da dependência emocional e
-              pesquisadoras de relações abusivas. Sua trajetória profissional é marcada pelo compromisso com a transformação emocional e pela facilidade de
-              ajudar pessoas a se libertarem da dependência emocional, compreenderem suas histórias e pararem de repetir padrões que causam sofrimento.
+              <strong>Raquel é muito mais que uma terapeuta:</strong> é uma das
+              mais respeitadas especialistas no tratamento da dependência
+              emocional e pesquisadoras de relações abusivas. Sua trajetória
+              profissional é marcada pelo compromisso com a transformação
+              emocional e pela facilidade de ajudar pessoas a se libertarem da
+              dependência emocional, compreenderem suas histórias e pararem de
+              repetir padrões que causam sofrimento.
             </p>
 
             <div class="formacao-box">
               <h3 class="formacao-title">
-                <span class="formacao-title-icon"><img src="assets/svg/compartilhados/icone-formatura.svg" alt="" aria-hidden="true" /></span>
+                <span class="formacao-title-icon"
+                  ><img
+                    src="assets/svg/compartilhados/icone-formatura.svg"
+                    alt=""
+                    aria-hidden="true"
+                /></span>
                 Formação & Especializações
               </h3>
-              <p class="formacao-desc">Psicanalista clínica, especialista em saúde mental e dependência emocional. Constelação familiar e renascimento.</p>
+              <p class="formacao-desc">
+                Psicanalista clínica, especialista em saúde mental e dependência
+                emocional. Constelação familiar e renascimento.
+              </p>
               <div class="formacao-tags">
-                <span class="tag-pill"><img src="assets/svg/sobre/icone-psicanalise.svg" alt="" aria-hidden="true" /> Psicanalista Clínica</span>
                 <span class="tag-pill"
-                  ><img src="assets/svg/sobre/icone-coracao-solido.svg" alt="" aria-hidden="true" /> Saúde Mental & Dependência Emocional</span
+                  ><img
+                    src="assets/svg/sobre/icone-psicanalise.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  Psicanalista Clínica</span
                 >
-                <span class="tag-pill"><img src="assets/svg/sobre/icone-lupa.svg" alt="" aria-hidden="true" /> Relações Abusivas</span>
-                <span class="tag-pill"><img src="assets/svg/sobre/icone-constelacao.svg" alt="" aria-hidden="true" /> Constelação Familiar</span>
-                <span class="tag-pill"><img src="assets/svg/sobre/icone-renascimento.svg" alt="" aria-hidden="true" /> Renascimento</span>
+                <span class="tag-pill"
+                  ><img
+                    src="assets/svg/sobre/icone-coracao-solido.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  Saúde Mental & Dependência Emocional</span
+                >
+                <span class="tag-pill"
+                  ><img
+                    src="assets/svg/sobre/icone-lupa.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  Relações Abusivas</span
+                >
+                <span class="tag-pill"
+                  ><img
+                    src="assets/svg/sobre/icone-constelacao.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  Constelação Familiar</span
+                >
+                <span class="tag-pill"
+                  ><img
+                    src="assets/svg/sobre/icone-renascimento.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  Renascimento</span
+                >
               </div>
             </div>
           </div>
@@ -496,42 +886,56 @@
       </section>
 
       <!-- Reflections / Content Section (Redesigned per Reference Image) -->
-      <section class="reflections" id="recursos" >
+      <section class="reflections" id="recursos">
         <!-- Ambient Background Decors -->
 
         <div class="container reflections-container">
           <div class="reflections-grid">
             <!-- Left Column: Eyebrow, Title, Quote, Tags & Purple Card -->
-            <div class="reflections-left-col" >
+            <div class="reflections-left-col">
               <span class="reflections-eyebrow">CONTEÚDOS E REFLEXÕES</span>
               <h2 class="reflections-main-title">
-                Uma conversa que pode destravar padrões e transformar sua forma de <em class="title-italic-gold">se relacionar</em>
+                Uma conversa que pode destravar padrões e transformar sua forma
+                de <em class="title-italic-gold">se relacionar</em>
               </h2>
 
               <div class="reflections-quote-box">
                 <span class="quote-mark" aria-hidden="true">“</span>
                 <p class="reflections-intro-desc">
-                  Um conteúdo direto, acolhedor e profundo para reconhecer bloqueios emocionais, gerar clareza e dar o primeiro passo rumo à sua autonomia.
+                  Um conteúdo direto, acolhedor e profundo para reconhecer
+                  bloqueios emocionais, gerar clareza e dar o primeiro passo
+                  rumo à sua autonomia.
                 </p>
               </div>
 
               <!-- Purple CTA Card (Jornada Card) -->
               <div class="reflections-jornada-card">
                 <div class="jornada-card-icon">
-                  <img src="logoOFC/icone-vendas.png" alt="Jornada da Libertação Emocional" />
+                  <img
+                    src="logoOFC/icone-vendas.png"
+                    alt="Jornada da Libertação Emocional"
+                  />
                 </div>
-                <h3 class="jornada-card-title">Pronta para iniciar sua<br />Jornada da Libertação Emocional?</h3>
+                <h3 class="jornada-card-title">
+                  Pronta para iniciar sua<br />Jornada da Libertação Emocional?
+                </h3>
                 <ul class="jornada-card-bullets">
                   <li>
-                    <span class="bullet-check"><i class="fas fa-check"></i></span>
+                    <span class="bullet-check"
+                      ><i class="fas fa-check"></i
+                    ></span>
                     <span>Entenda suas emoções com clareza</span>
                   </li>
                   <li>
-                    <span class="bullet-check"><i class="fas fa-check"></i></span>
+                    <span class="bullet-check"
+                      ><i class="fas fa-check"></i
+                    ></span>
                     <span>Quebre padrões que se repetem</span>
                   </li>
                   <li>
-                    <span class="bullet-check"><i class="fas fa-check"></i></span>
+                    <span class="bullet-check"
+                      ><i class="fas fa-check"></i
+                    ></span>
                     <span>Dê o primeiro passo para se transformar</span>
                   </li>
                 </ul>
@@ -539,12 +943,16 @@
                   QUERO COMEÇAR AGORA <i class="fas fa-arrow-right"></i>
                 </a>
                 <div class="jornada-card-footer-meta">
-                  <span>acesso imediato</span> • <span>conteúdo guiado</span> • <span>primeiro passo com segurança</span>
+                  <span>acesso imediato</span> • <span>conteúdo guiado</span> •
+                  <span>primeiro passo com segurança</span>
                 </div>
               </div>
 
               <div class="reflections-saiba-mais-wrapper">
-                <a href="pages/jornada.html" class="reflections-saiba-mais-link">
+                <a
+                  href="pages/jornada.html"
+                  class="reflections-saiba-mais-link"
+                >
                   Saiba mais <i class="fas fa-chevron-right"></i>
                 </a>
               </div>
@@ -560,10 +968,22 @@
                     src="https://www.youtube-nocookie.com/embed/FmHg2FjA4x4?enablejsapi=1&autoplay=1&mute=1&loop=1&playlist=FmHg2FjA4x4&controls=0&rel=0&modestbranding=1&disablekb=1&iv_load_policy=3&playsinline=1&vq=hd1080"
                     title="Vídeo Raquel Vieira"
                     frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allow="
+                      accelerometer;
+                      autoplay;
+                      clipboard-write;
+                      encrypted-media;
+                      gyroscope;
+                      picture-in-picture;
+                    "
                   ></iframe>
-                  <span class="reflections-video-badge"><i class="fas fa-star"></i> VÍDEO EM DESTAQUE</span>
-                  <div class="reflections-video-controls" aria-label="Controles do vídeo">
+                  <span class="reflections-video-badge"
+                    ><i class="fas fa-star"></i> VÍDEO EM DESTAQUE</span
+                  >
+                  <div
+                    class="reflections-video-controls"
+                    aria-label="Controles do vídeo"
+                  >
                     <input
                       id="reflectionsVideoProgress"
                       class="reflections-video-progress"
@@ -575,43 +995,75 @@
                       aria-label="Progresso do vídeo"
                     />
                     <div class="reflections-video-controls-row">
-                      <button id="reflectionsVideoPlay" class="reflections-video-control-btn" type="button" aria-label="Pausar vídeo" title="Pausar">
+                      <button
+                        id="reflectionsVideoPlay"
+                        class="reflections-video-control-btn"
+                        type="button"
+                        aria-label="Pausar vídeo"
+                        title="Pausar"
+                      >
                         <i class="fas fa-pause" aria-hidden="true"></i>
                       </button>
-                      <span id="reflectionsVideoTime" class="reflections-video-time">0:00 / 0:00</span>
+                      <span
+                        id="reflectionsVideoTime"
+                        class="reflections-video-time"
+                        >0:00 / 0:00</span
+                      >
                       <span class="reflections-video-controls-spacer"></span>
-                      <button id="reflectionsVideoMute" class="reflections-video-control-btn" type="button" aria-label="Ativar som" title="Ativar som">
+                      <button
+                        id="reflectionsVideoMute"
+                        class="reflections-video-control-btn"
+                        type="button"
+                        aria-label="Ativar som"
+                        title="Ativar som"
+                      >
                         <i class="fas fa-volume-mute" aria-hidden="true"></i>
                       </button>
-                      <button id="reflectionsVideoFullscreen" class="reflections-video-control-btn" type="button" aria-label="Abrir em tela cheia" title="Tela cheia">
+                      <button
+                        id="reflectionsVideoFullscreen"
+                        class="reflections-video-control-btn"
+                        type="button"
+                        aria-label="Abrir em tela cheia"
+                        title="Tela cheia"
+                      >
                         <i class="fas fa-expand" aria-hidden="true"></i>
                       </button>
                     </div>
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
       </section>
 
       <!-- Demonstrative Google Reviews Section -->
-      <section class="google-reviews-section" id="avaliacoes" aria-labelledby="googleReviewsTitle">
+      <section
+        class="google-reviews-section"
+        id="avaliacoes"
+        aria-labelledby="googleReviewsTitle"
+      >
         <div class="container">
           <div class="section-header-center google-reviews-heading">
-            <span class="section-tag google-reviews-tag"> AVALIAÇÕES GOOGLE </span>
+            <span class="section-tag google-reviews-tag">
+              AVALIAÇÕES GOOGLE
+            </span>
             <h2 class="section-title" id="googleReviewsTitle">
               Experiências de quem<br />
               escolheu <em class="title-italic-gold">se transformar</em>
             </h2>
-            <p>Depoimentos de pacientes que vivenciaram a transformação através do acompanhamento terapêutico.</p>
+            <p>
+              Depoimentos de pacientes que vivenciaram a transformação através
+              do acompanhamento terapêutico.
+            </p>
           </div>
 
           <div class="google-reviews-glass">
             <div class="google-reviews-summary">
               <div class="google-summary-brand">
-                <span class="google-logo-orb"><img src="assets/svg/avaliacoes/google-g.svg" alt="Google" /></span>
+                <span class="google-logo-orb"
+                  ><img src="assets/svg/avaliacoes/google-g.svg" alt="Google"
+                /></span>
                 <div>
                   <strong>Avaliações Google</strong>
                   <span>Depoimentos verificados</span>
@@ -621,15 +1073,25 @@
               <div class="google-summary-rating" aria-label="Nota 5 de 5">
                 <strong>5,0</strong>
                 <span class="google-stars" aria-hidden="true">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i>
                 </span>
               </div>
 
               <div class="google-reviews-controls">
-                <button type="button" id="googleReviewPrev" aria-label="Avaliação anterior">
+                <button
+                  type="button"
+                  id="googleReviewPrev"
+                  aria-label="Avaliação anterior"
+                >
                   <i class="fas fa-arrow-left" aria-hidden="true"></i>
                 </button>
-                <button type="button" id="googleReviewNext" aria-label="Próxima avaliação">
+                <button
+                  type="button"
+                  id="googleReviewNext"
+                  aria-label="Próxima avaliação"
+                >
                   <i class="fas fa-arrow-right" aria-hidden="true"></i>
                 </button>
               </div>
@@ -640,152 +1102,312 @@
                 <article class="google-review-card">
                   <div class="google-review-person">
                     <span class="google-review-avatar">P</span>
-                    <div><strong>Paciente</strong><span>Depoimento verificado</span></div>
-                    <img src="assets/svg/avaliacoes/google-g.svg" alt="" aria-hidden="true" />
+                    <div>
+                      <strong>Paciente</strong
+                      ><span>Depoimento verificado</span>
+                    </div>
+                    <img
+                      src="assets/svg/avaliacoes/google-g.svg"
+                      alt=""
+                      aria-hidden="true"
+                    />
                   </div>
                   <div class="google-review-stars" aria-label="5 de 5 estrelas">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i>
                   </div>
-                  <p>“Oi Raquel! Estou impressionada como as coisas estão melhorando. Vejo tudo com mais clareza e calma. Essa paz que sinto agora não tem preço! Aprendi a gostar de mim, enxergar meu valor e me posicionar.”</p>
+                  <p>
+                    “Oi Raquel! Estou impressionada como as coisas estão
+                    melhorando. Vejo tudo com mais clareza e calma. Essa paz que
+                    sinto agora não tem preço! Aprendi a gostar de mim, enxergar
+                    meu valor e me posicionar.”
+                  </p>
                 </article>
 
                 <article class="google-review-card">
                   <div class="google-review-person">
                     <span class="google-review-avatar">P</span>
-                    <div><strong>Paciente</strong><span>Depoimento verificado</span></div>
-                    <img src="assets/svg/avaliacoes/google-g.svg" alt="" aria-hidden="true" />
+                    <div>
+                      <strong>Paciente</strong
+                      ><span>Depoimento verificado</span>
+                    </div>
+                    <img
+                      src="assets/svg/avaliacoes/google-g.svg"
+                      alt=""
+                      aria-hidden="true"
+                    />
                   </div>
                   <div class="google-review-stars" aria-label="5 de 5 estrelas">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i>
                   </div>
-                  <p>“Passando pra agradecer por ter passado pela minha vida esse ano. Tantas sessões com outras profissionais nunca me fizeram me enxergar como as poucas que fiz com você. Você é uma pessoa iluminada!”</p>
+                  <p>
+                    “Passando pra agradecer por ter passado pela minha vida esse
+                    ano. Tantas sessões com outras profissionais nunca me
+                    fizeram me enxergar como as poucas que fiz com você. Você é
+                    uma pessoa iluminada!”
+                  </p>
                 </article>
 
                 <article class="google-review-card">
                   <div class="google-review-person">
                     <span class="google-review-avatar">P</span>
-                    <div><strong>Paciente</strong><span>Depoimento verificado</span></div>
-                    <img src="assets/svg/avaliacoes/google-g.svg" alt="" aria-hidden="true" />
+                    <div>
+                      <strong>Paciente</strong
+                      ><span>Depoimento verificado</span>
+                    </div>
+                    <img
+                      src="assets/svg/avaliacoes/google-g.svg"
+                      alt=""
+                      aria-hidden="true"
+                    />
                   </div>
                   <div class="google-review-stars" aria-label="5 de 5 estrelas">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i>
                   </div>
-                  <p>“Graças a Deus me sinto bem melhor! Minha amiga também está amando as terapias com você. Isso me alivia o coração, porque ela sempre buscou ajuda sem muito sucesso. Gratidão!”</p>
+                  <p>
+                    “Graças a Deus me sinto bem melhor! Minha amiga também está
+                    amando as terapias com você. Isso me alivia o coração,
+                    porque ela sempre buscou ajuda sem muito sucesso. Gratidão!”
+                  </p>
                 </article>
 
                 <article class="google-review-card">
                   <div class="google-review-person">
                     <span class="google-review-avatar">P</span>
-                    <div><strong>Paciente</strong><span>Depoimento verificado</span></div>
-                    <img src="assets/svg/avaliacoes/google-g.svg" alt="" aria-hidden="true" />
+                    <div>
+                      <strong>Paciente</strong
+                      ><span>Depoimento verificado</span>
+                    </div>
+                    <img
+                      src="assets/svg/avaliacoes/google-g.svg"
+                      alt=""
+                      aria-hidden="true"
+                    />
                   </div>
                   <div class="google-review-stars" aria-label="5 de 5 estrelas">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i>
                   </div>
-                  <p>“Preciso te dizer o quão incrível é fazer pequenos movimentos e as coisas mudarem tanto! Essa semana minha vida mudou da água para o vinho. Estou maravilhada! Gratidão!🙏”</p>
+                  <p>
+                    “Preciso te dizer o quão incrível é fazer pequenos
+                    movimentos e as coisas mudarem tanto! Essa semana minha vida
+                    mudou da água para o vinho. Estou maravilhada! Gratidão!🙏”
+                  </p>
                 </article>
 
                 <article class="google-review-card">
                   <div class="google-review-person">
                     <span class="google-review-avatar">P</span>
-                    <div><strong>Paciente</strong><span>Depoimento verificado</span></div>
-                    <img src="assets/svg/avaliacoes/google-g.svg" alt="" aria-hidden="true" />
+                    <div>
+                      <strong>Paciente</strong
+                      ><span>Depoimento verificado</span>
+                    </div>
+                    <img
+                      src="assets/svg/avaliacoes/google-g.svg"
+                      alt=""
+                      aria-hidden="true"
+                    />
                   </div>
                   <div class="google-review-stars" aria-label="5 de 5 estrelas">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i>
                   </div>
-                  <p>“Quero muito dizer o tanto que as coisas mudaram depois das sessões. Meu relacionamento mudou demais, não tenho mais aquele ciúme e medo de ficar só. Hoje sinto mais disposição e paz.”</p>
+                  <p>
+                    “Quero muito dizer o tanto que as coisas mudaram depois das
+                    sessões. Meu relacionamento mudou demais, não tenho mais
+                    aquele ciúme e medo de ficar só. Hoje sinto mais disposição
+                    e paz.”
+                  </p>
                 </article>
 
                 <article class="google-review-card">
                   <div class="google-review-person">
                     <span class="google-review-avatar">P</span>
-                    <div><strong>Paciente</strong><span>Depoimento verificado</span></div>
-                    <img src="assets/svg/avaliacoes/google-g.svg" alt="" aria-hidden="true" />
+                    <div>
+                      <strong>Paciente</strong
+                      ><span>Depoimento verificado</span>
+                    </div>
+                    <img
+                      src="assets/svg/avaliacoes/google-g.svg"
+                      alt=""
+                      aria-hidden="true"
+                    />
                   </div>
                   <div class="google-review-stars" aria-label="5 de 5 estrelas">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i>
                   </div>
-                  <p>“Queria agradecer pela transformação que tá acontecendo na minha vida. Consegui me libertar daquele relacionamento que me adoecia. Hoje não aceito abusos, pois sei o meu valor.”</p>
+                  <p>
+                    “Queria agradecer pela transformação que tá acontecendo na
+                    minha vida. Consegui me libertar daquele relacionamento que
+                    me adoecia. Hoje não aceito abusos, pois sei o meu valor.”
+                  </p>
                 </article>
 
                 <article class="google-review-card">
                   <div class="google-review-person">
                     <span class="google-review-avatar">P</span>
-                    <div><strong>Paciente</strong><span>Depoimento verificado</span></div>
-                    <img src="assets/svg/avaliacoes/google-g.svg" alt="" aria-hidden="true" />
+                    <div>
+                      <strong>Paciente</strong
+                      ><span>Depoimento verificado</span>
+                    </div>
+                    <img
+                      src="assets/svg/avaliacoes/google-g.svg"
+                      alt=""
+                      aria-hidden="true"
+                    />
                   </div>
                   <div class="google-review-stars" aria-label="5 de 5 estrelas">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i>
                   </div>
-                  <p>“Nem sei como te agradecer pelo tanto que conseguiu mudar na minha vida. Hoje sou outra pessoa. Até meu médico ficou surpreso e retirou medicamentos. Sou muito grata!”</p>
+                  <p>
+                    “Nem sei como te agradecer pelo tanto que conseguiu mudar na
+                    minha vida. Hoje sou outra pessoa. Até meu médico ficou
+                    surpreso e retirou medicamentos. Sou muito grata!”
+                  </p>
                 </article>
 
                 <article class="google-review-card">
                   <div class="google-review-person">
                     <span class="google-review-avatar">P</span>
-                    <div><strong>Paciente</strong><span>Depoimento verificado</span></div>
-                    <img src="assets/svg/avaliacoes/google-g.svg" alt="" aria-hidden="true" />
+                    <div>
+                      <strong>Paciente</strong
+                      ><span>Depoimento verificado</span>
+                    </div>
+                    <img
+                      src="assets/svg/avaliacoes/google-g.svg"
+                      alt=""
+                      aria-hidden="true"
+                    />
                   </div>
                   <div class="google-review-stars" aria-label="5 de 5 estrelas">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i>
                   </div>
-                  <p>“Queria agradecer pela transformação que estou tendo na minha vida. Estou fazendo os exercícios e me cuidando. Nunca acreditei que tivesse solução para aquela dor que sentia.”</p>
+                  <p>
+                    “Queria agradecer pela transformação que estou tendo na
+                    minha vida. Estou fazendo os exercícios e me cuidando. Nunca
+                    acreditei que tivesse solução para aquela dor que sentia.”
+                  </p>
                 </article>
 
                 <article class="google-review-card">
                   <div class="google-review-person">
                     <span class="google-review-avatar">P</span>
-                    <div><strong>Paciente</strong><span>Depoimento verificado</span></div>
-                    <img src="assets/svg/avaliacoes/google-g.svg" alt="" aria-hidden="true" />
+                    <div>
+                      <strong>Paciente</strong
+                      ><span>Depoimento verificado</span>
+                    </div>
+                    <img
+                      src="assets/svg/avaliacoes/google-g.svg"
+                      alt=""
+                      aria-hidden="true"
+                    />
                   </div>
                   <div class="google-review-stars" aria-label="5 de 5 estrelas">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i>
                   </div>
-                  <p>“Agradeço imensamente pelas sessões! Tive o melhor fim de ano da minha vida. Consegui participar das comemorações em família em paz, sem me sentir sufocada como antes.”</p>
+                  <p>
+                    “Agradeço imensamente pelas sessões! Tive o melhor fim de
+                    ano da minha vida. Consegui participar das comemorações em
+                    família em paz, sem me sentir sufocada como antes.”
+                  </p>
                 </article>
 
                 <article class="google-review-card">
                   <div class="google-review-person">
                     <span class="google-review-avatar">P</span>
-                    <div><strong>Paciente</strong><span>Depoimento verificado</span></div>
-                    <img src="assets/svg/avaliacoes/google-g.svg" alt="" aria-hidden="true" />
+                    <div>
+                      <strong>Paciente</strong
+                      ><span>Depoimento verificado</span>
+                    </div>
+                    <img
+                      src="assets/svg/avaliacoes/google-g.svg"
+                      alt=""
+                      aria-hidden="true"
+                    />
                   </div>
                   <div class="google-review-stars" aria-label="5 de 5 estrelas">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i>
                   </div>
-                  <p>“Faço questão de te dizer o quanto foi importante essa terapia. Hoje sei o que é sentir paz, dormir melhor e principalmente dizer não para quem se aproveitava da minha bondade.”</p>
+                  <p>
+                    “Faço questão de te dizer o quanto foi importante essa
+                    terapia. Hoje sei o que é sentir paz, dormir melhor e
+                    principalmente dizer não para quem se aproveitava da minha
+                    bondade.”
+                  </p>
                 </article>
 
                 <article class="google-review-card">
                   <div class="google-review-person">
                     <span class="google-review-avatar">P</span>
-                    <div><strong>Paciente</strong><span>Depoimento verificado</span></div>
-                    <img src="assets/svg/avaliacoes/google-g.svg" alt="" aria-hidden="true" />
+                    <div>
+                      <strong>Paciente</strong
+                      ><span>Depoimento verificado</span>
+                    </div>
+                    <img
+                      src="assets/svg/avaliacoes/google-g.svg"
+                      alt=""
+                      aria-hidden="true"
+                    />
                   </div>
                   <div class="google-review-stars" aria-label="5 de 5 estrelas">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i>
                   </div>
-                  <p>“Você não faz ideia do quanto minha vida mudou. Não foi fácil olhar pro meu passado, mas foi tão libertador! Não tem preço saber me posicionar e ter vontade de viver.”</p>
+                  <p>
+                    “Você não faz ideia do quanto minha vida mudou. Não foi
+                    fácil olhar pro meu passado, mas foi tão libertador! Não tem
+                    preço saber me posicionar e ter vontade de viver.”
+                  </p>
                 </article>
               </div>
             </div>
 
-            <div class="google-reviews-dots" id="googleReviewDots" aria-label="Navegação das avaliações"></div>
+            <div
+              class="google-reviews-dots"
+              id="googleReviewDots"
+              aria-label="Navegação das avaliações"
+            ></div>
           </div>
 
           <p class="google-reviews-disclaimer">
             <i class="fas fa-circle-info" aria-hidden="true"></i>
-            <span>Relatos reais compartilhados sob absoluto sigilo e preservação da identidade dos pacientes.</span>
+            <span
+              >Relatos reais compartilhados sob absoluto sigilo e preservação da
+              identidade dos pacientes.</span
+            >
           </p>
         </div>
       </section>
 
       <!-- FAQ Section -->
-      <section class="faq" id="perguntas" style="position: relative; overflow: hidden">
+      <section
+        class="faq"
+        id="perguntas"
+        style="position: relative; overflow: hidden"
+      >
         <div class="container">
           <div class="section-header-center">
-            <span class="section-tag"><i class="fas fa-circle-question"></i> PERGUNTAS FREQUENTES</span>
+            <span class="section-tag"
+              ><i class="fas fa-circle-question"></i> PERGUNTAS FREQUENTES</span
+            >
             <h2 class="section-title">
               Dúvidas comuns sobre o
               <em class="title-italic-gold">acompanhamento</em>
@@ -795,13 +1417,18 @@
           <div class="faq-wrapper">
             <div class="faq-item active">
               <button class="faq-question">
-                <span>Como funciona o tratamento da dependência emocional?</span>
+                <span
+                  >Como funciona o tratamento da dependência emocional?</span
+                >
                 <i class="fas fa-plus faq-icon"></i>
               </button>
               <div class="faq-answer">
                 <p>
-                  O tratamento foca em compreender as origens do apego doloroso, desconstruir crenças de desvalor e fortalecer sua autonomia emocional. Através
-                  de uma escuta acolhedora, você aprende a parar de repetir padrões de sofrimento e construir relações saudáveis consigo e com os outros.
+                  O tratamento foca em compreender as origens do apego doloroso,
+                  desconstruir crenças de desvalor e fortalecer sua autonomia
+                  emocional. Através de uma escuta acolhedora, você aprende a
+                  parar de repetir padrões de sofrimento e construir relações
+                  saudáveis consigo e com os outros.
                 </p>
               </div>
             </div>
@@ -813,8 +1440,11 @@
               </button>
               <div class="faq-answer">
                 <p>
-                  Relações abusivas vão muito além da violência física — envolvem manipulação psicológica, invalidação de sentimentos e perda gradual de
-                  autonomia. No espaço terapêutico, analisamos com ética e sigilo a sua história para que você possa retomar o controle da sua vida.
+                  Relações abusivas vão muito além da violência física —
+                  envolvem manipulação psicológica, invalidação de sentimentos e
+                  perda gradual de autonomia. No espaço terapêutico, analisamos
+                  com ética e sigilo a sua história para que você possa retomar
+                  o controle da sua vida.
                 </p>
               </div>
             </div>
@@ -826,8 +1456,10 @@
               </button>
               <div class="faq-answer">
                 <p>
-                  Raquel Vieira é psicanalista clínica, especialista em saúde mental e dependência emocional, com formação e atuação em Constelação Familiar e
-                  Renascimento (Rebirthing), integrando saberes para uma transformação profunda.
+                  Raquel Vieira é psicanalista clínica, especialista em saúde
+                  mental e dependência emocional, com formação e atuação em
+                  Constelação Familiar e Renascimento (Rebirthing), integrando
+                  saberes para uma transformação profunda.
                 </p>
               </div>
             </div>
@@ -839,8 +1471,10 @@
               </button>
               <div class="faq-answer">
                 <p>
-                  Sim! Os atendimentos são oferecidos tanto na modalidade presencial quanto online (via videochamada segura e sigilosa), garantindo o mesmo
-                  nível de acolhimento e privacidade para pacientes no Brasil e no exterior.
+                  Sim! Os atendimentos são oferecidos tanto na modalidade
+                  presencial quanto online (via videochamada segura e sigilosa),
+                  garantindo o mesmo nível de acolhimento e privacidade para
+                  pacientes no Brasil e no exterior.
                 </p>
               </div>
             </div>
@@ -852,8 +1486,9 @@
               </button>
               <div class="faq-answer">
                 <p>
-                  Basta clicar em qualquer botão "Agendar conversa" na página para entrar em contato diretamente via WhatsApp ou preencher o formulário rápido
-                  de agendamento.
+                  Basta clicar em qualquer botão "Agendar conversa" na página
+                  para entrar em contato diretamente via WhatsApp ou preencher o
+                  formulário rápido de agendamento.
                 </p>
               </div>
             </div>
@@ -867,10 +1502,15 @@
       <div class="container">
         <div class="footer-top">
           <div class="footer-brand">
-            <img src="assets/svg/marca/raquel-vieira-logo.svg" alt="Raquel Vieira" class="logo-img" />
+            <img
+              src="assets/svg/marca/raquel-vieira-logo.svg"
+              alt="Raquel Vieira"
+              class="logo-img"
+            />
             <p>
-              Psicanálise clínica, tratamento da dependência emocional, relações abusivas, constelação familiar e renascimento. Mais de 5.000 atendimentos
-              acompanhando caminhos de liberdade e autonomia.
+              Psicanálise clínica, tratamento da dependência emocional, relações
+              abusivas, constelação familiar e renascimento. Mais de 5.000
+              atendimentos acompanhando caminhos de liberdade e autonomia.
             </p>
             <div class="social-links" style="margin-top: 1.2rem">
               <a
@@ -907,10 +1547,24 @@
           <div>
             <h4 class="footer-column-title">Legal & Privacidade</h4>
             <ul class="footer-links">
-              <li><a href="pages/termos-privacidade.html#privacidade">Política de Privacidade</a></li>
-              <li><a href="pages/termos-privacidade.html#termos">Termos de Uso</a></li>
-              <li><a href="pages/termos-privacidade.html#cookies">Uso de Cookies</a></li>
-              <li><a href="pages/termos-privacidade.html#compromisso">Compromisso do Usuário</a></li>
+              <li>
+                <a href="pages/termos-privacidade.html#privacidade"
+                  >Política de Privacidade</a
+                >
+              </li>
+              <li>
+                <a href="pages/termos-privacidade.html#termos">Termos de Uso</a>
+              </li>
+              <li>
+                <a href="pages/termos-privacidade.html#cookies"
+                  >Uso de Cookies</a
+                >
+              </li>
+              <li>
+                <a href="pages/termos-privacidade.html#compromisso"
+                  >Compromisso do Usuário</a
+                >
+              </li>
             </ul>
           </div>
 
@@ -920,20 +1574,32 @@
               <li><i class="fas fa-phone-alt"></i> (33) 98821-5629</li>
               <li>
                 <i class="fas fa-envelope"></i>
-                <a href="mailto:raquelemocional@gmail.com">raquelemocional@gmail.com</a>
+                <a href="mailto:raquelemocional@gmail.com"
+                  >raquelemocional@gmail.com</a
+                >
               </li>
               <li><i class="fas fa-map-marker-alt"></i> Minas Gerais - MG</li>
             </ul>
             <div style="margin-top: 1.4rem">
-              <button class="btn btn-footer js-open-appointment" style="width: 100%">Agendar conversa</button>
+              <button
+                class="btn btn-footer js-open-appointment"
+                style="width: 100%"
+              >
+                Agendar conversa
+              </button>
             </div>
           </div>
         </div>
 
         <div class="footer-bottom">
-          <div>© 2026 Raquel Vieira Psicanálise. Todos os direitos reservados.</div>
+          <div>
+            © 2026 Raquel Vieira Psicanálise. Todos os direitos reservados.
+          </div>
           <div class="footer-bottom-links">
-            <a href="pages/termos-privacidade.html#privacidade">Política de Privacidade</a> • 
+            <a href="pages/termos-privacidade.html#privacidade"
+              >Política de Privacidade</a
+            >
+            •
             <a href="pages/termos-privacidade.html#termos">Termos de Uso</a>
           </div>
         </div>
@@ -959,25 +1625,53 @@
           <i class="fas fa-times"></i>
         </button>
         <h3 class="modal-title">Agendar conversa</h3>
-        <p class="modal-desc">Preencha seus dados para iniciar seu contato direto via WhatsApp com a Dra. Raquel Vieira.</p>
+        <p class="modal-desc">
+          Preencha seus dados para iniciar seu contato direto via WhatsApp com a
+          Dra. Raquel Vieira.
+        </p>
 
         <form id="appointmentForm">
           <div class="form-group">
             <label for="fieldName" class="form-label">Nome Completo</label>
-            <input type="text" id="fieldName" class="form-input" placeholder="Seu nome" required />
+            <input
+              type="text"
+              id="fieldName"
+              class="form-input"
+              placeholder="Seu nome"
+              required
+            />
           </div>
 
           <div class="form-group">
-            <label for="fieldPhone" class="form-label">Telefone / WhatsApp</label>
-            <input type="tel" id="fieldPhone" class="form-input" placeholder="(11) 99999-9999" maxlength="15" inputmode="numeric" autocomplete="tel" required />
+            <label for="fieldPhone" class="form-label"
+              >Telefone / WhatsApp</label
+            >
+            <input
+              type="tel"
+              id="fieldPhone"
+              class="form-input"
+              placeholder="(11) 99999-9999"
+              maxlength="15"
+              inputmode="numeric"
+              autocomplete="tel"
+              required
+            />
           </div>
 
           <div class="form-group">
-            <label for="fieldMessage" class="form-label">Mensagem (opcional)</label>
-            <textarea id="fieldMessage" class="form-input" placeholder="Como posso te ajudar no momento?"></textarea>
+            <label for="fieldMessage" class="form-label"
+              >Mensagem (opcional)</label
+            >
+            <textarea
+              id="fieldMessage"
+              class="form-input"
+              placeholder="Como posso te ajudar no momento?"
+            ></textarea>
           </div>
 
-          <button type="submit" class="btn btn-primary" style="width: 100%">Enviar mensagem no WhatsApp <i class="fab fa-whatsapp"></i></button>
+          <button type="submit" class="btn btn-primary" style="width: 100%">
+            Enviar mensagem no WhatsApp <i class="fab fa-whatsapp"></i>
+          </button>
         </form>
       </div>
     </div>
@@ -993,7 +1687,9 @@
             <i class="fas fa-sparkles"></i>
           </div>
           <div>
-            <span class="detail-modal-category" id="detailModalCategory">ÁREA DE ATUAÇÃO</span>
+            <span class="detail-modal-category" id="detailModalCategory"
+              >ÁREA DE ATUAÇÃO</span
+            >
             <h3 class="detail-modal-title" id="detailModalTitle">Título</h3>
           </div>
         </div>
@@ -1001,96 +1697,185 @@
           <p id="detailModalDesc" class="detail-modal-desc">Descrição...</p>
 
           <div class="detail-highlights-box">
-            <h4><i class="fas fa-check-circle"></i> O que é trabalhado neste acompanhamento:</h4>
+            <h4>
+              <i class="fas fa-check-circle"></i> O que é trabalhado neste
+              acompanhamento:
+            </h4>
             <ul id="detailModalList" class="detail-modal-list">
               <!-- Dynamic items populated via JS -->
             </ul>
           </div>
         </div>
         <div class="detail-modal-footer">
-          <button class="btn btn-primary js-open-appointment" style="width: 100%">Agendar conversa sobre este tema <i class="fab fa-whatsapp"></i></button>
+          <button
+            class="btn btn-primary js-open-appointment"
+            style="width: 100%"
+          >
+            Agendar conversa sobre este tema <i class="fab fa-whatsapp"></i>
+          </button>
         </div>
       </div>
     </div>
 
-  <!-- Privacy Policy Modal -->
-  <div class="modal-backdrop" id="privacyModal" role="dialog" aria-modal="true" aria-labelledby="privacyModalTitle">
-    <div class="modal-card privacy-modal-card">
-      <button class="modal-close js-close-modal" aria-label="Fechar">
-        <i class="fas fa-times"></i>
-      </button>
-      <div class="privacy-modal-header">
-        <div class="privacy-modal-icon">
-          <i class="fas fa-shield-alt"></i>
-        </div>
-        <div>
-          <span class="detail-modal-category">TRANSPARÊNCIA E ÉTICA</span>
-          <h3 class="modal-title" id="privacyModalTitle" style="margin-bottom: 0;">Política de Privacidade & Cookies</h3>
-        </div>
-      </div>
-      <div class="privacy-modal-body">
-        <h4>1. Compromisso com a sua Privacidade</h4>
-        <p>Valorizamos a sua privacidade e o sigilo absoluto. Suas informações e dados de navegação são tratados em estrita conformidade com a Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018) e os princípios éticos da prática psicanalítica.</p>
-        
-        <h4>2. O que são e como usamos Cookies?</h4>
-        <p>Cookies são pequenos arquivos salvos no seu dispositivo para registrar preferências e gerar estatísticas anônimas de visitas, garantindo que o site funcione com rapidez, segurança e proporcione a melhor experiência de navegação.</p>
-        
-        <h4>3. Coleta e Tratamento de Informações</h4>
-        <p>Os dados preenchidos nos formulários de contato ou direcionados para agendamento via WhatsApp são utilizados única e exclusivamente para o contato direto e atendimento clínico com a Dra. Raquel Vieira. Não realizamos qualquer compartilhamento com terceiros.</p>
-        
-        <h4>4. Seus Direitos</h4>
-        <p>Você pode, a qualquer momento, solicitar esclarecimentos sobre o tratamento dos seus dados ou a exclusão de qualquer registro de contato através do e-mail: <strong>raquelemocional@gmail.com</strong>.</p>
-      <div class="privacy-modal-footer" style="display: flex; gap: 12px; flex-wrap: wrap;">
-        <a href="pages/termos-privacidade.html" class="btn" style="background: var(--c-bg-alt); color: var(--c-dark); border: 1px solid rgba(188, 170, 151, 0.5); flex: 1; text-align: center; text-decoration: none; font-size: 0.88rem;">Ver Termos Completos <i class="fas fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i></a>
-        <button type="button" class="btn btn-primary js-close-modal" style="flex: 1; font-size: 0.88rem;">Entendi e Concordo</button>
-      </div>
-    </div>
-  </div>
-  </div>
-
-  <!-- 5-Second Course Transition Loading Screen Overlay -->
-  <div class="course-transition-overlay" id="courseTransitionOverlay" aria-hidden="true">
-    <div class="transition-content-box">
-      <div class="transition-logo-circle">
-        <img src="logoOFC/icone-vendas.png" alt="Borboleta Jornada da Libertação" class="transition-logo-img" />
-      </div>
-
-      <h3 class="transition-title">Jornada da Libertação Emocional</h3>
-      
-      <p class="transition-subtitle" id="transitionStatusText">
-        Preparando a sua experiência de transformação...
-      </p>
-
-      <div class="transition-progress-wrapper">
-        <div class="transition-progress-bar" id="transitionProgressBar"></div>
-      </div>
-
-      <div class="transition-timer-badge">
-        <i class="fas fa-spinner fa-spin"></i>
-        <span id="transitionTimerBadgeText">Redirecionando em <strong id="transitionTimerCount">1</strong>s...</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Floating Cookie Consent Popup Card -->
-  <div class="cookie-banner floating-cookie" id="cookieBanner" role="region" aria-label="Aviso de Cookies">
-    <div class="cookie-banner-container">
-      <div class="cookie-banner-header">
-        <span class="cookie-banner-icon"><i class="fas fa-cookie-bite"></i></span>
-        <span class="cookie-banner-heading">Privacidade & Cookies</span>
-      </div>
-      <p class="cookie-banner-text">
-        <strong>Cookies:</strong> a gente guarda estatísticas de visitas para melhorar sua experiência de navegação. Ao continuar, você concorda com nossa <a href="#" class="cookie-policy-link" id="cookiePolicyBtn">política de privacidade</a>.
-      </p>
-      <div class="cookie-banner-actions">
-        <button type="button" class="cookie-banner-btn" id="cookieAcceptBtn">
-          CONCORDAR E FECHAR
+    <!-- Privacy Policy Modal -->
+    <div
+      class="modal-backdrop"
+      id="privacyModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="privacyModalTitle"
+    >
+      <div class="modal-card privacy-modal-card">
+        <button class="modal-close js-close-modal" aria-label="Fechar">
+          <i class="fas fa-times"></i>
         </button>
+        <div class="privacy-modal-header">
+          <div class="privacy-modal-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <div>
+            <span class="detail-modal-category">TRANSPARÊNCIA E ÉTICA</span>
+            <h3
+              class="modal-title"
+              id="privacyModalTitle"
+              style="margin-bottom: 0"
+            >
+              Política de Privacidade & Cookies
+            </h3>
+          </div>
+        </div>
+        <div class="privacy-modal-body">
+          <h4>1. Compromisso com a sua Privacidade</h4>
+          <p>
+            Valorizamos a sua privacidade e o sigilo absoluto. Suas informações
+            e dados de navegação são tratados em estrita conformidade com a Lei
+            Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018) e os
+            princípios éticos da prática psicanalítica.
+          </p>
+
+          <h4>2. O que são e como usamos Cookies?</h4>
+          <p>
+            Cookies são pequenos arquivos salvos no seu dispositivo para
+            registrar preferências e gerar estatísticas anônimas de visitas,
+            garantindo que o site funcione com rapidez, segurança e proporcione
+            a melhor experiência de navegação.
+          </p>
+
+          <h4>3. Coleta e Tratamento de Informações</h4>
+          <p>
+            Os dados preenchidos nos formulários de contato ou direcionados para
+            agendamento via WhatsApp são utilizados única e exclusivamente para
+            o contato direto e atendimento clínico com a Dra. Raquel Vieira. Não
+            realizamos qualquer compartilhamento com terceiros.
+          </p>
+
+          <h4>4. Seus Direitos</h4>
+          <p>
+            Você pode, a qualquer momento, solicitar esclarecimentos sobre o
+            tratamento dos seus dados ou a exclusão de qualquer registro de
+            contato através do e-mail:
+            <strong>raquelemocional@gmail.com</strong>.
+          </p>
+          <div
+            class="privacy-modal-footer"
+            style="display: flex; gap: 12px; flex-wrap: wrap"
+          >
+            <a
+              href="pages/termos-privacidade.html"
+              class="btn"
+              style="
+                background: var(--c-bg-alt);
+                color: var(--c-dark);
+                border: 1px solid rgba(188, 170, 151, 0.5);
+                flex: 1;
+                text-align: center;
+                text-decoration: none;
+                font-size: 0.88rem;
+              "
+              >Ver Termos Completos
+              <i
+                class="fas fa-arrow-up-right-from-square"
+                style="font-size: 0.75rem"
+              ></i
+            ></a>
+            <button
+              type="button"
+              class="btn btn-primary js-close-modal"
+              style="flex: 1; font-size: 0.88rem"
+            >
+              Entendi e Concordo
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Main JavaScript File -->
-  <script src="js/main.js"></script>
-</body>
+    <!-- 5-Second Course Transition Loading Screen Overlay -->
+    <div
+      class="course-transition-overlay"
+      id="courseTransitionOverlay"
+      aria-hidden="true"
+    >
+      <div class="transition-content-box">
+        <div class="transition-logo-circle">
+          <img
+            src="logoOFC/icone-vendas.png"
+            alt="Borboleta Jornada da Libertação"
+            class="transition-logo-img"
+          />
+        </div>
+
+        <h3 class="transition-title">Jornada da Libertação Emocional</h3>
+
+        <p class="transition-subtitle" id="transitionStatusText">
+          Preparando a sua experiência de transformação...
+        </p>
+
+        <div class="transition-progress-wrapper">
+          <div class="transition-progress-bar" id="transitionProgressBar"></div>
+        </div>
+
+        <div class="transition-timer-badge">
+          <i class="fas fa-spinner fa-spin"></i>
+          <span id="transitionTimerBadgeText"
+            >Redirecionando em
+            <strong id="transitionTimerCount">1</strong>s...</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating Cookie Consent Popup Card -->
+    <div
+      class="cookie-banner floating-cookie"
+      id="cookieBanner"
+      role="region"
+      aria-label="Aviso de Cookies"
+    >
+      <div class="cookie-banner-container">
+        <div class="cookie-banner-header">
+          <span class="cookie-banner-icon"
+            ><i class="fas fa-cookie-bite"></i
+          ></span>
+          <span class="cookie-banner-heading">Privacidade & Cookies</span>
+        </div>
+        <p class="cookie-banner-text">
+          <strong>Cookies:</strong> a gente guarda estatísticas de visitas para
+          melhorar sua experiência de navegação. Ao continuar, você concorda com
+          nossa
+          <a href="#" class="cookie-policy-link" id="cookiePolicyBtn"
+            >política de privacidade</a
+          >.
+        </p>
+        <div class="cookie-banner-actions">
+          <button type="button" class="cookie-banner-btn" id="cookieAcceptBtn">
+            CONCORDAR E FECHAR
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main JavaScript File -->
+    <script src="js/main.js"></script>
+  </body>
 </html>
