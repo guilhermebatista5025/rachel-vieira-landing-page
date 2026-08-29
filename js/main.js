@@ -191,7 +191,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const reflectionsSection = document.querySelector('.reflections');
   const reflectionsInlineVideo = document.getElementById('reflectionsInlineVideo');
-  const reflectionsWebmSource = document.getElementById('reflectionsWebmSource');
   const reflectionsVideoFrame = document.querySelector('.reflections-video-thumb');
   const reflectionsVideoPlay = document.getElementById('reflectionsVideoPlay');
   const reflectionsVideoMute = document.getElementById('reflectionsVideoMute');
@@ -200,173 +199,169 @@ document.addEventListener('DOMContentLoaded', () => {
   const reflectionsVideoTime = document.getElementById('reflectionsVideoTime');
 
   if (reflectionsSection && reflectionsInlineVideo) {
-    reflectionsInlineVideo.muted = true;
-    let isVideoVisible = false;
-    let mp4FallbackActivated = false;
-    let fallbackTimer = null;
+    if (reflectionsInlineVideo.tagName === 'IFRAME') {
+      let ytPlayer = null;
+      let isPlaying = true;
+      let isMuted = true;
+      let updateInterval = null;
 
-    const clearFallbackTimer = () => {
-      if (fallbackTimer) {
-        window.clearTimeout(fallbackTimer);
-        fallbackTimer = null;
-      }
-    };
+      const formatVideoTime = value => {
+        if (!Number.isFinite(value) || value < 0) return '0:00';
+        const minutes = Math.floor(value / 60);
+        const seconds = Math.floor(value % 60).toString().padStart(2, '0');
+        return `${minutes}:${seconds}`;
+      };
 
-    const activateMp4Fallback = () => {
-      if (mp4FallbackActivated || reflectionsInlineVideo.currentSrc.endsWith('.mp4')) return;
+      const updatePlayControl = playing => {
+        isPlaying = playing;
+        if (!reflectionsVideoPlay) return;
+        const icon = reflectionsVideoPlay.querySelector('i');
+        if (icon) icon.className = playing ? 'fas fa-pause' : 'fas fa-play';
+        reflectionsVideoPlay.setAttribute('aria-label', playing ? 'Pausar vídeo' : 'Reproduzir vídeo');
+        reflectionsVideoPlay.title = playing ? 'Pausar' : 'Reproduzir';
+      };
 
-      mp4FallbackActivated = true;
-      clearFallbackTimer();
-      reflectionsInlineVideo.src = 'assets/video/video-oficial.mp4';
-      reflectionsInlineVideo.load();
+      const updateMuteControl = muted => {
+        isMuted = muted;
+        if (!reflectionsVideoMute) return;
+        const icon = reflectionsVideoMute.querySelector('i');
+        if (icon) icon.className = muted ? 'fas fa-volume-mute' : 'fas fa-volume-up';
+        reflectionsVideoMute.setAttribute('aria-label', muted ? 'Ativar som' : 'Desativar som');
+        reflectionsVideoMute.title = muted ? 'Desativar som' : 'Ativar som';
+      };
 
-      if (isVideoVisible) {
-        reflectionsInlineVideo.play().catch(() => {});
-      }
-    };
+      const updateVideoProgress = () => {
+        if (!ytPlayer || typeof ytPlayer.getCurrentTime !== 'function') return;
+        const currentTime = ytPlayer.getCurrentTime() || 0;
+        const duration = ytPlayer.getDuration() || 0;
+        const progress = duration > 0 ? (currentTime / duration) * 100 : 0;
 
-    const scheduleFallbackCheck = () => {
-      clearFallbackTimer();
-
-      if (mp4FallbackActivated) return;
-
-      fallbackTimer = window.setTimeout(() => {
-        if (reflectionsInlineVideo.readyState < HTMLMediaElement.HAVE_FUTURE_DATA) {
-          activateMp4Fallback();
+        if (reflectionsVideoProgress) {
+          reflectionsVideoProgress.value = String(progress);
+          reflectionsVideoProgress.style.setProperty('--video-progress', `${progress}%`);
         }
-      }, 8000);
-    };
 
-    if (reflectionsWebmSource) {
-      reflectionsWebmSource.addEventListener('error', activateMp4Fallback);
-    }
-
-    reflectionsInlineVideo.addEventListener('error', clearFallbackTimer);
-    reflectionsInlineVideo.addEventListener('playing', clearFallbackTimer);
-    reflectionsInlineVideo.addEventListener('canplay', clearFallbackTimer);
-    reflectionsInlineVideo.addEventListener('stalled', scheduleFallbackCheck);
-
-    const formatVideoTime = value => {
-      if (!Number.isFinite(value)) return '0:00';
-
-      const minutes = Math.floor(value / 60);
-      const seconds = Math.floor(value % 60).toString().padStart(2, '0');
-      return `${minutes}:${seconds}`;
-    };
-
-    const updatePlayControl = () => {
-      if (!reflectionsVideoPlay) return;
-
-      const isPaused = reflectionsInlineVideo.paused;
-      const icon = reflectionsVideoPlay.querySelector('i');
-      if (icon) icon.className = isPaused ? 'fas fa-play' : 'fas fa-pause';
-      reflectionsVideoPlay.setAttribute('aria-label', isPaused ? 'Reproduzir vídeo' : 'Pausar vídeo');
-      reflectionsVideoPlay.title = isPaused ? 'Reproduzir' : 'Pausar';
-    };
-
-    const updateMuteControl = () => {
-      if (!reflectionsVideoMute) return;
-
-      const isMuted = reflectionsInlineVideo.muted;
-      const icon = reflectionsVideoMute.querySelector('i');
-      if (icon) icon.className = isMuted ? 'fas fa-volume-mute' : 'fas fa-volume-up';
-      reflectionsVideoMute.setAttribute('aria-label', isMuted ? 'Ativar som' : 'Desativar som');
-      reflectionsVideoMute.title = isMuted ? 'Ativar som' : 'Desativar som';
-    };
-
-    const updateVideoProgress = () => {
-      const duration = reflectionsInlineVideo.duration;
-      const currentTime = reflectionsInlineVideo.currentTime;
-      const progress = Number.isFinite(duration) && duration > 0 ? (currentTime / duration) * 100 : 0;
-
-      if (reflectionsVideoProgress) {
-        reflectionsVideoProgress.value = String(progress);
-        reflectionsVideoProgress.style.setProperty('--video-progress', `${progress}%`);
-      }
-
-      if (reflectionsVideoTime) {
-        reflectionsVideoTime.textContent = `${formatVideoTime(currentTime)} / ${formatVideoTime(duration)}`;
-      }
-    };
-
-    const toggleVideoPlayback = () => {
-      if (reflectionsInlineVideo.paused) {
-        reflectionsInlineVideo.play().catch(() => {});
-      } else {
-        reflectionsInlineVideo.pause();
-      }
-    };
-
-    if (reflectionsVideoPlay) {
-      reflectionsVideoPlay.addEventListener('click', toggleVideoPlayback);
-    }
-
-    reflectionsInlineVideo.addEventListener('click', toggleVideoPlayback);
-
-    if (reflectionsVideoMute) {
-      reflectionsVideoMute.addEventListener('click', () => {
-        reflectionsInlineVideo.muted = !reflectionsInlineVideo.muted;
-      });
-    }
-
-    if (reflectionsVideoProgress) {
-      reflectionsVideoProgress.addEventListener('input', () => {
-        if (!Number.isFinite(reflectionsInlineVideo.duration)) return;
-        reflectionsInlineVideo.currentTime = (Number(reflectionsVideoProgress.value) / 100) * reflectionsInlineVideo.duration;
-      });
-    }
-
-    if (reflectionsVideoFullscreen && reflectionsVideoFrame) {
-      reflectionsVideoFullscreen.addEventListener('click', () => {
-        if (document.fullscreenElement) {
-          document.exitFullscreen();
-        } else if (reflectionsVideoFrame.requestFullscreen) {
-          reflectionsVideoFrame.requestFullscreen();
-        } else if (reflectionsInlineVideo.webkitEnterFullscreen) {
-          reflectionsInlineVideo.webkitEnterFullscreen();
+        if (reflectionsVideoTime) {
+          reflectionsVideoTime.textContent = `${formatVideoTime(currentTime)} / ${formatVideoTime(duration)}`;
         }
-      });
+      };
 
-      document.addEventListener('fullscreenchange', () => {
-        const isFullscreen = Boolean(document.fullscreenElement);
-        const icon = reflectionsVideoFullscreen.querySelector('i');
-        if (icon) icon.className = isFullscreen ? 'fas fa-compress' : 'fas fa-expand';
-        reflectionsVideoFullscreen.setAttribute('aria-label', isFullscreen ? 'Sair da tela cheia' : 'Abrir em tela cheia');
-      });
-    }
+      const startProgressLoop = () => {
+        if (!updateInterval) {
+          updateInterval = setInterval(updateVideoProgress, 250);
+        }
+      };
 
-    reflectionsInlineVideo.addEventListener('play', updatePlayControl);
-    reflectionsInlineVideo.addEventListener('pause', updatePlayControl);
-    reflectionsInlineVideo.addEventListener('volumechange', updateMuteControl);
-    reflectionsInlineVideo.addEventListener('timeupdate', updateVideoProgress);
-    reflectionsInlineVideo.addEventListener('loadedmetadata', updateVideoProgress);
-    reflectionsInlineVideo.addEventListener('durationchange', updateVideoProgress);
+      const stopProgressLoop = () => {
+        if (updateInterval) {
+          clearInterval(updateInterval);
+          updateInterval = null;
+        }
+      };
 
-    updatePlayControl();
-    updateMuteControl();
-    updateVideoProgress();
-
-    const videoObserver = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          isVideoVisible = entry.isIntersecting;
-
-          if (entry.isIntersecting) {
-            scheduleFallbackCheck();
-            reflectionsInlineVideo.play().catch(() => {});
-          } else {
-            clearFallbackTimer();
-            reflectionsInlineVideo.pause();
+      const setupYTPlayer = () => {
+        ytPlayer = new YT.Player('reflectionsInlineVideo', {
+          events: {
+            onReady: () => {
+              if (typeof ytPlayer.setPlaybackQuality === 'function') {
+                ytPlayer.setPlaybackQuality('highres');
+              }
+              updateMuteControl(ytPlayer.isMuted());
+              updatePlayControl(true);
+              startProgressLoop();
+            },
+            onStateChange: event => {
+              if (window.YT && event.data === YT.PlayerState.PLAYING) {
+                if (typeof ytPlayer.setPlaybackQuality === 'function') {
+                  ytPlayer.setPlaybackQuality('highres');
+                }
+                updatePlayControl(true);
+                startProgressLoop();
+              } else if (window.YT && (event.data === YT.PlayerState.PAUSED || event.data === YT.PlayerState.ENDED)) {
+                updatePlayControl(false);
+                stopProgressLoop();
+              }
+            }
           }
         });
-      },
-      {
-        threshold: 0.2,
-        rootMargin: '0px 0px -10% 0px'
-      }
-    );
+      };
 
-    videoObserver.observe(reflectionsSection);
+      if (window.YT && window.YT.Player) {
+        setupYTPlayer();
+      } else {
+        const tag = document.createElement('script');
+        tag.src = 'https://www.youtube.com/iframe_api';
+        const firstScript = document.getElementsByTagName('script')[0];
+        if (firstScript && firstScript.parentNode) {
+          firstScript.parentNode.insertBefore(tag, firstScript);
+        } else {
+          document.head.appendChild(tag);
+        }
+
+        const prevReady = window.onYouTubeIframeAPIReady;
+        window.onYouTubeIframeAPIReady = () => {
+          if (prevReady) prevReady();
+          setupYTPlayer();
+        };
+      }
+
+      if (reflectionsVideoPlay) {
+        reflectionsVideoPlay.addEventListener('click', e => {
+          e.stopPropagation();
+          if (!ytPlayer) return;
+          if (isPlaying) {
+            ytPlayer.pauseVideo();
+            updatePlayControl(false);
+          } else {
+            ytPlayer.playVideo();
+            updatePlayControl(true);
+          }
+        });
+      }
+
+      if (reflectionsVideoMute) {
+        reflectionsVideoMute.addEventListener('click', e => {
+          e.stopPropagation();
+          if (!ytPlayer) return;
+          if (ytPlayer.isMuted()) {
+            ytPlayer.unMute();
+            updateMuteControl(false);
+          } else {
+            ytPlayer.mute();
+            updateMuteControl(true);
+          }
+        });
+      }
+
+      if (reflectionsVideoProgress) {
+        reflectionsVideoProgress.addEventListener('input', () => {
+          if (!ytPlayer || typeof ytPlayer.getDuration !== 'function') return;
+          const duration = ytPlayer.getDuration();
+          if (duration > 0) {
+            const seekTime = (Number(reflectionsVideoProgress.value) / 100) * duration;
+            ytPlayer.seekTo(seekTime, true);
+            updateVideoProgress();
+          }
+        });
+      }
+
+      if (reflectionsVideoFullscreen && reflectionsVideoFrame) {
+        reflectionsVideoFullscreen.addEventListener('click', e => {
+          e.stopPropagation();
+          if (document.fullscreenElement) {
+            document.exitFullscreen();
+          } else if (reflectionsVideoFrame.requestFullscreen) {
+            reflectionsVideoFrame.requestFullscreen();
+          }
+        });
+
+        document.addEventListener('fullscreenchange', () => {
+          const isFullscreen = Boolean(document.fullscreenElement);
+          const icon = reflectionsVideoFullscreen.querySelector('i');
+          if (icon) icon.className = isFullscreen ? 'fas fa-compress' : 'fas fa-expand';
+        });
+      }
+    }
   }
 
   openDetailBtns.forEach(btn => {
